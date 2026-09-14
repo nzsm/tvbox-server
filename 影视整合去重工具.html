@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>影视源整合去重工具</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'PingFang SC','Microsoft YaHei',Arial,sans-serif;background:#F4F3EE;color:#1A1B1C;padding:20px;line-height:1.5}
+  .wrap{max-width:1000px;margin:0 auto}
+  h1{font-size:20px;margin-bottom:4px}
+  .sub{font-size:13px;color:#6B7280;margin-bottom:14px}
+  .tabs{display:flex;gap:6px;margin-bottom:16px}
+  .tab{border:1px solid #E4E3DD;background:#fff;border-radius:8px 8px 0 0;padding:8px 18px;font-size:14px;cursor:pointer;color:#6B7280;border-bottom:none}
+  .tab.on{background:#2F7FA8;color:#fff;font-weight:600}
+  .panel{background:#fff;border:1px solid #E4E3DD;border-radius:12px;padding:14px;margin-bottom:18px}
+  .panel h2{font-size:15px;margin-bottom:10px}
+  textarea,input[type=text]{width:100%;padding:8px 10px;border:1px solid #E4E3DD;border-radius:8px;font-size:13px;font-family:inherit}
+  textarea{resize:vertical}
+  .row{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:10px}
+  .btn{display:inline-block;border:none;border-radius:8px;padding:7px 14px;font-size:13px;cursor:pointer;background:#EAF3FB;color:#2F7FA8}
+  .btn.primary{background:#2F7FA8;color:#fff}
+  .btn.danger{background:#FDECEC;color:#EA6668}
+  .btn.ghost{background:#F5F5F3;color:#6B7280}
+  .msg{font-size:13px;margin-top:10px;line-height:1.7}
+  .msg.ok{color:#2F7FA8}
+  .msg.bad{color:#EA6668}
+  table{width:100%;border-collapse:collapse;font-size:12.5px;margin-top:10px}
+  th,td{text-align:left;padding:6px 8px;border-bottom:1px solid #F0EFEA;word-break:break-all;vertical-align:top}
+  th{color:#6B7280;font-weight:500;font-size:12px}
+  .tip{font-size:12px;color:#6B7280;margin-top:8px;line-height:1.6}
+  .count{font-size:12px;color:#6B7280;margin-left:auto}
+  .del{color:#EA6668;cursor:pointer;border:none;background:none;font-size:12px;text-decoration:underline}
+  input[type=checkbox]{width:16px;height:16px;cursor:pointer}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>影视源整合去重工具</h1>
+  <div class="sub">纯本地运行 · 双击本文件即用 · 批量整合 TVBox 影视源（数据源）· 自动去重 · 自动保存（刷新不丢）</div>
+
+  <div class="tabs">
+    <button class="tab on" id="tab1" onclick="switchTab(1)">影视源整合</button>
+    <button class="tab" id="tab2" onclick="switchTab(2)">影视数据去重</button>
+  </div>
+
+  <!-- ================= Tab1 影视源整合（主功能） ================= -->
+  <div id="tabpane1">
+    <div class="panel">
+      <h2>① 批量导入影视源（粘贴 TVBox 配置，多份累积 · 自动去重）</h2>
+      <textarea id="input" rows="7" placeholder='粘贴一份 TVBox 配置 JSON（含 sites 数组），例如：&#10;{&#10;  "spider": "./jar/demo",&#10;  "logo": "https://example.com/logo.png",&#10;  "sites": [{"key":"源1","name":"源1","type":3,"api":"csp_XBPQ"}, ...]&#10;}&#10;一份配置 = 一批影视源；顺财类配置一份就含几百个源。'></textarea>
+      <div class="row">
+        <button class="btn" onclick="document.getElementById('file').click()">选择配置文件</button>
+        <input type="file" id="file" accept=".json,.txt,application/json,text/plain" style="display:none" onchange="pickFile(this)">
+        <button class="btn ghost" onclick="fillSampleCfg()">填入示例配置</button>
+        <button class="btn primary" onclick="addToCfg()">加入源池</button>
+        <button class="btn danger" onclick="clearCfg()">清空源池</button>
+        <span class="count" id="poolCount"></span>
+      </div>
+      <div class="msg" id="impMsg"></div>
+      <div class="tip">
+        操作：每份配置粘贴后点一次「加入源池」，可反复粘贴多份累积。<b>不同配置间的重复源自动去重</b>（按源标识 key），同一份配置内部原样保留。
+        已自动容错：注释、非法空白、非法转义、误粘入的裸文本。
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2>② 源列表（搜索 / 勾选参与导出 / 删除 / 测延迟）</h2>
+      <div class="row">
+        <input type="text" id="search" placeholder="按 源名 / 标识 / 类型 筛选…" oninput="renderSrcList()">
+        <button class="btn ghost" onclick="toggleAll(true)">全选</button>
+        <button class="btn ghost" onclick="toggleAll(false)">全不选</button>
+        <button class="btn primary" onclick="testAllDelay()">测试全部链接延迟</button>
+        <button class="btn ghost" onclick="sortByDelay()">按延迟排序</button>
+        <button class="btn danger" onclick="delSelected()">删除选中</button>
+      </div>
+      <table>
+        <thead><tr><th style="width:4%"></th><th style="width:22%">源名</th><th style="width:7%">类型</th><th>标识 key</th><th style="width:16%">数据源（api / jar）</th><th style="width:9%">延迟</th></tr></thead>
+        <tbody id="srcBody"></tbody>
+      </table>
+      <div class="tip" id="srcTip"></div>
+    </div>
+
+    <div class="panel">
+      <h2>③ 生成合并配置（勾选的源整合成一份，填进 TVBox 即用）</h2>
+      <div class="row">
+        <button class="btn primary" onclick="genCfgOutput()">生成合并配置</button>
+        <button class="btn" onclick="copyCfgOutput()">复制</button>
+        <button class="btn" onclick="downloadCfg('json')">下载 .json</button>
+        <button class="btn" onclick="downloadCfg('txt')">下载 .txt</button>
+      </div>
+      <textarea id="cfgOutput" rows="8" readonly placeholder="点「生成合并配置」后这里显示合并结果"></textarea>
+      <div class="tip">合并配置 = 顶层字段（spider/logo/wallpaper 等，取第一份）+ 勾选的源（sites）+ 合并的 lives/parses。保存后托管到可访问地址（GitHub / Gitee raw 链接等），把链接填进 TVBox 即可整批使用这些源。</div>
+    </div>
+  </div>
+
+  <!-- ================= Tab2 影视数据去重（辅助） ================= -->
+  <div id="tabpane2" style="display:none">
+    <div class="panel">
+      <h2>① 批量导入影视条目（粘贴 / 文件，自动去重合并线路）</h2>
+      <textarea id="input2" rows="6" placeholder='粘贴影视数据 JSON 数组：&#10;[&#10;  {"name":"影片A","type_name":"电影","remarks":"1080P","play_url":"正片$https://x.com/a.mp4"},&#10;  {"name":"剧集B","type_name":"电视剧","remarks":"全10集","play_url":"第1集$https://x.com/b1.mp4#第2集$https://x.com/b2.mp4"}&#10;]'></textarea>
+      <div class="row">
+        <button class="btn" onclick="document.getElementById('file2').click()">选择 JSON 文件</button>
+        <input type="file" id="file2" accept=".json,.txt,application/json" style="display:none" onchange="pickFile2(this)">
+        <button class="btn ghost" onclick="fillSample2()">填入示例数据</button>
+        <button class="btn primary" onclick="doImport2()">导入并自动去重</button>
+        <span class="count" id="poolCount2"></span>
+      </div>
+      <div class="msg" id="impMsg2"></div>
+      <div class="tip">同片名+相同地址→跳过；同片名+不同地址→合并线路；缺 name/play_url→跳过。</div>
+    </div>
+    <div class="panel">
+      <h2>② 影视数据池（搜索 / 删除 / 清空）</h2>
+      <div class="row">
+        <input type="text" id="search2" placeholder="输入片名筛选…" oninput="renderPool2()">
+        <button class="btn danger" onclick="clearPool2()">清空数据池</button>
+      </div>
+      <table>
+        <thead><tr><th style="width:30%">片名</th><th style="width:12%">分类</th><th style="width:14%">备注</th><th>播放地址</th><th style="width:8%"></th></tr></thead>
+        <tbody id="poolBody2"></tbody>
+      </table>
+      <div class="tip" id="poolTip2"></div>
+    </div>
+    <div class="panel">
+      <h2>③ 导出影视数据</h2>
+      <div class="row">
+        <button class="btn primary" onclick="genOutput2()">生成 JSON</button>
+        <button class="btn" onclick="copyOutput2()">复制</button>
+        <button class="btn" onclick="downloadOutput2()">下载 .json 文件</button>
+      </div>
+      <textarea id="output2" rows="8" readonly placeholder="点「生成 JSON」显示结果"></textarea>
+    </div>
+  </div>
+</div>
+
+<script id="core">
+/* ============================================================
+ * 核心逻辑（纯函数，无 DOM，可被 node 提取测试）
+ * ============================================================ */
+/* 清洗 JSON 非法空白：BOM 删除；U+00A0、全角空格、Unicode 空白统一转为普通空格 */
+function sanitizeWhitespace(text){
+  return String(text==null?'':text)
+    .replace(/\uFEFF/g, '')
+    .replace(/[\u00A0\u1680\u2000-\u200A\u2028\u2029\u202F\u205F\u3000]/g, ' ');
+}
+/* 安全剥离 JSON 注释：// 行注释 与 /* 块注释 *\/；字符串内的 // 和 /* 保留（如 https://） */
+function stripJsonComments(text){
+  var out = '', i = 0, n = String(text==null?'':text).length, inStr = false, ch;
+  while(i < n){
+    ch = String(text).charAt(i);
+    if(inStr){
+      out += ch;
+      if(ch === '\\'){ if(i+1 < n){ out += String(text).charAt(i+1); i++; } }
+      else if(ch === '"'){ inStr = false; }
+      i++;
+      continue;
+    }
+    if(ch === '"'){ inStr = true; out += ch; i++; continue; }
+    if(ch === '/' && String(text).charAt(i+1) === '/'){ while(i < n && String(text).charAt(i) !== '\n') i++; continue; }
+    if(ch === '/' && String(text).charAt(i+1) === '*'){ i += 2; while(i+1 < n && !(String(text).charAt(i)==='*' && String(text).charAt(i+1)==='/')) i++; i += 2; continue; }
+    out += ch; i++;
+  }
+  return out;
+}
+/* 修复非法转义：\ 后跟非 JSON 合法转义字符时，去掉反斜杠保留原字符；
+ * 合法转义（" \\ / b f n r t u）原样保留 */
+function fixEscapes(text){
+  var s = String(text==null?'':text);
+  var out = '', i = 0, n = s.length, inStr = false, ch, nxt;
+  while(i < n){
+    ch = s.charAt(i);
+    if(inStr){
+      if(ch === '\\'){
+        nxt = s.charAt(i+1);
+        if('"\\/bfnrtu'.indexOf(nxt) !== -1){
+          out += ch + nxt; i += 2; continue;
+        }
+        out += nxt; i += 2; continue;   // 非法转义：\X -> X
+      }
+      if(ch === '"'){ inStr = false; }
+      out += ch; i++;
+      continue;
+    }
+    if(ch === '"'){ inStr = true; }
+    out += ch; i++;
+  }
+  return out;
+}
+function normalizeName(s){
+  return String(s==null?'':s)
+    .replace(/[\uFF01-\uFF5E]/g, function(ch){ return String.fromCharCode(ch.charCodeAt(0)-0xFEE0); })
+    .replace(/\u3000/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim()
+    .toLowerCase();
+}
+function splitLines(u){
+  return String(u==null?'':u).split('$$$').map(function(s){return s.trim();}).filter(Boolean);
+}
+function fillEmptyFields(ex, it){
+  ['pic','remarks','year','actor','director','content','type_name'].forEach(function(k){
+    if((!ex[k] || !String(ex[k]).trim()) && it[k] !== undefined) ex[k] = it[k];
+  });
+  return ex;
+}
+/* 清理结构级杂散字符：{ 或 , 之后紧跟的孤立字母（后接空白/引号/右括号）视为脏字符删除；
+ * 仅扫描字符串外部，字符串内内容（如 , A 或 {B）不受影响 */
+function removeStrayChars(text){
+  var s = String(text==null?'':text);
+  var out = '', i = 0, n = s.length, inStr = false, ch;
+  while(i < n){
+    ch = s.charAt(i);
+    if(inStr){
+      out += ch;
+      if(ch === '\\'){ if(i+1 < n){ out += s.charAt(i+1); i++; } }
+      else if(ch === '"'){ inStr = false; }
+      i++;
+      continue;
+    }
+    if(ch === '"'){ inStr = true; out += ch; i++; continue; }
+    if(ch === '{' || ch === ','){
+      out += ch; i++;
+      while(i < n && /\s/.test(s.charAt(i))){ out += s.charAt(i); i++; }
+      if(i < n && /[A-Za-z]/.test(s.charAt(i)) &&
+         (i+1 >= n || /\s|"|}/.test(s.charAt(i+1)))){
+        i++;   // 跳过孤立杂散字母
+      }
+      continue;
+    }
+    out += ch; i++;
+  }
+  return out;
+}
+/* 清除对象键名位置的裸文本：{ 之后本应是 "（键名）或 }（空对象）或 { [（嵌套），
+ * 若出现其它字符流（如误粘入的对话文字），删除该段直到遇到结构字符。
+ * 仅处理 { 后；, 后可能是数组数字值，不做删除以免误伤。仅扫描字符串外部 */
+function removeStrayText(text){
+  var s = String(text==null?'':text);
+  var out = '', i = 0, n = s.length, inStr = false, ch;
+  while(i < n){
+    ch = s.charAt(i);
+    if(inStr){
+      out += ch;
+      if(ch === '\\'){ if(i+1 < n){ out += s.charAt(i+1); i++; } }
+      else if(ch === '"'){ inStr = false; }
+      i++;
+      continue;
+    }
+    if(ch === '"'){ inStr = true; out += ch; i++; continue; }
+    if(ch === '{'){
+      out += ch; i++;
+      while(i < n && /\s/.test(s.charAt(i))){ out += s.charAt(i); i++; }
+      if(i < n && !/["{}\[\]]/.test(s.charAt(i))){
+        while(i < n && !/["{}\[\]]/.test(s.charAt(i))){ i++; }  // 删除裸文本
+      }
+      continue;
+    }
+    out += ch; i++;
+  }
+  return out;
+}
+/* 字段兼容：苹果CMS 用 vod_name / vod_play_url，普通数据用 name / play_url，统一为标准字段 */
+function normalizeItem(it){
+  var n = {};
+  n.name = (it.name!=null && String(it.name).trim()!=='') ? it.name : it.vod_name;
+  n.play_url = (it.play_url!=null && String(it.play_url).trim()!=='') ? it.play_url : it.vod_play_url;
+  n.pic = it.pic!=null ? it.pic : it.vod_pic;
+  n.remarks = it.remarks!=null ? it.remarks : it.vod_remarks;
+  n.year = it.year!=null ? it.year : it.vod_year;
+  n.actor = it.actor!=null ? it.actor : it.vod_actor;
+  n.director = it.director!=null ? it.director : it.vod_director;
+  n.content = it.content!=null ? it.content : it.vod_content;
+  n.type_name = it.type_name!=null ? it.type_name : (it.typeName!=null ? it.typeName : '电影');
+  n.play_from = it.play_from!=null ? it.play_from : it.vod_play_from;
+  return n;
+}
+/* 结构识别：数组=影视条目；{list:[...]}=苹果CMS 返回；{sites:[...]}=TVBox 站点配置 */
+function resolveItems(data){
+  if(Array.isArray(data)){
+    return {type:'vods', items:data, info:{count:data.length}};
+  }
+  if(data && typeof data==='object'){
+    if(Array.isArray(data.sites)){
+      return {type:'siteconfig', data:data, items:[], info:{sites:data.sites.length}};
+    }
+    if(Array.isArray(data.list)){
+      return {type:'vods', items:data.list, info:{count:data.list.length}};
+    }
+    if(Array.isArray(data.vods)){ return {type:'vods', items:data.vods, info:{count:data.vods.length}}; }
+    if(Array.isArray(data.vod_list)){ return {type:'vods', items:data.vod_list, info:{count:data.vod_list.length}}; }
+    return {type:'unknown', items:[], info:{}};
+  }
+  return {type:'empty', items:[], info:{}};
+}
+/* 合并多份 TVBox 配置：跨配置按源标识去重（同一份配置内部原样保留），
+ * sites 按 key（无则 name）、lives 按 key（无则 name）、parses 按 name；
+ * 顶层字段（spider/logo/wallpaper 等）取第一份非空值 */
+function mergeConfigs(cfgs){
+  var merged = {}, sites = [], lives = [], parses = [];
+  var seenS = {}, seenL = {}, seenP = {};
+  for(var i=0;i<cfgs.length;i++){
+    var c = cfgs[i] || {};
+    var localS = {}, localL = {}, localP = {};
+    for(var k in c){
+      if(k==='sites'||k==='lives'||k==='parses') continue;
+      if(merged[k]==null && c[k]!=null){ merged[k] = c[k]; }
+    }
+    (c.sites||[]).forEach(function(s){
+      var key = (s && s.key!=null && String(s.key).trim()!=='') ? String(s.key).trim()
+             : (s && s.name!=null ? String(s.name).trim() : JSON.stringify(s));
+      if(seenS[key] && !localS[key]) return;          // 跨配置重复 → 跳过
+      seenS[key] = 1; localS[key] = 1;
+      sites.push(s);
+    });
+    (c.lives||[]).forEach(function(l){
+      var key = (l && l.key!=null && String(l.key).trim()!=='') ? String(l.key).trim()
+             : (l && l.name!=null ? String(l.name).trim() : JSON.stringify(l));
+      if(seenL[key] && !localL[key]) return;
+      seenL[key] = 1; localL[key] = 1;
+      lives.push(l);
+    });
+    (c.parses||[]).forEach(function(p){
+      var key = (p && p.name!=null) ? String(p.name).trim() : JSON.stringify(p);
+      if(seenP[key] && !localP[key]) return;
+      seenP[key] = 1; localP[key] = 1;
+      parses.push(p);
+    });
+  }
+  merged.sites = sites; merged.lives = lives; merged.parses = parses;
+  return merged;
+}
+/* 把 items 并入 poolMap（Map: 归一化片名 -> 条目）
+ * 返回 {added, merged, dup, invalid}
+ * added=新增条目；merged=同名不同线路已合并；dup=完全重复跳过；invalid=缺必填跳过 */
+function dedupMerge(items, poolMap){
+  var r = {added:0, merged:0, dup:0, invalid:0};
+  for(var i=0;i<items.length;i++){
+    var it = normalizeItem(items[i] || {});
+    var name = String(it.name==null?'':it.name).trim();
+    var url = String(it.play_url==null?'':it.play_url).trim();
+    if(!name || !url){ r.invalid++; continue; }
+    var key = normalizeName(name);
+    if(poolMap.has(key)){
+      var ex = poolMap.get(key);
+      var exLines = splitLines(ex.play_url);
+      var newLines = splitLines(url);
+      var addedCnt = 0;
+      for(var j=0;j<newLines.length;j++){
+        if(exLines.indexOf(newLines[j])===-1){ exLines.push(newLines[j]); addedCnt++; }
+      }
+      if(addedCnt>0){
+        ex.play_url = exLines.join('$$$');
+        fillEmptyFields(ex, it);
+        r.merged++;
+      } else {
+        r.dup++;
+      }
+    } else {
+      poolMap.set(key, it);
+      r.added++;
+    }
+  }
+  return r;
+}
+/* 取影视源去重标识 */
+function srcKey(s){
+  return (s && s.key!=null && String(s.key).trim()!=='') ? String(s.key).trim()
+       : (s && s.name!=null ? String(s.name).trim() : JSON.stringify(s));
+}
+/* 提取源的可测试链接：优先 jar（爬虫脚本）→ api（若为 http URL）→ ext（字符串 URL 或 {url}） */
+function srcTestUrl(s){
+  if(!s) return '';
+  var u = '';
+  if(s.jar && typeof s.jar==='string' && /^https?:\/\//.test(s.jar)) u = s.jar;
+  else if(s.api && typeof s.api==='string' && /^https?:\/\//.test(s.api)) u = s.api;
+  else if(s.ext){
+    if(typeof s.ext==='string' && /^https?:\/\//.test(s.ext)) u = s.ext;
+    else if(typeof s.ext==='object' && s.ext.url && typeof s.ext.url==='string' && /^https?:\/\//.test(s.ext.url)) u = s.ext.url;
+  }
+  if(!u && s.api && typeof s.api==='string' && s.api.indexOf('csp_')===0 && s.jar && typeof s.jar==='string' && /^https?:\/\//.test(s.jar)) u = s.jar;
+  return u;
+}
+</script>
+
+<script>
+/* ============================================================
+ * UI 逻辑（浏览器环境）
+ * ============================================================ */
+(function(){
+  function el(id){return document.getElementById(id);}
+  function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+  function shortUrl(u){
+    u = String(u||'');
+    if(u.length<=46) return u;
+    return u.slice(0,44)+'…';
+  }
+  function flash(elId, msg){
+    var e = el(elId);
+    var old = e.innerHTML;
+    e.innerHTML = '<span class="msg ok">'+msg+'</span>';
+    setTimeout(function(){ e.innerHTML = old; }, 3000);
+  }
+
+  /* ---------- Tab 切换 ---------- */
+  window.switchTab = function(n){
+    el('tab1').className = n===1 ? 'tab on' : 'tab';
+    el('tab2').className = n===2 ? 'tab on' : 'tab';
+    el('tabpane1').style.display = n===1 ? '' : 'none';
+    el('tabpane2').style.display = n===2 ? '' : 'none';
+  };
+
+  /* ================= Tab1：影视源整合 ================= */
+  var SRC_KEY = 'tvbox_src_pool_v1';
+  var srcList = [];     // [{id, key, name, type, api, jar, obj}]
+  var sel = {};         // id -> bool（参与导出）
+  var cfgPool = [];     // 原始配置数组（用于顶层字段/lives/parses）
+  var nextId = 1;
+  var globalSeen = {};  // 跨配置去重集合
+
+  function saveSrc(){ try{ localStorage.setItem(SRC_KEY, JSON.stringify({srcList:srcList, sel:sel, cfgPool:cfgPool})); }catch(e){} }
+  function loadSrc(){
+    try{
+      var raw = localStorage.getItem(SRC_KEY);
+      if(!raw) return;
+      var d = JSON.parse(raw);
+      if(d.srcList && Array.isArray(d.srcList)) srcList = d.srcList;
+      if(d.sel && typeof d.sel==='object') sel = d.sel;
+      if(d.cfgPool && Array.isArray(d.cfgPool)) cfgPool = d.cfgPool;
+      srcList.forEach(function(it){ if(it.id>=nextId) nextId = it.id+1; globalSeen[it.key] = 1; });
+    }catch(e){}
+  }
+
+  window.pickFile = function(input){
+    var f = input.files[0]; if(!f) return;
+    var rd = new FileReader();
+    rd.onload = function(){ el('input').value = rd.result; el('impMsg').innerHTML='<span class="msg ok">已读取文件「'+esc(f.name)+'」，点「加入源池」生效</span>'; };
+    rd.onerror = function(){ el('impMsg').innerHTML='<span class="msg bad">读取文件失败</span>'; };
+    rd.readAsText(f, 'utf-8');
+    input.value = '';
+  };
+
+  window.fillSampleCfg = function(){
+    el('input').value = JSON.stringify({
+      spider: './jar/demo',
+      logo: 'https://example.com/logo.png',
+      warningText: '示例配置',
+      sites: [
+        {key:'示例源1', name:'示例源1', type:0, api:'csp_XBPQ'},
+        {key:'示例源2', name:'示例源2', type:1, api:'csp_AppRJ', jar:'https://example.com/spider.jar'},
+        {key:'示例源3', name:'示例源3', type:3, api:'csp_DrPy'}
+      ]
+    }, null, 2);
+  };
+
+  /* 把一份配置的源并入源池（跨配置去重） */
+  window.addToCfg = function(){
+    var txt = el('input').value.trim();
+    if(!txt){ el('impMsg').innerHTML='<span class="msg bad">请先粘贴 TVBox 配置 JSON，或选择配置文件</span>'; return; }
+    var cleaned = removeStrayText(fixEscapes(sanitizeWhitespace(stripJsonComments(txt)))).trim();
+    var data;
+    try{ data = JSON.parse(cleaned); }
+    catch(e){
+      el('impMsg').innerHTML='<span class="msg bad">JSON 格式错误：'+esc(e.message)+'（已自动：剥离注释、清洗非法空白、修复非法转义、清除误粘入的裸文本；仍失败说明数据缺逗号/引号或结构不完整）</span>';
+      return;
+    }
+    var res = resolveItems(data);
+    if(res.type!=='siteconfig'){
+      el('impMsg').innerHTML='<span class="msg bad">这不是影视源配置：没有 sites 数组。请粘贴含 <b>{"sites":[...]}</b> 的 TVBox 配置（如顺财类配置）。</span>';
+      return;
+    }
+    var before = srcList.length, skip = 0, localSeen = {};
+    (data.sites||[]).forEach(function(s){
+      var key = srcKey(s);
+      if(globalSeen[key] && !localSeen[key]){ skip++; return; }
+      globalSeen[key] = 1; localSeen[key] = 1;
+      var id = nextId++;
+      srcList.push({id:id, key:key, name:(s&&s.name!=null?String(s.name):''), type:(s&&s.type!=null?String(s.type):''),
+        api:(s&&s.api!=null?String(s.api):''), jar:(s&&s.jar!=null?String(s.jar):''), obj:s});
+      sel[id] = true;
+    });
+    cfgPool.push(data);
+    saveSrc();
+    var added = srcList.length - before;
+    el('impMsg').innerHTML =
+      '<span class="msg ok">已加入 1 份配置：新增 <b>'+added+'</b> 个源，重复去重跳过 <b>'+skip+'</b> 个（本份共 '+res.info.sites+' 个源）。当前源池共 <b>'+srcList.length+'</b> 个源</span>';
+    renderSrcList();
+  };
+
+  window.renderSrcList = function(){
+    var kw = normalizeName(el('search').value);
+    var arr = srcList.slice();
+    if(kw){ arr = arr.filter(function(it){ return normalizeName((it.name||'')+' '+(it.key||'')+' '+(it.type||'')).indexOf(kw)!==-1; }); }
+    if(delaySort===1){
+      arr.sort(function(a,b){
+        var da = delays[a.id], db = delays[b.id];
+        var va = da && da.ok ? da.ms : 1e9, vb = db && db.ok ? db.ms : 1e9;
+        return va - vb;
+      });
+    }
+    var shown = arr.slice(0, 1000);
+    el('srcBody').innerHTML = shown.map(function(it){
+      var d = delays[it.id];
+      var dl = d ? (d.ok ? '<span style="color:#2F7FA8">'+d.ms+'ms</span>' : (d.ms>=8000 ? '<span style="color:#EA6668">超时</span>' : '<span style="color:#EA6668">失败</span>')) : '—';
+      return '<tr><td><input type="checkbox" '+(sel[it.id]?'checked':'')+' onchange="toggleSel('+it.id+')"></td>'+
+        '<td>'+esc(it.name||'')+'</td><td>'+esc(it.type||'')+'</td><td>'+esc(it.key||'')+'</td>'+
+        '<td>'+esc(shortUrl(it.api||it.jar||''))+'</td><td>'+dl+'</td></tr>';
+    }).join('') || '<tr><td colspan="6" style="color:#9AA5B1">源池为空：先在上方粘贴配置点「加入源池」</td></tr>';
+    var selCount = srcList.filter(function(it){ return sel[it.id]; }).length;
+    el('srcTip').textContent = '共 '+srcList.length+' 个源 · 勾选 '+selCount+' 个参与导出 · 已测延迟 '+Object.keys(delays).length+' 个（仅显示前 1000 个，可搜索筛选）';
+    el('poolCount').textContent = '源池 '+srcList.length+' 个源';
+  };
+
+  window.toggleSel = function(id){
+    sel[id] = !sel[id];
+    saveSrc();
+    renderSrcList();
+  };
+  window.toggleAll = function(on){
+    srcList.forEach(function(it){ sel[it.id] = on; });
+    saveSrc();
+    renderSrcList();
+  };
+  window.delSelected = function(){
+    var n = srcList.filter(function(it){ return sel[it.id]; }).length;
+    if(n===0){ flash('impMsg','没有勾选的源'); return; }
+    if(!confirm('确定删除勾选的 '+n+' 个源？')) return;
+    srcList = srcList.filter(function(it){ return !sel[it.id]; });
+    globalSeen = {};
+    srcList.forEach(function(it){ globalSeen[it.key] = 1; });
+    saveSrc();
+    renderSrcList();
+    flash('impMsg','已删除 '+n+' 个源，源池剩余 '+srcList.length+' 个');
+  };
+  window.clearCfg = function(){
+    if(srcList.length===0){ flash('impMsg','源池已经是空的'); return; }
+    if(!confirm('确定清空源池全部 '+srcList.length+' 个源和 '+cfgPool.length+' 份配置？')) return;
+    srcList = []; sel = {}; cfgPool = []; globalSeen = {}; nextId = 1; delays = {}; saveDelay();
+    saveSrc();
+    renderSrcList();
+    el('cfgOutput').value='';
+    flash('impMsg','源池已清空');
+  };
+
+  /* ---------- 链接延迟测试 ---------- */
+  var DELAY_KEY = 'tvbox_src_delay_v1';
+  var delays = {};     // id -> {ms, ok, url}
+  var delaySort = 0;   // 0=原顺序 1=按延迟升序
+  function saveDelay(){ try{ localStorage.setItem(DELAY_KEY, JSON.stringify(delays)); }catch(e){} }
+  function loadDelay(){ try{ var raw = localStorage.getItem(DELAY_KEY); if(raw){ delays = JSON.parse(raw) || {}; } }catch(e){ delays = {}; } }
+
+  function testOne(url, cb){
+    var ctl = (typeof AbortController !== 'undefined') ? new AbortController() : null;
+    var t0 = Date.now(), done = false, timer = null;
+    function finish(ms, ok){ if(done) return; done = true; if(ctl && timer) clearTimeout(timer); cb(ms, ok); }
+    if(ctl){ timer = setTimeout(function(){ finish(8000, false); }, 8000); }
+    try{
+      fetch(url, {mode:'no-cors', cache:'no-store', signal: ctl ? ctl.signal : undefined})
+        .then(function(){ finish(Date.now()-t0, true); })
+        .catch(function(){ finish(Date.now()-t0, false); });
+    }catch(e){ finish(0, false); }
+  }
+
+  window.testAllDelay = function(){
+    var targets = [];
+    srcList.forEach(function(it){
+      var u = srcTestUrl(it.obj);
+      if(u) targets.push({id:it.id, url:u});
+    });
+    if(targets.length===0){ flash('impMsg','没有可测试的链接（源缺少 api/jar/ext 的 http 地址）'); return; }
+    el('impMsg').innerHTML = '<span class="msg ok">开始测试 '+targets.length+' 个链接（并发 4 个，超时 8 秒）…</span>';
+    var done = 0, idx = 0, CONC = 4;
+    function next(){
+      if(idx >= targets.length) return;
+      var t = targets[idx++];
+      testOne(t.url, function(ms, ok){
+        delays[t.id] = {ms:ms, ok:ok, url:t.url};
+        done++;
+        saveDelay();
+        el('impMsg').innerHTML = '<span class="msg ok">测试中… <b>'+done+' / '+targets.length+'</b>'+(idx<targets.length?'（继续）':'（完成）')+'</span>';
+        renderSrcList();
+        next();
+      });
+    }
+    for(var i=0;i<CONC && i<targets.length;i++){ next(); }
+  };
+
+  window.sortByDelay = function(){
+    delaySort = delaySort===0 ? 1 : 0;
+    renderSrcList();
+  };
+
+  window.genCfgOutput = function(){
+    if(srcList.length===0){ el('cfgOutput').value='源池为空：先在上方加入源'; return; }
+    var m = mergeConfigs(cfgPool);   // 顶层字段 + lives/parses 合并
+    m.sites = srcList.filter(function(it){ return sel[it.id]; }).map(function(it){ return it.obj; });
+    if(m.sites.length===0){ el('cfgOutput').value='请至少勾选一个源再生成'; return; }
+    el('cfgOutput').value = JSON.stringify(m, null, 2);
+  };
+  window.copyCfgOutput = function(){
+    var ta = el('cfgOutput');
+    if(!ta.value){ genCfgOutput(); }
+    if(!ta.value || ta.value.indexOf('请')===0){ return; }
+    ta.select();
+    var ok = false;
+    try{ ok = document.execCommand('copy'); }catch(e){ ok = false; }
+    if(!ok && navigator.clipboard){
+      navigator.clipboard.writeText(ta.value).then(function(){ flash('impMsg','合并配置已复制'); });
+      return;
+    }
+    flash('impMsg', ok ? '合并配置已复制' : '复制失败，请手动 Ctrl+C');
+  };
+  window.downloadCfg = function(kind){
+    var ta = el('cfgOutput');
+    if(!ta.value){ genCfgOutput(); }
+    if(!ta.value || ta.value.indexOf('请')===0){ return; }
+    var blob = new Blob([ta.value], {type:'application/json;charset=utf-8'});
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = kind==='txt' ? '合并配置.txt' : '合并配置.json';
+    document.body.appendChild(a);
+    a.click();
+    setTimeout(function(){ URL.revokeObjectURL(a.href); a.remove(); }, 200);
+  };
+
+  /* ================= Tab2：影视数据去重 ================= */
+  var POOL_KEY = 'tvbox_pool_v1';
+  var pool = new Map();
+  var impStat = {in:0, added:0, merged:0, dup:0};
+  function load2(){
+    try{
+      var raw = localStorage.getItem(POOL_KEY);
+      if(raw){
+        var arr = JSON.parse(raw);
+        pool = new Map();
+        arr.forEach(function(it){ pool.set(normalizeName(it.name), it); });
+      }
+    }catch(e){ pool = new Map(); }
+  }
+  function save2(){ try{ localStorage.setItem(POOL_KEY, JSON.stringify(Array.from(pool.values()))); }catch(e){} }
+
+  window.fillSample2 = function(){
+    el('input2').value = JSON.stringify([
+      {name:'星海远征', type_name:'电影', remarks:'1080P', play_url:'正片$https://x.com/xinghai.mp4'},
+      {name:'星海远征 ', type_name:'电影', remarks:'4K', play_url:'正片$https://x.com/xinghai.mp4'},
+      {name:'山间日记', type_name:'电视剧', remarks:'全24集', play_url:'第1集$https://x.com/sj1.mp4#第2集$https://x.com/sj2.mp4'}
+    ], null, 2);
+  };
+  window.pickFile2 = function(input){
+    var f = input.files[0]; if(!f) return;
+    var rd = new FileReader();
+    rd.onload = function(){ el('input2').value = rd.result; el('impMsg2').innerHTML='<span class="msg ok">已读取文件「'+esc(f.name)+'」，点「导入并自动去重」生效</span>'; };
+    rd.onerror = function(){ el('impMsg2').innerHTML='<span class="msg bad">读取文件失败</span>'; };
+    rd.readAsText(f, 'utf-8');
+    input.value = '';
+  };
+  window.doImport2 = function(){
+    var txt = el('input2').value.trim();
+    if(!txt){ el('impMsg2').innerHTML='<span class="msg bad">请先粘贴影视数据 JSON</span>'; return; }
+    var cleaned = removeStrayText(fixEscapes(sanitizeWhitespace(stripJsonComments(txt)))).trim();
+    var arr;
+    try{ arr = JSON.parse(cleaned); }catch(e){
+      el('impMsg2').innerHTML='<span class="msg bad">JSON 格式错误：'+esc(e.message)+'（已自动剥离注释/清洗空白/修复转义/清除裸文本）</span>'; return;
+    }
+    var res = resolveItems(arr);
+    if(res.type==='siteconfig'){
+      el('impMsg2').innerHTML='<span class="msg bad">这是<b>站点配置</b>不是影视数据，请切换到「影视源整合」页加入源池。</span>';
+      return;
+    }
+    if(res.type==='unknown' || res.type==='empty'){
+      el('impMsg2').innerHTML='<span class="msg bad">未识别到影视列表，请使用数组 [{"name","play_url"}] 或苹果CMS {"list":[...]}</span>';
+      return;
+    }
+    var r = dedupMerge(res.items, pool);
+    save2();
+    impStat = {in:res.items.length, added:r.added, merged:r.merged, dup:r.dup};
+    el('impMsg2').innerHTML =
+      '<span class="msg ok">本次导入 <b>'+res.items.length+'</b> 条 → 新增 <b>'+r.added+'</b>，合并线路 <b>'+r.merged+'</b>，重复跳过 <b>'+r.dup+'</b>，无效跳过 <b>'+r.invalid+'</b></span>';
+    renderPool2();
+  };
+  window.renderPool2 = function(){
+    var kw = normalizeName(el('search2').value);
+    var arr = Array.from(pool.values());
+    if(kw){ arr = arr.filter(function(it){ return normalizeName(it.name).indexOf(kw)!==-1; }); }
+    var shown = arr.slice(0, 500);
+    el('poolBody2').innerHTML = shown.map(function(it){
+      return '<tr><td>'+esc(it.name)+'</td><td>'+esc(it.type_name||'')+'</td><td>'+esc(it.remarks||'')+'</td>'+
+        '<td title="'+esc(it.play_url)+'">'+esc(shortUrl(it.play_url))+'</td>'+
+        '<td><button class="del" onclick="delItem2(\''+esc(normalizeName(it.name))+'\')">删除</button></td></tr>';
+    }).join('') || '<tr><td colspan="5" style="color:#9AA5B1">暂无数据，先在上方导入</td></tr>';
+    el('poolTip2').textContent = arr.length>500 ? ('共 '+arr.length+' 条，仅显示前 500 条，可用搜索缩小范围') : ('共 '+arr.length+' 条');
+    el('poolCount2').textContent = '数据池 '+pool.size+' 条';
+  };
+  window.delItem2 = function(key){
+    if(pool.delete(key)){ save2(); renderPool2(); }
+  };
+  window.clearPool2 = function(){
+    if(pool.size===0) return;
+    if(!confirm('确定清空数据池全部 '+pool.size+' 条数据？')) return;
+    pool = new Map();
+    save2(); renderPool2();
+  };
+  window.genOutput2 = function(){
+    var arr = Array.from(pool.values());
+    el('output2').value = arr.length===0 ? '数据池为空' : JSON.stringify(arr, null, 2);
+  };
+  window.copyOutput2 = function(){
+    var ta = el('output2');
+    if(!ta.value){ genOutput2(); }
+    ta.select();
+    var ok = false;
+    try{ ok = document.execCommand('copy'); }catch(e){ ok = false; }
+    if(!ok && navigator.clipboard){
+      navigator.clipboard.writeText(ta.value).then(function(){ flash('impMsg2','已复制'); });
+      return;
+    }
+    flash('impMsg2', ok ? '已复制' : '复制失败，请手动 Ctrl+C');
+  };
+  window.downloadOutput2 = function(){
+    var ta = el('output2');
+    if(!ta.value){ genOutput2(); }
+    if(ta.value==='数据池为空') return;
+    var blob = new Blob([ta.value], {type:'application/json;charset=utf-8'});
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = '影视数据池.json';
+    document.body.appendChild(a);
+    a.click();
+    setTimeout(function(){ URL.revokeObjectURL(a.href); a.remove(); }, 200);
+  };
+
+  loadSrc(); load2(); loadDelay(); renderSrcList(); renderPool2();
+})();
+</script>
+</body>
+</html>
