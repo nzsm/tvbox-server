@@ -162,6 +162,33 @@ function stripJsonComments(text){
   }
   return out;
 }
+/* 删除尾逗号：, 后（跳过空白）紧跟 ] 或 } 时，该逗号为尾逗号，删除。
+ * 仅扫描字符串外部，字符串内的 ", ]" 等内容不受影响 */
+function removeTrailingCommas(text){
+  var s = String(text==null?'':text);
+  var out = '', i = 0, n = s.length, inStr = false, ch;
+  while(i < n){
+    ch = s.charAt(i);
+    if(inStr){
+      out += ch;
+      if(ch === '\\'){ if(i+1 < n){ out += s.charAt(i+1); i++; } }
+      else if(ch === '"'){ inStr = false; }
+      i++;
+      continue;
+    }
+    if(ch === '"'){ inStr = true; out += ch; i++; continue; }
+    if(ch === ','){
+      var j = i + 1;
+      while(j < n && /\s/.test(s.charAt(j))) j++;
+      if(j < n && (s.charAt(j) === ']' || s.charAt(j) === '}')){
+        i++;   // 尾逗号：删除
+        continue;
+      }
+    }
+    out += ch; i++;
+  }
+  return out;
+}
 /* 修复非法转义：\ 后跟非 JSON 合法转义字符时，去掉反斜杠保留原字符；
  * 合法转义（" \\ / b f n r t u）原样保留 */
 function fixEscapes(text){
@@ -456,11 +483,11 @@ function srcTestUrl(s){
   window.addToCfg = function(){
     var txt = el('input').value.trim();
     if(!txt){ el('impMsg').innerHTML='<span class="msg bad">请先粘贴 TVBox 配置 JSON，或选择配置文件</span>'; return; }
-    var cleaned = removeStrayText(fixEscapes(sanitizeWhitespace(stripJsonComments(txt)))).trim();
+    var cleaned = removeStrayText(fixEscapes(removeTrailingCommas(sanitizeWhitespace(stripJsonComments(txt))))).trim();
     var data;
     try{ data = JSON.parse(cleaned); }
     catch(e){
-      el('impMsg').innerHTML='<span class="msg bad">JSON 格式错误：'+esc(e.message)+'（已自动：剥离注释、清洗非法空白、修复非法转义、清除误粘入的裸文本；仍失败说明数据缺逗号/引号或结构不完整）</span>';
+      el('impMsg').innerHTML='<span class="msg bad">JSON 格式错误：'+esc(e.message)+'（已自动：剥离注释、清洗非法空白、修复非法转义、删除尾逗号、清除误粘入的裸文本；仍失败说明数据缺逗号/引号或结构不完整）</span>';
       return;
     }
     var res = resolveItems(data);
@@ -656,10 +683,10 @@ function srcTestUrl(s){
   window.doImport2 = function(){
     var txt = el('input2').value.trim();
     if(!txt){ el('impMsg2').innerHTML='<span class="msg bad">请先粘贴影视数据 JSON</span>'; return; }
-    var cleaned = removeStrayText(fixEscapes(sanitizeWhitespace(stripJsonComments(txt)))).trim();
+    var cleaned = removeStrayText(fixEscapes(removeTrailingCommas(sanitizeWhitespace(stripJsonComments(txt))))).trim();
     var arr;
     try{ arr = JSON.parse(cleaned); }catch(e){
-      el('impMsg2').innerHTML='<span class="msg bad">JSON 格式错误：'+esc(e.message)+'（已自动剥离注释/清洗空白/修复转义/清除裸文本）</span>'; return;
+      el('impMsg2').innerHTML='<span class="msg bad">JSON 格式错误：'+esc(e.message)+'（已自动剥离注释/清洗空白/修复转义/删除尾逗号/清除裸文本）</span>'; return;
     }
     var res = resolveItems(arr);
     if(res.type==='siteconfig'){
