@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8">
@@ -42,13 +42,14 @@
   <div class="tabs">
     <button class="tab on" id="tab1" onclick="switchTab(1)">影视源整合</button>
     <button class="tab" id="tab2" onclick="switchTab(2)">影视数据去重</button>
+    <button class="tab" id="tab3" onclick="switchTab(3)">网站生成源</button>
   </div>
 
   <!-- ================= Tab1 影视源整合（主功能） ================= -->
   <div id="tabpane1">
     <div class="panel">
       <h2>① 批量导入影视源（粘贴 TVBox 配置，多份累积 · 自动去重）</h2>
-      <textarea id="input" rows="7" placeholder='粘贴一份 TVBox 配置 JSON（含 sites 数组），例如：&#10;{&#10;  "spider": "./jar/demo",&#10;  "logo": "https://example.com/logo.png",&#10;  "sites": [{"key":"源1","name":"源1","type":3,"api":"csp_XBPQ"}, ...]&#10;}&#10;一份配置 = 一批影视源；顺财类配置一份就含几百个源。'></textarea>
+      <textarea id="input" rows="7" placeholder='粘贴 TVBox 配置 JSON（含 sites 数组）或直播源 m3u 列表。&#10;影视配置示例：&#10;{ "spider":"./jar/demo", "sites":[{"key":"源1","name":"源1","type":3,"api":"csp_XBPQ"}, ...] }&#10;直播源示例（自动识别并转 lives）：&#10;💝推流秒开,#genre#&#10;央视频道1,http://xxx.m3u8&#10;一份配置 = 一批源；顺财类配置一份就含几百个源。'></textarea>
       <div class="row">
         <button class="btn" onclick="document.getElementById('file').click()">选择配置文件</button>
         <input type="file" id="file" accept=".json,.txt,application/json,text/plain" style="display:none" onchange="pickFile(this)">
@@ -71,18 +72,29 @@
         <button class="btn ghost" onclick="toggleAll(true)">全选</button>
         <button class="btn ghost" onclick="toggleAll(false)">全不选</button>
         <button class="btn primary" onclick="testAllDelay()">测试全部链接延迟</button>
+        <button class="btn ghost" onclick="stopTest()">停止</button>
         <button class="btn ghost" onclick="sortByDelay()">按延迟排序</button>
         <button class="btn danger" onclick="delSelected()">删除选中</button>
       </div>
       <table>
-        <thead><tr><th style="width:4%"></th><th style="width:22%">源名</th><th style="width:7%">类型</th><th>标识 key</th><th style="width:16%">数据源（api / jar）</th><th style="width:9%">延迟</th></tr></thead>
+        <thead><tr><th style="width:4%"></th><th style="width:22%">源名</th><th style="width:6%">类型</th><th>标识 key</th><th style="width:18%">数据源（api / jar）</th><th style="width:10%">延迟</th></tr></thead>
         <tbody id="srcBody"></tbody>
       </table>
       <div class="tip" id="srcTip"></div>
     </div>
 
     <div class="panel">
-      <h2>③ 生成合并配置（勾选的源整合成一份，填进 TVBox 即用）</h2>
+      <h2>③ 直播源配置（lives）</h2>
+      <div class="tip" style="margin-bottom:8px">填你自己的直播源地址，导出时写进配置 lives。URL 可以是<b>本地相对路径</b>（如 <code>./avlive.txt</code>，文件放服务目录）或<b>绝对网址</b>（如 GitHub raw 链接）。留空则不生成该项。</div>
+      <div id="liveRows"></div>
+      <div class="row" style="margin-top:6px">
+        <button class="btn" onclick="addLiveRow()">+ 添加直播源</button>
+        <button class="btn" onclick="loadDefaultLives()">恢复默认(ALive/ALive2)</button>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2>④ 生成合并配置（勾选的源整合成一份，填进 TVBox 即用）</h2>
       <div class="row">
         <button class="btn primary" onclick="genCfgOutput()">生成合并配置</button>
         <button class="btn" onclick="copyCfgOutput()">复制</button>
@@ -90,7 +102,7 @@
         <button class="btn" onclick="downloadCfg('txt')">下载 .txt</button>
       </div>
       <textarea id="cfgOutput" rows="8" readonly placeholder="点「生成合并配置」后这里显示合并结果"></textarea>
-      <div class="tip">合并配置 = 顶层字段（spider/logo/wallpaper 等，取第一份）+ 勾选的源（sites）+ 合并的 lives/parses。保存后托管到可访问地址（GitHub / Gitee raw 链接等），把链接填进 TVBox 即可整批使用这些源。</div>
+      <div class="tip">合并配置 = 顶层字段（spider/logo/wallpaper 等，取第一份）+ 勾选的源（sites）+ 合并的 lives/parses。下载的 .txt 已自动命名为 <b>merged_config.txt</b>，直接放进自建服务目录（tvbox-server 文件夹），TVBox 配置地址填 <b>http://电脑IP:8080/tvbox.txt</b> 即可使用。</div>
     </div>
   </div>
 
@@ -131,6 +143,38 @@
       <textarea id="output2" rows="8" readonly placeholder="点「生成 JSON」显示结果"></textarea>
     </div>
   </div>
+
+  <!-- ================= Tab3 网站生成源（需配合本地服务 /api/probe） ================= -->
+  <div id="tabpane3" style="display:none">
+    <div class="panel">
+      <h2>① 输入网站 → 自动探测影视接口 → 生成 TVBox 源</h2>
+      <div class="row">
+        <input type="text" id="probeUrl" placeholder="输入影视网站网址，如 www.example.com 或 http://xxx.com" style="flex:1;min-width:220px">
+        <input type="text" id="probeSrv" value="http://127.0.0.1:8080" style="width:190px" title="本地服务地址（工具和点播服务在同一台电脑时保持默认）">
+        <button class="btn primary" onclick="probeSite()">探测并生成源</button>
+      </div>
+      <div class="msg" id="probeMsg"></div>
+      <div class="tip">
+        原理：把网址发给本地点播服务（tvbox_server.py），由它尝试常见影视接口路径（苹果CMS /api.php/provide/vod、/api/vod、/json.php 等）。
+        找到标准 JSON 接口 → 直接生成一行 TVBox 源配置；找不到 → 报告页面里发现的接口线索。<br>
+        <b>要求</b>：本地点播服务正在运行（双击「启动点播服务.bat」）。
+      </div>
+    </div>
+    <div class="panel">
+      <h2>② 探测结果</h2>
+      <table>
+        <thead><tr><th style="width:36%">路径</th><th style="width:14%">状态</th><th>类型 / 说明</th></tr></thead>
+        <tbody id="probeBody"></tbody>
+      </table>
+      <div class="msg" id="probeCfgMsg"></div>
+      <textarea id="probeCfgOut" rows="4" readonly placeholder="探测到标准接口后，这里显示生成好的源配置"></textarea>
+      <div class="row">
+        <button class="btn" onclick="copyProbeCfg()">复制源配置</button>
+        <button class="btn primary" onclick="addProbeToPool()">加入源池</button>
+        <button class="btn ghost" onclick="switchTab(1)">去源列表查看</button>
+      </div>
+    </div>
+  </div>
 </div>
 
 <script id="core">
@@ -156,7 +200,12 @@ function stripJsonComments(text){
       continue;
     }
     if(ch === '"'){ inStr = true; out += ch; i++; continue; }
-    if(ch === '/' && String(text).charAt(i+1) === '/'){ while(i < n && String(text).charAt(i) !== '\n') i++; continue; }
+    if(ch === '/' && String(text).charAt(i+1) === '/'){
+      // URL 的 // 前紧跟 :（如 https://），不当注释
+      var k = out.length - 1;
+      while(k >= 0 && /\s/.test(out.charAt(k))) k--;
+      if(k < 0 || out.charAt(k) !== ':'){ while(i < n && String(text).charAt(i) !== '\n') i++; continue; }
+    }
     if(ch === '/' && String(text).charAt(i+1) === '*'){ i += 2; while(i+1 < n && !(String(text).charAt(i)==='*' && String(text).charAt(i+1)==='/')) i++; i += 2; continue; }
     out += ch; i++;
   }
@@ -264,6 +313,18 @@ function removeStrayChars(text){
 function removeStrayText(text){
   var s = String(text==null?'':text);
   var out = '', i = 0, n = s.length, inStr = false, ch;
+  function skipStray(){
+    // i 指向 { 或 , 之后：跳过空白；若是宽松 key（字符...:）则保留，否则删除裸文本
+    while(i < n && /\s/.test(s.charAt(i))){ out += s.charAt(i); i++; }
+    if(i < n && !/["{}\[\]]/.test(s.charAt(i))){
+      var j = i;
+      while(j < n && !/["{}\[\]:]/.test(s.charAt(j))) j++;
+      if(j < n && s.charAt(j) === ':'){
+        return; // 宽松 key（key: value），保留
+      }
+      while(i < n && !/["{}\[\]]/.test(s.charAt(i))){ i++; }  // 删除裸文本
+    }
+  }
   while(i < n){
     ch = s.charAt(i);
     if(inStr){
@@ -274,19 +335,77 @@ function removeStrayText(text){
       continue;
     }
     if(ch === '"'){ inStr = true; out += ch; i++; continue; }
-    if(ch === '{'){
-      out += ch; i++;
+    if(ch === '{'){ out += ch; i++; skipStray(); continue; }
+    out += ch; i++;
+  }
+  return out;
+}
+/* 修复数组/对象元素间缺失的逗号：字符串值结束、}、]、数字之后，
+ * 若下一个非空白字符是新的值起始（" { [ - 数字 t f n），且不是 , } ] : 或文件尾，
+ * 则在该处补一个逗号。只扫描字符串外部；对合法 JSON 是无操作（不会改动任何字符）。
+ * 用于解决 "Expected ',' or ']' after array element" 这类缺逗号错误 */
+function insertMissingCommas(text){
+  var s = String(text==null?'':text);
+  var out = '', i = 0, n = s.length;
+  function nextNonWs(j){ while(j < n && /\s/.test(s.charAt(j))) j++; return j; }
+  function isValueStart(c){
+    return c==='"' || c==='{' || c==='[' || c==='-' || /[0-9]/.test(c) ||
+           c==='t' || c==='f' || c==='n';
+  }
+  function maybeComma(k){
+    var j = nextNonWs(k);
+    var nc = j < n ? s.charAt(j) : '';
+    if(nc !== '' && nc !== ',' && nc !== '}' && nc !== ']' && nc !== ':' && isValueStart(nc)){
       while(i < n && /\s/.test(s.charAt(i))){ out += s.charAt(i); i++; }
-      if(i < n && !/["{}\[\]]/.test(s.charAt(i))){
-        while(i < n && !/["{}\[\]]/.test(s.charAt(i))){ i++; }  // 删除裸文本
+      out += ',';
+    }
+  }
+  while(i < n){
+    var ch = s.charAt(i);
+    if(ch === '\\'){
+      /* 字符串外遇到反斜杠：原样保留并跳过下一字符，避免把 \" 中的引号误判为字符串边界 */
+      out += ch; if(i+1 < n){ out += s.charAt(i+1); i++; } i++;
+      continue;
+    }
+    if(ch === '"'){
+      out += ch; i++;
+      var closed = false;
+      while(i < n && !closed){
+        var c2 = s.charAt(i);
+        if(c2 === '\\'){ out += c2; if(i+1 < n){ out += s.charAt(i+1); i += 2; } else { i++; } continue; }
+        out += c2;
+        if(c2 === '"'){ closed = true; }
+        i++;
       }
+      maybeComma(i);
+      continue;
+    }
+    if(ch === '}' || ch === ']'){
+      out += ch; i++;
+      maybeComma(i);
+      continue;
+    }
+    if(ch === 't' || ch === 'f' || ch === 'n'){
+      var wlen = ch==='f' ? 5 : 4;
+      var word = s.substr(i, wlen);
+      if((ch==='t' && word==='true') || (ch==='f' && word==='false') || (ch==='n' && word==='null')){
+        out += word; i += wlen;
+        maybeComma(i);
+        continue;
+      }
+      out += ch; i++;
+      continue;
+    }
+    if(ch === '-' || /[0-9]/.test(ch)){
+      out += ch; i++;
+      while(i < n && /[0-9.eE+\-]/.test(s.charAt(i))){ out += s.charAt(i); i++; }
+      maybeComma(i);
       continue;
     }
     out += ch; i++;
   }
   return out;
 }
-/* 字段兼容：苹果CMS 用 vod_name / vod_play_url，普通数据用 name / play_url，统一为标准字段 */
 function normalizeItem(it){
   var n = {};
   n.name = (it.name!=null && String(it.name).trim()!=='') ? it.name : it.vod_name;
@@ -301,6 +420,180 @@ function normalizeItem(it){
   n.play_from = it.play_from!=null ? it.play_from : it.vod_play_from;
   return n;
 }
+/* 给未加双引号的属性名补引号（兼容 JS 风格 {key: "v"} 的宽松 JSON）：
+ * 状态机扫描，只在对象内 { 或 , 之后、: 之前的标识符补引号；
+ * 字符串内、数组元素、已加引号的 key 均不受影响 */
+function addPropertyQuotes(text){
+  var out = '', inStr = false, esc = false, stack = [], expectKey = false;
+  var i = 0, n = text.length;
+  while(i < n){
+    var ch = text[i];
+    if(inStr){
+      out += ch;
+      if(esc){ esc = false; }
+      else if(ch === '\\'){ esc = true; }
+      else if(ch === '"'){ inStr = false; }
+      i++; continue;
+    }
+    if(ch === '"'){ inStr = true; out += ch; i++; continue; }
+    if(ch === '{'){ stack.push('obj'); expectKey = true; out += ch; i++; continue; }
+    if(ch === '['){ stack.push('arr'); expectKey = false; out += ch; i++; continue; }
+    if(ch === '}' || ch === ']'){
+      if(stack.length) stack.pop();
+      expectKey = false; out += ch; i++; continue;
+    }
+    if(ch === ':'){ expectKey = false; out += ch; i++; continue; }
+    if(ch === ','){
+      expectKey = (stack.length>0 && stack[stack.length-1]==='obj');
+      out += ch; i++; continue;
+    }
+    if(expectKey){
+      if(/\s/.test(ch)){ out += ch; i++; continue; }
+      if(ch === '}' || ch === ','){ expectKey = false; out += ch; i++; continue; }
+      var keyStart = i, ok = true;
+      while(i < n){
+        var c2 = text[i];
+        if(c2 === ':' ) break;
+        if(c2 === '"'){ i++; continue; }  // 闭引号残留（key 有闭无开），跳过
+        if(c2 === '{' || c2 === '[' || c2 === '}' || c2 === ']' || c2 === ','){ ok = false; break; }
+        i++;
+      }
+      if(ok){
+        var key = text.slice(keyStart, i).trim().replace(/"/g, '');
+        if(key){ out += '"' + key + '"'; }
+      } else {
+        out += text.slice(keyStart, i);
+        expectKey = false;
+      }
+      continue;
+    }
+    out += ch; i++;
+  }
+  return out;
+}
+/* 值结束后缺逗号补全（兼容 {"a": "x" "b": "y"} / ["a" "b"] / [1 2] 等）：
+ * 字符串值/数字/布尔/对象/数组结束后，若下一个非空白是新的元素起始（"、{、[、数字、字母、中文），自动补逗号。
+ * 仅在结构栈非空（数组/对象内）时补，不碰字符串内容 */
+function addMissingValueCommas(text){
+  var out = '', inStr = false, esc = false, stack = [], expectKey = false, lastWasValue = false;
+  var i = 0, n = text.length;
+  var wasKey = false;
+  function needComma(ch){
+    if(!lastWasValue || stack.length===0) return false;
+    if(ch === ',' || ch === '}' || ch === ']') return false;
+    return ch === '"' || ch === '{' || ch === '[' || /[0-9A-Za-z_\u4e00-\u9fa5$]/.test(ch);
+  }
+  while(i < n){
+    var ch = text[i];
+    if(inStr){
+      out += ch;
+      if(esc){ esc = false; }
+      else if(ch === '\\'){ esc = true; }
+      else if(ch === '"'){ inStr = false; lastWasValue = !wasKey; }
+      i++; continue;
+    }
+    if(ch === '"'){
+      if(needComma(ch)) out += ',';
+      inStr = true; wasKey = expectKey; out += ch; i++; continue;
+    }
+    if(ch === '{'){
+      if(needComma(ch)) out += ',';
+      stack.push('obj'); expectKey = true; lastWasValue = false; out += ch; i++; continue;
+    }
+    if(ch === '['){
+      if(needComma(ch)) out += ',';
+      stack.push('arr'); expectKey = false; lastWasValue = false; out += ch; i++; continue;
+    }
+    if(ch === '}' || ch === ']'){
+      if(stack.length) stack.pop();
+      expectKey = false; lastWasValue = true; out += ch; i++; continue;
+    }
+    if(ch === ':'){ expectKey = false; lastWasValue = false; out += ch; i++; continue; }
+    if(ch === ','){
+      expectKey = (stack.length>0 && stack[stack.length-1]==='obj');
+      lastWasValue = false; out += ch; i++; continue;
+    }
+    if(/\s/.test(ch)){ out += ch; i++; continue; }
+    // 数字 / true / false / null 字面量
+    if(/[0-9-]/.test(ch) || /[A-Za-z]/.test(ch)){
+      if(needComma(ch)) out += ',';
+      var start = i;
+      if(/[0-9-]/.test(ch)){
+        while(i < n && /[0-9.eE+\-]/.test(text[i])) i++;
+      } else {
+        while(i < n && /[A-Za-z]/.test(text[i])) i++;
+      }
+      var tok = text.slice(start, i);
+      if(tok === 'true' || tok === 'false' || tok === 'null' || /^-?[0-9]/.test(tok)){
+        out += tok; lastWasValue = true;
+      } else {
+        out += tok; lastWasValue = false;
+      }
+      continue;
+    }
+    // 中文等其它字符（未加引号 key 已由 addPropertyQuotes 处理过，这里兜底）
+    if(needComma(ch)) out += ',';
+    lastWasValue = false; out += ch; i++;
+  }
+  return out;
+}
+/* 坏源自动剔除：整个配置 JSON.parse 失败时，从 sites 数组切出每个顶层 {对象}，
+ * 逐个解析，坏源跳过，好源保留。返回 {sites:[...], good:n, skipped:n} 或 null */
+function extractGoodSites(text){
+  var m = String(text).match(/"sites"\s*:/);
+  if(!m) return null;
+  var arrStart = text.indexOf('[', m.index);
+  if(arrStart < 0) return null;
+  var slice = text.slice(arrStart);
+  var objs = [], depth = 0, start = -1, inStr = false, esc = false;
+  for(var i=0;i<slice.length;i++){
+    var ch = slice[i];
+    if(inStr){
+      if(esc) esc = false;
+      else if(ch === '\\') esc = true;
+      else if(ch === '"') inStr = false;
+      continue;
+    }
+    if(ch === '"'){ inStr = true; continue; }
+    if(ch === '{'){ if(depth===0) start=i; depth++; }
+    else if(ch === '}'){
+      depth--;
+      if(depth===0 && start>=0){ objs.push(slice.slice(start, i+1)); start=-1; }
+    }
+  }
+  var good = [], skipped = 0;
+  for(var j=0;j<objs.length;j++){
+    try{ good.push(JSON.parse(objs[j])); }catch(e){ skipped++; }
+  }
+  if(good.length === 0) return null;
+  return {sites: good, good: good.length, skipped: skipped};
+}
+/* 直播源 m3u/m3u8 文本识别与转换：
+ * 格式：'分组名,#genre#' 设置当前分组；'频道名,http://...m3u8' 为频道行
+ * 识别成功返回 {lives:[...], count}，否则返回 null
+ */
+function detectLiveText(text){
+  if(!text || typeof text!=='string') return null;
+  var lines = text.split(/\r?\n/);
+  var lives = [], group = '默认', found = 0;
+  for(var i=0;i<lines.length;i++){
+    var line = lines[i].replace(/^\uFEFF/,'').trim();
+    if(!line) continue;
+    if(/,?#genre#\s*$/i.test(line)){
+      group = line.replace(/,?#genre#\s*$/i,'').trim() || '默认';
+      continue;
+    }
+    var idx = line.indexOf(',');
+    if(idx<=0) continue;
+    var name = line.slice(0,idx).trim();
+    var url = line.slice(idx+1).trim();
+    if(!name || !/^https?:\/\//i.test(url)) continue;
+    lives.push({group:group, name:name, url:url});
+    found++;
+  }
+  if(found===0) return null;
+  return {lives:lives, count:found};
+}
 /* 结构识别：数组=影视条目；{list:[...]}=苹果CMS 返回；{sites:[...]}=TVBox 站点配置 */
 function resolveItems(data){
   if(Array.isArray(data)){
@@ -309,6 +602,9 @@ function resolveItems(data){
   if(data && typeof data==='object'){
     if(Array.isArray(data.sites)){
       return {type:'siteconfig', data:data, items:[], info:{sites:data.sites.length}};
+    }
+    if(Array.isArray(data.lives)){
+      return {type:'liveconfig', data:data, items:[], info:{lives:data.lives.length}};
     }
     if(Array.isArray(data.list)){
       return {type:'vods', items:data.list, info:{count:data.list.length}};
@@ -322,11 +618,39 @@ function resolveItems(data){
 /* 合并多份 TVBox 配置：跨配置按源标识去重（同一份配置内部原样保留），
  * sites 按 key（无则 name）、lives 按 key（无则 name）、parses 按 name；
  * 顶层字段（spider/logo/wallpaper 等）取第一份非空值 */
+/* 清理魔改配置的逗号残留：key 和字符串值两端的多余逗号去掉（保留中间逗号，不误伤 "a,b" 这种） */
+function cleanCommaPollution(o){
+  if(typeof o === "string"){ return o.replace(/^,+|,+$/g, ""); }
+  if(Array.isArray(o)){ return o.map(cleanCommaPollution); }
+  if(o && typeof o === "object"){
+    var out = {};
+    Object.keys(o).forEach(function(k){
+      var nk = (typeof k === "string") ? k.replace(/^,+|,+$/g, "") : k;
+      out[nk] = cleanCommaPollution(o[k]);
+    });
+    return out;
+  }
+  return o;
+}
 function mergeConfigs(cfgs){
   var merged = {}, sites = [], lives = [], parses = [];
   var seenS = {}, seenL = {}, seenP = {};
+  var m3uExtras = [];
   for(var i=0;i<cfgs.length;i++){
     var c = cfgs[i] || {};
+    if(c._m3u){
+      // m3u 文本直播：先记下，最后追加到 lives 末尾，不抢原配置的第一位
+      m3uExtras.push({
+        name: c._m3uName || "我的直播",
+        type: 0,
+        playerType: 1,
+        url: "./live.m3u",
+        epg: "http://epg.112114.xyz/?ch={name}&date={date}",
+        logo: "https://epg.112114.xyz/logo/{name}.png",
+        timeout: 10
+      });
+      continue;
+    }
     var localS = {}, localL = {}, localP = {};
     for(var k in c){
       if(k==='sites'||k==='lives'||k==='parses') continue;
@@ -340,7 +664,7 @@ function mergeConfigs(cfgs){
       sites.push(s);
     });
     (c.lives||[]).forEach(function(l){
-      var key = (l && l.key!=null && String(l.key).trim()!=='') ? String(l.key).trim()
+      var key = (l && l.name!=null && l.url!=null) ? (String(l.name).trim()+'|'+String(l.url).trim())
              : (l && l.name!=null ? String(l.name).trim() : JSON.stringify(l));
       if(seenL[key] && !localL[key]) return;
       seenL[key] = 1; localL[key] = 1;
@@ -353,8 +677,9 @@ function mergeConfigs(cfgs){
       parses.push(p);
     });
   }
+  lives = lives.concat(m3uExtras);
   merged.sites = sites; merged.lives = lives; merged.parses = parses;
-  return merged;
+  return cleanCommaPollution(merged);
 }
 /* 把 items 并入 poolMap（Map: 归一化片名 -> 条目）
  * 返回 {added, merged, dup, invalid}
@@ -398,7 +723,8 @@ function srcKey(s){
 function srcTestUrl(s){
   if(!s) return '';
   var u = '';
-  if(s.jar && typeof s.jar==='string' && /^https?:\/\//.test(s.jar)) u = s.jar;
+  if(s.url && typeof s.url==='string' && /^https?:\/\//.test(s.url)) u = s.url;
+  else if(s.jar && typeof s.jar==='string' && /^https?:\/\//.test(s.jar)) u = s.jar;
   else if(s.api && typeof s.api==='string' && /^https?:\/\//.test(s.api)) u = s.api;
   else if(s.ext){
     if(typeof s.ext==='string' && /^https?:\/\//.test(s.ext)) u = s.ext;
@@ -406,6 +732,47 @@ function srcTestUrl(s){
   }
   if(!u && s.api && typeof s.api==='string' && s.api.indexOf('csp_')===0 && s.jar && typeof s.jar==='string' && /^https?:\/\//.test(s.jar)) u = s.jar;
   return u;
+}
+/* ============ 源分类（纯函数，便于测试） ============ */
+var GROUP_ORDER = ['影视','直播','短剧','动漫','体育','音乐','新闻','其他','未分类'];
+/* 按源名关键词自动归类 */
+function classifyName(name){
+  var n = String(name==null?'':name);
+  var rules = [
+    ['直播', /直播/],
+    ['短剧', /短剧/],
+    ['动漫', /(动漫|动画)/],
+    ['体育', /体育/],
+    ['音乐', /(音乐|MV)/],
+    ['新闻', /新闻/],
+    ['其他', /🔞|成人|福利/]
+  ];
+  for(var i=0;i<rules.length;i++){ if(rules[i][1].test(n)) return rules[i][0]; }
+  return '影视';
+}
+/* 按分组排序（组内保持原顺序）+ 可选源名前缀
+ * list: [{group,name,obj}], usePrefix: bool → sites 数组（obj 深拷贝，name 加前缀） */
+function applyGrouping(list, usePrefix){
+  var rank = {};
+  GROUP_ORDER.forEach(function(g,i){ rank[g] = i; });
+  var arr = list.slice().sort(function(a,b){
+    var ga = a.group||'', gb = b.group||'';
+    var ia = rank[ga]!=null ? rank[ga] : 99;
+    var ib = rank[gb]!=null ? rank[gb] : 99;
+    if(ia!==ib) return ia-ib;
+    return 0;   // 稳定排序：组内保持导入顺序
+  });
+  return arr.map(function(it){
+    var o = JSON.parse(JSON.stringify(it.obj||{}));
+    if(usePrefix && it.group && it.group!=='未分类' && it.group!==''){
+      o.name = '【'+it.group+'】'+(o.name!=null?o.name:'');
+    }
+    return o;
+  });
+}
+/* 从 URL 提取域名（纯函数，便于测试） */
+function extractHost(url){
+  try{ return new URL(String(url||'')).hostname; }catch(e){ return ''; }
 }
 </script>
 
@@ -432,19 +799,121 @@ function srcTestUrl(s){
   window.switchTab = function(n){
     el('tab1').className = n===1 ? 'tab on' : 'tab';
     el('tab2').className = n===2 ? 'tab on' : 'tab';
+    el('tab3').className = n===3 ? 'tab on' : 'tab';
     el('tabpane1').style.display = n===1 ? '' : 'none';
     el('tabpane2').style.display = n===2 ? '' : 'none';
+    el('tabpane3').style.display = n===3 ? '' : 'none';
+  };
+
+  /* ================= Tab3：网站生成源 ================= */
+  window.probeSite = function(){
+    var url = el('probeUrl').value.trim();
+    var srv = (el('probeSrv').value.trim() || 'http://127.0.0.1:8080').replace(/\/$/,'');
+    if(!url){ el('probeMsg').innerHTML='<span class="msg bad">请先输入网站网址</span>'; return; }
+    el('probeMsg').innerHTML = '<span class="msg ok">正在探测 <b>'+esc(url)+'</b>（尝试常见接口路径，每个超时 6 秒）…</span>';
+    el('probeBody').innerHTML = '';
+    el('probeCfgOut').value = '';
+    el('probeCfgMsg').innerHTML = '';
+    fetch(srv + '/api/probe', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({url: url})
+    })
+    .then(function(r){ return r.json(); })
+    .then(function(j){
+      if(j.code!==1){ el('probeMsg').innerHTML='<span class="msg bad">'+esc(j.msg||'探测失败')+'</span>'; return; }
+      var rows = (j.items||[]).map(function(it){
+        var st = it.status===0 ? '<span style="color:#EA6668">请求失败</span>' : '<span style="color:#2F7FA8">'+it.status+'</span>';
+        var kd = ({cms:'标准CMS接口', json_list:'JSON列表', json:'JSON', json_unparsable:'JSON无法解析', html:'网页', no_response:'无响应', unknown:'未知'}[it.kind] || it.kind);
+        return '<tr><td>'+esc(it.path)+'</td><td>'+st+'</td><td>'+kd+'</td></tr>';
+      }).join('');
+      el('probeBody').innerHTML = rows || '<tr><td colspan="3" style="color:#9AA5B1">无探测结果</td></tr>';
+      el('probeMsg').innerHTML = '<span class="msg ok">探测完成：'+esc(j.msg||'')+'</span>';
+      if(j.config){
+        el('probeCfgOut').value = j.config;
+        el('probeCfgMsg').innerHTML = '<span class="msg ok">发现标准接口，已生成源配置 ↓（复制或加入源池）</span>';
+      } else {
+        el('probeCfgMsg').innerHTML = '<span class="msg bad">'+esc(j.msg||'未发现可用接口')+'</span>';
+      }
+    })
+    .catch(function(e){
+      el('probeMsg').innerHTML='<span class="msg bad">无法连接本地服务（'+esc(srv)+'）：请确认「启动点播服务.bat」已运行且地址正确。错误：'+esc(e.message)+'</span>';
+    });
+  };
+  window.copyProbeCfg = function(){
+    var ta = el('probeCfgOut');
+    if(!ta.value){ flash('probeMsg','没有可复制的配置'); return; }
+    ta.select();
+    var ok = false;
+    try{ ok = document.execCommand('copy'); }catch(e){}
+    if(!ok && navigator.clipboard){ navigator.clipboard.writeText(ta.value).then(function(){ flash('probeMsg','源配置已复制'); }); return; }
+    flash('probeMsg','源配置已复制');
+  };
+  window.addProbeToPool = function(){
+    var cfg = el('probeCfgOut').value.trim();
+    if(!cfg){ flash('probeMsg','先探测生成源配置再加入'); return; }
+    var obj;
+    try{ obj = JSON.parse(cfg); }catch(e){ flash('probeMsg','配置不是合法 JSON'); return; }
+    el('input').value = JSON.stringify({sites:[obj]});
+    addToCfg();
+    switchTab(1);
+    flash('impMsg','已把探测到的源加入源池');
   };
 
   /* ================= Tab1：影视源整合 ================= */
   var SRC_KEY = 'tvbox_src_pool_v1';
+  var LIVE_KEY = 'tvbox_lives_v1';
   var srcList = [];     // [{id, key, name, type, api, jar, obj}]
   var sel = {};         // id -> bool（参与导出）
   var cfgPool = [];     // 原始配置数组（用于顶层字段/lives/parses）
   var nextId = 1;
   var globalSeen = {};  // 跨配置去重集合
 
-  function saveSrc(){ try{ localStorage.setItem(SRC_KEY, JSON.stringify({srcList:srcList, sel:sel, cfgPool:cfgPool})); }catch(e){} }
+  /* ---------- lives 编辑 ---------- */
+  var livesConf = [];   // [{name, url, epg, logo}]
+  try { livesConf = JSON.parse(localStorage.getItem(LIVE_KEY) || 'null') || []; } catch(e){ livesConf = []; }
+  if(livesConf.length === 0){
+    livesConf = [
+      {name:'ALive',  url:'https://raw.githubusercontent.com/nzsm/tvbox-server/main/avlive.txt',  epg:'http://epg.112114.xyz/?ch={name}&date={date}', logo:'https://epg.112114.xyz/logo/{name}.png'},
+      {name:'ALive2', url:'https://raw.githubusercontent.com/nzsm/tvbox-server/main/avlive2.txt', epg:'http://epg.112114.xyz/?ch={name}&date={date}', logo:'https://epg.112114.xyz/logo/{name}.png'}
+    ];
+  }
+  function saveLivesConf(){ try{ localStorage.setItem(LIVE_KEY, JSON.stringify(livesConf)); }catch(e){} }
+  function renderLiveRows(){
+    var box = el('liveRows');
+    if(!box) return;
+    box.innerHTML = '';
+    livesConf.forEach(function(lv, i){
+      var row = document.createElement('div');
+      row.style.cssText = 'display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-bottom:6px;';
+      row.innerHTML =
+        '<input placeholder="名称 如 ALive" value="'+(lv.name||'')+'" data-i="'+i+'" data-k="name" style="width:130px;padding:6px;border:1px solid #ddd;border-radius:6px;">' +
+        '<input placeholder="URL（./本地.txt 或 http绝对地址）" value="'+(lv.url||'')+'" data-i="'+i+'" data-k="url" style="flex:1;min-width:260px;padding:6px;border:1px solid #ddd;border-radius:6px;">' +
+        '<input placeholder="epg(可选)" value="'+(lv.epg||'')+'" data-i="'+i+'" data-k="epg" style="width:200px;padding:6px;border:1px solid #ddd;border-radius:6px;">' +
+        '<button class="btn" onclick="removeLiveRow('+i+')" style="padding:4px 10px;">删</button>';
+      box.appendChild(row);
+    });
+    box.querySelectorAll('input').forEach(function(inp){
+      inp.oninput = function(){
+        var i = +inp.dataset.i, k = inp.dataset.k;
+        livesConf[i][k] = inp.value;
+        saveLivesConf();
+      };
+    });
+  }
+  window.addLiveRow = function(){ livesConf.push({name:'',url:'',epg:'',logo:''}); saveLivesConf(); renderLiveRows(); };
+  window.removeLiveRow = function(i){ livesConf.splice(i,1); saveLivesConf(); renderLiveRows(); };
+  window.loadDefaultLives = function(){
+    livesConf = [
+      {name:'ALive',  url:'https://raw.githubusercontent.com/nzsm/tvbox-server/main/avlive.txt',  epg:'http://epg.112114.xyz/?ch={name}&date={date}', logo:'https://epg.112114.xyz/logo/{name}.png'},
+      {name:'ALive2', url:'https://raw.githubusercontent.com/nzsm/tvbox-server/main/avlive2.txt', epg:'http://epg.112114.xyz/?ch={name}&date={date}', logo:'https://epg.112114.xyz/logo/{name}.png'}
+    ];
+    saveLivesConf(); renderLiveRows();
+  };
+  renderLiveRows();
+
+  var _saveTimer = null;
+  function saveSrc(){ if(_saveTimer) clearTimeout(_saveTimer); _saveTimer = setTimeout(function(){ try{ localStorage.setItem(SRC_KEY, JSON.stringify({srcList:srcList, sel:sel, cfgPool:cfgPool})); }catch(e){} }, 200); }
   function loadSrc(){
     try{
       var raw = localStorage.getItem(SRC_KEY);
@@ -480,19 +949,54 @@ function srcTestUrl(s){
   };
 
   /* 把一份配置的源并入源池（跨配置去重） */
+  function importLiveList(livesArr, count, m3uText){
+    if(m3uText){
+      // m3u 文本：原样存，导出时单独生成 live.m3u，lives 项指向它
+      cfgPool.push({_m3u: m3uText, _m3uName: "我的直播("+count+"频道)"});
+      // 频道进源池列表（可测延迟），标记 type=live，导出时不进 sites
+      livesArr.forEach(function(lv){
+        var id = nextId++;
+        srcList.push({id:id, key:(lv.name+'|'+lv.url), name:lv.name, type:'live',
+          api:'', jar:'', group:(lv.group||'直播'), obj:{name:lv.name, url:lv.url, group:lv.group}});
+        sel[id] = true;
+      });
+    } else {
+      cfgPool.push({lives: livesArr});
+    }
+    saveSrc();
+    renderSrcList();
+    el('impMsg').innerHTML =
+      '<span class="msg ok">识别为<b>直播源</b>（m3u 列表），已收录 <b>'+count+'</b> 个频道进源池（可测延迟）→ 导出时会自动生成 <b>live.m3u</b> 文件，lives 指向它（两个文件一起放服务目录）。当前共 '+cfgPool.length+' 份配置</span>';
+  }
+
   window.addToCfg = function(){
     var txt = el('input').value.trim();
-    if(!txt){ el('impMsg').innerHTML='<span class="msg bad">请先粘贴 TVBox 配置 JSON，或选择配置文件</span>'; return; }
-    var cleaned = removeStrayText(fixEscapes(removeTrailingCommas(sanitizeWhitespace(stripJsonComments(txt))))).trim();
+    if(!txt){ el('impMsg').innerHTML='<span class="msg bad">请先粘贴 TVBox 配置 JSON 或直播源 m3u 列表，或选择配置文件</span>'; return; }
+    var cleaned = addPropertyQuotes(addMissingValueCommas(insertMissingCommas(removeStrayText(fixEscapes(removeTrailingCommas(sanitizeWhitespace(stripJsonComments(txt)))))))).trim();
     var data;
     try{ data = JSON.parse(cleaned); }
     catch(e){
-      el('impMsg').innerHTML='<span class="msg bad">JSON 格式错误：'+esc(e.message)+'（已自动：剥离注释、清洗非法空白、修复非法转义、删除尾逗号、清除误粘入的裸文本；仍失败说明数据缺逗号/引号或结构不完整）</span>';
-      return;
+      var live = detectLiveText(txt);
+      if(live){ importLiveList(live.lives, live.count, txt); return; }
+      var ext = extractGoodSites(cleaned);
+      if(ext && ext.sites.length){
+        data = {sites: ext.sites};
+        el('impMsg').innerHTML='<span class="msg ok">原配置整体解析失败，已自动剔除 <b>'+ext.skipped+'</b> 个坏源，保留 <b>'+ext.good+'</b> 个好源继续导入。</span>';
+      } else {
+        var _m = String(e.message).match(/position (\d+)/);
+        var _pos = _m ? parseInt(_m[1], 10) : 0;
+        var _ctx = cleaned.length > 160 ? cleaned.slice(Math.max(0,_pos-80), _pos+80) : cleaned;
+        el('impMsg').innerHTML='<span class="msg bad">JSON 格式错误：'+esc(e.message)+'（已自动：剥离注释、清洗非法空白、修复非法转义、删除尾逗号、清除误粘入的裸文本、补全缺失逗号、补全缺失引号；仍失败说明数据缺引号或结构不完整）<br>↓ 出错位置附近内容（复制发给助手可精准修复）：<br><b>'+esc(_ctx)+'</b></span>';
+        return;
+      }
     }
     var res = resolveItems(data);
+    if(res.type==='liveconfig'){
+      importLiveList(data.lives, res.info.lives);
+      return;
+    }
     if(res.type!=='siteconfig'){
-      el('impMsg').innerHTML='<span class="msg bad">这不是影视源配置：没有 sites 数组。请粘贴含 <b>{"sites":[...]}</b> 的 TVBox 配置（如顺财类配置）。</span>';
+      el('impMsg').innerHTML='<span class="msg bad">无法识别内容：既没有 sites 数组，也不是直播源列表。请粘贴含 <b>{"sites":[...]}</b> 的 TVBox 配置，或 m3u 直播源文本。</span>';
       return;
     }
     var before = srcList.length, skip = 0, localSeen = {};
@@ -513,29 +1017,52 @@ function srcTestUrl(s){
     renderSrcList();
   };
 
-  window.renderSrcList = function(){
+  var _renderTimer = null;
+  window.renderSrcList = function(immediate){
+    if(_renderTimer) clearTimeout(_renderTimer);
+    if(immediate){ _renderInner(); return; }
+    _renderTimer = setTimeout(_renderInner, 120);
+  };
+  function _renderInner(){
+    _renderTimer = null;
     var kw = normalizeName(el('search').value);
-    var arr = srcList.slice();
+    var arr = srcList;
     if(kw){ arr = arr.filter(function(it){ return normalizeName((it.name||'')+' '+(it.key||'')+' '+(it.type||'')).indexOf(kw)!==-1; }); }
     if(delaySort===1){
-      arr.sort(function(a,b){
+      arr = arr.slice().sort(function(a,b){
         var da = delays[a.id], db = delays[b.id];
         var va = da && da.ok ? da.ms : 1e9, vb = db && db.ok ? db.ms : 1e9;
         return va - vb;
       });
     }
     var shown = arr.slice(0, 1000);
-    el('srcBody').innerHTML = shown.map(function(it){
+    var html = shown.map(function(it){
       var d = delays[it.id];
-      var dl = d ? (d.ok ? '<span style="color:#2F7FA8">'+d.ms+'ms</span>' : (d.ms>=8000 ? '<span style="color:#EA6668">超时</span>' : '<span style="color:#EA6668">失败</span>')) : '—';
+      var dl, dg = '';
+      if(d){
+        dl = d.ok ? '<span style="color:#2F7FA8">'+d.ms+'ms</span>'
+             : (d.ms>=5000 ? '<span style="color:#EA6668">超时</span>' : '<span style="color:#EA6668">失败</span>');
+        if(!d.ok && d.doh){
+          dg = d.doh.ok
+            ? '<div style="font-size:11px;color:#B8860B">公共DNS正常('+esc(d.doh.ip)+')→网络问题</div>'
+            : '<div style="font-size:11px;color:#EA6668">公共DNS也解析不到→已失效</div>';
+        }
+      } else {
+        dl = srcTestUrl(it.obj)
+          ? '<span style="color:#9AA5B1">未测</span>'
+          : '<span style="color:#C0C8D0">无链接</span>';
+      }
       return '<tr><td><input type="checkbox" '+(sel[it.id]?'checked':'')+' onchange="toggleSel('+it.id+')"></td>'+
-        '<td>'+esc(it.name||'')+'</td><td>'+esc(it.type||'')+'</td><td>'+esc(it.key||'')+'</td>'+
-        '<td>'+esc(shortUrl(it.api||it.jar||''))+'</td><td>'+dl+'</td></tr>';
+        '<td>'+esc(it.name||'')+'</td>'+
+        '<td>'+esc(it.type||'')+'</td><td>'+esc(it.key||'')+'</td>'+
+        '<td>'+esc(shortUrl(it.api||it.jar||''))+'</td><td>'+dl+dg+'</td></tr>';
     }).join('') || '<tr><td colspan="6" style="color:#9AA5B1">源池为空：先在上方粘贴配置点「加入源池」</td></tr>';
-    var selCount = srcList.filter(function(it){ return sel[it.id]; }).length;
+    el('srcBody').innerHTML = html;
+    var selCount = 0;
+    for(var k in sel){ if(sel[k]) selCount++; }
     el('srcTip').textContent = '共 '+srcList.length+' 个源 · 勾选 '+selCount+' 个参与导出 · 已测延迟 '+Object.keys(delays).length+' 个（仅显示前 1000 个，可搜索筛选）';
     el('poolCount').textContent = '源池 '+srcList.length+' 个源';
-  };
+  }
 
   window.toggleSel = function(id){
     sel[id] = !sel[id];
@@ -570,21 +1097,48 @@ function srcTestUrl(s){
 
   /* ---------- 链接延迟测试 ---------- */
   var DELAY_KEY = 'tvbox_src_delay_v1';
-  var delays = {};     // id -> {ms, ok, url}
+  var delays = {};     // id -> {ms, ok, url, doh}
   var delaySort = 0;   // 0=原顺序 1=按延迟升序
-  function saveDelay(){ try{ localStorage.setItem(DELAY_KEY, JSON.stringify(delays)); }catch(e){} }
+  var stopFlag = false; // 测速停止标志
+  var _delaySaveTimer = null;
+  function saveDelay(){ if(_delaySaveTimer) clearTimeout(_delaySaveTimer); _delaySaveTimer = setTimeout(function(){ try{ localStorage.setItem(DELAY_KEY, JSON.stringify(delays)); }catch(e){} }, 300); }
   function loadDelay(){ try{ var raw = localStorage.getItem(DELAY_KEY); if(raw){ delays = JSON.parse(raw) || {}; } }catch(e){ delays = {}; } }
 
   function testOne(url, cb){
     var ctl = (typeof AbortController !== 'undefined') ? new AbortController() : null;
     var t0 = Date.now(), done = false, timer = null;
     function finish(ms, ok){ if(done) return; done = true; if(ctl && timer) clearTimeout(timer); cb(ms, ok); }
-    if(ctl){ timer = setTimeout(function(){ finish(8000, false); }, 8000); }
+    if(ctl){ timer = setTimeout(function(){ finish(5000, false); }, 5000); }
     try{
       fetch(url, {mode:'no-cors', cache:'no-store', signal: ctl ? ctl.signal : undefined})
         .then(function(){ finish(Date.now()-t0, true); })
         .catch(function(){ finish(Date.now()-t0, false); });
     }catch(e){ finish(0, false); }
+  }
+  /* DoH 辅助诊断：用阿里公共 DNS（加密查询，不受本地 DNS 污染影响）复查域名能否解析。
+   * 区分：域名正常但连不上 → 网络/服务器问题；域名解析不到 → 污染或已失效 */
+  function dohCheck(url, id){
+    var host = extractHost(url);
+    if(!host) return;
+    var ctl = (typeof AbortController !== 'undefined') ? new AbortController() : null;
+    var timer = setTimeout(function(){ if(ctl) ctl.abort(); }, 6000);
+    fetch('https://223.5.5.5/resolve?name='+encodeURIComponent(host)+'&type=A',
+          {signal: ctl ? ctl.signal : undefined})
+      .then(function(r){ return r.json(); })
+      .then(function(j){
+        clearTimeout(timer);
+        var ip = '';
+        if(j && j.Status===0 && Array.isArray(j.Answer)){
+          for(var i=0;i<j.Answer.length;i++){
+            if(j.Answer[i].type===1){ ip = j.Answer[i].data; break; }
+          }
+        }
+        if(!delays[id]) delays[id] = {};
+        delays[id].doh = ip ? {ok:true, ip:ip} : {ok:false};
+        saveDelay();
+        renderSrcList();
+      })
+      .catch(function(){ clearTimeout(timer); });
   }
 
   window.testAllDelay = function(){
@@ -594,16 +1148,19 @@ function srcTestUrl(s){
       if(u) targets.push({id:it.id, url:u});
     });
     if(targets.length===0){ flash('impMsg','没有可测试的链接（源缺少 api/jar/ext 的 http 地址）'); return; }
-    el('impMsg').innerHTML = '<span class="msg ok">开始测试 '+targets.length+' 个链接（并发 4 个，超时 8 秒）…</span>';
-    var done = 0, idx = 0, CONC = 4;
+    stopFlag = false;
+    el('impMsg').innerHTML = '<span class="msg ok">开始测试 '+targets.length+' 个链接（并发 16 个，超时 5 秒，最快约 '+Math.ceil(targets.length/16)+' 秒）…</span>';
+    var done = 0, idx = 0, CONC = 16;
     function next(){
-      if(idx >= targets.length) return;
+      if(idx >= targets.length){ if(done>=targets.length){ el('impMsg').innerHTML='<span class="msg ok">测速完成：'+targets.length+' 个链接已测，失败项已用公共DNS复查域名</span>'; } return; }
+      if(stopFlag) return;
       var t = targets[idx++];
       testOne(t.url, function(ms, ok){
         delays[t.id] = {ms:ms, ok:ok, url:t.url};
         done++;
         saveDelay();
-        el('impMsg').innerHTML = '<span class="msg ok">测试中… <b>'+done+' / '+targets.length+'</b>'+(idx<targets.length?'（继续）':'（完成）')+'</span>';
+        if(!ok){ dohCheck(t.url, t.id); }   // 失败/超时 → 用公共 DNS 复查域名
+        el('impMsg').innerHTML = '<span class="msg ok">测试中… <b>'+done+' / '+targets.length+'</b>'+(idx<targets.length?'（继续）':'（完成，失败项已用公共DNS复查域名）')+'</span>';
         renderSrcList();
         next();
       });
@@ -615,12 +1172,24 @@ function srcTestUrl(s){
     delaySort = delaySort===0 ? 1 : 0;
     renderSrcList();
   };
+  window.stopTest = function(){
+    stopFlag = true;
+    flash('impMsg','已停止：不再启动新的测速请求，进行中的几个完成后即停');
+  };
 
   window.genCfgOutput = function(){
     if(srcList.length===0){ el('cfgOutput').value='源池为空：先在上方加入源'; return; }
     var m = mergeConfigs(cfgPool);   // 顶层字段 + lives/parses 合并
-    m.sites = srcList.filter(function(it){ return sel[it.id]; }).map(function(it){ return it.obj; });
-    if(m.sites.length===0){ el('cfgOutput').value='请至少勾选一个源再生成'; return; }
+    var list = srcList.filter(function(it){ return sel[it.id] && it.type !== 'live'; });
+    if(list.length===0 && (!m.sites || m.sites.length===0)){ el('cfgOutput').value='请至少勾选一个影视源再生成（直播频道不进 sites，在 lives 里）'; return; }
+    m.sites = list.map(function(it){ return it.obj; });
+    // lives 用用户在③里填的，不用 cfgPool 合并的
+    m.lives = livesConf.filter(function(lv){ return lv.name && lv.url; }).map(function(lv){
+      var o = { name: lv.name, type: 0, playerType: 1, url: lv.url, timeout: 10 };
+      if(lv.epg) o.epg = lv.epg;
+      if(lv.logo) o.logo = lv.logo;
+      return o;
+    });
     el('cfgOutput').value = JSON.stringify(m, null, 2);
   };
   window.copyCfgOutput = function(){
@@ -643,10 +1212,22 @@ function srcTestUrl(s){
     var blob = new Blob([ta.value], {type:'application/json;charset=utf-8'});
     var a = document.createElement('a');
     a.href = URL.createObjectURL(blob);
-    a.download = kind==='txt' ? '合并配置.txt' : '合并配置.json';
+    a.download = kind==='txt' ? 'merged_config.txt' : 'merged_config.json';
     document.body.appendChild(a);
     a.click();
     setTimeout(function(){ URL.revokeObjectURL(a.href); a.remove(); }, 200);
+    // 若含 m3u 直播源，同时下载 live.m3u（和 merged_config 一起放服务目录）
+    var m3uParts = [];
+    cfgPool.forEach(function(c){ if(c._m3u) m3uParts.push(c._m3u); });
+    if(m3uParts.length){
+      var b2 = new Blob([m3uParts.join('\n')], {type:'audio/x-mpegurl;charset=utf-8'});
+      var a2 = document.createElement('a');
+      a2.href = URL.createObjectURL(b2);
+      a2.download = 'live.m3u';
+      document.body.appendChild(a2);
+      setTimeout(function(){ a2.click(); setTimeout(function(){ URL.revokeObjectURL(a2.href); a2.remove(); }, 300); }, 400);
+      flash('impMsg', '已同时下载 merged_config.txt 和 live.m3u，两个文件一起放进 tvbox-server 目录');
+    }
   };
 
   /* ================= Tab2：影视数据去重 ================= */
@@ -683,10 +1264,10 @@ function srcTestUrl(s){
   window.doImport2 = function(){
     var txt = el('input2').value.trim();
     if(!txt){ el('impMsg2').innerHTML='<span class="msg bad">请先粘贴影视数据 JSON</span>'; return; }
-    var cleaned = removeStrayText(fixEscapes(removeTrailingCommas(sanitizeWhitespace(stripJsonComments(txt))))).trim();
+    var cleaned = addPropertyQuotes(addMissingValueCommas(insertMissingCommas(removeStrayText(fixEscapes(removeTrailingCommas(sanitizeWhitespace(stripJsonComments(txt)))))))).trim();
     var arr;
     try{ arr = JSON.parse(cleaned); }catch(e){
-      el('impMsg2').innerHTML='<span class="msg bad">JSON 格式错误：'+esc(e.message)+'（已自动剥离注释/清洗空白/修复转义/删除尾逗号/清除裸文本）</span>'; return;
+      el('impMsg2').innerHTML='<span class="msg bad">JSON 格式错误：'+esc(e.message)+'（已自动剥离注释/清洗空白/修复转义/删除尾逗号/清除裸文本/补全缺失逗号）</span>'; return;
     }
     var res = resolveItems(arr);
     if(res.type==='siteconfig'){

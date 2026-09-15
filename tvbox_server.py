@@ -28,6 +28,7 @@
 """
 
 import json
+import os
 import socket
 import threading
 import time
@@ -721,13 +722,22 @@ class Handler(BaseHTTPRequestHandler):
             self._admin_get(path, parsed)
         elif path == "/":
             self._text(200, "TVBox 点播接口运行中\n配置订阅: /config.json\n管理页  : /admin")
+        elif path == "/tvbox.txt":
+            self._serve_merged_config()
+        elif path in ("/live.m3u", "/live.txt"):
+            self._serve_static(path.lstrip("/"))
+        elif path.startswith("/jar/"):
+            self._serve_jar(path[len("/jar/"):])
         else:
             self._text(404, "Not Found")
 
     def do_POST(self):
         self._bump()
         parsed = urllib.parse.urlparse(self.path)
-        if parsed.path == "/admin/api/sources":
+        if parsed.path == "/api/probe":
+            body = self._read_json()
+            self._json(probe_site(body.get("url", "")))
+        elif parsed.path == "/admin/api/sources":
             body = self._read_json()
             ok = self.multi.set_enabled(body.get("id", ""), bool(body.get("enabled", False)))
             self._json({"code": 1 if ok else 0, "msg": "已更新" if ok else "源不存在"})
@@ -752,6 +762,14 @@ class Handler(BaseHTTPRequestHandler):
             self._json({"code": 1, "msg": "已添加", "vod_id": v.vod_id})
         else:
             self._text(404, "Not Found")
+
+    def do_OPTIONS(self):
+        self.send_response(204)
+        self.send_header("Access-Control-Allow-Origin", "*")
+        self.send_header("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
+        self.send_header("Access-Control-Allow-Headers", "Content-Type")
+        self.send_header("Access-Control-Max-Age", "86400")
+        self.end_headers()
 
     def do_DELETE(self):
         self._bump()
@@ -832,6 +850,60 @@ class Handler(BaseHTTPRequestHandler):
         self.end_headers()
         self.wfile.write(body)
 
+    def _serve_merged_config(self):
+        """托管用户整合的配置：优先 merged_config.txt，其次 merged_config.json"""
+        base = os.path.dirname(os.path.abspath(__file__))
+        for name in ("merged_config.txt", "merged_config.json"):
+            p = os.path.join(base, name)
+            if os.path.isfile(p):
+                with open(p, "rb") as f:
+                    body = f.read()
+                self.send_response(200)
+                self.send_header("Content-Type", "text/plain; charset=utf-8")
+                self.send_header("Content-Length", str(len(body)))
+                self.send_header("Access-Control-Allow-Origin", "*")
+                self.end_headers()
+                self.wfile.write(body)
+                return
+        self._text(404,
+                   "未找到合并配置。请把影视源整合工具导出的配置文件命名为 "
+                   "merged_config.txt（或 merged_config.json）放到服务目录，然后重启服务。")
+
+    def _serve_static(self, name: str):
+        """托管服务目录下的静态文本文件（live.m3u 等）"""
+        base = os.path.dirname(os.path.abspath(__file__))
+        p = os.path.join(base, name)
+        if not os.path.isfile(p):
+            self._text(404, f"{name} 不存在，请把工具导出的 {name} 放到服务目录")
+            return
+        with open(p, "rb") as f:
+            body = f.read()
+        self.send_response(200)
+        self.send_header("Content-Type", "audio/x-mpegurl; charset=utf-8")
+        self.send_header("Content-Length", str(len(body)))
+        self.send_header("Access-Control-Allow-Origin", "*")
+        self.end_headers()
+        self.wfile.write(body)
+
+    def _serve_jar(self, name: str):
+        """托管 jar 目录下的静态文件，供配置中 ./jar/xxx 相对引用使用"""
+        if "/" in name or ".." in name or "\\" in name:
+            self._text(403, "Forbidden")
+            return
+        base = os.path.join(os.path.dirname(os.path.abspath(__file__)), "jar")
+        p = os.path.join(base, name)
+        if os.path.isfile(p):
+            with open(p, "rb") as f:
+                body = f.read()
+            self.send_response(200)
+            self.send_header("Content-Type", "application/octet-stream")
+            self.send_header("Content-Length", str(len(body)))
+            self.send_header("Access-Control-Allow-Origin", "*")
+            self.end_headers()
+            self.wfile.write(body)
+            return
+        self._text(404, f"jar/{name} 不存在，请把该文件放到服务目录的 jar/ 子目录")
+
     def log_message(self, fmt, *args):
         print(f"[{self.log_date_time_string()}] {fmt % args}")
 
@@ -845,6 +917,102 @@ def get_lan_ip() -> str:
         return ip
     except Exception:
         return "127.0.0.1"
+
+
+# ============ 网站 → TVBox 源 探测 ============
+PROBE_PATHS = [
+    "/api.php/provide/vod/?ac=videolist",
+    "/api.php/provide/vod/",
+    "/api/vod",
+    "/index.php/api/vod",
+    "/json.php",
+    "/",
+]
+PROBE_UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36"
+
+
+def _http_get(url: str, timeout: int = 6) -> Optional[Tuple[int, str, str]]:
+    """返回 (status, content_type, body)；失败返回 None"""
+    try:
+        req = urllib.request.Request(url, headers={
+            "User-Agent": PROBE_UA,
+            "Accept": "application/json,text/html,application/xhtml+xml,*/*",
+        })
+        with urllib.request.urlopen(req, timeout=timeout) as r:
+            body = r.read(300000).decode("utf-8", "ignore")
+            return r.status, r.headers.get("Content-Type", ""), body
+    except Exception:
+        return None
+
+
+def probe_site(raw_url: str) -> dict:
+    """探测一个网站是否有可用的影视接口，有则生成 TVBox 源配置"""
+    u = (raw_url or "").strip()
+    if not u:
+        return {"code": 0, "msg": "请输入网址"}
+    if not u.startswith(("http://", "https://")):
+        u = "https://" + u
+    try:
+        pu = urllib.parse.urlparse(u)
+        base = f"{pu.scheme}://{pu.netloc}"
+    except Exception:
+        return {"code": 0, "msg": "网址格式不正确，请填写类似 www.example.com 或 http://xxx.com"}
+    if pu.path not in ("", "/"):
+        base = f"{pu.scheme}://{pu.netloc}{pu.path.rstrip('/')}"
+
+    items, cms_api, html_hints = [], None, []
+    for path in PROBE_PATHS:
+        url = base + path
+        got = _http_get(url)
+        if got is None:
+            items.append({"path": path, "status": 0, "kind": "no_response"})
+            continue
+        status, ct, body = got
+        kind = "unknown"
+        if "json" in ct or body.lstrip().startswith("{"):
+            try:
+                j = json.loads(body)
+                if isinstance(j, dict) and "code" in j and "page" in j and "list" in j:
+                    kind = "cms"
+                    cms_api = url.split("?")[0] + "/"
+                elif isinstance(j, list) or (isinstance(j, dict) and "list" in j):
+                    kind = "json_list"
+                else:
+                    kind = "json"
+            except Exception:
+                kind = "json_unparsable"
+        elif body.lstrip().startswith("<") or "html" in ct:
+            kind = "html"
+            for pat in (
+                r'["\']([^"\']*api\.php/provide/vod[^"\']*)["\']',
+                r'["\']([^"\']*/api/vod[^"\']*)["\']',
+                r'["\']([^"\']*json\.php[^"\']*)["\']',
+                r'["\']([^"\']*index\.php/api/vod[^"\']*)["\']',
+            ):
+                import re
+                m = re.search(pat, body)
+                if m:
+                    hint = m.group(1)
+                    if hint not in html_hints:
+                        html_hints.append(hint)
+        items.append({"path": path, "status": status, "kind": kind})
+
+    result = {"code": 1, "base": base, "items": items, "html_hints": html_hints[:6]}
+    if cms_api:
+        key = "probe-" + pu.netloc.split(":")[0]
+        name = pu.netloc
+        cfg = {
+            "key": key, "name": name, "type": 0, "api": cms_api,
+            "searchable": 1, "quickSearch": 0, "filterable": 1,
+        }
+        result["cms_api"] = cms_api
+        result["config"] = json.dumps(cfg, ensure_ascii=False)
+        result["msg"] = "发现标准接口，已生成 TVBox 源配置"
+    elif html_hints:
+        result["msg"] = "未发现标准 JSON 接口，但在页面中找到接口线索：\n" + "\n".join(html_hints[:6])
+    else:
+        result["msg"] = "未发现可用接口（网站可能需要登录、或接口地址特殊，或并非影视站）"
+    return result
 
 
 def main():
