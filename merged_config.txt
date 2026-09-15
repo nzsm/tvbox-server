@@ -479,7 +479,7 @@
   "sites": [
     {
       "key": "高清xxxx黑料-公子",
-      "name": "👇长按主页刷新资源•首次加载较慢•推荐电信网络",
+      "name": "【影视】👇长按主页刷新资源•首次加载较慢•推荐电信网络",
       "type": 3,
       "api": "csp_XBPQ",
       "searchable": 1,
@@ -502,186 +502,20 @@
       }
     },
     {
-      "key": "drpy_js_色色-公子",
-      "name": "🔞ss直播",
-      "type": 3,
-      "playerType": 1,
-      "api": "./js/drpy2.min.js",
-      "ext": "./mov/js/ss直播.js"
-    },
-    {
-      "key": "hipy_js_36直播[密]",
-      "name": "🔞36直播",
-      "type": 3,
-      "api": "./js/drpy2.min.js",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "order_num": 0,
-      "ext": "./mov/js/36直播[密].js"
-    },
-    {
-      "key": "155-公子-高天流云9918",
-      "name": "🔞155",
-      "type": 1,
-      "api": "https://155api.com/api.php/provide/vod/",
-      "searchable": 1,
-      "changeable": 1
-    },
-    {
-      "key": "iKun",
-      "name": "🔞iKun",
-      "type": 1,
-      "api": "https://www.ikunzy.cc/api.php/provide/vod/",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "categories": [
-        "里番动漫",
-        "伦理片"
-      ]
-    },
-    {
-      "key": "JKun",
-      "name": "🔞jKun",
-      "type": 1,
-      "api": "https://jkunzyapi.com/api.php/provide/vod",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 0
-    },
-    {
-      "key": "91麻豆.me",
-      "name": "🔞麻豆",
-      "type": 1,
-      "style": {
-        "type": "rect",
-        "ratio": 1.485
-      },
-      "api": "http://91md.me/api.php/provide/vod/",
-      "searchable": 1
-    },
-    {
-      "key": "性南国-高天流云9918",
-      "name": "🔞南国",
-      "type": 1,
-      "api": "https://api.sexnguon.com/api.php/provide/vod/",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1
-    },
-    {
-      "key": "XMVideo-公子",
-      "name": "🔞熊猫",
-      "type": 3,
-      "api": "csp_XMVideo",
-      "searchable": 1,
-      "filterable": 1,
-      "jar": "./jar/182.jar"
-    },
-    {
-      "key": "红桃-公子",
-      "name": "🔞红桃",
-      "type": 1,
-      "api": "https://apidanaizi.com/api.php/provide/vod/",
-      "searchable": 1,
-      "changeable": 1
-    },
-    {
-      "key": "苹果小电影",
-      "name": "🔞苹果",
-      "type": 0,
-      "api": "https://www.pgxdy.com/api/xml.php",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1
-    },
-    {
-      "key": "laosebizy.com-高天流云9918",
-      "name": "🔞老色比",
-      "type": 1,
-      "api": "https://apilsbzy1.com/api.php/provide/vod/",
-      "searchable": 1,
-      "filterable": 1
-    },
-    {
-      "key": "naixxzy.com-高天流云9918",
-      "name": "🔞香奶奶",
-      "type": 1,
-      "api": "https://naixxzy.com/api.php/provide/vod/?ac=list",
-      "searchable": 1,
-      "filterable": 1
-    },
-    {
-      "key": "老色胚资源",
-      "name": "🔞老色胚",
-      "type": 0,
-      "api": "https://www.gdlsp.com/api/xml.php",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1
-    },
-    {
-      "key": "kxgav",
-      "name": "🔞开心果",
-      "type": 0,
-      "api": "https://www.kxgav.com/api/xml.php"
-    },
-    {
-      "key": "xrbsp.com",
-      "name": "🔞小日本",
-      "type": 0,
-      "api": "https://www.xrbsp.com/api/xml.php",
-      "quickSearch": 1,
-      "searchable": 1,
-      "filterable": 1
-    },
-    {
-      "key": "msnii.com",
-      "name": "🔞美少女",
-      "type": 0,
-      "style": {
-        "type": "rect",
-        "ratio": 1.485
-      },
-      "api": "https://www.msnii.com/api/xml.php",
-      "searchable": 1
-    },
-    {
-      "key": "火车36小时-公子",
-      "name": "🔞火车36",
-      "type": 3,
-      "api": "csp_XBPQ",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "ext": {
-        "发布页": "https://6m8.36huo165che.xyz/",
-        "主页url": "https://uk.36,huo271,che.xyz/topic/",
-        ",数组": ",class=\"lazy\"&&</div></div>",
-        "图片": "data-original=\"&&\"",
-        "标题": "_blank\">&&</a>",
-        "链接": "https://uk.36huo271che.xyz/vodplay/+href=\"/voddetail/&&.html\"+-1-1.html",
-        "跳转播放链接": "urlDecode(var player*url\":\"&&\")",
-        "搜索url": "https://uk.36huo271che.xyz/vodsearch/{wd},----------,{pg},---.html",
-        "分类二次截取": "<div class=\"nav\">&&</div>",
-        "分类url": "https://uk.36huo271che.xyz/vodtype/{cateId},-,{catePg}.html[https://uk.36huo271che.xyz/vodtype/{cateId}.html];;z",
-        "分类": "国产视频$6#中文字幕$7#国产传媒$8#日本有码$9#日本无码$10#欧美无码$11#强奸乱伦$12#制服诱惑$20#直播主播$21#糖心Vlog$22#激情动漫$23#抖阴视频$63#女优明星$24#网-曝-门$25#伦理三级$26#AV解说$30#SM调教$31#萝莉少女$37#极品媚黑$32#女同性恋$33,"
-      }
-    },
-    {
       "key": "黄色仓库-cc",
       ",name": "🔞黄色仓库&1,",
       ",type": 3,
       "api": "csp_XBPQ",
-      "ext": "./mov/json/黄色仓库cc.json"
+      "ext": "./mov/json/黄色仓库cc.json",
+      "name": "【影视】"
     },
     {
       "key": "黄色仓库-xyz",
       ",name": "🔞黄色仓库&2,",
       ",type": 3,
       "api": "csp_XBPQ",
-      "ext": "./mov/json/黄色仓库xyz.json"
+      "ext": "./mov/json/黄色仓库xyz.json",
+      "name": "【影视】"
     },
     {
       "key": "乱伦群视频-公子",
@@ -708,7 +542,8 @@
         "分类标题": ">&&</a[不包含:更多],",
         "分类ID": "/llq/index.php/vod/*/id/&&.html",
         "分类url": "https://web.llq4.xyz/llq/index.php/vod/type/id/{cateId}/page/{catePg}.html;;z"
-      }
+      },
+      "name": "【影视】"
     },
     {
       "key": "手鸡助手-公子",
@@ -722,7 +557,8 @@
         "分类": "日韩有码$480#日韩无码$481#中文字幕$483#AV解说$485#欧美情色$482#国产情色$479#网红主播$484#卡通动漫$1505,",
         "播放标题": "<h1&&</h1>",
         "搜索url": "https://mcpg.sjzs199p.buzz/?mod=videos&wd={wd},"
-      }
+      },
+      "name": "【影视】"
     },
     {
       "key": "hipy_js_采集之王[合],2,",
@@ -733,7 +569,8 @@
       "quickSearch": 1,
       ",filterable": 1,
       "order_num": 2,
-      "ext": "./mov/js/采集之王[合].js?type=url&params=./mov/json/采集[密]静态.json"
+      "ext": "./mov/js/采集之王[合].js?type=url&params=./mov/json/采集[密]静态.json",
+      "name": "【影视】"
     },
     {
       "key": "乐播资源",
@@ -742,7 +579,8 @@
       "api": "https://lbapi9.com/api.php/provide/vod/",
       "searchable": 1,
       "quickSearch": 1,
-      ",filterable": 1
+      ",filterable": 1,
+      "name": "【影视】"
     },
     {
       "key": "富二代-公子",
@@ -751,7 +589,8 @@
       "api": "http://f2dcj6.com/sapi?ac=list",
       "searchable": 1,
       "quickSearch": 1,
-      ",filterable": 0
+      ",filterable": 0,
+      "name": "【影视】"
     },
     {
       "key": "奥斯卡资源网-高天流云9918,",
@@ -760,7 +599,8 @@
       "api": "https://aosikazy.com/api.php/provide/vod/",
       "searchable": 1,
       "quickSearch": 1,
-      ",filterable": 1
+      ",filterable": 1,
+      "name": "【影视】"
     },
     {
       "key": "api.11bat.com",
@@ -776,7 +616,8 @@
       "header": {
         "Accept": ",text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7,",
         "User-Agent": "Mozilla/5.0(WindowsNT10.0;Win64;x64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/117.0.0.0Safari/537.36,"
-      }
+      },
+      "name": "【影视】"
     },
     {
       "key": "hipy_js_小女18,[密],-道长",
@@ -787,7 +628,8 @@
       "quickSearch": 1,
       ",filterable": 1,
       "order_num": 0,
-      "ext": "./mov/js/小女18,[密].js"
+      "ext": "./mov/js/小女18,[密].js",
+      "name": "【影视】"
     },
     {
       "key": "hipy_js_R18撸[密],-道长",
@@ -798,7 +640,8 @@
       "quickSearch": 1,
       ",filterable": 1,
       "order_num": 0,
-      "ext": "./mov/js/R18撸[密].js"
+      "ext": "./mov/js/R18撸[密].js",
+      "name": "【影视】"
     },
     {
       "key": ",00色猫资源",
@@ -807,7 +650,8 @@
       "api": "https://api.maozyapi.com/inc/apijson_vod.php",
       "playUrl": "https://api.maozyapi.com/m3u8/?url=",
       "searchable": 1,
-      "quickSearch": 1
+      "quickSearch": 1,
+      "name": "【影视】"
     },
     {
       "key": "didizy.com-高天流云9918,",
@@ -815,7 +659,8 @@
       ",type": 1,
       "api": "https://api.ddapi.cc/api.php/provide/vod/?ac=list",
       "searchable": 1,
-      ",filterable": 1
+      ",filterable": 1,
+      "name": "【影视】"
     },
     {
       "key": "senlinzy2.com",
@@ -823,7 +668,8 @@
       ",type": 1,
       "api": "http://senlinzy2.com/api.php/provide/vod/?ac=list",
       "searchable": 1,
-      ",filterable": 1
+      ",filterable": 1,
+      "name": "【影视】"
     },
     {
       "key": "大地av",
@@ -833,7 +679,8 @@
       "playUrl": "https://play.dadiapi.com/watch?url=",
       "searchable": 1,
       "quickSearch": 1,
-      ",filterable": 0
+      ",filterable": 0,
+      "name": "【影视】"
     },
     {
       "key": "hipy_js_乐草TV[密],-道长",
@@ -844,7 +691,8 @@
       "quickSearch": 1,
       ",filterable": 1,
       "order_num": 0,
-      "ext": "./mov/js/乐草TV[密].js"
+      "ext": "./mov/js/乐草TV[密].js",
+      "name": "【影视】"
     },
     {
       "key": "番号",
@@ -855,7 +703,8 @@
         "ratio": 1.485
       },
       "api": "http://fhapi9.com/api.php/provide/vod/",
-      "searchable": 1
+      "searchable": 1,
+      "name": "【影视】"
     },
     {
       "key": "yyb-公子",
@@ -878,7 +727,8 @@
         "分类url": "https://lifeow.yyb4.motorcycles/vodtype/{cateId}/{catePg}.html",
         "分类": "偷拍自拍&强奸乱伦&人妻熟女&制服情景&国产情色&亚洲精品&卡通动漫&欧美性爱&精品三级",
         "分类值": ",20&21&22&23&24&25&26&27&28,"
-      }
+      },
+      "name": "【影视】"
     },
     {
       "key": "芊芊视频🔞-公子",
@@ -911,7 +761,8 @@
         "搜索url": "https://m.xianxian176.com/search.asp?page={pg}&searchword={wd}&searchtype=-1,",
         "分类url": "https://m.xianxian176.com/L/{cateId}_{catePg}.html[https://m.xianxian176.com/L/{cateId}.html],",
         "分类": "视频一$26#视频二$22#视频三$23#视频四$32#视频五$36#视频六$37#字幕一$27#字幕二$28#骑兵一$17#骑兵二$33#步兵区$24#欧美区$29#主播一$31#主播二$34#H动漫$25#水果派$35#原创一$30#原创二$38,"
-      }
+      },
+      "name": "【影视】"
     },
     {
       "key": "yybf-公子",
@@ -934,21 +785,24 @@
         "分类url": "https://icl.yybf2.lat/cn/home/web/index.php/vod/type/id/{cateId}/page/{catePg}.html",
         "分类": "绝美少女&激情口交&亚洲日韩&人妖激情&重咸口味&国产专区&日韩专区&欧美专区&卡通动漫&三级伦理",
         "分类值": ",20&21&22&23&24&25&26&27&28&29,"
-      }
+      },
+      "name": "【影视】"
     },
     {
       "key": "直转点-公子",
       ",name": "🔞AV直转点",
       ",type": 3,
       "api": "./js/直转点.js",
-      "ext": "./mov/json/直转点.txt"
+      "ext": "./mov/json/直转点.txt",
+      "name": "【影视】"
     },
     {
       "key": "福利直播-公子",
       ",name": "🔞福利直播",
       ",type": 3,
       "api": "./js/直转点.js",
-      "ext": "./mov/json/lf_live1.,txt"
+      "ext": "./mov/json/lf_live1.,txt",
+      "name": "【影视】"
     },
     {
       "key": "大地",
@@ -959,7 +813,8 @@
         "ratio": 1.485
       },
       "api": "http://dadiapi.com/api.php",
-      "searchable": 1
+      "searchable": 1,
+      "name": "【影视】"
     },
     {
       "key": "我爱AV",
@@ -969,7 +824,8 @@
       "searchable": 1,
       "quickSearch": 1,
       ",filterable": 1,
-      "ext": "./mov/json/我爱AV.json"
+      "ext": "./mov/json/我爱AV.json",
+      "name": "【影视】"
     },
     {
       "key": "老鸭-高天流云9918,",
@@ -978,7 +834,8 @@
       "api": "https://api.apilyzy.com/api.php/provide/vod/",
       "searchable": 1,
       "quickSearch": 1,
-      ",filterable": 1
+      ",filterable": 1,
+      "name": "【影视】"
     },
     {
       "key": ",tantanzy.com-高天流云9918,",
@@ -986,7 +843,8 @@
       ",type": 1,
       "api": "https://apittzy.com/api.php/provide/vod/?ac=list",
       "searchable": 1,
-      ",filterable": 1
+      ",filterable": 1,
+      "name": "【影视】"
     },
     {
       "key": "senlinzy.com-高天流云9918,",
@@ -994,7 +852,8 @@
       ",type": 1,
       "api": "https://slapibf.com/api.php/provide/vod/?ac=list",
       "searchable": 1,
-      ",filterable": 1
+      ",filterable": 1,
+      "name": "【影视】"
     },
     {
       "key": "jingpinx.com-高天流云9918,",
@@ -1002,7 +861,8 @@
       ",type": 1,
       "api": "https://www.jingpinx.com//api.php/provide/vod/?ac=list",
       "searchable": 1,
-      ",filterable": 1
+      ",filterable": 1,
+      "name": "【影视】"
     },
     {
       "key": "乐播资源-高天流云9918,",
@@ -1011,7 +871,8 @@
       "api": "https://lbapi9.com/api.php/provide/vod/",
       "searchable": 1,
       "quickSearch": 1,
-      ",filterable": 1
+      ",filterable": 1,
+      "name": "【影视】"
     },
     {
       "key": "喇叭",
@@ -1022,7 +883,8 @@
         "ratio": 1.485
       },
       "api": "http://lbapiby.com/api.php/provide/vod/at/xml",
-      "searchable": 1
+      "searchable": 1,
+      "name": "【影视】"
     },
     {
       "key": "www.caoliuzyw.com-高天流云9918,",
@@ -1031,7 +893,8 @@
       "api": "https://www.caoliuzyw.com/api.php/provide/vod/?ac=list",
       "playurl": "https://jx.caoliuzywcdnjx.com:188/m3u8.php?url=",
       "searchable": 1,
-      ",filterable": 1
+      ",filterable": 1,
+      "name": "【影视】"
     },
     {
       "key": "vnzyz.com-高天流云9918,",
@@ -1040,7 +903,8 @@
       "api": "https://vnzyz.com/api.php/provide/vod/?ac=list",
       "playurl": "http://www.vnzyz.com",
       "searchable": 1,
-      ",filterable": 1
+      ",filterable": 1,
+      "name": "【影视】"
     },
     {
       "key": "semaozy.com-高天流云9918,",
@@ -1049,7 +913,8 @@
       "api": "https://caiji.semaozy.net/inc/apijson_vod.php",
       "playurl": "https://jiexi.semaozy.cc/m3u8/?url=",
       "searchable": 1,
-      ",filterable": 1
+      ",filterable": 1,
+      "name": "【影视】"
     },
     {
       "key": "sesehuzy.com-高天流云9918,",
@@ -1057,7 +922,8 @@
       ",type": 1,
       "api": "https://apisesehuzy.com/api.php/provide/vod/?ac=list",
       "searchable": 1,
-      ",filterable": 1
+      ",filterable": 1,
+      "name": "【影视】"
     },
     {
       "key": "gqzy.me-高天流云9918,",
@@ -1066,7 +932,8 @@
       "api": "https://caiji.gqjiexi.com/api.php/provide/vod/",
       "playurl": "https://jiexi.gqjiexi.com/?url=",
       "searchable": 1,
-      ",filterable": 1
+      ",filterable": 1,
+      "name": "【影视】"
     },
     {
       "key": ",timizy.cc-高天流云9918,",
@@ -1075,7 +942,8 @@
       "api": "https://tianmiapi.com/api.php/provide/vod/?ac=list",
       "playurl": "https://tianmijx.com/m3u8.php?url=",
       "searchable": 1,
-      ",filterable": 1
+      ",filterable": 1,
+      "name": "【影视】"
     },
     {
       "key": "lyhzyw.com-高天流云9918,",
@@ -1083,7 +951,8 @@
       ",type": 1,
       "api": "https://api.lyhapi.com/api.php/provide/vod/?ac=list",
       "searchable": 1,
-      ",filterable": 1
+      ",filterable": 1,
+      "name": "【影视】"
     },
     {
       "key": "kuaiavzy.com-高天流云9918,",
@@ -1091,7 +960,8 @@
       ",type": 1,
       "api": "https://kuaiavzy.com/api.php/provide/vod/?ac=list",
       "searchable": 1,
-      ",filterable": 1
+      ",filterable": 1,
+      "name": "【影视】"
     },
     {
       "key": "lltv_360采集-夜猫",
@@ -1101,7 +971,8 @@
       "playurl": "json:https://www.360jiexi.com/player/?url=",
       "categories": [
         "伦理片"
-      ]
+      ],
+      "name": "【影视】"
     },
     {
       "key": "CK资源-伦理",
@@ -1113,7 +984,8 @@
       ",filterable": 1,
       "categories": [
         "伦理片"
-      ]
+      ],
+      "name": "【影视】"
     },
     {
       "key": "KKzy",
@@ -1121,7 +993,8 @@
       ",type": 1,
       "api": "https://kkzy.me/api.php/provide/vod/",
       "searchable": 1,
-      "quickSearch": 1
+      "quickSearch": 1,
+      "name": "【影视】"
     },
     {
       "key": "csp_xml___百度资源",
@@ -1133,7 +1006,8 @@
       ",filterable": 1,
       "categories": [
         "伦理片"
-      ]
+      ],
+      "name": "【影视】"
     },
     {
       "key": "暴风资源",
@@ -1145,7 +1019,8 @@
       ",filterable": 1,
       "categories": [
         "理论片"
-      ]
+      ],
+      "name": "【影视】"
     },
     {
       "key": "csp_非凡资源",
@@ -1157,7 +1032,8 @@
       ",filterable": 1,
       "categories": [
         "伦理片"
-      ]
+      ],
+      "name": "【影视】"
     },
     {
       "key": "光速资源",
@@ -1170,7 +1046,8 @@
       ",filterable": 1,
       "categories": [
         "伦理片"
-      ]
+      ],
+      "name": "【影视】"
     },
     {
       "key": "虎牙",
@@ -1183,7 +1060,8 @@
       ",filterable": 1,
       "categories": [
         "伦理片"
-      ]
+      ],
+      "name": "【影视】"
     },
     {
       "key": "豪华资源",
@@ -1196,7 +1074,8 @@
       ",filterable": 1,
       "categories": [
         "伦理片"
-      ]
+      ],
+      "name": "【影视】"
     },
     {
       "key": "红牛",
@@ -1208,7 +1087,8 @@
       ",filterable": 1,
       "categories": [
         "伦理片"
-      ]
+      ],
+      "name": "【影视】"
     },
     {
       "key": "lltv_极速",
@@ -1220,7 +1100,8 @@
       "quickSearch": 1,
       "categories": [
         "伦理片"
-      ]
+      ],
+      "name": "【影视】"
     },
     {
       "key": "api_金鹰资源",
@@ -1232,7 +1113,8 @@
       ",filterable": 1,
       "categories": [
         "伦理片"
-      ]
+      ],
+      "name": "【影视】"
     },
     {
       "key": "快车资源",
@@ -1244,7 +1126,8 @@
       ",filterable": 1,
       "categories": [
         "伦理片"
-      ]
+      ],
+      "name": "【影视】"
     },
     {
       "key": "快看资源",
@@ -1256,7 +1139,8 @@
       ",filterable": 1,
       "categories": [
         "伦理片"
-      ]
+      ],
+      "name": "【影视】"
     },
     {
       "key": "lltv_乐视-夜猫",
@@ -1271,7 +1155,8 @@
         "韩国伦理",
         "日本伦理",
         "其他伦理"
-      ]
+      ],
+      "name": "【影视】"
     },
     {
       "key": "量子资源",
@@ -1283,7 +1168,8 @@
       ",filterable": 1,
       "categories": [
         "伦理片"
-      ]
+      ],
+      "name": "【影视】"
     },
     {
       "key": "奇虎资源",
@@ -1296,7 +1182,8 @@
       ",filterable": 1,
       "categories": [
         "伦理片"
-      ]
+      ],
+      "name": "【影视】"
     },
     {
       "key": "速播资源",
@@ -1308,7 +1195,8 @@
       ",filterable": 1,
       "categories": [
         "伦理片"
-      ]
+      ],
+      "name": "【影视】"
     },
     {
       "key": "api_天翼资源",
@@ -1320,7 +1208,8 @@
       ",filterable": 1,
       "categories": [
         "伦理片"
-      ]
+      ],
+      "name": "【影视】"
     },
     {
       "key": "csp_xml___U酷资源",
@@ -1332,7 +1221,8 @@
       ",filterable": 1,
       "categories": [
         "伦理片"
-      ]
+      ],
+      "name": "【影视】"
     },
     {
       "key": "csp_xml___无尽资源",
@@ -1344,7 +1234,8 @@
       ",filterable": 1,
       "categories": [
         "伦理片"
-      ]
+      ],
+      "name": "【影视】"
     },
     {
       "key": "卧龙资源",
@@ -1356,7 +1247,8 @@
       ",filterable": 1,
       "categories": [
         "伦理片"
-      ]
+      ],
+      "name": "【影视】"
     },
     {
       "key": "zy_新浪资源",
@@ -1368,7 +1260,8 @@
       ",filterable": 1,
       "categories": [
         "伦理片"
-      ]
+      ],
+      "name": "【影视】"
     },
     {
       "key": "易看资源-伦理",
@@ -1376,7 +1269,8 @@
       ",type": 1,
       "api": "https://api.yikanapi.com/api.php/provide/vod/",
       "searchable": 1,
-      "quickSearch": 1
+      "quickSearch": 1,
+      "name": "【影视】"
     },
     {
       "key": "优质资源",
@@ -1389,7 +1283,8 @@
       "categories": [
         "福利",
         "倫理片"
-      ]
+      ],
+      "name": "【影视】"
     },
     {
       "key": "AV影院-公子",
@@ -1406,7 +1301,8 @@
         "主页url": "https://wyaslcwgroup.cfd/",
         "分类": "国产视频$1#主播$2#黑料$3#中文$6#国产传媒$7#制服$12#抖音$15#三级$17#AV解说$18#日本有码$8#日本无码$9#强奸乱轮$11#动漫$13#明星换脸$14#女优明星$16,",
         "分类url": "https://wyaslcwgroup.cfd/index.php/vod/type/id/{cateId}/page/{catePg}.html"
-      }
+      },
+      "name": "【影视】"
     },
     {
       "key": "qbl-公子",
@@ -1423,7 +1319,8 @@
         "分类url": "/videos/{cateId}?page={catePg};;z",
         "分类": "全部&3D&素人&日本女优&自拍&金发洋物",
         "分类值": "/&3d&amateur&japanese&selfie&western"
-      }
+      },
+      "name": "【影视】"
     },
     {
       "key": "爱丽丝-公子",
@@ -1451,7 +1348,8 @@
         "分类数组": "<li class=\"hl-menus-item\"&&</li>",
         "分类标题": "<span>&&</span>",
         "分类ID": "/index.php/vod/type/id/&&.html"
-      }
+      },
+      "name": "【影视】"
     },
     {
       "key": "黑料001,",
@@ -1474,7 +1372,8 @@
         "分类url": "https://97.lutnnf.com/category/{cateId}/{catePg}.html",
         "分类": "独家爆料&网红明星&反差女友&校园政坛&性爱课堂&奇闻异事&热点吃瓜&今日黑料&经典大瓜&黑料历史&每日热瓜",
         "分类值": ",9&1&4&2&12&3&7&6&8&10&11,"
-      }
+      },
+      "name": "【影视】"
     },
     {
       "key": "*91麻豆",
@@ -1482,7 +1381,8 @@
       ",type": 1,
       "api": "https://91md.me/api.php/provide/vod/",
       "searchable": 0,
-      "quickSearch": 0
+      "quickSearch": 0,
+      "name": "【影视】"
     },
     {
       "key": "♥️利来资源  ",
@@ -1490,7 +1390,8 @@
       ",type": 0,
       "api": "http://llzxcj.com/inc/sck.php?ac=list",
       "searchable": 1,
-      "quickSearch": 1
+      "quickSearch": 1,
+      "name": "【影视】"
     },
     {
       "key": "♥️森林专场",
@@ -1544,7 +1445,8 @@
         "女同性恋",
         "男同性恋",
         "恋腿狂魔"
-      ]
+      ],
+      "name": "【影视】"
     },
     {
       "key": ",99zywcj",
@@ -1553,7 +1455,8 @@
       "api": "http://99zywcj.com/inc/sck.php?ac=videolist",
       "searchable": 1,
       "quickSearch": 1,
-      ",filterable": 1
+      ",filterable": 1,
+      "name": "【影视】"
     },
     {
       "key": "*天堂福利",
@@ -1562,7 +1465,8 @@
       "api": "https://bttcj.com/inc/sapi.php",
       "searchable": 1,
       "quickSearch": 1,
-      ",filterable": 1
+      ",filterable": 1,
+      "name": "【影视】"
     },
     {
       "key": "西瓜影院_XBPQ",
@@ -1580,7 +1484,8 @@
         "分类url": "https://www.uccomic.com/vodshow/{cateId},-,{area},-,{by},-,{class},--,{letter},---,{catePg},---,{year}/",
         "分类": "福利&主播自拍&国产精品&日本精品&中文字幕&欧美精品",
         "分类值": ",49&50&51&53&54&55,"
-      }
+      },
+      "name": "【影视】"
     },
     {
       "key": "csp_zhazhiji",
@@ -1590,7 +1495,8 @@
       "searchable": 1,
       "quickSearch": 1,
       ",filterable": 0,
-      "ext": "./mov/json/榨汁姬.json"
+      "ext": "./mov/json/榨汁姬.json",
+      "name": "【影视】"
     },
     {
       "key": "玉兔专场",
@@ -1600,7 +1506,8 @@
       "playUrl": ",",
       "searchable": 1,
       "quickSearch": 1,
-      ",filterable": 1
+      ",filterable": 1,
+      "name": "【影视】"
     },
     {
       "key": ",timizy",
@@ -1610,7 +1517,8 @@
       "searchable": 1,
       "changeable": 1,
       "quickSearch": 1,
-      ",filterable": 1
+      ",filterable": 1,
+      "name": "【影视】"
     },
     {
       "key": "BT天堂",
@@ -1618,7 +1526,8 @@
       ",type": 0,
       "api": "http://bttcj.com/inc/sapi.php",
       "playUrl": ",",
-      "categories": []
+      "categories": [],
+      "name": "【影视】"
     },
     {
       "key": "玖玖资源",
@@ -1627,7 +1536,8 @@
       "api": "http://99zywcj.com/inc/sapi.php?ac=videolist",
       "searchable": 1,
       "quickSearch": 1,
-      ",filterable": 1
+      ",filterable": 1,
+      "name": "【影视】"
     },
     {
       "key": "无码资源",
@@ -1636,7 +1546,8 @@
       "api": "http://wmcj8.com/inc/sapi.php",
       "searchable": 1,
       "quickSearch": 1,
-      ",filterable": 1
+      ",filterable": 1,
+      "name": "【影视】"
     },
     {
       "key": "麻豆村",
@@ -1645,7 +1556,8 @@
       "api": "https://madoucun.com/api.php/provide/vod/?ac=list",
       "searchable": 1,
       "quickSearch": 1,
-      ",filterable": 0
+      ",filterable": 0,
+      "name": "【影视】"
     },
     {
       "key": "chengren",
@@ -1653,7 +1565,8 @@
       ",type": 1,
       "api": "https://www.partnersky-horoskop.com/api.php/provide/vod/",
       "searchable": 1,
-      "quickSearch": 1
+      "quickSearch": 1,
+      "name": "【影视】"
     },
     {
       "key": "*皇冠资源",
@@ -1662,7 +1575,8 @@
       "playerType": 2,
       "api": "https://hghhh.com/api.php/provide/vod/",
       "searchable": 1,
-      "quickSearch": 1
+      "quickSearch": 1,
+      "name": "【影视】"
     },
     {
       "key": "*鲨鱼资源",
@@ -1670,7 +1584,8 @@
       ",type": 1,
       "api": "https://shayuapi.com/api.php/provide/vod/",
       "searchable": 0,
-      "quickSearch": 0
+      "quickSearch": 0,
+      "name": "【影视】"
     },
     {
       "key": "csp_JavDb",
@@ -1682,7 +1597,8 @@
       ",filterable": 1,
       "changeable": 1,
       ",timeout": 60,
-      "ext": "http://javdb523.com"
+      "ext": "http://javdb523.com",
+      "name": "【影视】"
     },
     {
       "key": "mygzycj.com",
@@ -1691,7 +1607,8 @@
       "api": "http://mygzycj.com/api.php?ac=list",
       "quickSearch": 1,
       "searchable": 1,
-      ",filterable": 1
+      ",filterable": 1,
+      "name": "【影视】"
     },
     {
       "key": "cjmygzy",
@@ -1700,7 +1617,8 @@
       "api": "http://cjmygzy.com/inc/sapi.php?ac=videolist",
       "searchable": 1,
       "quickSearch": 1,
-      ",filterable": 1
+      ",filterable": 1,
+      "name": "【影视】"
     },
     {
       "key": "JAV名优",
@@ -1709,7 +1627,8 @@
       "api": "http://mygzycj.com/api.php?ac=list",
       "searchable": 1,
       "quickSearch": 1,
-      ",filterable": 1
+      ",filterable": 1,
+      "name": "【影视】"
     },
     {
       "key": "*小湿妹资源",
@@ -1717,7 +1636,8 @@
       ",type": 0,
       "api": "https://www.afasu.com/api/xml.php",
       "searchable": 0,
-      "quickSearch": 0
+      "quickSearch": 0,
+      "name": "【影视】"
     },
     {
       "key": ",00色窝资源",
@@ -1726,7 +1646,8 @@
       "api": "https://sewozyapi.com/api.php/provide/vod/",
       "playUrl": "https://player.sewozyplayer.com/m3u8/?url=",
       "searchable": 1,
-      "quickSearch": 1
+      "quickSearch": 1,
+      "name": "【影视】"
     },
     {
       "key": "鲨鱼18+,",
@@ -1739,7 +1660,8 @@
       "api": "https://shayuapi.com/api.php/Seacms/vod",
       "searchable": 0,
       "quickSearch": 1,
-      ",filterable": 0
+      ",filterable": 0,
+      "name": "【影视】"
     },
     {
       "key": "哥哥妹妹",
@@ -1748,7 +1670,8 @@
       "api": "http://www.ggmmzy.com:9999/inc/xml",
       "searchable": 1,
       "quickSearch": 1,
-      ",filterable": 0
+      ",filterable": 0,
+      "name": "【影视】"
     },
     {
       "key": "红袖",
@@ -1789,7 +1712,8 @@
         "内地传媒",
         "国产精品",
         "日韩有码"
-      ]
+      ],
+      "name": "【影视】"
     },
     {
       "key": "KOK资源",
@@ -1798,7 +1722,8 @@
       "api": "https://api.vodkok2.com/api.php/provide/vod/",
       "searchable": 1,
       "quickSearch": 1,
-      ",filterable": 0
+      ",filterable": 0,
+      "name": "【影视】"
     },
     {
       "key": ",51smt4.xyz",
@@ -1809,7 +1734,8 @@
         "ratio": 1.485
       },
       "api": "http://51smt4.xyz/api.php/provide/vod/",
-      "searchable": 1
+      "searchable": 1,
+      "name": "【影视】"
     },
     {
       "key": "jcspcj8.com",
@@ -1820,7 +1746,8 @@
         "ratio": 1.485
       },
       "api": "http://jcspcj8.com/api?ac=videolist",
-      "searchable": 1
+      "searchable": 1,
+      "name": "【影视】"
     },
     {
       "key": "bttcj.com",
@@ -1831,7 +1758,8 @@
         "ratio": 1.485
       },
       "api": "http://bttcj.com/inc/sapi.php",
-      "searchable": 1
+      "searchable": 1,
+      "name": "【影视】"
     },
     {
       "key": "cjmygzy.com",
@@ -1842,7 +1770,8 @@
         "ratio": 1.485
       },
       "api": "http://cjmygzy.com/inc/sapi.php?ac=videolist",
-      "searchable": 1
+      "searchable": 1,
+      "name": "【影视】"
     },
     {
       "key": ",91md.me",
@@ -1853,7 +1782,8 @@
         "ratio": 1.485
       },
       "api": "http://91md.me/api.php/provide/vod/",
-      "searchable": 1
+      "searchable": 1,
+      "name": "【影视】"
     },
     {
       "key": "dadiapi.com",
@@ -1864,7 +1794,8 @@
         "ratio": 1.485
       },
       "api": "http://dadiapi.com/api.php",
-      "searchable": 1
+      "searchable": 1,
+      "name": "【影视】"
     },
     {
       "key": "secj8.com",
@@ -1875,7 +1806,8 @@
         "ratio": 1.485
       },
       "api": "http://secj8.com/inc/sapi.php?ac=videolist",
-      "searchable": 1
+      "searchable": 1,
+      "name": "【影视】"
     },
     {
       "key": "api.putaozy.net",
@@ -1886,7 +1818,8 @@
         "ratio": 1.485
       },
       "api": "http://api.putaozy.net/inc/apijson_vod.php",
-      "searchable": 1
+      "searchable": 1,
+      "name": "【影视】"
     },
     {
       "key": "llzxcj.com",
@@ -1897,7 +1830,8 @@
         "ratio": 1.485
       },
       "api": "http://llzxcj.com/inc/sck.php?ac=videolist",
-      "searchable": 1
+      "searchable": 1,
+      "name": "【影视】"
     },
     {
       "key": "apilj.com",
@@ -1908,7 +1842,8 @@
         "ratio": 1.485
       },
       "api": "http://apilj.com/api.php/provide/vod/at/json/",
-      "searchable": 1
+      "searchable": 1,
+      "name": "【影视】"
     },
     {
       "key": ",f2dcj6.com",
@@ -1919,7 +1854,8 @@
         "ratio": 1.485
       },
       "api": "http://f2dcj6.com/sapi?ac=videolist",
-      "searchable": 1
+      "searchable": 1,
+      "name": "【影视】"
     },
     {
       "key": ",99zy.pw",
@@ -1930,7 +1866,8 @@
         "ratio": 1.485
       },
       "api": "http://99zy.pw/api.php/provide/vod/",
-      "searchable": 1
+      "searchable": 1,
+      "name": "【影视】"
     },
     {
       "key": "ggmmzy.com",
@@ -1941,7 +1878,8 @@
         "ratio": 1.485
       },
       "api": "http://www.ggmmzy.com:9999/inc/xml",
-      "searchable": 1
+      "searchable": 1,
+      "name": "【影视】"
     },
     {
       "key": ",fhapi9.com",
@@ -1952,7 +1890,8 @@
         "ratio": 1.485
       },
       "api": "http://fhapi9.com/api.php/provide/vod/",
-      "searchable": 1
+      "searchable": 1,
+      "name": "【影视】"
     },
     {
       "key": ",feifei67.com",
@@ -1963,7 +1902,8 @@
         "ratio": 1.485
       },
       "api": "http://www.feifei67.com/api.php/provide/vod/",
-      "searchable": 1
+      "searchable": 1,
+      "name": "【影视】"
     },
     {
       "key": "sdszyapi.com",
@@ -1974,7 +1914,8 @@
         "ratio": 1.485
       },
       "api": "http://sdszyapi.com/home/cjapi/asbb/mc10/vod/xml",
-      "searchable": 1
+      "searchable": 1,
+      "name": "【影视】"
     },
     {
       "key": "madouse.la",
@@ -1985,7 +1926,8 @@
         "ratio": 1.485
       },
       "api": "http://madouse.la/api.php/provide/vod/",
-      "searchable": 1
+      "searchable": 1,
+      "name": "【影视】"
     },
     {
       "key": "xjjzyapi.com",
@@ -1996,7 +1938,8 @@
         "ratio": 1.485
       },
       "api": "http://xjjzyapi.com/home/cjapi/askl/mc10/vod/xml",
-      "searchable": 1
+      "searchable": 1,
+      "name": "【影视】"
     },
     {
       "key": "shabizy.com",
@@ -2007,7 +1950,8 @@
         "ratio": 1.485
       },
       "api": "http://www.shabizy.com:777/inc/sea",
-      "searchable": 1
+      "searchable": 1,
+      "name": "【影视】"
     },
     {
       "key": "caiji21.com",
@@ -2018,7 +1962,8 @@
         "ratio": 1.485
       },
       "api": "http://www.caiji21.com/home/cjapi/klkl/mc10/vod/xml",
-      "searchable": 1
+      "searchable": 1,
+      "name": "【影视】"
     },
     {
       "key": "caiji25.com",
@@ -2029,7 +1974,8 @@
         "ratio": 1.485
       },
       "api": "http://www.caiji25.com/home/cjapi/p0as/mc10/vod/xml",
-      "searchable": 1
+      "searchable": 1,
+      "name": "【影视】"
     },
     {
       "key": "caiji26.com",
@@ -2040,7 +1986,8 @@
         "ratio": 1.485
       },
       "api": "http://caiji26.com/home/cjapi/p0g8/mc10/vod/xml",
-      "searchable": 1
+      "searchable": 1,
+      "name": "【影视】"
     },
     {
       "key": "caiji24.com",
@@ -2051,7 +1998,8 @@
         "ratio": 1.485
       },
       "api": "http://www.caiji24.com/home/cjapi/p0d2/mc10/vod/xml",
-      "searchable": 1
+      "searchable": 1,
+      "name": "【影视】"
     },
     {
       "key": "lbapiby.com",
@@ -2062,7 +2010,8 @@
         "ratio": 1.485
       },
       "api": "http://lbapiby.com/api.php/provide/vod/at/xml",
-      "searchable": 1
+      "searchable": 1,
+      "name": "【影视】"
     },
     {
       "key": "api.maozyapi.com",
@@ -2073,7 +2022,8 @@
         "ratio": 1.485
       },
       "api": "https://api.maozyapi.com/inc/apijson_vod.php",
-      "searchable": 1
+      "searchable": 1,
+      "name": "【影视】"
     },
     {
       "key": ",888dav.com",
@@ -2084,7 +2034,8 @@
         "ratio": 1.485
       },
       "api": "https://www.888dav.com/api.php/provide/vod/",
-      "searchable": 1
+      "searchable": 1,
+      "name": "【影视】"
     },
     {
       "key": "mgav1.cc",
@@ -2095,7 +2046,8 @@
         "ratio": 1.485
       },
       "api": "https://www.mgav1.cc/api.php/provide/vod/at/xml",
-      "searchable": 1
+      "searchable": 1,
+      "name": "【影视】"
     },
     {
       "key": "mgzyz1.com",
@@ -2106,7 +2058,8 @@
         "ratio": 1.485
       },
       "api": "https://mgzyz1.com/api.php/provide/vod/",
-      "searchable": 1
+      "searchable": 1,
+      "name": "【影视】"
     },
     {
       "key": "msnii.com2,",
@@ -2117,7 +2070,8 @@
         "ratio": 1.485
       },
       "api": "https://www.msnii.com/api/xml.php",
-      "searchable": 1
+      "searchable": 1,
+      "name": "【影视】"
     },
     {
       "key": "kkzy.me",
@@ -2128,7 +2082,8 @@
         "ratio": 1.485
       },
       "api": "https://kkzy.me/api.php/provide/vod/",
-      "searchable": 1
+      "searchable": 1,
+      "name": "【影视】"
     },
     {
       "key": "caiji.huakuiapi.com",
@@ -2139,7 +2094,8 @@
         "ratio": 1.485
       },
       "api": "https://caiji.huakuiapi.com/inc/apijson_vod.php",
-      "searchable": 1
+      "searchable": 1,
+      "name": "【影视】"
     },
     {
       "key": "siwazyw.cc",
@@ -2150,7 +2106,8 @@
         "ratio": 1.485
       },
       "api": "https://siwazyw.cc/api.php/provide/vod/",
-      "searchable": 1
+      "searchable": 1,
+      "name": "【影视】"
     },
     {
       "key": "pgxdy.com",
@@ -2161,7 +2118,8 @@
         "ratio": 1.485
       },
       "api": "https://www.pgxdy.com/api/xml.php",
-      "searchable": 1
+      "searchable": 1,
+      "name": "【影视】"
     },
     {
       "key": "api.sexnguon.com",
@@ -2172,7 +2130,8 @@
         "ratio": 1.485
       },
       "api": "https://api.sexnguon.com/api.php/provide/vod/",
-      "searchable": 1
+      "searchable": 1,
+      "name": "【影视】"
     },
     {
       "key": "dmmapi.com",
@@ -2183,7 +2142,8 @@
         "ratio": 1.485
       },
       "api": "https://www.dmmapi.com/home/cjapi/asd2c7/mc10/vod/xml",
-      "searchable": 1
+      "searchable": 1,
+      "name": "【影视】"
     },
     {
       "key": "xx55zyapi.com",
@@ -2194,7 +2154,8 @@
         "ratio": 1.485
       },
       "api": "https://xx55zyapi.com/home/cjapi/ascf/mc10/vod/xml",
-      "searchable": 1
+      "searchable": 1,
+      "name": "【影视】"
     },
     {
       "key": "kxgav.com2,",
@@ -2205,7 +2166,8 @@
         "ratio": 1.485
       },
       "api": "https://www.kxgav.com/api/xml.php",
-      "searchable": 1
+      "searchable": 1,
+      "name": "【影视】"
     },
     {
       "key": "caiji02.com",
@@ -2216,7 +2178,8 @@
         "ratio": 1.485
       },
       "api": "https://www.caiji02.com/home/cjapi/cfas/mc10/vod/xml",
-      "searchable": 1
+      "searchable": 1,
+      "name": "【影视】"
     },
     {
       "key": "xrbsp2,",
@@ -2227,7 +2190,8 @@
         "ratio": 1.485
       },
       "api": "https://www.xrbsp.com/api/xml.php",
-      "searchable": 1
+      "searchable": 1,
+      "name": "【影视】"
     },
     {
       "key": "caiji07.com",
@@ -2238,7 +2202,8 @@
         "ratio": 1.485
       },
       "api": "https://www.caiji07.com/home/cjapi/cfcf/mc10/vod/xml",
-      "searchable": 1
+      "searchable": 1,
+      "name": "【影视】"
     },
     {
       "key": "lbapi9.com",
@@ -2249,7 +2214,8 @@
         "ratio": 1.485
       },
       "api": "https://lbapi9.com/api.php/provide/vod/",
-      "searchable": 1
+      "searchable": 1,
+      "name": "【影视】"
     },
     {
       "key": "caiji03.com",
@@ -2260,7 +2226,8 @@
         "ratio": 1.485
       },
       "api": "https://www.caiji03.com/home/cjapi/cfg8/mc10/vod/xml",
-      "searchable": 1
+      "searchable": 1,
+      "name": "【影视】"
     },
     {
       "key": "caiji08.com",
@@ -2271,7 +2238,8 @@
         "ratio": 1.485
       },
       "api": "https://www.caiji08.com/home/cjapi/cfkl/mc10/vod/xml",
-      "searchable": 1
+      "searchable": 1,
+      "name": "【影视】"
     },
     {
       "key": "caiji10.com",
@@ -2282,7 +2250,8 @@
         "ratio": 1.485
       },
       "api": "https://www.caiji10.com/home/cjapi/cfs6/mc10/vod/xml",
-      "searchable": 1
+      "searchable": 1,
+      "name": "【影视】"
     },
     {
       "key": ",52zyapi.com",
@@ -2293,7 +2262,8 @@
         "ratio": 1.485
       },
       "api": "https://52zyapi.com/home/cjapi/asda/mc10/vod/xml",
-      "searchable": 1
+      "searchable": 1,
+      "name": "【影视】"
     },
     {
       "key": "apittzy.com",
@@ -2304,7 +2274,8 @@
         "ratio": 1.485
       },
       "api": "https://apittzy.com/api.php/provide/vod/",
-      "searchable": 1
+      "searchable": 1,
+      "name": "【影视】"
     },
     {
       "key": "api.xiuseapi.com",
@@ -2315,7 +2286,8 @@
         "ratio": 1.485
       },
       "api": "https://api.xiuseapi.com/api.php/provide/vod/",
-      "searchable": 1
+      "searchable": 1,
+      "name": "【影视】"
     },
     {
       "key": "caiji01.com",
@@ -2326,7 +2298,8 @@
         "ratio": 1.485
       },
       "api": "https://www.caiji01.com/home/cjapi/cfd2/mc10/vod/xml",
-      "searchable": 1
+      "searchable": 1,
+      "name": "【影视】"
     },
     {
       "key": "caiji22.com",
@@ -2337,7 +2310,8 @@
         "ratio": 1.485
       },
       "api": "https://www.caiji22.com/home/cjapi/klp0/mc10/vod/xml",
-      "searchable": 1
+      "searchable": 1,
+      "name": "【影视】"
     },
     {
       "key": "caiji23.com",
@@ -2348,7 +2322,8 @@
         "ratio": 1.485
       },
       "api": "https://www.caiji23.com/home/cjapi/kls6/mc10/vod/xml",
-      "searchable": 1
+      "searchable": 1,
+      "name": "【影视】"
     },
     {
       "key": "afasu.com",
@@ -2359,7 +2334,8 @@
         "ratio": 1.485
       },
       "api": "https://www.afasu.com/api/xml.php",
-      "searchable": 1
+      "searchable": 1,
+      "name": "【影视】"
     },
     {
       "key": "hghhh.com",
@@ -2370,7 +2346,8 @@
         "ratio": 1.485
       },
       "api": "https://hghhh.com/api.php/provide/vod/",
-      "searchable": 1
+      "searchable": 1,
+      "name": "【影视】"
     },
     {
       "key": "sewozyapi.com",
@@ -2381,7 +2358,8 @@
         "ratio": 1.485
       },
       "api": "https://sewozyapi.com/api.php/provide/vod/",
-      "searchable": 1
+      "searchable": 1,
+      "name": "【影视】"
     },
     {
       "key": "gdlsp.com",
@@ -2392,7 +2370,8 @@
         "ratio": 1.485
       },
       "api": "https://www.gdlsp.com/api/xml.php",
-      "searchable": 1
+      "searchable": 1,
+      "name": "【影视】"
     },
     {
       "key": "caiji04.com",
@@ -2403,7 +2382,8 @@
         "ratio": 1.485
       },
       "api": "https://www.caiji04.com/home/cjapi/cfc7/mc10/vod/xml",
-      "searchable": 1
+      "searchable": 1,
+      "name": "【影视】"
     },
     {
       "key": "caiji09.com",
@@ -2414,7 +2394,8 @@
         "ratio": 1.485
       },
       "api": "https://www.caiji09.com/home/cjapi/cfp0/mc10/vod/xml",
-      "searchable": 1
+      "searchable": 1,
+      "name": "【影视】"
     },
     {
       "key": "caiji05.com",
@@ -2425,7 +2406,8 @@
         "ratio": 1.485
       },
       "api": "https://www.caiji05.com/home/cjapi/cfda/mc10/vod/xml",
-      "searchable": 1
+      "searchable": 1,
+      "name": "【影视】"
     },
     {
       "key": "jgczyapi.com",
@@ -2436,7 +2418,8 @@
         "ratio": 1.485
       },
       "api": "https://jgczyapi.com/home/cjapi/kld2/mc10/vod/xml",
-      "searchable": 1
+      "searchable": 1,
+      "name": "【影视】"
     },
     {
       "key": "caiji.caomeiapi.com",
@@ -2447,7 +2430,8 @@
         "ratio": 1.485
       },
       "api": "https://caiji.caomeiapi.com/inc/apijson_vod.php",
-      "searchable": 1
+      "searchable": 1,
+      "name": "【影视】"
     },
     {
       "key": "caiji.523zyw.com",
@@ -2458,7 +2442,8 @@
         "ratio": 1.485
       },
       "api": "https://caiji.523zyw.com/inc/apijson_vod.php",
-      "searchable": 1
+      "searchable": 1,
+      "name": "【影视】"
     },
     {
       "key": "caiji.naichaapi.com",
@@ -2469,7 +2454,8 @@
         "ratio": 1.485
       },
       "api": "https://caiji.naichaapi.com/inc/apijson_vod.php",
-      "searchable": 1
+      "searchable": 1,
+      "name": "【影视】"
     },
     {
       "key": "api.apilyzy.com",
@@ -2480,7 +2466,8 @@
         "ratio": 1.485
       },
       "api": "https://api.apilyzy.com/api.php/provide/vod/",
-      "searchable": 1
+      "searchable": 1,
+      "name": "【影视】"
     },
     {
       "key": "js_豆瓣",
@@ -6501,6 +6488,25 @@
       "ext": "https://www.xb6v.com"
     },
     {
+      "key": "drpy_js_色色-公子",
+      "name": "【直播】🔞ss直播",
+      "type": 3,
+      "playerType": 1,
+      "api": "./js/drpy2.min.js",
+      "ext": "./mov/js/ss直播.js"
+    },
+    {
+      "key": "hipy_js_36直播[密]",
+      "name": "【直播】🔞36直播",
+      "type": 3,
+      "api": "./js/drpy2.min.js",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "order_num": 0,
+      "ext": "./mov/js/36直播[密].js"
+    },
+    {
       "key": "t42直播转点播",
       "name": "【直播】【直播】👒T4直播",
       "type": 4,
@@ -6891,6 +6897,155 @@
       "filterable": 1,
       "order_num": 0,
       "ext": "https://raw.bgithub.xyz/lishuncai8881/c/refs/heads/drpy_libs/%E7%88%B1%E8%BD%A6MV%5B%E5%90%AC%5D.js"
+    },
+    {
+      "key": "155-公子-高天流云9918",
+      "name": "【其他】🔞155",
+      "type": 1,
+      "api": "https://155api.com/api.php/provide/vod/",
+      "searchable": 1,
+      "changeable": 1
+    },
+    {
+      "key": "iKun",
+      "name": "【其他】🔞iKun",
+      "type": 1,
+      "api": "https://www.ikunzy.cc/api.php/provide/vod/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "categories": [
+        "里番动漫",
+        "伦理片"
+      ]
+    },
+    {
+      "key": "JKun",
+      "name": "【其他】🔞jKun",
+      "type": 1,
+      "api": "https://jkunzyapi.com/api.php/provide/vod",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0
+    },
+    {
+      "key": "91麻豆.me",
+      "name": "【其他】🔞麻豆",
+      "type": 1,
+      "style": {
+        "type": "rect",
+        "ratio": 1.485
+      },
+      "api": "http://91md.me/api.php/provide/vod/",
+      "searchable": 1
+    },
+    {
+      "key": "性南国-高天流云9918",
+      "name": "【其他】🔞南国",
+      "type": 1,
+      "api": "https://api.sexnguon.com/api.php/provide/vod/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
+      "key": "XMVideo-公子",
+      "name": "【其他】🔞熊猫",
+      "type": 3,
+      "api": "csp_XMVideo",
+      "searchable": 1,
+      "filterable": 1,
+      "jar": "./jar/182.jar"
+    },
+    {
+      "key": "红桃-公子",
+      "name": "【其他】🔞红桃",
+      "type": 1,
+      "api": "https://apidanaizi.com/api.php/provide/vod/",
+      "searchable": 1,
+      "changeable": 1
+    },
+    {
+      "key": "苹果小电影",
+      "name": "【其他】🔞苹果",
+      "type": 0,
+      "api": "https://www.pgxdy.com/api/xml.php",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
+      "key": "laosebizy.com-高天流云9918",
+      "name": "【其他】🔞老色比",
+      "type": 1,
+      "api": "https://apilsbzy1.com/api.php/provide/vod/",
+      "searchable": 1,
+      "filterable": 1
+    },
+    {
+      "key": "naixxzy.com-高天流云9918",
+      "name": "【其他】🔞香奶奶",
+      "type": 1,
+      "api": "https://naixxzy.com/api.php/provide/vod/?ac=list",
+      "searchable": 1,
+      "filterable": 1
+    },
+    {
+      "key": "老色胚资源",
+      "name": "【其他】🔞老色胚",
+      "type": 0,
+      "api": "https://www.gdlsp.com/api/xml.php",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
+      "key": "kxgav",
+      "name": "【其他】🔞开心果",
+      "type": 0,
+      "api": "https://www.kxgav.com/api/xml.php"
+    },
+    {
+      "key": "xrbsp.com",
+      "name": "【其他】🔞小日本",
+      "type": 0,
+      "api": "https://www.xrbsp.com/api/xml.php",
+      "quickSearch": 1,
+      "searchable": 1,
+      "filterable": 1
+    },
+    {
+      "key": "msnii.com",
+      "name": "【其他】🔞美少女",
+      "type": 0,
+      "style": {
+        "type": "rect",
+        "ratio": 1.485
+      },
+      "api": "https://www.msnii.com/api/xml.php",
+      "searchable": 1
+    },
+    {
+      "key": "火车36小时-公子",
+      "name": "【其他】🔞火车36",
+      "type": 3,
+      "api": "csp_XBPQ",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "ext": {
+        "发布页": "https://6m8.36huo165che.xyz/",
+        "主页url": "https://uk.36,huo271,che.xyz/topic/",
+        ",数组": ",class=\"lazy\"&&</div></div>",
+        "图片": "data-original=\"&&\"",
+        "标题": "_blank\">&&</a>",
+        "链接": "https://uk.36huo271che.xyz/vodplay/+href=\"/voddetail/&&.html\"+-1-1.html",
+        "跳转播放链接": "urlDecode(var player*url\":\"&&\")",
+        "搜索url": "https://uk.36huo271che.xyz/vodsearch/{wd},----------,{pg},---.html",
+        "分类二次截取": "<div class=\"nav\">&&</div>",
+        "分类url": "https://uk.36huo271che.xyz/vodtype/{cateId},-,{catePg}.html[https://uk.36huo271che.xyz/vodtype/{cateId}.html];;z",
+        "分类": "国产视频$6#中文字幕$7#国产传媒$8#日本有码$9#日本无码$10#欧美无码$11#强奸乱伦$12#制服诱惑$20#直播主播$21#糖心Vlog$22#激情动漫$23#抖阴视频$63#女优明星$24#网-曝-门$25#伦理三级$26#AV解说$30#SM调教$31#萝莉少女$37#极品媚黑$32#女同性恋$33,"
+      }
     },
     {
       "key": "精品采集",
