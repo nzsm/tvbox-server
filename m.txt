@@ -1,0 +1,7345 @@
+{
+  "spider": "https://reian99.coding.net/p/maotv/d/CatVodTVSpider/git/raw/master/jar/custom_spider.jar",
+  "flags": [
+    "youku",
+    "qq",
+    "iqiyi",
+    "qiyi",
+    "letv",
+    "sohu",
+    "tudou",
+    "pptv",
+    "mgtv",
+    "wasu",
+    "bilibili"
+  ],
+  "ijk": [
+    {
+      "group": "杞В鐮�",
+      "options": [
+        {
+          "category": 4,
+          "name": "opensles",
+          "value": "0"
+        },
+        {
+          "category": 4,
+          "name": "overlay-format",
+          "value": "842225234"
+        },
+        {
+          "category": 4,
+          "name": "framedrop",
+          "value": "1"
+        },
+        {
+          "category": 4,
+          "name": "soundtouch",
+          "value": "1"
+        },
+        {
+          "category": 4,
+          "name": "start-on-prepared",
+          "value": "1"
+        },
+        {
+          "category": 1,
+          "name": "http-detect-range-support",
+          "value": "0"
+        },
+        {
+          "category": 1,
+          "name": "fflags",
+          "value": "fastseek"
+        },
+        {
+          "category": 2,
+          "name": "skip_loop_filter",
+          "value": "48"
+        },
+        {
+          "category": 4,
+          "name": "reconnect",
+          "value": "1"
+        },
+        {
+          "category": 4,
+          "name": "max-buffer-size",
+          "value": "5242880"
+        },
+        {
+          "category": 4,
+          "name": "enable-accurate-seek",
+          "value": "0"
+        },
+        {
+          "category": 4,
+          "name": "mediacodec",
+          "value": "0"
+        },
+        {
+          "category": 4,
+          "name": "mediacodec-auto-rotate",
+          "value": "0"
+        },
+        {
+          "category": 4,
+          "name": "mediacodec-handle-resolution-change",
+          "value": "0"
+        },
+        {
+          "category": 4,
+          "name": "mediacodec-hevc",
+          "value": "0"
+        },
+        {
+          "category": 1,
+          "name": "dns_cache_timeout",
+          "value": "36000000"
+        }
+      ]
+    },
+    {
+      "group": "纭В鐮�",
+      "options": [
+        {
+          "category": 4,
+          "name": "opensles",
+          "value": "0"
+        },
+        {
+          "category": 4,
+          "name": "overlay-format",
+          "value": "842225234"
+        },
+        {
+          "category": 4,
+          "name": "framedrop",
+          "value": "1"
+        },
+        {
+          "category": 4,
+          "name": "soundtouch",
+          "value": "1"
+        },
+        {
+          "category": 4,
+          "name": "start-on-prepared",
+          "value": "1"
+        },
+        {
+          "category": 1,
+          "name": "http-detect-range-support",
+          "value": "0"
+        },
+        {
+          "category": 1,
+          "name": "fflags",
+          "value": "fastseek"
+        },
+        {
+          "category": 2,
+          "name": "skip_loop_filter",
+          "value": "48"
+        },
+        {
+          "category": 4,
+          "name": "reconnect",
+          "value": "1"
+        },
+        {
+          "category": 4,
+          "name": "max-buffer-size",
+          "value": "5242880"
+        },
+        {
+          "category": 4,
+          "name": "enable-accurate-seek",
+          "value": "0"
+        },
+        {
+          "category": 4,
+          "name": "mediacodec",
+          "value": "1"
+        },
+        {
+          "category": 4,
+          "name": "mediacodec-auto-rotate",
+          "value": "1"
+        },
+        {
+          "category": 4,
+          "name": "mediacodec-handle-resolution-change",
+          "value": "1"
+        },
+        {
+          "category": 4,
+          "name": "mediacodec-hevc",
+          "value": "1"
+        },
+        {
+          "category": 1,
+          "name": "dns_cache_timeout",
+          "value": "36000000"
+        }
+      ]
+    }
+  ],
+  "ads": [
+    "mimg.0c1q0l.cn",
+    "www.googletagmanager.com",
+    "www.google-analytics.com",
+    "mc.usihnbcq.cn",
+    "mg.g1mm3d.cn",
+    "mscs.svaeuzh.cn",
+    "cnzz.hhttm.top",
+    "tp.vinuxhome.com",
+    "cnzz.mmstat.com",
+    "www.baihuillq.com",
+    "s23.cnzz.com",
+    "z3.cnzz.com",
+    "c.cnzz.com",
+    "stj.v1vo.top",
+    "z12.cnzz.com",
+    "img.mosflower.cn",
+    "tips.gamevvip.com",
+    "ehwe.yhdtns.com",
+    "xdn.cqqc3.com",
+    "www.jixunkyy.cn",
+    "sp.chemacid.cn",
+    "hm.baidu.com",
+    "s9.cnzz.com",
+    "z6.cnzz.com",
+    "um.cavuc.com",
+    "mav.mavuz.com",
+    "wofwk.aoidf3.com",
+    "z5.cnzz.com",
+    "xc.hubeijieshikj.cn",
+    "tj.tianwenhu.com",
+    "xg.gars57.cn",
+    "k.jinxiuzhilv.com",
+    "cdn.bootcss.com",
+    "ppl.xunzhuo123.com",
+    "xomk.jiangjunmh.top",
+    "img.xunzhuo123.com",
+    "z1.cnzz.com",
+    "s13.cnzz.com",
+    "xg.huataisangao.cn",
+    "z7.cnzz.com",
+    "xg.huataisangao.cn",
+    "z2.cnzz.com",
+    "s96.cnzz.com",
+    "q11.cnzz.com",
+    "thy.dacedsfa.cn",
+    "xg.whsbpw.cn",
+    "s19.cnzz.com",
+    "z8.cnzz.com",
+    "s4.cnzz.com",
+    "f5w.as12df.top",
+    "ae01.alicdn.com",
+    "www.92424.cn",
+    "k.wudejia.com",
+    "vivovip.mmszxc.top",
+    "qiu.xixiqiu.com",
+    "cdnjs.hnfenxun.com",
+    "cms.qdwght.com"
+  ],
+  "wallpaper": "https://yydsys.top/bg.php",
+  "warningText": "椤鸿储椤洪椤烘按椤鸿储绁�",
+  "logo": "https://gitee.com/lltv/by/raw/main/logo.png",
+  "rules": [
+    {
+      "host": "*",
+      "rule": [
+        "douyinvod.com",
+        "/video/tos/cn/"
+      ]
+    },
+    {
+      "host": "*",
+      "rule": [
+        "default.365yg.com",
+        "/video/tos/cn/"
+      ]
+    },
+    {
+      "host": "*",
+      "rule": [
+        "aliyundrive.net",
+        "response-content-disposition=",
+        ".m3u8"
+      ]
+    },
+    {
+      "host": "*",
+      "rule": [
+        "aliyundrive.net",
+        "response-content-disposition=",
+        ".mp4"
+      ]
+    },
+    {
+      "host": "*",
+      "rule": [
+        "aliyundrive.net",
+        "response-content-disposition=",
+        ".mkv"
+      ]
+    },
+    {
+      "host": "*",
+      "rule": [
+        "/m3u8.php?path=",
+        ".m3u8"
+      ]
+    },
+    {
+      "host": "zjmiao.com",
+      "rule": [
+        "play.videomiao.vip/API.php",
+        "time=",
+        "key=",
+        "path="
+      ]
+    },
+    {
+      "host": "*",
+      "rule": [
+        "/API.php?time=",
+        "key=",
+        "path=",
+        ".m3u8"
+      ]
+    },
+    {
+      "host": "*",
+      "rule": [
+        "oss-cn-m3u8",
+        "myqcloud.com.zh188.net",
+        "?url=",
+        ".m3u8"
+      ]
+    },
+    {
+      "host": "www.007ts.me",
+      "rule": [
+        "hls.pchj.net",
+        ".m3u8"
+      ]
+    },
+    {
+      "host": "*",
+      "rule": [
+        "iesdouyin.com/aweme",
+        "video_id="
+      ]
+    },
+    {
+      "host": "*",
+      "rule": [
+        "huoshan.com",
+        "/item/video/"
+      ]
+    },
+    {
+      "host": "*",
+      "rule": [
+        "http((?!http).){12,}?\\.(m3u8|mp4|flv|avi|mkv|rm|wmv|mpg|m4a)\\?.*"
+      ]
+    },
+    {
+      "host": "*",
+      "rule": [
+        "http((?!http).){12,}\\.(m3u8|mp4|flv|avi|mkv|rm|wmv|mpg|m4a)"
+      ]
+    },
+    {
+      "host": "*",
+      "rule": [
+        "mp3"
+      ]
+    },
+    {
+      "host": "*",
+      "rule": [
+        "m4a"
+      ]
+    },
+    {
+      "name": "绱㈠凹",
+      "hosts": [
+        "suonizy"
+      ],
+      "regex": [
+        "#EXTINF.*?\\s+.*?original.*?\\.ts\\s+",
+        "15.1666",
+        "15.2666",
+        "16.333333",
+        "15.266667"
+      ]
+    },
+    {
+      "name": "娴峰鐪�",
+      "hosts": [
+        "haiwaikan"
+      ],
+      "regex": [
+        "8.16",
+        "8.1748",
+        "10.0099",
+        "10.3333",
+        "10.85",
+        "12.33",
+        "16.0599"
+      ]
+    },
+    {
+      "name": "纾佸姏寤ｅ憡",
+      "hosts": [
+        "magnet"
+      ],
+      "regex": [
+        "婢抽棬鏂拌憽浜�",
+        "鏇村",
+        "绀惧崁",
+        "xuu",
+        "鏈€鏂�",
+        "鏈€鏂�",
+        "鐩存挱",
+        "鏇存柊",
+        "绀惧尯",
+        "鏈夎叮",
+        "鏈夎叮",
+        "鑻辩殗浣撹偛",
+        "鍏ㄤ腑鏂嘇V鍦ㄧ嚎",
+        "婢抽棬鐨囧啝璧屽満",
+        "鍝ュ摜蹇潵",
+        "缇庡コ鑽峰畼",
+        "瑁歌亰",
+        "鏂扮墖棣栧彂",
+        "UUE29",
+        "涔濇父濞变箰"
+      ]
+    },
+    {
+      "name": "BF",
+      "hosts": [
+        "bfzycdn.com"
+      ],
+      "regex": [
+        "#EXTINF.*?\\s+.*?adjump.*?\\.ts\\s+",
+        "_cef"
+      ]
+    },
+    {
+      "name": "涓€璧风湅骞垮憡",
+      "hosts": [
+        "yqk88"
+      ],
+      "regex": [
+        "18.4",
+        "15.1666",
+        "16.5333",
+        "#EXT-X-DISCONTINUITY\\r*\\n*[\\s\\S]*?#EXT-X-CUE-IN"
+      ]
+    },
+    {
+      "name": "鐏北鍡呮帰",
+      "hosts": [
+        "huoshan.com"
+      ],
+      "regex": [
+        "item_id="
+      ]
+    },
+    {
+      "name": "鎶栭煶鍡呮帰",
+      "hosts": [
+        "douyin.com"
+      ],
+      "regex": [
+        "is_play_url="
+      ]
+    },
+    {
+      "name": "proxy",
+      "hosts": [
+        "raw.bgithub.xyz",
+        "googlevideo.com",
+        "cdn.v82u1l.com",
+        "cdn.iz8qkg.com",
+        "cdn.kin6c1.com",
+        "c.biggggg.com",
+        "c.olddddd.com",
+        "haiwaikan.com",
+        "www.histar.tv",
+        "youtube.com",
+        "uhibo.com",
+        ".*boku.*",
+        ".*nivod.*",
+        "*.t4tv.hz.cz",
+        ".*ulivetv.*"
+      ]
+    },
+    {
+      "name": "鏄熸槦骞垮憡",
+      "hosts": [
+        "aws.ulivetv.net"
+      ],
+      "regex": [
+        "#EXT-X-DISCONTINUITY\\r*\\n*#EXTINF:8,[\\s\\S]*?#EXT-X-DISCONTINUITY"
+      ]
+    },
+    {
+      "name": "蹇湅骞垮憡",
+      "hosts": [
+        "kuaikan"
+      ],
+      "regex": [
+        "#EXT-X-KEY:METHOD=NONE\\r*\\n*#EXTINF:5,[\\s\\S]*?#EXT-X-DISCONTINUITY",
+        "#EXT-X-KEY:METHOD=NONE\\r*\\n*#EXTINF:2\\.4,[\\s\\S]*?#EXT-X-DISCONTINUITY"
+      ]
+    },
+    {
+      "name": "鈾伙笍蹇湅",
+      "hosts": [
+        "kuaikan"
+      ],
+      "regex": [
+        "15.32",
+        "15.231"
+      ]
+    }
+  ],
+  "tag": "https://github.com/Tangsan99999/Tangsan99999.github.io/blob/master/mao.json",
+  "doh": [
+    {
+      "name": "Google",
+      "url": "https://dns.google/dns-query",
+      "ips": [
+        "8.8.4.4",
+        "8.8.8.8"
+      ]
+    },
+    {
+      "name": "Cloudflare",
+      "url": "https://cloudflare-dns.com/dns-query",
+      "ips": [
+        "1.1.1.1",
+        "1.0.0.1",
+        "2606:4700:4700::1111",
+        "2606:4700:4700::1001"
+      ]
+    },
+    {
+      "name": "AdGuard",
+      "url": "https://dns.adguard.com/dns-query",
+      "ips": [
+        "94.140.14.140",
+        "94.140.14.141"
+      ]
+    },
+    {
+      "name": "DNSWatch",
+      "url": "https://resolver2.dns.watch/dns-query",
+      "ips": [
+        "84.200.69.80",
+        "84.200.70.40"
+      ]
+    },
+    {
+      "name": "Quad9",
+      "url": "https://dns.quad9.net/dns-quer",
+      "ips": [
+        "9.9.9.9",
+        "149.112.112.112"
+      ]
+    }
+  ],
+  "headers": [
+    {
+      "host": "148.135.93.213",
+      "header": {
+        "User-Agent": "AptvPlayer/1.3.8"
+      }
+    },
+    {
+      "host": "itv-tb.myukj.cn",
+      "header": {
+        "User-Agent": "c1c42b9e0d9e3a3a"
+      }
+    },
+    {
+      "host": "cn-all-iptv.myukj.cn",
+      "header": {
+        "User-Agent": "c1c42b9e0d9e3a3a"
+      }
+    },
+    {
+      "host": "cn-iptv-5.myukj.cn",
+      "header": {
+        "User-Agent": "c1c42b9e0d9e3a3a"
+      }
+    },
+    {
+      "host": "cn-iptv-6.myukj.cn",
+      "header": {
+        "User-Agent": "c1c42b9e0d9e3a3a"
+      }
+    },
+    {
+      "host": "mursor.ottiptv.cc",
+      "header": {
+        "User-Agent": "okHttp/Mod-1.2.0.1"
+      }
+    },
+    {
+      "host": "live.catvod.com",
+      "header": {
+        "User-Agent": "catvod.com"
+      }
+    },
+    {
+      "host": "101.35.240.114",
+      "header": {
+        "User-Agent": "AptvPlayer-UA"
+      }
+    }
+  ],
+  "hosts": [
+    "cache.ott.*.itv.cmvideo.cn=base-v4-free-mghy.e.cdn.chinamobile.com",
+    "cache.ott.ystenlive.itv.cmvideo.cn=base-v4-free-mghy.e.cdn.chinamobile.com",
+    "cache.ott.bestlive.itv.cmvideo.cn=base-v4-free-mghy.e.cdn.chinamobile.com",
+    "cache.ott.wasulive.itv.cmvideo.cn=base-v4-free-mghy.e.cdn.chinamobile.com",
+    "cache.ott.fifalive.itv.cmvideo.cn=base-v4-free-mghy.e.cdn.chinamobile.com",
+    "cache.ott.hnbblive.itv.cmvideo.cn=base-v4-free-mghy.e.cdn.chinamobile.com"
+  ],
+  "sites": [
+    {
+      "key": "閲忓瓙",
+      "name": "閲忓瓙",
+      "type": 0,
+      "api": "http://127.0.0.1:10079/?thread=0&proxy=socks5://192.168.1.9:4592&url=https://cj.lziapi.com/api.php/provide/vod/at/xml/",
+      "playUrl": "json:http://127.0.0.1:10079/parse/?thread=0&proxy=socks5://192.168.1.9:4592&url=",
+      "searchable": 1,
+      "changeable": 1,
+      "categories": [
+        "浼︾悊鐗�"
+      ]
+    },
+    {
+      "key": "闈炲嚒",
+      "name": "闈炲嚒",
+      "type": 0,
+      "api": "http://127.0.0.1:10079/?thread=0&proxy=socks5://192.168.1.9:4592&url=http://cj.ffzyapi.com/api.php/provide/vod/at/xml/",
+      "playUrl": "json:http://127.0.0.1:10079/parse/?thread=0&proxy=socks5://192.168.1.9:4592&url=",
+      "searchable": 1,
+      "changeable": 1,
+      "categories": [
+        "浼︾悊鐗�"
+      ]
+    },
+    {
+      "key": "18A璨�",
+      "name": "18A璨�",
+      "type": 3,
+      "api": "https://gh-proxy.com/https://raw.githubusercontent.com/FongMi/CatVodOpen/main/open/18a_open.js",
+      "searchable": 1,
+      "recordable": 0,
+      "style": {
+        "type": "rect",
+        "ratio": 1.485
+      }
+    },
+    {
+      "key": "鐜夊厰璧勬簮",
+      "name": "鐜夊厰璧勬簮",
+      "type": 0,
+      "api": "https://apiyutu.com/api.php/provide/vod/at/xml/",
+      "searchable": 1,
+      "style": {
+        "type": "rect",
+        "ratio": 1.333
+      },
+      "quickSearch": 1
+    },
+    {
+      "key": "kd",
+      "name": "閰疯眴",
+      "type": 0,
+      "api": "https://api.kdapi.info/api.php/provide/vod/at/xml/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0
+    },
+    {
+      "key": "kulunli",
+      "name": "閰蜂鸡鐞�",
+      "type": 1,
+      "api": "https://api.kudian70.com/api.php/provide/vod/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
+      "key": "timizy",
+      "name": "鐢滆湝璧勬簮 ",
+      "type": 1,
+      "api": "https://timizy10.cc/api.php/provide/vod/?ac=list",
+      "searchable": 1,
+      "changeable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
+      "key": "濂ユ柉鍗¤祫婧愮綉",
+      "name": "濂ユ柉鍗¤祫婧愮綉",
+      "type": 1,
+      "api": "https://aosikazy.com/api.php/provide/vod/"
+    },
+    {
+      "key": "apilj.com",
+      "name": "鎴愪汉01",
+      "type": 1,
+      "api": "http://apilj.com/api.php/provide/vod/at/json/",
+      "searchable": 1,
+      "recordable": 0,
+      "style": {
+        "type": "rect",
+        "ratio": 1.33
+      }
+    },
+    {
+      "key": "dadiapi.com",
+      "name": "鎴愪汉02",
+      "type": 0,
+      "api": "http://dadiapi.com/api.php",
+      "searchable": 1,
+      "recordable": 0,
+      "style": {
+        "type": "rect",
+        "ratio": 1.33
+      }
+    },
+    {
+      "key": "91md.me",
+      "name": "鎴愪汉03",
+      "type": 1,
+      "api": "http://91md.me/api.php/provide/vod/",
+      "searchable": 1,
+      "recordable": 0,
+      "style": {
+        "type": "rect",
+        "ratio": 1.33
+      }
+    },
+    {
+      "key": "jcspcj8.com",
+      "name": "鎴愪汉04",
+      "type": 0,
+      "api": "http://jcspcj8.com/api?ac=videolist",
+      "searchable": 1,
+      "recordable": 0,
+      "style": {
+        "type": "rect",
+        "ratio": 1.33
+      }
+    },
+    {
+      "key": "bttcj.com",
+      "name": "鎴愪汉05",
+      "type": 0,
+      "api": "http://bttcj.com/inc/sapi.php",
+      "searchable": 1,
+      "recordable": 0,
+      "style": {
+        "type": "rect",
+        "ratio": 1.33
+      }
+    },
+    {
+      "key": "cjmygzy.com",
+      "name": "鎴愪汉06",
+      "type": 0,
+      "api": "http://cjmygzy.com/inc/sapi.php?ac=videolist",
+      "searchable": 1,
+      "recordable": 0,
+      "style": {
+        "type": "rect",
+        "ratio": 1.33
+      }
+    },
+    {
+      "key": "api.sexnguon.com",
+      "name": "鎴愪汉07",
+      "type": 1,
+      "api": "http://api.sexnguon.com/api.php/provide/vod/",
+      "searchable": 1,
+      "recordable": 0,
+      "style": {
+        "type": "rect",
+        "ratio": 1.33
+      }
+    },
+    {
+      "key": "feifei67.com",
+      "name": "鎴愪汉08",
+      "type": 1,
+      "api": "http://www.feifei67.com/api.php/provide/vod/",
+      "searchable": 1,
+      "recordable": 0,
+      "style": {
+        "type": "rect",
+        "ratio": 1.33
+      }
+    },
+    {
+      "key": "llzxcj.com",
+      "name": "鎴愪汉09",
+      "type": 0,
+      "api": "http://llzxcj.com/inc/sck.php?ac=videolist",
+      "searchable": 1,
+      "recordable": 0,
+      "style": {
+        "type": "rect",
+        "ratio": 1.33
+      }
+    },
+    {
+      "key": "f2dcj6.com",
+      "name": "鎴愪汉10",
+      "type": 0,
+      "api": "http://f2dcj6.com/sapi?ac=videolist",
+      "searchable": 1,
+      "recordable": 0,
+      "style": {
+        "type": "rect",
+        "ratio": 1.33
+      }
+    },
+    {
+      "key": "ggmmzy.com",
+      "name": "鎴愪汉11",
+      "type": 0,
+      "api": "http://www.ggmmzy.com:9999/inc/xml",
+      "searchable": 1,
+      "recordable": 0,
+      "style": {
+        "type": "rect",
+        "ratio": 1.33
+      }
+    },
+    {
+      "key": "fhapi9.com",
+      "name": "鎴愪汉12",
+      "type": 1,
+      "api": "http://fhapi9.com/api.php/provide/vod/",
+      "searchable": 1,
+      "recordable": 0,
+      "style": {
+        "type": "rect",
+        "ratio": 1.33
+      }
+    },
+    {
+      "key": "madouse.la",
+      "name": "鎴愪汉13",
+      "type": 1,
+      "api": "http://madouse.la/api.php/provide/vod/",
+      "searchable": 1,
+      "recordable": 0,
+      "style": {
+        "type": "rect",
+        "ratio": 1.33
+      }
+    },
+    {
+      "key": "lbapiby.com",
+      "name": "鎴愪汉14",
+      "type": 0,
+      "api": "http://lbapiby.com/api.php/provide/vod/at/xml",
+      "searchable": 1,
+      "recordable": 0,
+      "style": {
+        "type": "rect",
+        "ratio": 1.33
+      }
+    },
+    {
+      "key": "api.maozyapi.com",
+      "name": "鎴愪汉15",
+      "type": 1,
+      "api": "https://api.maozyapi.com/inc/apijson_vod.php",
+      "searchable": 1,
+      "recordable": 0,
+      "style": {
+        "type": "rect",
+        "ratio": 1.33
+      }
+    },
+    {
+      "key": "msnii.com",
+      "name": "鎴愪汉16",
+      "type": 0,
+      "api": "https://www.msnii.com/api/xml.php",
+      "searchable": 1,
+      "recordable": 0,
+      "style": {
+        "type": "rect",
+        "ratio": 1.33
+      }
+    },
+    {
+      "key": "gdlsp.com",
+      "name": "鎴愪汉17",
+      "type": 0,
+      "api": "https://www.gdlsp.com/api/xml.php",
+      "searchable": 1,
+      "recordable": 0,
+      "style": {
+        "type": "rect",
+        "ratio": 1.33
+      }
+    },
+    {
+      "key": "caiji.huakuiapi.com",
+      "name": "鎴愪汉18",
+      "type": 1,
+      "api": "https://caiji.huakuiapi.com/inc/apijson_vod.php",
+      "searchable": 1,
+      "recordable": 0,
+      "style": {
+        "type": "rect",
+        "ratio": 1.33
+      }
+    },
+    {
+      "key": "kxgav.com",
+      "name": "鎴愪汉19",
+      "type": 0,
+      "api": "https://www.kxgav.com/api/xml.php",
+      "searchable": 1,
+      "recordable": 0,
+      "style": {
+        "type": "rect",
+        "ratio": 1.33
+      }
+    },
+    {
+      "key": "xrbsp.com",
+      "name": "鎴愪汉20",
+      "type": 0,
+      "api": "https://www.xrbsp.com/api/xml.php",
+      "searchable": 1,
+      "recordable": 0,
+      "style": {
+        "type": "rect",
+        "ratio": 1.33
+      }
+    },
+    {
+      "key": "pgxdy.com",
+      "name": "鎴愪汉21",
+      "type": 0,
+      "api": "https://www.pgxdy.com/api/xml.php",
+      "searchable": 1,
+      "recordable": 0,
+      "style": {
+        "type": "rect",
+        "ratio": 1.33
+      }
+    },
+    {
+      "key": "afasu.com",
+      "name": "鎴愪汉22",
+      "type": 0,
+      "api": "https://www.afasu.com/api/xml.php",
+      "searchable": 1,
+      "recordable": 0,
+      "style": {
+        "type": "rect",
+        "ratio": 1.33
+      }
+    },
+    {
+      "key": "kkzy.me",
+      "name": "鎴愪汉23",
+      "type": 1,
+      "api": "https://kkzy.me/api.php/provide/vod/",
+      "searchable": 1,
+      "recordable": 0,
+      "style": {
+        "type": "rect",
+        "ratio": 1.33
+      }
+    },
+    {
+      "key": "888dav.com",
+      "name": "鎴愪汉24",
+      "type": 1,
+      "api": "https://www.888dav.com/api.php/provide/vod/",
+      "searchable": 1,
+      "recordable": 0,
+      "style": {
+        "type": "rect",
+        "ratio": 1.33
+      }
+    },
+    {
+      "key": "apittzy.com",
+      "name": "鎴愪汉25",
+      "type": 1,
+      "api": "https://apittzy.com/api.php/provide/vod/",
+      "searchable": 1,
+      "recordable": 0,
+      "style": {
+        "type": "rect",
+        "ratio": 1.33
+      }
+    },
+    {
+      "key": "lbapi9.com",
+      "name": "鎴愪汉26",
+      "type": 1,
+      "api": "https://lbapi9.com/api.php/provide/vod/",
+      "searchable": 1,
+      "recordable": 0,
+      "style": {
+        "type": "rect",
+        "ratio": 1.33
+      }
+    },
+    {
+      "key": "鑰侀腑绂忓埄",
+      "name": "鑰侀腑绂忓埄",
+      "type": 0,
+      "api": "https://api.apilyzy.com/api.php/provide/vod/at/xml"
+    },
+    {
+      "key": "鑺掓灉绂忓埄",
+      "name": "鑺掓灉绂忓埄",
+      "type": 0,
+      "api": "https://www.mgav1.cc/api.php/provide/vod/at/xml/"
+    },
+    {
+      "key": "澶╁爞绂忓埄",
+      "name": "澶╁爞绂忓埄",
+      "type": 0,
+      "api": "https://bttcj.com/inc/sapi.php"
+    },
+    {
+      "key": "鎺㈡帰璧勬簮",
+      "name": "鎺㈡帰璧勬簮",
+      "type": 0,
+      "api": "https://apittzy.com/api.php/provide/vod/at/xml",
+      "playUrl": "https://jiexi.ttbfp1.com/m3u8/?url="
+    },
+    {
+      "key": "涔愰奔璧勬簮",
+      "name": "涔愰奔璧勬簮",
+      "type": 0,
+      "api": "https://www.leyuzyapi.com/inc/zyapimac.php",
+      "playUrl": "https://player.leyuzy.net/?url="
+    },
+    {
+      "key": "绉€鑹茶祫婧�",
+      "name": "绉€鑹茶祫婧�",
+      "type": 0,
+      "api": "https://api.xiuseapi.com/api.php/provide/vod/at/xml",
+      "playUrl": "https://player.leyuzy.net/?url="
+    },
+    {
+      "key": "椴ㄩ奔璧勬簮",
+      "name": "椴ㄩ奔璧勬簮",
+      "type": 0,
+      "api": "https://shayuapi.com/api.php/provide/vod/at/xml/"
+    },
+    {
+      "key": "鑹茶壊璧勬簮",
+      "name": "鑹茶壊璧勬簮",
+      "type": 0,
+      "api": "http://m.7777688.com/inc/api.php/"
+    },
+    {
+      "key": "澶у湴璧勬簮",
+      "name": "澶у湴璧勬簮",
+      "type": 0,
+      "api": "https://dadiapi.com/api.php/"
+    },
+    {
+      "key": "9987",
+      "name": "9987",
+      "type": 0,
+      "api": "https://www.qbzyz.com/api.php/provide/vod/at/xml"
+    },
+    {
+      "key": "涔愭挱",
+      "name": "涔愭挱",
+      "type": 0,
+      "api": "https://lbapi9.com/api.php/provide/vod/at/xml/"
+    },
+    {
+      "key": "鑻嶅ぉ",
+      "name": "鑻嶅ぉ",
+      "type": 0,
+      "api": "http://cj.cangtiancj.com/api.php/Seacms/vod"
+    },
+    {
+      "key": "浣充附",
+      "name": "浣充附",
+      "type": 0,
+      "api": "https://jialiapi.com/api.php/provide/vod/at/xml/"
+    },
+    {
+      "key": "鑹烘湳",
+      "name": "鑹烘湳",
+      "type": 0,
+      "api": "http://122ap.com/inc/api.php"
+    },
+    {
+      "key": "鑺掓灉",
+      "name": "鑺掓灉",
+      "type": 0,
+      "api": "https://mgzyz1.com/api.php/provide/vod/at/xml"
+    },
+    {
+      "key": "妗冭壊",
+      "name": "妗冭壊",
+      "type": 0,
+      "api": "https://cj.taoseapi.com/inc/api.php"
+    },
+    {
+      "key": "浼樻灉",
+      "name": "浼樻灉",
+      "type": 0,
+      "api": "https://www.ugirl6.com/inc/zyapimac.php"
+    },
+    {
+      "key": "鑰侀腑",
+      "name": "鑰侀腑",
+      "type": 0,
+      "api": "http://laoyazy5.com/api.php/provide/vod/at/xml"
+    },
+    {
+      "key": "BB璧勬簮",
+      "name": "BB璧勬簮",
+      "type": 0,
+      "api": "http://bbzy.cc/inc/maccms10.php"
+    },
+    {
+      "key": "100ai",
+      "name": "100ai",
+      "type": 0,
+      "api": "http://www.010aizy.com/API/maxs.php"
+    },
+    {
+      "key": "javcaptain",
+      "name": "javcaptain",
+      "type": 0,
+      "api": "https://javcaptain.com/api.php/provide/vod/at/xml"
+    },
+    {
+      "key": "涔濅節璧勬簮",
+      "name": "涔濅節璧勬簮",
+      "type": 0,
+      "api": "http://99zyba.com/api.php/provide/vod/at/xml"
+    },
+    {
+      "key": "鑺辨",
+      "name": "鑺辨",
+      "type": 0,
+      "api": "https://cj.apihjzy.com/inc/api.php"
+    },
+    {
+      "key": "SW璧勬簮",
+      "name": "SW璧勬簮",
+      "type": 0,
+      "api": "https://siwazyw.net/api.php/provide/vod/at/xml",
+      "playUrl": "https://help.siwazywcdn2.com/m3u8.php?url=",
+      "categories": []
+    },
+    {
+      "key": "HAV璧勬簮",
+      "name": "HAV璧勬簮",
+      "type": 1,
+      "api": "https://www.pgxdy.com/api/json.php",
+      "playUrl": "",
+      "categories": []
+    },
+    {
+      "key": "姘磋湝妗�",
+      "name": "姘磋湝妗�",
+      "type": 0,
+      "api": "http://51smt4.xyz/api.php/provide/vod/at/xml",
+      "playUrl": "",
+      "categories": []
+    },
+    {
+      "key": "璧勬簮缃�",
+      "name": "璧勬簮缃�",
+      "type": 0,
+      "api": "https://jialiapi.com/api.php/Seacms/vod/at/xml",
+      "playUrl": "",
+      "categories": []
+    },
+    {
+      "key": "灏忕孩璧勬簮",
+      "name": "灏忕孩璧勬簮",
+      "type": 0,
+      "api": "https://cj.xhzy1.xyz/api.php/provide/vod/at/xml",
+      "playUrl": "",
+      "categories": []
+    },
+    {
+      "key": "CK璧勬簮",
+      "name": "CK璧勬簮",
+      "type": 0,
+      "api": "https://ckzy.me/api.php/provide/vod/at/xml",
+      "playUrl": "",
+      "categories": []
+    },
+    {
+      "key": "鑼勫瓙璧勬簮",
+      "name": "鑼勫瓙璧勬簮",
+      "type": 0,
+      "api": "http://www.qiezizy8.com/api.php/provide/vod/at/xml",
+      "playUrl": "",
+      "categories": []
+    },
+    {
+      "key": "1024璧勬簮",
+      "name": "1024璧勬簮",
+      "type": 0,
+      "api": "https://www.1024nf.com/api.php/provide/vod/at/xml",
+      "playUrl": "",
+      "categories": []
+    },
+    {
+      "key": "av888璧勬簮",
+      "name": "av888璧勬簮",
+      "type": 0,
+      "api": "http://m.7777688.com/inc/api.php",
+      "playUrl": "",
+      "categories": []
+    },
+    {
+      "key": "杈ｆ璧勬簮",
+      "name": "杈ｆ璧勬簮",
+      "type": 0,
+      "api": "http://api.11bat.com/api.php/provide/vod/at/xml",
+      "playUrl": "",
+      "categories": []
+    },
+    {
+      "key": "杈ｆ璧勬簮2",
+      "name": "杈ｆ璧勬簮2",
+      "type": 0,
+      "api": "http://www.lajiaozy18.com/api.php/provide/vod/at/xml",
+      "playUrl": "",
+      "categories": []
+    },
+    {
+      "key": "鐜簹璧勬簮",
+      "name": "鐜簹璧勬簮",
+      "type": 0,
+      "api": "http://wmcj8.com/inc/sapi.php",
+      "playUrl": "",
+      "categories": []
+    },
+    {
+      "key": "JAV鍚嶄紭",
+      "name": "JAV鍚嶄紭",
+      "type": 0,
+      "api": "http://mygzycj.com/sapi.php?ac=videolist",
+      "playUrl": "",
+      "categories": []
+    },
+    {
+      "key": "SS璧勬簮",
+      "name": "SS璧勬簮",
+      "type": 0,
+      "api": "http://secj8.com/inc/sapi.php?ac=videolist",
+      "playUrl": "",
+      "categories": []
+    },
+    {
+      "key": "鐜栫帠璧勬簮",
+      "name": "鐜栫帠璧勬簮",
+      "type": 0,
+      "api": "http://99zywcj.com/inc/sapi.php?ac=videolist",
+      "playUrl": "",
+      "categories": []
+    },
+    {
+      "key": "鎾告浣犺祫婧�",
+      "name": "鎾告浣犺祫婧�",
+      "type": 0,
+      "api": "http://lsnzxcj.com/inc/sapi.php",
+      "playUrl": "",
+      "categories": []
+    },
+    {
+      "key": "瀵屼簩浠ｈ祫婧�",
+      "name": "瀵屼簩浠ｈ祫婧�",
+      "type": 0,
+      "api": "http://f2dcj6.com/sapi/?ac=videolist",
+      "playUrl": "",
+      "categories": []
+    },
+    {
+      "key": "瀛楀箷缃�",
+      "name": "瀛楀箷缃�",
+      "type": 0,
+      "api": "http://zmcj88.com/sapi?ac=videolist",
+      "playUrl": "",
+      "categories": []
+    },
+    {
+      "key": "涔呰崏璧勬簮",
+      "name": "涔呰崏璧勬簮",
+      "type": 0,
+      "api": "http://jcspcj8.com/sapi",
+      "playUrl": "",
+      "categories": []
+    },
+    {
+      "key": "蹇椿璧勬簮",
+      "name": "蹇椿璧勬簮",
+      "type": 0,
+      "api": "https://www.khzywapi.com/api.php/provide/vod/at/xml",
+      "playUrl": "",
+      "categories": []
+    },
+    {
+      "key": "鐣彿璧勬簮",
+      "name": "鐣彿璧勬簮",
+      "type": 0,
+      "api": "http://fhapi9.com/api.php/provide/vod/at/xml",
+      "playUrl": "",
+      "categories": []
+    },
+    {
+      "key": "鑻嶅ぉ璧勬簮",
+      "name": "鑻嶅ぉ璧勬簮",
+      "type": 0,
+      "api": "http://cj.cangtiancj.com/api.php/provide/vod/at/xml",
+      "playUrl": "",
+      "categories": []
+    },
+    {
+      "key": "鐚涚墰",
+      "name": "鐚涚墰",
+      "type": 0,
+      "api": "http://nen13.space/api.php/provide/vod/at/xml",
+      "playUrl": "",
+      "categories": []
+    },
+    {
+      "key": "77璧勬簮",
+      "name": "77璧勬簮",
+      "type": 0,
+      "api": "https://www.77zy.vip/inc/m3u8.php",
+      "playUrl": "",
+      "categories": []
+    },
+    {
+      "key": "523璧勬簮",
+      "name": "523璧勬簮",
+      "type": 0,
+      "api": "https://caiji.523zyw.com/inc/api.php",
+      "playUrl": "",
+      "categories": []
+    },
+    {
+      "key": "鐔婄尗璧勬簮",
+      "name": "鐔婄尗璧勬簮",
+      "type": 0,
+      "api": "http://jcspcj8.com/api?ac=list",
+      "playUrl": "",
+      "categories": []
+    },
+    {
+      "key": "娉¤姍璧勬簮",
+      "name": "娉¤姍璧勬簮",
+      "type": 0,
+      "api": "http://zmcj88.com/api?ac=list",
+      "playUrl": "",
+      "categories": []
+    },
+    {
+      "key": "鍚戞棩钁�",
+      "name": "鍚戞棩钁�",
+      "type": 0,
+      "api": "http://mygzycj.com/api.php?ac=list",
+      "playUrl": "",
+      "categories": []
+    },
+    {
+      "key": "鐧藉珫璧勬簮",
+      "name": "鐧藉珫璧勬簮",
+      "type": 1,
+      "api": "https://www.kxgav.com/api/json.php?ac=list",
+      "playUrl": "",
+      "categories": []
+    },
+    {
+      "key": "S鐚祫婧�",
+      "name": "S鐚祫婧�",
+      "type": 0,
+      "api": "https://api.maozyapi.com/inc/api.php",
+      "playUrl": "",
+      "categories": []
+    },
+    {
+      "key": "缇庡皯濂�",
+      "name": "缇庡皯濂�",
+      "type": 1,
+      "api": "https://www.msnii.com/api/json.php?ac=list",
+      "playUrl": "",
+      "categories": []
+    },
+    {
+      "key": "Y姘存満",
+      "name": "Y姘存満",
+      "type": 1,
+      "api": "https://www.xrbsp.com/api/json.php?ac=list",
+      "playUrl": "",
+      "categories": []
+    },
+    {
+      "key": "棣欏ザ鍎�",
+      "name": "棣欏ザ鍎�",
+      "type": 1,
+      "api": "https://www.gdlsp.com/api/json.php?ac=list",
+      "playUrl": "",
+      "categories": []
+    },
+    {
+      "key": "4000璧勬簮",
+      "name": "4000璧勬簮",
+      "type": 0,
+      "api": "https://www.4000zy.com/inc/api.php",
+      "playUrl": "",
+      "categories": []
+    },
+    {
+      "key": "*瓒ｆ挱璧勬簮",
+      "name": "*瓒ｆ挱璧勬簮",
+      "type": 0,
+      "api": "https://www.qbzyz.com/api.php/provide/vod/at/xml/"
+    },
+    {
+      "key": "*浼樻灉璧勬簮",
+      "name": "*浼樻灉璧勬簮",
+      "type": 0,
+      "api": "https://www.ugzyz5.com/inc/zyapimac.php"
+    },
+    {
+      "key": "*姘存満璧勬簮",
+      "name": "*姘存満璧勬簮",
+      "type": 1,
+      "api": "https://www.xrbsp.com/api/json.php"
+    },
+    {
+      "key": "*52AVAV",
+      "name": "*52AVAV",
+      "type": 0,
+      "api": "http://02caiji.com/home/cjapi/aab3238922bcc25a6f606eb525ffdc56/vod/xml"
+    },
+    {
+      "key": "*楠氳壊璧勬簮",
+      "name": "*楠氳壊璧勬簮",
+      "type": 1,
+      "api": "http://api.saosezy.icu/api.php/provide/vod/"
+    },
+    {
+      "key": "*閫熸挱璧勬簮",
+      "name": "*閫熸挱璧勬簮",
+      "type": 1,
+      "api": "http://api.suboapi.com/api.php/provide/vod/"
+    },
+    {
+      "key": "*椴嶉奔BB",
+      "name": "*椴嶉奔BB",
+      "type": 0,
+      "api": "http://baoyub.live/inc/api.php"
+    },
+    {
+      "key": "*涓€鏈珼璧勬簮",
+      "name": "*涓€鏈珼璧勬簮",
+      "type": 0,
+      "api": "http://caiji03.com/home/cjapi/44f683a84163b3523afe57c2e008bc8c/vod/xml"
+    },
+    {
+      "key": "*楹昏眴瑙嗛",
+      "name": "*楹昏眴瑙嗛",
+      "type": 0,
+      "api": "http://caiji04.com/home/cjapi/03afdbd66e7929b125f8597834fa83a4/vod/xml"
+    },
+    {
+      "key": "*闈掗潚鑽夎棰�",
+      "name": "*闈掗潚鑽夎棰�",
+      "type": 0,
+      "api": "http://caiji05.com/home/cjapi/ea5d2f1c4608232e07d3aa3d998e5135/vod/xml"
+    },
+    {
+      "key": "*涔呬箙鐑湪绾�",
+      "name": "*涔呬箙鐑湪绾�",
+      "type": 0,
+      "api": "http://caiji06.com/home/cjapi/fc490ca45c00b1249bbe3554a4fdf6fb/vod/xml"
+    },
+    {
+      "key": "*鏃ユ湰AV鍦ㄧ嚎",
+      "name": "*鏃ユ湰AV鍦ㄧ嚎",
+      "type": 0,
+      "api": "http://caiji07.com/home/cjapi/3295c76acbf4caaed33c36b1b5fc2cb1/vod/xml"
+    },
+    {
+      "key": "*椴嶉奔AV",
+      "name": "*椴嶉奔AV",
+      "type": 0,
+      "api": "http://caiji26.com/home/cjapi/9778d5d219c5080b9a6a17bef029331c/vod/xml"
+    },
+    {
+      "key": "*鐖遍夯璞�",
+      "name": "*鐖遍夯璞�",
+      "type": 1,
+      "api": "http://emodao.la/api.php/provide/vod/"
+    },
+    {
+      "key": "*EU璧勬簮",
+      "name": "*EU璧勬簮",
+      "type": 1,
+      "api": "http://euzy9.xyz/api.php/provide/vod/"
+    },
+    {
+      "key": "*娴疆璧勬簮",
+      "name": "*娴疆璧勬簮",
+      "type": 1,
+      "api": "http://langchaozy6.com/api.php/provide/vod/"
+    },
+    {
+      "key": "*800188188",
+      "name": "*800188188",
+      "type": 0,
+      "api": "http://www.800188188.com/inc/api.php"
+    },
+    {
+      "key": "*92鐖辫祫婧�",
+      "name": "*92鐖辫祫婧�",
+      "type": 0,
+      "api": "http://www.92aizy.com/api/macs.php"
+    },
+    {
+      "key": "*澶╁櫆鍟﹁祫婧�",
+      "name": "*澶╁櫆鍟﹁祫婧�",
+      "type": 0,
+      "api": "http://www.987caiji.com/api/max.php"
+    },
+    {
+      "key": "*蹇挱鐩掑瓙璧勬簮",
+      "name": "*蹇挱鐩掑瓙璧勬簮",
+      "type": 0,
+      "api": "http://www.caiji09.com/home/cjapi/a3f390d88e4c41f2747bfa2f1b5f87db/vod/xml"
+    },
+    {
+      "key": "*鎴戣鍟暘",
+      "name": "*鎴戣鍟暘",
+      "type": 0,
+      "api": "http://www.caiji21.com/home/cjapi/28dd2c7955ce926456240b2ff0100bde/vod/xml"
+    },
+    {
+      "key": "*澶涓濊祫婧�",
+      "name": "*澶涓濊祫婧�",
+      "type": 0,
+      "api": "http://www.caiji24.com/home/cjapi/f033ab37c30201f73f142449d037028d/vod/xml"
+    },
+    {
+      "key": "*鍜挭璧勬簮",
+      "name": "*鍜挭璧勬簮",
+      "type": 0,
+      "api": "http://www.caiji25.com/home/cjapi/43ec517d68b6edd3015b3edc9a11367b/vod/xml"
+    },
+    {
+      "key": "*杈ｆ璧勬簮",
+      "name": "*杈ｆ璧勬簮",
+      "type": 1,
+      "api": "http://www.lajiaozy18.com/api.php/provide/vod?ac=list"
+    },
+    {
+      "key": "*澶╁爞AV",
+      "name": "*澶╁爞AV",
+      "type": 0,
+      "api": "http://www.njxinli.com/inc/api.php"
+    },
+    {
+      "key": "*浜篞璧勬簮",
+      "name": "*浜篞璧勬簮",
+      "type": 0,
+      "api": "http://www.yrqcaiji.com/home/cjapi/98dce83da57b0395e163467c9dae521b/vod/xml"
+    },
+    {
+      "key": "*灏忓N璧勬簮",
+      "name": "*灏忓N璧勬簮",
+      "type": 0,
+      "api": "http://xcncaiji.com/home/cjapi/812b4ba287f5ee0bc9d43bbf5bbe87fb/vod/xml"
+    },
+    {
+      "key": "*涔呰崏鍦ㄧ嚎瑙嗛",
+      "name": "*涔呰崏鍦ㄧ嚎瑙嗛",
+      "type": 0,
+      "api": "https://hhjc2.com/sapi/?ac=videolist"
+    },
+    {
+      "key": "*鐥存眽闃熼暱",
+      "name": "*鐥存眽闃熼暱",
+      "type": 1,
+      "api": "https://javcaptain.com/api.php/provide/vod/"
+    },
+    {
+      "key": "*鏌氳悓瑙嗛",
+      "name": "*鏌氳悓瑙嗛",
+      "type": 1,
+      "api": "https://nameweb.xyz/api.php/provide/vod/"
+    },
+    {
+      "key": "*绮惧伐鍘傝祫婧�",
+      "name": "*绮惧伐鍘傝祫婧�",
+      "type": 0,
+      "api": "https://www.016caiji.com/home/cjapi/7cbbc409ec990f19c78c75bd1e06f215/vod/xml"
+    },
+    {
+      "key": "*浣充汉璧勬簮",
+      "name": "*浣充汉璧勬簮",
+      "type": 1,
+      "api": "https://www.951c.tk/api.php/provide/vod/"
+    },
+    {
+      "key": "*AE86璧勬簮",
+      "name": "*AE86璧勬簮",
+      "type": 1,
+      "api": "https://www.ae86zy.com/api.php/provide/vod/"
+    },
+    {
+      "key": "*浜氭床鍦ㄧ嚎",
+      "name": "*浜氭床鍦ㄧ嚎",
+      "type": 0,
+      "api": "https://www.caiji01.com/home/cjapi/072b030ba126b2f4b2374f342be9ed44/vod/xml"
+    },
+    {
+      "key": "*鑽夋Υ瑙嗛",
+      "name": "*鑽夋Υ瑙嗛",
+      "type": 0,
+      "api": "https://www.caiji02.com/home/cjapi/7f39f8317fbdb1988ef4c628eba02591/vod/xml"
+    },
+    {
+      "key": "*澶ч钑夎祫婧�",
+      "name": "*澶ч钑夎祫婧�",
+      "type": 0,
+      "api": "https://www.caiji08.com/home/cjapi/735b90b4568125ed6c3f678819b6e058/vod/xml"
+    },
+    {
+      "key": "*榛勭摐TV璧勬簮",
+      "name": "*榛勭摐TV璧勬簮",
+      "type": 0,
+      "api": "https://www.caiji10.com/home/cjapi/14bfa6bb14875e45bba028a21ed38046/vod/xml"
+    },
+    {
+      "key": "*AV闆嗕腑",
+      "name": "*AV闆嗕腑",
+      "type": 0,
+      "api": "https://www.caiji22.com/home/cjapi/35f4a8d465e6e1edc05f3d8ab658c551/vod/xml"
+    },
+    {
+      "key": "*澶滃鎾歌祫婧�",
+      "name": "*澶滃鎾歌祫婧�",
+      "type": 0,
+      "api": "https://www.caiji23.com/home/cjapi/d1fe173d08e959397adf34b1d77e88d7/vod/xml"
+    },
+    {
+      "key": "*姘村笜娲炶祫婧�",
+      "name": "*姘村笜娲炶祫婧�",
+      "type": 0,
+      "api": "https://www.sldcaiji.com/home/cjapi/f4b9ec30ad9f68f89b29639786cb62ef/vod/xml"
+    },
+    {
+      "key": "*浼樻灉",
+      "name": "*浼樻灉",
+      "type": 0,
+      "api": "https://www.ugvapi.com/inc/zyapimac.php"
+    },
+    {
+      "key": "*鑻ユⅵ褰辫",
+      "name": "*鑻ユⅵ褰辫",
+      "type": 1,
+      "api": "http://47.106.80.129/api.php/provide/vod?ac=list"
+    },
+    {
+      "key": "*鐧惧害璧勬簮",
+      "name": "*鐧惧害璧勬簮",
+      "type": 1,
+      "api": "http://llbdzy.com/api.php/provide/vod?ac=list"
+    },
+    {
+      "key": "*99璧勬簮",
+      "name": "*99璧勬簮",
+      "type": 1,
+      "api": "http://99zy.pw/api.php/provide/vod/"
+    },
+    {
+      "key": "88",
+      "name": "88",
+      "type": 0,
+      "api": "http://www.88zy.live/inc/api.php",
+      "playUrl": ""
+    },
+    {
+      "name": "榛樿",
+      "url": "https://api.jhdyw.vip/?url="
+    },
+    {
+      "name": "80tv",
+      "url": "https://1.api.80tvs.cn/?url="
+    },
+    {
+      "name": "2A璧勬簮",
+      "url": "https://www.2ajx.com/vip.php?url="
+    },
+    {
+      "name": "BL瑙ｆ瀽",
+      "url": "https://vip.bljiex.com/?v="
+    },
+    {
+      "name": "涔呯湅瑙ｆ瀽",
+      "url": "https://9kjx.com/?url="
+    },
+    {
+      "name": "60瑙ｆ瀽",
+      "url": "http://60jx.com/?url="
+    },
+    {
+      "name": "铏剧背",
+      "url": "https://jx.xmflv.com/?url="
+    },
+    {
+      "name": "鍏ㄦ皯瑙ｆ瀽",
+      "url": "https://jx.quanmingjiexi.com/?url="
+    },
+    {
+      "name": "parwix瑙ｆ瀽",
+      "url": "https://jx.parwix.com:4433/player/?url="
+    },
+    {
+      "name": "Ckplayer",
+      "url": "https://www.ckplayer.vip/jiexi/?url="
+    },
+    {
+      "name": "CKMOV瑙ｆ瀽",
+      "url": "https://ckmov.ccyjjd.com/ckmov/?url="
+    },
+    {
+      "name": "M3U8",
+      "url": "https://jx.m3u8.tv/jiexi/?url="
+    },
+    {
+      "name": "鑰佹澘",
+      "url": "https://vip.laobandq.com/jiexi.php?url="
+    },
+    {
+      "name": "鐩樺彜",
+      "url": "https://www.pangujiexi.cc/jiexi.php?url="
+    },
+    {
+      "name": "杩ゥ",
+      "url": "https://123.1dior.cn/?url="
+    },
+    {
+      "name": "H8",
+      "url": "https://www.h8jx.com/jiexi.php?url="
+    },
+    {
+      "name": "缁村",
+      "url": "https://jx.ivito.cn/?url="
+    },
+    {
+      "name": "鏄熼┌",
+      "url": "https://vip.cjys.top/?url="
+    },
+    {
+      "name": "鐩樺彜浜�",
+      "url": "https://go.yh0523.cn/y.cy?url="
+    },
+    {
+      "name": "17浜�",
+      "url": "https://www.1717yun.com/jx/ty.php?url="
+    },
+    {
+      "name": "116",
+      "url": "https://jx.116kan.com/?url="
+    },
+    {
+      "name": "200",
+      "url": "https://vip.66parse.club/?url="
+    },
+    {
+      "name": "8090",
+      "url": "https://www.8090g.cn/?url="
+    },
+    {
+      "name": "鏆厜瑙ｆ瀽",
+      "url": "https://muguang.mgtv.com.muguangys.com/jiexi.php?url="
+    },
+    {
+      "name": "Parwix瑙ｆ瀽",
+      "url": "https://vip.parwix.com:4433/player/?url="
+    },
+    {
+      "name": "Json.M3u8",
+      "url": "https://json.m3u8.tv:7788/json.php?url=",
+      "type": 1
+    },
+    {
+      "name": "Json.VodJX",
+      "url": "https://www.vodjx.top/api/?key=XSQzk8KFK1I7FfPK5X&url=",
+      "type": 1
+    },
+    {
+      "name": "绾噣瑙ｆ瀽",
+      "url": "https://z1.m1907.cn/?jx="
+    },
+    {
+      "name": "楂橀€熸帴鍙�1",
+      "url": "https://jsap.attakids.com/?url="
+    },
+    {
+      "name": "B绔欒В鏋�2",
+      "url": "https://www.cuan.la/m3u8.php?url="
+    },
+    {
+      "name": "Mao瑙ｆ瀽",
+      "url": "https://qd.hxys.tv/m3u8.php?url="
+    },
+    {
+      "name": "SSAMAO",
+      "url": "https://www.ssamao.com/jx/?url="
+    },
+    {
+      "name": "鏃犳瀬",
+      "url": "https://da.wujiys.com/?url="
+    },
+    {
+      "name": "618G",
+      "url": "https://jx.618g.com/?url="
+    },
+    {
+      "name": "ckmov",
+      "url": "https://www.ckmov.vip/api.php?url="
+    },
+    {
+      "name": "绂忔槦",
+      "url": "https://jx.popo520.cn/jiexi/?url="
+    },
+    {
+      "name": "RDHK",
+      "url": "https://jx.rdhk.net/?v="
+    },
+    {
+      "name": "瑙ｆ瀽鍟�",
+      "url": "https://api.jiexi.la/?url="
+    },
+    {
+      "name": "涔呮挱",
+      "url": "https://jx.jiubojx.com/vip.php?url="
+    },
+    {
+      "name": "涔濆叓",
+      "url": "https://jx.youyitv.com/?url="
+    },
+    {
+      "name": "涔愬柕",
+      "url": "https://jx.hao-zsj.cn/vip/?url="
+    },
+    {
+      "name": "MUTV",
+      "url": "https://jiexi.janan.net/jiexi/?url="
+    },
+    {
+      "name": "涔呮挱",
+      "url": "https://jx.jiubojx.com/vip/?url="
+    },
+    {
+      "name": "纾ㄨ弴",
+      "url": "https://jx.wzslw.cn/?url="
+    },
+    {
+      "name": "OK",
+      "url": "https://okjx.cc/?url="
+    },
+    {
+      "name": "灏忚拫",
+      "url": "https://www.kpezp.cn/jlexi.php?url="
+    },
+    {
+      "name": "灏忕嫾",
+      "url": "https://jx.yaohuaxuan.com/?url="
+    },
+    {
+      "name": "鏅鸿兘",
+      "url": "https://vip.kurumit3.top/?v="
+    },
+    {
+      "name": "鏈堜寒",
+      "url": "https://api.yueliangjx.com/?url="
+    },
+    {
+      "name": "浜戣В鏋�",
+      "url": "https://jx.ergan.top/?url="
+    },
+    {
+      "name": "66",
+      "url": "https://api.3jx.top/vip/?url="
+    },
+    {
+      "name": "浜戞瀽",
+      "url": "https://jx.yparse.com/index.php?url="
+    },
+    {
+      "name": "U鐚�",
+      "url": "http://jiex.cf/?url="
+    },
+    {
+      "name": "鐖辫窡",
+      "url": "https://vip.2ktvb.com/player/?url="
+    },
+    {
+      "name": "CHok",
+      "url": "https://www.gai4.com/?url="
+    },
+    {
+      "name": "鍐拌眴",
+      "url": "https://api.qianqi.net/vip/?url="
+    },
+    {
+      "name": "澶х櫧",
+      "url": "https://api.myzch.cn/?url="
+    },
+    {
+      "name": "澶у箷",
+      "url": "https://jx.52damu.com/dmjx/jiexi.php?url="
+    },
+    {
+      "name": "璺熷墽",
+      "url": "https://www.5igen.com/dmplayer/player/?url="
+    },
+    {
+      "name": "鍙箰",
+      "url": "https://jx.keleapi.com/?url=",
+      "t": "m"
+    },
+    {
+      "name": "LE",
+      "url": "https://lecurl.cn/?url="
+    },
+    {
+      "name": "鎳掔尗",
+      "url": "https://api.lanmaody.com/dm/?url=",
+      "t": "m"
+    },
+    {
+      "name": "涔愬",
+      "url": "https://api.leduotv.com/wp-api/ifr.php?isDp=1&vid=",
+      "t": "m"
+    },
+    {
+      "name": "鏄庢棩",
+      "url": "https://jx.yingxiangbao.cn/vip.php?url="
+    },
+    {
+      "name": "璇鸿",
+      "url": "https://www.ckmov.com/?url="
+    },
+    {
+      "name": "璇鸿",
+      "url": "https://www.nxflv.com/?url="
+    },
+    {
+      "name": "PM",
+      "url": "https://www.playm3u8.cn/jiexi.php?url="
+    },
+    {
+      "name": "濂囩背",
+      "url": "https://qimihe.com/?url="
+    },
+    {
+      "name": "鎬濅簯",
+      "url": "https://jx.ap2p.cn/?url="
+    },
+    {
+      "name": "鎬濆彜",
+      "url": "https://api.sigujx.com/?url="
+    },
+    {
+      "name": "鎬濆彜2",
+      "url": "https://api.bbbbbb.me/jx/?url="
+    },
+    {
+      "name": "娣樼數褰�",
+      "url": "https://jx.vodjx.top/vip/?url="
+    },
+    {
+      "name": "鍚箰",
+      "url": "https://jx.dj6u.com/?url=",
+      "t": "m"
+    },
+    {
+      "name": "浜戠偣鎾�",
+      "url": "https://api.iopenyun.com:88/vip/?url="
+    },
+    {
+      "key": "*姘磋湝妗�",
+      "name": "*姘磋湝妗�",
+      "type": 1,
+      "api": "http://51smt4.xyz/api.php/provide/vod/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0
+    },
+    {
+      "key": "*鍗氬ぉ鍫�",
+      "name": "*鍗氬ぉ鍫�",
+      "type": 0,
+      "api": "http://bttcj.com/inc/sapi.php?ac=videolist",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0
+    },
+    {
+      "key": "*鐐圭偣濞变箰",
+      "name": "*鐐圭偣濞变箰",
+      "type": 1,
+      "api": "https://xx55zyapi.com/home/cjapi/ascf/mc/vod/xml",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0
+    },
+    {
+      "key": "*鑰侀腑璧勬簮",
+      "name": "*鑰侀腑璧勬簮",
+      "type": 1,
+      "api": "https://api.apilyzy.com/api.php/provide/vod/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0
+    },
+    {
+      "key": "*鑹插睂涓�(VPN)",
+      "name": "*鑹插睂涓�(VPN)",
+      "type": 0,
+      "api": "https://sdszyapi.com/home/cjapi/asbb/mc/vod/xml",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0
+    },
+    {
+      "key": "*鐜簹璧勬簮",
+      "name": "*鐜簹璧勬簮",
+      "type": 0,
+      "api": "http://wmcj8.com/inc/sapi.php?ac=videolist",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0
+    },
+    {
+      "key": "*灏忓濮愯祫婧�",
+      "name": "*灏忓濮愯祫婧�",
+      "type": 0,
+      "api": "https://xjjzyapi.com/home/cjapi/askl/mc/vod/xml",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0
+    },
+    {
+      "key": "*妗冭壊璧勬簮",
+      "name": "*妗冭壊璧勬簮",
+      "type": 1,
+      "api": "https://api.taoseapi.com/api.php/provide/vod/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0
+    },
+    {
+      "key": "*绉€鑹茶祫婧�",
+      "name": "*绉€鑹茶祫婧�",
+      "type": 1,
+      "api": "https://api.xiuseapi.com/api.php/provide/vod/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0
+    },
+    {
+      "key": "*鑺辨璧勬簮",
+      "name": "*鑺辨璧勬簮",
+      "type": 1,
+      "api": "https://apihjzy.com/api.php/provide/vod/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0
+    },
+    {
+      "key": "*CK璧勬簮(VPN)",
+      "name": "*CK璧勬簮(VPN)",
+      "type": 1,
+      "api": "https://ckzy.me/api.php/provide/vod/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0
+    },
+    {
+      "key": "*澶у湴璧勬簮",
+      "name": "*澶у湴璧勬簮",
+      "type": 0,
+      "api": "https://dadiapi.com/api.php",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0
+    },
+    {
+      "key": "*鑺掓灉璧勬簮",
+      "name": "*鑺掓灉璧勬簮",
+      "type": 1,
+      "api": "https://mgzyz1.com/api.php/provide/vod/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0
+    },
+    {
+      "key": "*椴ㄩ奔璧勬簮",
+      "name": "*椴ㄩ奔璧勬簮",
+      "type": 1,
+      "api": "https://shayuapi.com/api.php/provide/vod/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0
+    },
+    {
+      "key": "*涓濊璧勬簮",
+      "name": "*涓濊璧勬簮",
+      "type": 1,
+      "api": "https://siwazyw.net/api.php/provide/vod/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0
+    },
+    {
+      "key": "*1024璧勬簮",
+      "name": "*1024璧勬簮",
+      "type": 0,
+      "api": "https://www.1024nf.com/api.php/provide/vod/at/xml/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0
+    },
+    {
+      "key": "*灏忔箍濡硅祫婧�",
+      "name": "*灏忔箍濡硅祫婧�",
+      "type": 1,
+      "api": "https://www.afasu.com/api/json.php",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0
+    },
+    {
+      "key": "*棣欏ザ鍎胯祫婧�",
+      "name": "*棣欏ザ鍎胯祫婧�",
+      "type": 1,
+      "api": "https://www.gdlsp.com/api/json.php",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0
+    },
+    {
+      "key": "*蹇椿璧勬簮",
+      "name": "*蹇椿璧勬簮",
+      "type": 1,
+      "api": "https://www.khzywapi.com/api.php/provide/vod/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0
+    },
+    {
+      "key": "*鐧藉珫璧勬簮",
+      "name": "*鐧藉珫璧勬簮",
+      "type": 1,
+      "api": "https://www.kxgav.com/api/json.php",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0
+    },
+    {
+      "key": "*缇庡皯濂宠祫婧�",
+      "name": "*缇庡皯濂宠祫婧�",
+      "type": 1,
+      "api": "https://www.msnii.com/api/json.php",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0
+    },
+    {
+      "key": "*涓€鏈亾璧勬簮",
+      "name": "*涓€鏈亾璧勬簮",
+      "type": 0,
+      "api": "https://www.caiji03.com/home/cjapi/cfg8/mc/vod/xml",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0
+    },
+    {
+      "key": "*澶у睂涓濊祫婧�",
+      "name": "*澶у睂涓濊祫婧�",
+      "type": 0,
+      "api": "https://www.caiji24.com/home/cjapi/p0d2/mc/vod/xml",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0
+    },
+    {
+      "key": "*娣汉濡昏祫婧�",
+      "name": "*娣汉濡昏祫婧�",
+      "type": 0,
+      "api": "http://www.yrqcaiji.com/home/cjapi/s6c7/mc/vod/xml",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0
+    },
+    {
+      "key": "*灏忓濂宠祫婧�",
+      "name": "*灏忓濂宠祫婧�",
+      "type": 0,
+      "api": "http://xcncaiji.com/home/cjapi/s6bb/mc/vod/xml",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0
+    },
+    {
+      "key": "*閰疯眴璧勬簮",
+      "name": "*閰疯眴璧勬簮",
+      "type": 1,
+      "api": "https://kudouzy.com/api.php/provide/art/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0
+    },
+    {
+      "key": "*浜氭床鎴愪汉鍦ㄧ嚎",
+      "name": "*浜氭床鎴愪汉鍦ㄧ嚎",
+      "type": 0,
+      "api": "https://www.caiji01.com/home/cjapi/cfd2/mc/vod/xml",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0
+    },
+    {
+      "key": "*AV闆嗕腑娣�",
+      "name": "*AV闆嗕腑娣�",
+      "type": 0,
+      "api": "https://www.caiji22.com/home/cjapi/klp0/mc/vod/xml",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0
+    },
+    {
+      "key": "*涔愰奔璧勬簮",
+      "name": "*涔愰奔璧勬簮",
+      "type": 1,
+      "api": "https://www.leyuzyapi.com/inc/apijson_vod.php",
+      "searchable": 0,
+      "quickSearch": 1,
+      "filterable": 0
+    },
+    {
+      "key": "*鑺辨璧勬簮",
+      "name": "*鑺辨璧勬簮",
+      "type": 1,
+      "api": "https://apihjzy.com/api.php/provide/art/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0
+    },
+    {
+      "name": "789pan",
+      "url": "https://vip.gaotian.love/api/?key=GiML8kaI6DnlpAahLM&url="
+    },
+    {
+      "name": "lekanzyw",
+      "url": "https://bak.ojbkjx.com/?url="
+    },
+    {
+      "key": "155-鍏瓙-楂樺ぉ娴佷簯9918",
+      "name": "馃敒155",
+      "type": 1,
+      "api": "https://155api.com/api.php/provide/vod/",
+      "searchable": 1,
+      "changeable": 1
+    },
+    {
+      "key": "iKun",
+      "name": "馃敒iKun",
+      "type": 1,
+      "api": "https://www.ikunzy.cc/api.php/provide/vod/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "categories": [
+        "閲岀暘鍔ㄦ极",
+        "浼︾悊鐗�"
+      ]
+    },
+    {
+      "key": "JKun",
+      "name": "馃敒jKun",
+      "type": 1,
+      "api": "https://jkunzyapi.com/api.php/provide/vod",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0
+    },
+    {
+      "key": "鎬у崡鍥�-楂樺ぉ娴佷簯9918",
+      "name": "馃敒鍗楀浗",
+      "type": 1,
+      "api": "https://api.sexnguon.com/api.php/provide/vod/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
+      "key": "绾㈡-鍏瓙",
+      "name": "馃敒绾㈡",
+      "type": 1,
+      "api": "https://apidanaizi.com/api.php/provide/vod/",
+      "searchable": 1,
+      "changeable": 1
+    },
+    {
+      "key": "laosebizy.com-楂樺ぉ娴佷簯9918",
+      "name": "馃敒鑰佽壊姣�",
+      "type": 1,
+      "api": "https://apilsbzy1.com/api.php/provide/vod/",
+      "searchable": 1,
+      "filterable": 1
+    },
+    {
+      "key": "naixxzy.com-楂樺ぉ娴佷簯9918",
+      "name": "馃敒棣欏ザ濂�",
+      "type": 1,
+      "api": "https://naixxzy.com/api.php/provide/vod/?ac=list",
+      "searchable": 1,
+      "filterable": 1
+    },
+    {
+      "key": "瀵屼簩浠�-鍏瓙",
+      ",name": "馃敒瀵屼簩浠�",
+      ",type": 0,
+      "api": "http://f2dcj6.com/sapi?ac=list",
+      "searchable": 1,
+      "quickSearch": 1,
+      ",filterable": 0
+    },
+    {
+      "key": "didizy.com-楂樺ぉ娴佷簯9918,",
+      ",name": "馃敒婊存淮",
+      ",type": 1,
+      "api": "https://api.ddapi.cc/api.php/provide/vod/?ac=list",
+      "searchable": 1,
+      ",filterable": 1
+    },
+    {
+      "key": "senlinzy2.com",
+      ",name": "馃敒妫灄",
+      ",type": 1,
+      "api": "http://senlinzy2.com/api.php/provide/vod/?ac=list",
+      "searchable": 1,
+      ",filterable": 1
+    },
+    {
+      "key": "澶у湴av",
+      ",name": "馃敒澶у湴AV",
+      ",type": 0,
+      "api": "https://dadiapi.com/apple_m3u8.php",
+      "playUrl": "https://play.dadiapi.com/watch?url=",
+      "searchable": 1,
+      "quickSearch": 1,
+      ",filterable": 0
+    },
+    {
+      "key": ",tantanzy.com-楂樺ぉ娴佷簯9918,",
+      ",name": "馃挄鎺㈡帰(鐩磋繛)",
+      ",type": 1,
+      "api": "https://apittzy.com/api.php/provide/vod/?ac=list",
+      "searchable": 1,
+      ",filterable": 1
+    },
+    {
+      "key": "senlinzy.com-楂樺ぉ娴佷簯9918,",
+      ",name": "馃挄妫灄(鐩磋繛)",
+      ",type": 1,
+      "api": "https://slapibf.com/api.php/provide/vod/?ac=list",
+      "searchable": 1,
+      ",filterable": 1
+    },
+    {
+      "key": "jingpinx.com-楂樺ぉ娴佷簯9918,",
+      ",name": "馃挄绮惧搧(鐩磋繛)",
+      ",type": 1,
+      "api": "https://www.jingpinx.com//api.php/provide/vod/?ac=list",
+      "searchable": 1,
+      ",filterable": 1
+    },
+    {
+      "key": "www.caoliuzyw.com-楂樺ぉ娴佷簯9918,",
+      ",name": "馃挄鑽夋Υ(鐩磋繛)",
+      ",type": 1,
+      "api": "https://www.caoliuzyw.com/api.php/provide/vod/?ac=list",
+      "playurl": "https://jx.caoliuzywcdnjx.com:188/m3u8.php?url=",
+      "searchable": 1,
+      ",filterable": 1
+    },
+    {
+      "key": "vnzyz.com-楂樺ぉ娴佷簯9918,",
+      ",name": "馃挄瓒婂崡(鐩磋繛)",
+      ",type": 1,
+      "api": "https://vnzyz.com/api.php/provide/vod/?ac=list",
+      "playurl": "http://www.vnzyz.com",
+      "searchable": 1,
+      ",filterable": 1
+    },
+    {
+      "key": "semaozy.com-楂樺ぉ娴佷簯9918,",
+      ",name": "馃挄鑹茬尗(鐩磋繛)",
+      ",type": 1,
+      "api": "https://caiji.semaozy.net/inc/apijson_vod.php",
+      "playurl": "https://jiexi.semaozy.cc/m3u8/?url=",
+      "searchable": 1,
+      ",filterable": 1
+    },
+    {
+      "key": "sesehuzy.com-楂樺ぉ娴佷簯9918,",
+      ",name": "馃挄鑹茶檸(鐩磋繛)",
+      ",type": 1,
+      "api": "https://apisesehuzy.com/api.php/provide/vod/?ac=list",
+      "searchable": 1,
+      ",filterable": 1
+    },
+    {
+      "key": "gqzy.me-楂樺ぉ娴佷簯9918,",
+      ",name": "馃挄鎼炶捣(鐩磋繛)",
+      ",type": 1,
+      "api": "https://caiji.gqjiexi.com/api.php/provide/vod/",
+      "playurl": "https://jiexi.gqjiexi.com/?url=",
+      "searchable": 1,
+      ",filterable": 1
+    },
+    {
+      "key": ",timizy.cc-楂樺ぉ娴佷簯9918,",
+      ",name": "馃挄鐢滆湝(鐩磋繛)",
+      ",type": 1,
+      "api": "https://tianmiapi.com/api.php/provide/vod/?ac=list",
+      "playurl": "https://tianmijx.com/m3u8.php?url=",
+      "searchable": 1,
+      ",filterable": 1
+    },
+    {
+      "key": "lyhzyw.com-楂樺ぉ娴佷簯9918,",
+      ",name": "馃挄鐙煎弸浼�(鐩磋繛)",
+      ",type": 1,
+      "api": "https://api.lyhapi.com/api.php/provide/vod/?ac=list",
+      "searchable": 1,
+      ",filterable": 1
+    },
+    {
+      "key": "kuaiavzy.com-楂樺ぉ娴佷簯9918,",
+      ",name": "馃挄蹇玜v(鐩磋繛)",
+      ",type": 1,
+      "api": "https://kuaiavzy.com/api.php/provide/vod/?ac=list",
+      "searchable": 1,
+      ",filterable": 1
+    },
+    {
+      "key": "lltv_360閲囬泦-澶滅尗",
+      ",name": ",360鈹冧鸡鐞�",
+      ",type": 1,
+      "api": "https://360zy.com/api.php/provide/vod",
+      "playurl": "json:https://www.360jiexi.com/player/?url=",
+      "categories": [
+        "浼︾悊鐗�"
+      ]
+    },
+    {
+      "key": "csp_xml___鐧惧害璧勬簮",
+      ",name": "鐧惧害鈹冧鸡鐞�",
+      ",type": 1,
+      "api": "https://api.apibdzy.com/api.php/provide/vod/",
+      "searchable": 1,
+      "quickSearch": 1,
+      ",filterable": 1,
+      "categories": [
+        "浼︾悊鐗�"
+      ]
+    },
+    {
+      "key": "鏆撮璧勬簮",
+      ",name": "鏆撮鈹冧鸡鐞�",
+      ",type": 1,
+      "api": "https://bfzyapi.com/api.php/provide/vod/?ac=list",
+      "searchable": 1,
+      "quickSearch": 1,
+      ",filterable": 1,
+      "categories": [
+        "鐞嗚鐗�"
+      ]
+    },
+    {
+      "key": "csp_闈炲嚒璧勬簮",
+      ",name": "闈炲嚒鈹冧鸡鐞�",
+      ",type": 1,
+      "api": "http://cj.ffzyapi.com/api.php/provide/vod/from/ffm3u8/",
+      "searchable": 1,
+      "quickSearch": 1,
+      ",filterable": 1,
+      "categories": [
+        "浼︾悊鐗�"
+      ]
+    },
+    {
+      "key": "鍏夐€熻祫婧�",
+      ",name": "鍏夐€熲攦浼︾悊",
+      ",type": 1,
+      "playerType": 1,
+      "api": "https://api.guangsuapi.com/api.php/provide/vod/from/gsm3u8/",
+      "searchable": 1,
+      "quickSearch": 1,
+      ",filterable": 1,
+      "categories": [
+        "浼︾悊鐗�"
+      ]
+    },
+    {
+      "key": "铏庣墮",
+      ",name": "铏庣墮鈹冧鸡鐞�",
+      ",type": 1,
+      "playerType": 1,
+      "api": "https://www.huyaapi.com/api.php/provide/vod/from/hym3u8/at/json",
+      "searchable": 1,
+      "quickSearch": 1,
+      ",filterable": 1,
+      "categories": [
+        "浼︾悊鐗�"
+      ]
+    },
+    {
+      "key": "璞崕璧勬簮",
+      ",name": "璞崕鈹冧鸡鐞�",
+      ",type": 1,
+      "playerType": 1,
+      "api": "https://hhzyapi.com/api.php/provide/vod/from/hhm3u8/",
+      "searchable": 1,
+      "quickSearch": 1,
+      ",filterable": 1,
+      "categories": [
+        "浼︾悊鐗�"
+      ]
+    },
+    {
+      "key": "绾㈢墰",
+      ",name": "绾㈢墰鈹冧鸡鐞�",
+      ",type": 1,
+      "api": "https://www.hongniuzy2.com/api.php/provide/vod/from/hnm3u8/",
+      "searchable": 1,
+      "quickSearch": 1,
+      ",filterable": 1,
+      "categories": [
+        "浼︾悊鐗�"
+      ]
+    },
+    {
+      "key": "lltv_鏋侀€�",
+      ",name": "鏋侀€熲攦鐭墽",
+      ",type": 1,
+      "api": "https://jszyapi.com/api.php/provide/vod/from/jsm3u8/",
+      "playurl": "json:https://jsjiexi.com/play/?url=",
+      "searchable": 1,
+      "quickSearch": 1,
+      "categories": [
+        "浼︾悊鐗�"
+      ]
+    },
+    {
+      "key": "api_閲戦拱璧勬簮",
+      ",name": "閲戦拱鈹冧鸡鐞�",
+      ",type": 1,
+      "api": "https://jyzyapi.com/provide/vod/from/jinyingm3u8/",
+      "searchable": 1,
+      "quickSearch": 1,
+      ",filterable": 1,
+      "categories": [
+        "浼︾悊鐗�"
+      ]
+    },
+    {
+      "key": "蹇溅璧勬簮",
+      ",name": "蹇溅鈹冧鸡鐞�",
+      ",type": 1,
+      "api": "https://caiji.kczyapi.com/api.php/provide/vod/",
+      "searchable": 1,
+      "quickSearch": 1,
+      ",filterable": 1,
+      "categories": [
+        "浼︾悊鐗�"
+      ]
+    },
+    {
+      "key": "蹇湅璧勬簮",
+      ",name": "蹇湅鈹冧鸡鐞�",
+      ",type": 1,
+      "api": "https://kuaikan-api.com/api.php/provide/vod/",
+      "searchable": 1,
+      "quickSearch": 1,
+      ",filterable": 1,
+      "categories": [
+        "浼︾悊鐗�"
+      ]
+    },
+    {
+      "key": "lltv_涔愯-澶滅尗",
+      ",name": "涔愯鈹冧鸡鐞�",
+      ",type": 1,
+      "api": "https://leshiapi.com/api.php/provide/vod/at/json/",
+      "searchable": 1,
+      "changeable": 1,
+      "categories": [
+        "浼︾悊鐗�",
+        "娓彴涓夌骇",
+        "闊╁浗浼︾悊",
+        "鏃ユ湰浼︾悊",
+        "鍏朵粬浼︾悊"
+      ]
+    },
+    {
+      "key": "閲忓瓙璧勬簮",
+      ",name": "閲忓瓙鈹冧鸡鐞�",
+      ",type": 1,
+      "api": "http://cj.lziapi.com/api.php/provide/vod/",
+      "searchable": 1,
+      "quickSearch": 1,
+      ",filterable": 1,
+      "categories": [
+        "浼︾悊鐗�"
+      ]
+    },
+    {
+      "key": "濂囪檸璧勬簮",
+      ",name": "濂囪檸鈹冧鸡鐞�",
+      ",type": 1,
+      "api": "https://caiji.qhzyapi.com/api.php/provide/vod/",
+      "playUrl": ",",
+      "searchable": 1,
+      "quickSearch": 1,
+      ",filterable": 1,
+      "categories": [
+        "浼︾悊鐗�"
+      ]
+    },
+    {
+      "key": "閫熸挱璧勬簮",
+      ",name": "閫熸挱鈹冧鸡鐞�",
+      ",type": 1,
+      "api": "https://subocaiji.com/api.php/provide/vod/from/subm3u8/",
+      "searchable": 1,
+      "quickSearch": 1,
+      ",filterable": 1,
+      "categories": [
+        "浼︾悊鐗�"
+      ]
+    },
+    {
+      "key": "api_澶╃考璧勬簮",
+      ",name": "澶╃考鈹冧鸡鐞�",
+      ",type": 1,
+      "api": "https://www.911ysw.top/tianyi.php/provide/vod/",
+      "searchable": 1,
+      "quickSearch": 1,
+      ",filterable": 1,
+      "categories": [
+        "浼︾悊鐗�"
+      ]
+    },
+    {
+      "key": "csp_xml___U閰疯祫婧�",
+      ",name": "U閰封攦浼︾悊",
+      ",type": 1,
+      "api": "https://api.ukuapi.com/api.php/provide/vod/?ac=list",
+      "searchable": 1,
+      "quickSearch": 1,
+      ",filterable": 1,
+      "categories": [
+        "浼︾悊鐗�"
+      ]
+    },
+    {
+      "key": "csp_xml___鏃犲敖璧勬簮",
+      ",name": "鏃犲敖鈹冧鸡鐞�",
+      ",type": 1,
+      "api": "https://api.wujinapi.com/api.php/provide/vod/",
+      "searchable": 1,
+      "quickSearch": 1,
+      ",filterable": 1,
+      "categories": [
+        "浼︾悊鐗�"
+      ]
+    },
+    {
+      "key": "鍗ч緳璧勬簮",
+      ",name": "鍗ч緳鈹冧鸡鐞�",
+      ",type": 1,
+      "api": "https://collect.wolongzyw.com/api.php/provide/vod/",
+      "searchable": 1,
+      "quickSearch": 1,
+      ",filterable": 1,
+      "categories": [
+        "浼︾悊鐗�"
+      ]
+    },
+    {
+      "key": "zy_鏂版氮璧勬簮",
+      ",name": "鏂版氮鈹冧鸡鐞�",
+      ",type": 1,
+      "api": "https://api.xinlangapi.com/xinlangapi.php/provide/vod/",
+      "searchable": 1,
+      "quickSearch": 1,
+      ",filterable": 1,
+      "categories": [
+        "浼︾悊鐗�"
+      ]
+    },
+    {
+      "key": "鏄撶湅璧勬簮-浼︾悊",
+      ",name": "鏄撶湅鈹冧鸡鐞�",
+      ",type": 1,
+      "api": "https://api.yikanapi.com/api.php/provide/vod/",
+      "searchable": 1,
+      "quickSearch": 1
+    },
+    {
+      "key": "浼樿川璧勬簮",
+      ",name": "浼樿川鈹冧鸡鐞�",
+      ",type": 0,
+      "api": "https://api.1080zyku.com/inc/api.php",
+      "searchable": 1,
+      "quickSearch": 1,
+      "changeable": 1,
+      "categories": [
+        "绂忓埄",
+        "鍊悊鐗�"
+      ]
+    },
+    {
+      "key": "*91楹昏眴",
+      ",name": "馃敒91楹昏眴",
+      ",type": 1,
+      "api": "https://91md.me/api.php/provide/vod/",
+      "searchable": 0,
+      "quickSearch": 0
+    },
+    {
+      "key": "鈾ワ笍鍒╂潵璧勬簮  ",
+      ",name": "馃敒鍒╂潵璧勬簮",
+      ",type": 0,
+      "api": "http://llzxcj.com/inc/sck.php?ac=list",
+      "searchable": 1,
+      "quickSearch": 1
+    },
+    {
+      "key": "鈾ワ笍妫灄涓撳満",
+      ",name": "馃敒妫灄璧勬簮",
+      ",type": 1,
+      "api": "https://beiyong.slapibf.com/api.php/provide/vod/",
+      "playUrl": ",",
+      "searchable": 1,
+      "quickSearch": 1,
+      ",filterable": 1,
+      "categories": [
+        "绮惧搧鎺ㄨ崘",
+        "鍥戒骇鑹叉儏",
+        "涓绘挱鐩存挱",
+        "浜氭床鏃犵爜",
+        "浜氭床鏈夌爜",
+        "涓枃瀛楀箷",
+        "宸ㄤ钩缇庝钩",
+        "浜哄鐔熷コ",
+        "寮哄ジ涔变鸡",
+        "娆х編绮惧搧",
+        "钀濊帀灏戝コ",
+        "浼︾悊涓夌骇",
+        "鎴愪汉鍔ㄦ极",
+        "鑷媿鍋锋媿",
+        "鍒舵湇涓濊",
+        "鍙ｄ氦棰滃皠",
+        "鏃ユ湰绮惧搧",
+        "Cosplay",
+        "绱犱汉鑷媿",
+        "鍙版咕杈ｅ",
+        "闊╁浗寰″",
+        "鍞編娓",
+        "涓滃崡浜欰V",
+        "娆鸿颈鍑岃颈",
+        "鍓ф儏浠嬬粛",
+        "澶氫汉澶歅",
+        ",91鎺㈣姳",
+        "缃戠孩娴佸嚭",
+        "閲庡闇插嚭",
+        "鍙よ鎵紨",
+        "濂充紭绯诲垪",
+        "鍙埍瀛︾敓",
+        "椋庢儏鏃楄",
+        "鍏借€崇郴鍒�",
+        "鐟滀冀瑁�",
+        "闂烽獨鎶ゅ＋",
+        "杩囪啙琚�",
+        "缃戞洕闂�",
+        "浼犲獟鍑哄搧",
+        "濂冲悓鎬ф亱",
+        "鐢峰悓鎬ф亱",
+        "鎭嬭吙鐙傞瓟"
+      ]
+    },
+    {
+      "key": ",99zywcj",
+      ",name": "馃敒99璧勬簮",
+      ",type": 0,
+      "api": "http://99zywcj.com/inc/sck.php?ac=videolist",
+      "searchable": 1,
+      "quickSearch": 1,
+      ",filterable": 1
+    },
+    {
+      "key": "鐜夊厰涓撳満",
+      ",name": "馃敒鐜夊厰璧勬簮",
+      ",type": 1,
+      "api": "https://apiyutu.com/api.php/provide/vod/",
+      "playUrl": ",",
+      "searchable": 1,
+      "quickSearch": 1,
+      ",filterable": 1
+    },
+    {
+      "key": "楹昏眴鏉�",
+      ",name": "馃敒楹昏眴鏉�",
+      ",type": 1,
+      "api": "https://madoucun.com/api.php/provide/vod/?ac=list",
+      "searchable": 1,
+      "quickSearch": 1,
+      ",filterable": 0
+    },
+    {
+      "key": "chengren",
+      ",name": "馃敒浼欎即澶╃┖",
+      ",type": 1,
+      "api": "https://www.partnersky-horoskop.com/api.php/provide/vod/",
+      "searchable": 1,
+      "quickSearch": 1
+    },
+    {
+      "key": "*鐨囧啝璧勬簮",
+      ",name": "馃敒鐨囧啝璧勬簮",
+      ",type": 1,
+      "playerType": 2,
+      "api": "https://hghhh.com/api.php/provide/vod/",
+      "searchable": 1,
+      "quickSearch": 1
+    },
+    {
+      "key": "csp_JavDb",
+      ",name": "馃敒JavDb",
+      ",type": 3,
+      "api": "csp_JavDb",
+      "searchable": 1,
+      "quickSearch": 1,
+      ",filterable": 1,
+      "changeable": 1,
+      ",timeout": 60,
+      "ext": "http://javdb523.com"
+    },
+    {
+      "key": ",00鑹茬獫璧勬簮",
+      ",name": "馃敒鑹茬獫",
+      ",type": 1,
+      "api": "https://sewozyapi.com/api.php/provide/vod/",
+      "playUrl": "https://player.sewozyplayer.com/m3u8/?url=",
+      "searchable": 1,
+      "quickSearch": 1
+    },
+    {
+      "key": "椴ㄩ奔18+,",
+      ",name": "馃敒椴ㄩ奔18+,",
+      ",type": 0,
+      "style": {
+        ",type": "rect",
+        "ratio": 1.485
+      },
+      "api": "https://shayuapi.com/api.php/Seacms/vod",
+      "searchable": 0,
+      "quickSearch": 1,
+      ",filterable": 0
+    },
+    {
+      "key": "绾㈣",
+      ",name": "馃敒绾㈣娣婚",
+      ",type": 1,
+      "api": "https://hongxiuzy.com/api.php/provide/vod/from/hxm3u8/",
+      "playUrl": ",",
+      "searchable": 1,
+      "quickSearch": 1,
+      ",filterable": 1,
+      "categories": [
+        "涓€鍖�",
+        "浜屽尯",
+        "涓夊尯",
+        "鍥涘尯",
+        "鍥戒骇瑁歌亰",
+        "鎶栭煶瑙嗛",
+        "缃戠孩澶存潯",
+        "缃戞洕榛戞枡",
+        "娆х編鏃犵爜",
+        "濂充紭鏄庢槦",
+        "SM璋冩暀",
+        "鏃犵爜涓撳尯",
+        "楹昏眴浼犲獟",
+        "鍒舵湇璇辨儜",
+        "AI鎹㈣劯",
+        "涓枃瀛楀箷",
+        "鍗￠€氬姩婕�",
+        "鏋佸搧鎺㈣姳",
+        "缇庡コ涓绘挱",
+        "鑷媿鍋锋媿",
+        "鐔熷コ浜哄",
+        "钀濊帀灏戝コ",
+        "铚滄浼犲獟",
+        ",3P缇や氦",
+        "鏋滃喕浼犲獟",
+        "绮句笢褰变笟",
+        "鍐呭湴浼犲獟",
+        "鍥戒骇绮惧搧",
+        "鏃ラ煩鏈夌爜"
+      ]
+    },
+    {
+      "key": "KOK璧勬簮",
+      ",name": "馃敒KOK璧勬簮",
+      ",type": 1,
+      "api": "https://api.vodkok2.com/api.php/provide/vod/",
+      "searchable": 1,
+      "quickSearch": 1,
+      ",filterable": 0
+    },
+    {
+      "key": "api.putaozy.net",
+      ",name": "鎴愪汉08,",
+      ",type": 1,
+      "style": {
+        ",type": "rect",
+        "ratio": 1.485
+      },
+      "api": "http://api.putaozy.net/inc/apijson_vod.php",
+      "searchable": 1
+    },
+    {
+      "key": "sdszyapi.com",
+      ",name": "鎴愪汉16,",
+      ",type": 0,
+      "style": {
+        ",type": "rect",
+        "ratio": 1.485
+      },
+      "api": "http://sdszyapi.com/home/cjapi/asbb/mc10/vod/xml",
+      "searchable": 1
+    },
+    {
+      "key": "xjjzyapi.com",
+      ",name": "鎴愪汉18,",
+      ",type": 0,
+      "style": {
+        ",type": "rect",
+        "ratio": 1.485
+      },
+      "api": "http://xjjzyapi.com/home/cjapi/askl/mc10/vod/xml",
+      "searchable": 1
+    },
+    {
+      "key": "shabizy.com",
+      ",name": "鎴愪汉19,",
+      ",type": 0,
+      "style": {
+        ",type": "rect",
+        "ratio": 1.485
+      },
+      "api": "http://www.shabizy.com:777/inc/sea",
+      "searchable": 1
+    },
+    {
+      "key": "caiji21.com",
+      ",name": "鎴愪汉20,",
+      ",type": 0,
+      "style": {
+        ",type": "rect",
+        "ratio": 1.485
+      },
+      "api": "http://www.caiji21.com/home/cjapi/klkl/mc10/vod/xml",
+      "searchable": 1
+    },
+    {
+      "key": "caiji25.com",
+      ",name": "鎴愪汉21,",
+      ",type": 0,
+      "style": {
+        ",type": "rect",
+        "ratio": 1.485
+      },
+      "api": "http://www.caiji25.com/home/cjapi/p0as/mc10/vod/xml",
+      "searchable": 1
+    },
+    {
+      "key": "caiji26.com",
+      ",name": "鎴愪汉22,",
+      ",type": 0,
+      "style": {
+        ",type": "rect",
+        "ratio": 1.485
+      },
+      "api": "http://caiji26.com/home/cjapi/p0g8/mc10/vod/xml",
+      "searchable": 1
+    },
+    {
+      "key": "caiji24.com",
+      ",name": "鎴愪汉23,",
+      ",type": 0,
+      "style": {
+        ",type": "rect",
+        "ratio": 1.485
+      },
+      "api": "http://www.caiji24.com/home/cjapi/p0d2/mc10/vod/xml",
+      "searchable": 1
+    },
+    {
+      "key": "mgav1.cc",
+      ",name": "鎴愪汉27,",
+      ",type": 0,
+      "style": {
+        ",type": "rect",
+        "ratio": 1.485
+      },
+      "api": "https://www.mgav1.cc/api.php/provide/vod/at/xml",
+      "searchable": 1
+    },
+    {
+      "key": "siwazyw.cc",
+      ",name": "鎴愪汉32,",
+      ",type": 1,
+      "style": {
+        ",type": "rect",
+        "ratio": 1.485
+      },
+      "api": "https://siwazyw.cc/api.php/provide/vod/",
+      "searchable": 1
+    },
+    {
+      "key": "dmmapi.com",
+      ",name": "鎴愪汉35,",
+      ",type": 0,
+      "style": {
+        ",type": "rect",
+        "ratio": 1.485
+      },
+      "api": "https://www.dmmapi.com/home/cjapi/asd2c7/mc10/vod/xml",
+      "searchable": 1
+    },
+    {
+      "key": "xx55zyapi.com",
+      ",name": "鎴愪汉36,",
+      ",type": 0,
+      "style": {
+        ",type": "rect",
+        "ratio": 1.485
+      },
+      "api": "https://xx55zyapi.com/home/cjapi/ascf/mc10/vod/xml",
+      "searchable": 1
+    },
+    {
+      "key": "caiji02.com",
+      ",name": "鎴愪汉38,",
+      ",type": 0,
+      "style": {
+        ",type": "rect",
+        "ratio": 1.485
+      },
+      "api": "https://www.caiji02.com/home/cjapi/cfas/mc10/vod/xml",
+      "searchable": 1
+    },
+    {
+      "key": "caiji07.com",
+      ",name": "鎴愪汉40,",
+      ",type": 0,
+      "style": {
+        ",type": "rect",
+        "ratio": 1.485
+      },
+      "api": "https://www.caiji07.com/home/cjapi/cfcf/mc10/vod/xml",
+      "searchable": 1
+    },
+    {
+      "key": "caiji03.com",
+      ",name": "鎴愪汉42,",
+      ",type": 0,
+      "style": {
+        ",type": "rect",
+        "ratio": 1.485
+      },
+      "api": "https://www.caiji03.com/home/cjapi/cfg8/mc10/vod/xml",
+      "searchable": 1
+    },
+    {
+      "key": "caiji08.com",
+      ",name": "鎴愪汉43,",
+      ",type": 0,
+      "style": {
+        ",type": "rect",
+        "ratio": 1.485
+      },
+      "api": "https://www.caiji08.com/home/cjapi/cfkl/mc10/vod/xml",
+      "searchable": 1
+    },
+    {
+      "key": "caiji10.com",
+      ",name": "鎴愪汉44,",
+      ",type": 0,
+      "style": {
+        ",type": "rect",
+        "ratio": 1.485
+      },
+      "api": "https://www.caiji10.com/home/cjapi/cfs6/mc10/vod/xml",
+      "searchable": 1
+    },
+    {
+      "key": ",52zyapi.com",
+      ",name": "鎴愪汉45,",
+      ",type": 0,
+      "style": {
+        ",type": "rect",
+        "ratio": 1.485
+      },
+      "api": "https://52zyapi.com/home/cjapi/asda/mc10/vod/xml",
+      "searchable": 1
+    },
+    {
+      "key": "caiji01.com",
+      ",name": "鎴愪汉48,",
+      ",type": 0,
+      "style": {
+        ",type": "rect",
+        "ratio": 1.485
+      },
+      "api": "https://www.caiji01.com/home/cjapi/cfd2/mc10/vod/xml",
+      "searchable": 1
+    },
+    {
+      "key": "caiji22.com",
+      ",name": "鎴愪汉49,",
+      ",type": 0,
+      "style": {
+        ",type": "rect",
+        "ratio": 1.485
+      },
+      "api": "https://www.caiji22.com/home/cjapi/klp0/mc10/vod/xml",
+      "searchable": 1
+    },
+    {
+      "key": "caiji23.com",
+      ",name": "鎴愪汉50,",
+      ",type": 0,
+      "style": {
+        ",type": "rect",
+        "ratio": 1.485
+      },
+      "api": "https://www.caiji23.com/home/cjapi/kls6/mc10/vod/xml",
+      "searchable": 1
+    },
+    {
+      "key": "caiji04.com",
+      ",name": "鎴愪汉55,",
+      ",type": 0,
+      "style": {
+        ",type": "rect",
+        "ratio": 1.485
+      },
+      "api": "https://www.caiji04.com/home/cjapi/cfc7/mc10/vod/xml",
+      "searchable": 1
+    },
+    {
+      "key": "caiji09.com",
+      ",name": "鎴愪汉56,",
+      ",type": 0,
+      "style": {
+        ",type": "rect",
+        "ratio": 1.485
+      },
+      "api": "https://www.caiji09.com/home/cjapi/cfp0/mc10/vod/xml",
+      "searchable": 1
+    },
+    {
+      "key": "caiji05.com",
+      ",name": "鎴愪汉57,",
+      ",type": 0,
+      "style": {
+        ",type": "rect",
+        "ratio": 1.485
+      },
+      "api": "https://www.caiji05.com/home/cjapi/cfda/mc10/vod/xml",
+      "searchable": 1
+    },
+    {
+      "key": "jgczyapi.com",
+      ",name": "鎴愪汉58,",
+      ",type": 0,
+      "style": {
+        ",type": "rect",
+        "ratio": 1.485
+      },
+      "api": "https://jgczyapi.com/home/cjapi/kld2/mc10/vod/xml",
+      "searchable": 1
+    },
+    {
+      "key": "caiji.caomeiapi.com",
+      ",name": "鎴愪汉59,",
+      ",type": 1,
+      "style": {
+        ",type": "rect",
+        "ratio": 1.485
+      },
+      "api": "https://caiji.caomeiapi.com/inc/apijson_vod.php",
+      "searchable": 1
+    },
+    {
+      "key": "caiji.523zyw.com",
+      ",name": "鎴愪汉60,",
+      ",type": 1,
+      "style": {
+        ",type": "rect",
+        "ratio": 1.485
+      },
+      "api": "https://caiji.523zyw.com/inc/apijson_vod.php",
+      "searchable": 1
+    },
+    {
+      "key": "caiji.naichaapi.com",
+      ",name": "鎴愪汉61,",
+      ",type": 1,
+      "style": {
+        ",type": "rect",
+        "ratio": 1.485
+      },
+      "api": "https://caiji.naichaapi.com/inc/apijson_vod.php",
+      "searchable": 1
+    },
+    {
+      ",name": "LLTV_1,",
+      ",type": ",1,",
+      "url": "https://mfjx.iwsyy.xyz/?url=",
+      "ext": {
+        ",flag": [
+          "qq",
+          "鑵捐",
+          "qiyi",
+          "鐖卞鑹�",
+          "濂囪壓",
+          "youku",
+          "浼橀叿",
+          "sohu",
+          "鎼滅嫄",
+          "letv",
+          "涔愯",
+          "mgtv",
+          "鑺掓灉",
+          ",tnmb",
+          "seven",
+          "bilibili",
+          ",1905,",
+          "NetFilx"
+        ],
+        "header": {
+          "User-Agent": "okhttp/4.9.1,"
+        }
+      }
+    },
+    {
+      ",name": "LLTV_3,",
+      ",type": 0,
+      "url": "https://bd.jx.cn/?url=",
+      "ext": {
+        "header": {
+          "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.57,"
+        }
+      }
+    },
+    {
+      ",name": "Google",
+      "url": "https://dns.google/dns-query",
+      "ips": [
+        ",8.8.4.4,",
+        ",8.8.8.8,"
+      ]
+    },
+    {
+      ",name": "Cloudflare",
+      "url": "https://cloudflare-dns.com/dns-query",
+      "ips": [
+        ",1.1.1.1,",
+        ",1.0.0.1,",
+        ",2606:4700:4700::1111,",
+        ",2606:4700:4700::1001,"
+      ]
+    },
+    {
+      ",name": "AdGuard",
+      "url": "https://dns.adguard.com/dns-query",
+      "ips": [
+        ",94.140.14.140,",
+        ",94.140.14.141,"
+      ]
+    },
+    {
+      ",name": "DNSWatch",
+      "url": "https://resolver2.dns.watch/dns-query",
+      "ips": [
+        ",84.200.69.80,",
+        ",84.200.70.40,"
+      ]
+    },
+    {
+      ",name": "Quad9,",
+      "url": "https://dns.quad9.,net/dns-quer",
+      "ips": [
+        ",9.9.9.9,",
+        ",149.112.112.112,"
+      ]
+    }
+  ],
+  "lives": [],
+  "parses": [
+    {
+      "name": "Json骞跺彂",
+      "type": 2,
+      "url": "Parallel"
+    },
+    {
+      "name": "Json杞",
+      "type": 2,
+      "url": "Sequence"
+    },
+    {
+      "name": "555TV",
+      "type": 1,
+      "url": "https://api.parwix.com:4433/analysis/json/?uid=1752&my=fhlwyABGHJLNRX1489&url=",
+      "t": 182,
+      "i": "check at 2021-12-06 16:29:03"
+    },
+    {
+      "name": "蹇簯褰遍煶1",
+      "type": 1,
+      "url": "http://vip.mengx.vip/home/api?type=ys&uid=2494472&key=deglpquwxzDNQRV378&url=",
+      "t": 229,
+      "i": "check at 2021-12-06 16:27:54"
+    },
+    {
+      "name": "澶х唺褰辫",
+      "type": 1,
+      "url": "https://api.parwix.com:4433/analysis/json/?uid=1735&my=bcefosxyACJKOWX678&url=",
+      "t": 240,
+      "i": "check at 2021-12-06 16:26:30"
+    },
+    {
+      "name": "鍗楀簻褰辫1",
+      "type": 1,
+      "url": "http://play.szbodankyy.com/cnmb101/?url=",
+      "t": 247,
+      "i": "check at 2021-12-06 16:29:28"
+    },
+    {
+      "name": "灏忓己TV",
+      "type": 1,
+      "url": "https://json.pangujiexi.com:12345/json.php?url=",
+      "t": 253,
+      "i": "check at 2021-12-06 16:26:13"
+    },
+    {
+      "name": "涔呬箙杩藉墽",
+      "type": 1,
+      "url": "https://json.nbjx.vip:4399/?wap=1&url=",
+      "t": 300,
+      "i": "check at 2021-12-06 16:27:25"
+    },
+    {
+      "name": "榛勬渤褰辫",
+      "type": 1,
+      "url": "http://jx.ledu8.cn/api/?key=P8QSgO61p1MpHV2ALn&url=",
+      "t": 374,
+      "i": "check at 2021-12-06 16:26:10"
+    },
+    {
+      "name": "涔呬箙杩藉墽1",
+      "type": 1,
+      "url": "http://iptv1.xncyx.top/api/?key=dnctIpkRezy1vGKbVI&url=",
+      "t": 390,
+      "i": "check at 2021-12-06 16:27:27"
+    },
+    {
+      "name": "5060褰遍櫌",
+      "type": 1,
+      "url": "https://vip.mengx.vip/home/api?type=ys&uid=18613&key=bknprsxCILRTUVYZ79&url=",
+      "t": 391,
+      "i": "check at 2021-12-06 16:29:23"
+    },
+    {
+      "name": "鍗楀簻褰辫",
+      "type": 1,
+      "url": "http://ay5k.wchulian.com.cn/home/api?type=ys&uid=218311&key=bghituvyCDSUY01568&tm=1637161513062&url=",
+      "t": 408,
+      "i": "check at 2021-12-06 16:29:24"
+    },
+    {
+      "name": "瀹呯敺褰遍櫌",
+      "type": 1,
+      "url": "http://vip.mengx.vip/home/api?type=ys&uid=1496242&key=cdhiCDFHPQRVZ02567&url=",
+      "t": 410,
+      "i": "check at 2021-12-06 16:28:26"
+    },
+    {
+      "name": "鐪嬪墽鍚�",
+      "type": 1,
+      "url": "http://vip.mengx.vip/home/api?type=ys&uid=3714324&key=adhmprtwyzBCHLSUX1&url=",
+      "t": 453,
+      "i": "check at 2021-12-06 16:28:40"
+    },
+    {
+      "name": "鍏富褰辫",
+      "type": 1,
+      "url": "http://jno.mshemvg.cn/?url=",
+      "t": 548,
+      "i": "check at 2021-12-06 16:28:11"
+    },
+    {
+      "name": "鐩婅揪褰遍櫌",
+      "type": 1,
+      "url": "http://vip.mengx.vip/home/api?type=ys&uid=2462596&key=bdhkCEGHLNOQ123789&url=",
+      "t": 553,
+      "i": "check at 2021-12-06 16:27:53"
+    },
+    {
+      "name": "鍗楀簻褰辫3",
+      "type": 1,
+      "url": "https://vip.mengx.vip/home/api?type=ys&uid=4536224&key=ikluvwzAELNSUWYZ19&url=",
+      "t": 566,
+      "i": "check at 2021-12-06 16:29:36"
+    },
+    {
+      "name": "褰遍槄闃�",
+      "type": 1,
+      "url": "https://api.m3u8.tv:5678/home/api?type=ys&uid=594615&key=bcehpqtxCEGKMT0248&url=",
+      "t": 579,
+      "i": "check at 2021-12-06 16:29:22"
+    },
+    {
+      "name": "闆ㄦ灉褰辫1",
+      "type": 1,
+      "url": "https://svip.renrenmi.cc:2222/api/?key=mtjJAJRXpwT5XAqWnn&url=",
+      "t": 585,
+      "i": "check at 2021-12-06 16:27:31"
+    },
+    {
+      "name": "闆汉褰辫",
+      "type": 1,
+      "url": "https://svip.renrenmi.cc:2222/api/?key=S77lACKG9VTwNq5Upv&url=",
+      "t": 597,
+      "i": "check at 2021-12-06 16:27:18"
+    },
+    {
+      "name": "娈靛弸褰辫",
+      "type": 1,
+      "url": "https://api.m3u8.tv:5678/home/api?type=ys&uid=998036&key=afhlnuvzDJLMOX3689&url=",
+      "t": 601,
+      "i": "check at 2021-12-06 16:28:26"
+    },
+    {
+      "name": "绁為┈褰遍櫌",
+      "type": 1,
+      "url": "https://jhpc.manduhu.com/j.php?url=",
+      "t": 615,
+      "i": "check at 2021-12-06 16:28:47"
+    },
+    {
+      "name": "鐩掑瓙褰遍櫌",
+      "type": 1,
+      "url": "http://cygc.xyz:88/api/?key=uju6GVaLpIgZX2012r&url=",
+      "t": 615,
+      "i": "check at 2021-12-06 16:28:24"
+    },
+    {
+      "name": "鍠典箰褰辫",
+      "type": 1,
+      "url": "https://api.shengqiankuaitao.cn/api/?key=yU21osyRGGj7U1GmR1&url=",
+      "t": 635,
+      "i": "check at 2021-12-06 16:26:18"
+    },
+    {
+      "name": "杩蜂綘搴�",
+      "type": 1,
+      "url": "https://rrmi.renrenmi.cc:3366/qq/tx.php?url=",
+      "t": 652,
+      "i": "check at 2021-12-06 16:29:20"
+    },
+    {
+      "name": "绛嬫枟浜�1",
+      "type": 1,
+      "url": "https://api.m3u8.tv:5678/home/api?type=ys&uid=1494542&key=ijmqvwxABEHILMOT48&url=",
+      "t": 777,
+      "i": "check at 2021-12-06 16:27:24"
+    },
+    {
+      "name": "闃旇醇褰遍櫌",
+      "type": 1,
+      "url": "https://supervip.rongxingvr.cn:8866/api/?key=41UviJ16T6DndnSpZr&url=",
+      "t": 804,
+      "i": "check at 2021-12-06 16:27:42"
+    },
+    {
+      "name": "CJT褰遍櫌",
+      "type": 1,
+      "url": "https://svip.xizny.com/api/?key=R7kI28sF7lyDy9z8wu&url=",
+      "t": 841,
+      "i": "check at 2021-12-06 16:29:15"
+    },
+    {
+      "name": "瀹呯敺褰遍櫌1",
+      "type": 1,
+      "url": "https://vip.rongxingvr.cn/api/?key=TjbT8ogE0sBCt8YA1U&url=",
+      "t": 843,
+      "i": "check at 2021-12-06 16:28:27"
+    },
+    {
+      "name": "闃垮Ж杩藉墽1",
+      "type": 1,
+      "url": "https://json.1920i.com/home/api?type=app&uid=922662&key=efkpqrstuvwBCKOU59&url=",
+      "t": 861,
+      "i": "check at 2021-12-06 16:29:54"
+    },
+    {
+      "name": "鏋楄胺褰辫",
+      "type": 1,
+      "url": "http://jx.jiaodada.cn/api/?key=eQ15x5H0TbOkANPoNR&url=",
+      "t": 864,
+      "i": "check at 2021-12-06 16:29:06"
+    },
+    {
+      "name": "鏄熷奖鐩搁殢1",
+      "type": 1,
+      "url": "https://xt.gbxy.net.cn/api/?key=7gAmfK5typSVsg2Qnr&url=",
+      "t": 873,
+      "i": "check at 2021-12-06 16:27:01"
+    },
+    {
+      "name": "鏌犳煔褰辫1",
+      "type": 1,
+      "url": "https://xt.gbxy.net.cn/api/?key=7gAmfK5typSVsg2Qnr&url=",
+      "t": 920,
+      "i": "check at 2021-12-06 16:26:51"
+    },
+    {
+      "name": "鐨毊褰辫",
+      "type": 1,
+      "url": "https://fast.rongxingvr.cn:8866/api/?key=2YP5jFSwnsDRCjX5pt&url=",
+      "t": 968,
+      "i": "check at 2021-12-06 16:29:10"
+    },
+    {
+      "name": "褰遍槄闃�1",
+      "type": 1,
+      "url": "http://api1.json.vin:4433/api/?key=WPDh6vf0aT0ahepWzW&url=",
+      "t": 989,
+      "i": "check at 2021-12-06 16:29:23"
+    },
+    {
+      "name": "褰辫宸ュ巶",
+      "url": "https://jx.ysgc.xyz/?url="
+    },
+    {
+      "name": "铏剧背",
+      "url": "https://jx.xmflv.com/?url="
+    },
+    {
+      "name": "鏄熺┖",
+      "url": "http://60jx.com/?url="
+    },
+    {
+      "name": "钀屾",
+      "url": "https://jiexi.linzhiyuan.xyz/jiexi/?url="
+    },
+    {
+      "name": "涔愬柕",
+      "url": "http://jx.hao-zsj.cn/vip/?url="
+    },
+    {
+      "name": "鐖辫窡",
+      "url": "https://vip.2ktvb.com/player/?url="
+    },
+    {
+      "name": "Json.VodJX",
+      "url": "http://admin.vodjx.top/json.php?url=",
+      "type": 1
+    },
+    {
+      "name": "VodJX1",
+      "url": "https://api.vodjx.top/?url="
+    },
+    {
+      "name": "VodJX2",
+      "url": "https://jx.vodjx.top/jiexi.php?url="
+    },
+    {
+      "name": "杩藉墽杈句汉",
+      "url": "https://vip123kan.vip/m3u8.php?url="
+    },
+    {
+      "name": "鑰佹澘",
+      "url": "https://vip.laobandq.com/jiexi.php?url="
+    },
+    {
+      "name": "杩ゥ",
+      "url": "https://123.1dior.cn/?url="
+    },
+    {
+      "name": "涔濆叓",
+      "url": "https://jx.youyitv.com/?url="
+    },
+    {
+      "name": "鏄熼┌",
+      "url": "https://vip.cjys.top/?url="
+    },
+    {
+      "name": "灏忚拫",
+      "url": "https://www.kpezp.cn/jlexi.php?url="
+    },
+    {
+      "name": "8鍙�",
+      "url": "http://vip.8bys.cn/?url="
+    },
+    {
+      "name": "鎬濅簯",
+      "url": "https://jx.ap2p.cn/?url="
+    },
+    {
+      "name": "涓冨僵",
+      "url": "https://www.xymav.com/?url="
+    },
+    {
+      "name": "h8",
+      "url": "https://www.h8jx.com/jiexi.php?url="
+    },
+    {
+      "name": "瑙ｆ瀽鍟�",
+      "url": "https://api.jiexi.la/?url="
+    },
+    {
+      "name": "8090",
+      "url": "https://www.8090g.cn/?url="
+    },
+    {
+      "name": "Ckplayer",
+      "url": "https://www.ckplayer.vip/jiexi/?url="
+    },
+    {
+      "name": "ok3389",
+      "url": "https://api.okjx.cc:3389/jx.php?url="
+    },
+    {
+      "name": "娓歌壓",
+      "url": "https://api.u1o.net/?url="
+    },
+    {
+      "name": "楂樻竻1",
+      "type": 0,
+      "url": "https://titan.mgtv.com.jumi.tv/player/?url="
+    },
+    {
+      "name": "楂樻竻2",
+      "type": 0,
+      "url": "https://dmku.dijiaxia.com/?url="
+    },
+    {
+      "name": "楂樻竻3",
+      "type": 0,
+      "url": "https://jx.ppflv.com/?url="
+    },
+    {
+      "name": "楂樻竻4",
+      "type": 0,
+      "url": "http://an61.com/jx/vip?v="
+    },
+    {
+      "name": "M2090",
+      "url": "https://m2090.com/?url="
+    },
+    {
+      "name": "360",
+      "url": "https://jx.ns360.cn/1080/jiexi/?url="
+    },
+    {
+      "name": "JJXX",
+      "url": "http://jjxx.me/?url="
+    },
+    {
+      "name": "Parwix",
+      "url": "https://vip.parwix.com:4433/player/?url="
+    },
+    {
+      "name": "OK",
+      "url": "https://okjx.cc/?url="
+    },
+    {
+      "name": "鏄庢棩",
+      "url": "https://jx.yingxiangbao.cn/vip.php?url="
+    },
+    {
+      "name": "2A璧勬簮",
+      "url": "https://www.2ajx.com/vip.php?url="
+    },
+    {
+      "name": "涔呯湅",
+      "url": "https://9kjx.com/?url="
+    },
+    {
+      "name": "鍏ㄦ皯",
+      "url": "https://jx.quanmingjiexi.com/?url="
+    },
+    {
+      "name": "BL",
+      "url": "https://vip.bljiex.com/?v="
+    },
+    {
+      "name": "浜戠",
+      "url": "https://jx.ergan.top/?url="
+    },
+    {
+      "name": "33tn",
+      "url": "http://www.33tn.cn/?url="
+    },
+    {
+      "name": "濞冨▋",
+      "url": "http://frog.pinellia.xyz/jx/?url="
+    },
+    {
+      "name": "CHok",
+      "url": "https://www.gai4.com/?url="
+    },
+    {
+      "name": "鍙箰",
+      "url": "https://jx.keleapi.com/?url=",
+      "t": "m"
+    },
+    {
+      "name": "鎬濆彜3",
+      "url": "https://jsap.attakids.com/?url="
+    },
+    {
+      "name": "浜轰汉杩�",
+      "url": "https://jx.renrenmi.cc/?url="
+    },
+    {
+      "name": "VIP灏婁韩",
+      "url": "https://player.maqq.cn/?url="
+    },
+    {
+      "name": "鐖辫眴",
+      "url": "https://jx.aidouer.net/?url="
+    },
+    {
+      "name": "浜戣В鏋�",
+      "url": "https://jx.mw0.cc/?url="
+    },
+    {
+      "name": "璇鸿",
+      "url": "https://www.nxflv.com/?url="
+    },
+    {
+      "name": "LE",
+      "url": "https://lecurl.cn/?url="
+    },
+    {
+      "name": "鐩樺彜浜�",
+      "url": "https://go.yh0523.cn/y.cy?url="
+    },
+    {
+      "name": "澶╃考",
+      "url": "https://jsap.attakids.com/?url="
+    },
+    {
+      "name": "鑱氬悎",
+      "type": 3,
+      "url": "Demo"
+    },
+    {
+      "name": "瑙ｆ瀽鑱氬悎",
+      "type": 3,
+      "url": "Web"
+    },
+    {
+      "name": "澶忓",
+      "url": "http://8.155.50.80/xiayexk.php?url="
+    },
+    {
+      "name": "-m3u8-",
+      "type": 0,
+      "url": "https://jx.m3u8.pw/?url="
+    },
+    {
+      "name": "-铏剧背-",
+      "type": 0,
+      "url": "https://jx.xmflv.com/?url="
+    },
+    {
+      "name": "鑷讳韩",
+      "type": "1",
+      "url": "http://pan.qiaoji8.com/tvbox/neibu.php?url=",
+      "ext": {
+        "flag": [
+          "qq",
+          "鑵捐",
+          "qiyi",
+          "鐖卞鑹�",
+          "濂囪壓",
+          "youku",
+          "浼橀叿",
+          "sohu",
+          "鎼滅嫄",
+          "letv",
+          "涔愯",
+          "mgtv",
+          "鑺掓灉",
+          "tnmb",
+          "seven",
+          "bilibili",
+          "1905"
+        ],
+        "header": {
+          "User-Agent": "okhttp/4.9.1"
+        }
+      }
+    },
+    {
+      "name": "鎺ㄨ崘",
+      "type": 1,
+      "url": "https://jxjson.icu/neibu.php?url=",
+      "ext": {
+        "flag": [
+          "qq",
+          "鑵捐",
+          "qiyi",
+          "鐖卞鑹�",
+          "濂囪壓",
+          "youku",
+          "浼橀叿",
+          "sohu",
+          "鎼滅嫄",
+          "letv",
+          "涔愯",
+          "mgtv",
+          "鑺掓灉",
+          "tnmb",
+          "seven",
+          "bilibili",
+          "1905"
+        ],
+        "header": {
+          "User-Agent": "okhttp/4.9.1"
+        }
+      }
+    },
+    {
+      "name": "浼橀€�",
+      "type": 1,
+      "url": "http://1.94.221.189:88/algorithm.php?url=",
+      "ext": {
+        "flag": [
+          "qq",
+          "鑵捐",
+          "qiyi",
+          "鐖卞鑹�",
+          "濂囪壓",
+          "youku",
+          "浼橀叿",
+          "sohu",
+          "鎼滅嫄",
+          "letv",
+          "涔愯",
+          "mgtv",
+          "鑺掓灉",
+          "tnmb",
+          "seven",
+          "bilibili",
+          "1905"
+        ],
+        "header": {
+          "User-Agent": "okhttp/4.9.1"
+        }
+      }
+    },
+    {
+      "name": "绾胯矾1",
+      "type": 0,
+      "url": "https://jx.xmflv.com/?url=",
+      "ext": {
+        "header": {
+          "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.57"
+        }
+      }
+    },
+    {
+      "name": "绾胯矾2",
+      "type": 0,
+      "url": "https://jx.quankan.app/?url=",
+      "ext": {
+        "header": {
+          "user-agent": "Mozilla/5.0 (Linux; Android 13; V2049A Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/116.0.0.0 Mobile Safari/537.36"
+        }
+      }
+    },
+    {
+      "name": "绾胯矾3",
+      "type": 0,
+      "url": "https://jx.yparse.com/index.php?url=",
+      "ext": {
+        "header": {
+          "user-agent": "Mozilla/5.0 (Linux; Android 13; V2049A Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/116.0.0.0 Mobile Safari/537.36"
+        }
+      }
+    },
+    {
+      "name": "绾胯矾4",
+      "type": 0,
+      "url": "https://jx.aidouer.net/?url=",
+      "ext": {
+        "header": {
+          "user-agent": "Mozilla/5.0 (Linux; Android 13; V2049A Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/116.0.0.0 Mobile Safari/537.36",
+          "referer": "https://jiejie.uk/"
+        }
+      }
+    },
+    {
+      "name": "绾胯矾5",
+      "type": 0,
+      "url": "https://www.8090g.cn/?url="
+    },
+    {
+      "name": "绾胯矾6",
+      "type": 0,
+      "url": "https://jx.yangtu.top?url="
+    },
+    {
+      "name": "绾胯矾7",
+      "type": 0,
+      "url": "https://jx.m3u8.tv/jiexi/?url="
+    },
+    {
+      "name": "绾胯矾8",
+      "type": 0,
+      "url": "https://www.ckplayer.vip/jiexi/?url="
+    },
+    {
+      "name": "椤洪《閰�",
+      "type": 1,
+      "url": "http://moyu.zhuimi.top/zhuimi666.php?url=",
+      "ext": {
+        "flag": [
+          "qq",
+          "鑵捐",
+          "qiyi",
+          "鐖卞鑹�",
+          "濂囪壓",
+          "youku",
+          "浼橀叿",
+          "sohu",
+          "鎼滅嫄",
+          "letv",
+          "涔愯",
+          "mgtv",
+          "鑺掓灉",
+          "rx",
+          "ltnb",
+          "bilibili",
+          "1905",
+          "xigua"
+        ]
+      }
+    },
+    {
+      "name": "馃悷鎽搁奔瑙ｆ瀽",
+      "type": 1,
+      "url": "http://110.40.61.139:4655/zhuimi666.php?url=",
+      "ext": {
+        "flag": [
+          "qq",
+          "鑵捐",
+          "mgtv",
+          "鑺掓灉"
+        ],
+        "header": {
+          "User-Agent": "okhttp/4.9.1"
+        }
+      }
+    },
+    {
+      "name": "椤鸿姃鏋�4k瑙ｆ瀽",
+      "type": 1,
+      "url": "http://llyh.xn--yi7aa.top/api/?key=5b317c16d457b31a3150d87c0a362a9e&url=",
+      "ext": {
+        "flag": [
+          "qq",
+          "鑵捐",
+          "qiyi",
+          "鐖卞鑹�",
+          "濂囪壓",
+          "youku",
+          "浼橀叿",
+          "sohu",
+          "鎼滅嫄",
+          "letv",
+          "涔愯",
+          "mgtv",
+          "鑺掓灉",
+          "tnmb",
+          "seven",
+          "bilibili",
+          "1905"
+        ],
+        "header": {
+          "User-Agent": "okhttp/4.9.1"
+        }
+      }
+    },
+    {
+      "name": "椤�4k瑙ｆ瀽",
+      "type": 1,
+      "url": "http://6qu.us.kg/鍏紬鍙峰叚瓒�.php?url=",
+      "ext": {
+        "flag": [
+          "qq",
+          "鑵捐",
+          "qiyi",
+          "鐖卞鑹�",
+          "濂囪壓",
+          "youku",
+          "浼橀叿",
+          "tucheng",
+          "sohu",
+          "鎼滅嫄",
+          "letv",
+          "涔愯",
+          "mgtv",
+          "鑺掓灉",
+          "tnmb",
+          "seven",
+          "yzm",
+          "aliyun",
+          "RJuMao",
+          "bilibili",
+          "1905",
+          "xinvip",
+          "XAL",
+          "qiqi",
+          "XALS",
+          "YuMi-vip"
+        ]
+      }
+    },
+    {
+      "name": "椤鸿仛鍚圔",
+      "type": 1,
+      "url": "http://43.136.176.188:91/api/?key=e394fb9aa10efe421b35539f22e2e6d5&url=",
+      "ext": {
+        "flag": [
+          "qq",
+          "鑵捐",
+          "qiyi",
+          "鐖卞鑹�",
+          "濂囪壓",
+          "youku",
+          "浼橀叿",
+          "tucheng",
+          "sohu",
+          "鎼滅嫄",
+          "letv",
+          "涔愯",
+          "mgtv",
+          "鑺掓灉",
+          "tnmb",
+          "seven",
+          "yzm",
+          "aliyun",
+          "RJuMao",
+          "bilibili",
+          "1905",
+          "xinvip",
+          "XAL",
+          "qiqi",
+          "XALS",
+          "YuMi-vip"
+        ]
+      }
+    },
+    {
+      "name": "椤�4k瑙ｆ瀽3",
+      "type": 1,
+      "url": "https://jxjson.icu/neibu.php?url=",
+      "ext": {
+        "flag": [
+          "qq",
+          "鑵捐",
+          "qiyi",
+          "鐖卞鑹�",
+          "濂囪壓",
+          "youku",
+          "浼橀叿",
+          "sohu",
+          "鎼滅嫄",
+          "letv",
+          "涔愯",
+          "mgtv",
+          "鑺掓灉",
+          "tnmb",
+          "seven",
+          "bilibili",
+          "1905"
+        ],
+        "header": {
+          "User-Agent": "okhttp/4.9.1"
+        }
+      }
+    },
+    {
+      "name": "椤�8090g",
+      "url": "https://www.8090g.cn/jiexi/?url=",
+      "type": 0,
+      "ext": {
+        "flag": [
+          "qiyi",
+          "imgo",
+          "鐖卞鑹�",
+          "濂囪壓",
+          "qq",
+          "qq 棰勫憡鍙婅姳绲�",
+          "鑵捐",
+          "youku",
+          "浼橀叿",
+          "pptv",
+          "PPTV",
+          "letv",
+          "涔愯",
+          "leshi",
+          "mgtv",
+          "鑺掓灉",
+          "sohu",
+          "xigua",
+          "fun",
+          "椋庤"
+        ]
+      },
+      "header": {
+        "User-Agent": "Mozilla/5.0"
+      }
+    },
+    {
+      "name": "椤鸿櫨绫�",
+      "url": "https://jx.xmflv.com/?url=",
+      "type": 0,
+      "ext": {
+        "flag": [
+          "qiyi",
+          "imgo",
+          "鐖卞鑹�",
+          "濂囪壓",
+          "qq",
+          "qq 棰勫憡鍙婅姳绲�",
+          "鑵捐",
+          "youku",
+          "浼橀叿",
+          "pptv",
+          "PPTV",
+          "letv",
+          "涔愯",
+          "leshi",
+          "mgtv",
+          "鑺掓灉",
+          "sohu",
+          "xigua",
+          "fun",
+          "椋庤"
+        ]
+      },
+      "header": {
+        "User-Agent": "Mozilla/5.0"
+      }
+    },
+    {
+      "name": "椤鸿櫨绫�2",
+      "url": "https://jx.xmflv.cc/?url=",
+      "type": 0,
+      "ext": {
+        "flag": [
+          "qiyi",
+          "imgo",
+          "鐖卞鑹�",
+          "濂囪壓",
+          "qq",
+          "qq 棰勫憡鍙婅姳绲�",
+          "鑵捐",
+          "youku",
+          "浼橀叿",
+          "pptv",
+          "PPTV",
+          "letv",
+          "涔愯",
+          "leshi",
+          "mgtv",
+          "鑺掓灉",
+          "sohu",
+          "xigua",
+          "fun",
+          "椋庤"
+        ]
+      },
+      "header": {
+        "User-Agent": "Mozilla/5.0"
+      }
+    },
+    {
+      "name": "椤簆ouyun",
+      "url": "https://www.pouyun.com/?url=",
+      "type": 0,
+      "ext": {
+        "flag": [
+          "qiyi",
+          "imgo",
+          "鐖卞鑹�",
+          "濂囪壓",
+          "qq",
+          "qq 棰勫憡鍙婅姳绲�",
+          "鑵捐",
+          "youku",
+          "浼橀叿",
+          "pptv",
+          "PPTV",
+          "letv",
+          "涔愯",
+          "leshi",
+          "mgtv",
+          "鑺掓灉",
+          "sohu",
+          "xigua",
+          "fun",
+          "椋庤"
+        ]
+      },
+      "header": {
+        "User-Agent": "Mozilla/5.0"
+      }
+    },
+    {
+      "name": "椤哄啺璞�",
+      "url": "https://bd.jx.cn/?url=",
+      "type": 0,
+      "ext": {
+        "flag": [
+          "qiyi",
+          "imgo",
+          "鐖卞鑹�",
+          "濂囪壓",
+          "qq",
+          "qq 棰勫憡鍙婅姳绲�",
+          "鑵捐",
+          "youku",
+          "浼橀叿",
+          "pptv",
+          "PPTV",
+          "letv",
+          "涔愯",
+          "leshi",
+          "mgtv",
+          "鑺掓灉",
+          "sohu",
+          "xigua",
+          "fun",
+          "椋庤"
+        ]
+      },
+      "header": {
+        "User-Agent": "Mozilla/5.0"
+      }
+    },
+    {
+      "name": "PM",
+      "url": "https://www.playm3u8.cn/jiexi.php?url=",
+      "type": 0,
+      "ext": {
+        "flag": [
+          "qiyi",
+          "imgo",
+          "鐖卞鑹�",
+          "濂囪壓",
+          "qq",
+          "鑵捐",
+          "youku",
+          "浼橀叿",
+          "pptv",
+          "PPTV",
+          "letv",
+          "涔愯",
+          "leshi",
+          "bilibili",
+          "鍝斿摡鍝斿摡",
+          "鍝斿摡",
+          "mgtv",
+          "鑺掓灉",
+          "sohu",
+          "xigua",
+          "fun",
+          "椋庤"
+        ],
+        "header": {
+          "User-Agent": "Mozilla/5.0"
+        }
+      },
+      "header": {
+        "User-Agent": "Mozilla/5.0"
+      }
+    },
+    {
+      "name": "m3u8",
+      "type": 0,
+      "url": "https://jx.m3u8.tv/jiexi/?url="
+    },
+    {
+      "name": "鐪嬬湅",
+      "type": 0,
+      "url": "https://jx.m3u8.pw/?url="
+    },
+    {
+      "name": "鍜搁奔",
+      "type": 0,
+      "url": "https://jx.xyflv.cc/?url=",
+      "ext": {
+        "header": {
+          "user-agent": "Mozilla/5.0(Linux;Android13;V2049ABuild/TP1A.220624.014;wv)AppleWebKit/537.36(KHTML,likeGecko)Version/4.0Chrome/116.0.0.0MobileSafari/537.36",
+          "referer": "https://www.xyflv.cc/"
+        }
+      }
+    },
+    {
+      "name": "宸ф妧",
+      "type": 1,
+      "url": "http://pan.qiaoji8.com/tvbox/neibu.php?url=",
+      "ext": {
+        "flag": [
+          "qq",
+          "鑵捐",
+          "qiyi",
+          "鐖卞鑹�",
+          "濂囪壓",
+          "youku",
+          "浼橀叿",
+          "sohu",
+          "鎼滅嫄",
+          "letv",
+          "涔愯",
+          "mgtv",
+          "鑺掓灉",
+          "tnmb",
+          "seven",
+          "bilibili",
+          "1905"
+        ],
+        "header": {
+          "User-Agent": "okhttp/4.9.1"
+        }
+      }
+    },
+    {
+      "name": "宸ф妧浜�",
+      "type": 1,
+      "url": "http://pan.qiaoji8.com/tvbox/gouzi.php?url=",
+      "ext": {
+        "flag": [
+          "qq",
+          "鑵捐",
+          "qiyi",
+          "鐖卞鑹�",
+          "濂囪壓",
+          "youku",
+          "浼橀叿",
+          "sohu",
+          "鎼滅嫄",
+          "letv",
+          "涔愯",
+          "mgtv",
+          "鑺掓灉",
+          "tnmb",
+          "seven",
+          "bilibili",
+          "1905",
+          "NetFilx"
+        ],
+        "header": {
+          "User-Agent": "okhttp/4.9.1"
+        }
+      }
+    },
+    {
+      "name": "-绮鹃€�1-",
+      "type": 0,
+      "url": "https://player.bingdou.vip/?pass=14&url="
+    },
+    {
+      "name": "-绮鹃€�2-",
+      "type": 0,
+      "url": "https://bd.jx.cn/?url="
+    },
+    {
+      "name": "-绮鹃€�3-",
+      "type": 0,
+      "url": "https://jx.xmflv.com/?wap=1&url="
+    },
+    {
+      "name": "qiyi[瀹樻簮]",
+      "type": 1,
+      "url": "http://39.104.230.177:1122/lxjx/myyk.php?url="
+    },
+    {
+      "name": "鑵�4K",
+      "type": 1,
+      "url": "http://www.mpanso.com/woaini.php?url=",
+      "ext": {
+        "flag": [
+          "qq",
+          "鑵捐",
+          "qiyi",
+          "鐖卞鑹�",
+          "濂囪壓",
+          "youku",
+          "浼橀叿",
+          "sohu",
+          "鎼滅嫄",
+          "letv",
+          "涔愯",
+          "mgtv",
+          "鑺掓灉",
+          "tnmb",
+          "seven",
+          "bilibili",
+          "1905"
+        ],
+        "header": {
+          "User-Agent": "okhttp/4.9.1"
+        }
+      }
+    },
+    {
+      "name": "P2P鍔犻€�",
+      "type": 0,
+      "url": "https://webp2p.augok.com/player/?url="
+    },
+    {
+      "name": "绾胯矾銑�",
+      "type": 0,
+      "url": "https://jx.5566jiexi.com/?url="
+    },
+    {
+      "name": "绾胯矾銑�",
+      "type": 0,
+      "url": "https://jx.jsonplayer.com/player/?url="
+    },
+    {
+      "name": "绾胯矾銑�",
+      "type": 0,
+      "url": "https://jx.xyflv.cc/?url="
+    },
+    {
+      "name": "绾胯矾銑�",
+      "type": 0,
+      "url": "https://www.pouyun.com/?url="
+    },
+    {
+      "name": "绾胯矾銑�",
+      "type": 0,
+      "url": "https://www.yemu.xyz/?url="
+    },
+    {
+      "name": "绾胯矾銑�",
+      "type": 0,
+      "url": "http://jx.playerjy.com/?url="
+    },
+    {
+      "name": "绾胯矾鈷�",
+      "type": 0,
+      "url": "https://jx.xmflv.com/?url=",
+      "ext": {
+        "header": {
+          "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.57"
+        }
+      }
+    },
+    {
+      "name": "绾胯矾鈷�",
+      "type": 0,
+      "url": "https://jx.quankan.app/?url=",
+      "ext": {
+        "header": {
+          "user-agent": "Mozilla/5.0 (Linux; Android 13; V2049A Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/116.0.0.0 Mobile Safari/537.36"
+        }
+      }
+    },
+    {
+      "name": "绾胯矾鈷�",
+      "type": 0,
+      "url": "https://jx.yparse.com/index.php?url=",
+      "ext": {
+        "header": {
+          "user-agent": "Mozilla/5.0 (Linux; Android 13; V2049A Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/116.0.0.0 Mobile Safari/537.36"
+        }
+      }
+    },
+    {
+      "name": "绾胯矾鈷�",
+      "type": 0,
+      "url": "https://jx.jsonplayer.com/player/?url=",
+      "ext": {
+        "header": {
+          "user-agent": "Mozilla/5.0 (Linux; Android 13; V2049A Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/116.0.0.0 Mobile Safari/537.36"
+        }
+      }
+    },
+    {
+      "name": "绾胯矾鈷�",
+      "type": 0,
+      "url": "https://jx.aidouer.net/?url=",
+      "ext": {
+        "header": {
+          "user-agent": "Mozilla/5.0 (Linux; Android 13; V2049A Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/116.0.0.0 Mobile Safari/537.36",
+          "referer": "https://jiejie.uk/"
+        }
+      }
+    },
+    {
+      "name": "馃悳铓傝殎",
+      "type": 0,
+      "url": "http://103.233.255.142:1133/?url=",
+      "ext": {
+        "flag": [
+          "NBY"
+        ],
+        "header": {
+          "User-Agent": "okhttp/4.1.0"
+        }
+      }
+    },
+    {
+      "name": "瑗跨摐馃崏",
+      "type": 0,
+      "url": "https://t1.qlplayer.cyou/player/analysis.php?v="
+    },
+    {
+      "name": "璧涙枃",
+      "type": 1,
+      "url": "http://xiutan.shiyifacai.com/json/qingfeng.php?url=",
+      "ext": {
+        "flag": [
+          "seven"
+        ],
+        "header": {
+          "User-Agent": "Lavf/58.12.100"
+        }
+      }
+    },
+    {
+      "name": "馃憤澶╁井瑙ｆ瀽",
+      "type": 1,
+      "url": "http://xiutan.shiyifacai.com/json/qingfeng.php?url=",
+      "ext": {
+        "flag": [
+          "seven"
+        ],
+        "header": {
+          "User-Agent": "Lavf/58.12.100"
+        }
+      }
+    },
+    {
+      "name": "鍡呮帰",
+      "type": 0,
+      "url": "https://jx.haokantv.cyou/player/?url="
+    },
+    {
+      "name": "鍡呮帰涓€",
+      "type": 0,
+      "url": "http://bfqjc.xwyxpw.cn/?url="
+    },
+    {
+      "name": "鍡呮帰浜�",
+      "type": 0,
+      "url": "https://jx.jsonplayer.com/player/?url="
+    },
+    {
+      "name": "鍡呮帰涓�",
+      "type": 0,
+      "url": "https://jx.bozrc.com:4433/player/?url="
+    },
+    {
+      "name": "鍡呮帰鍥�",
+      "type": 0,
+      "url": "https://jx.777jiexi.com/player/?url="
+    },
+    {
+      "name": "鍡呮帰浜�",
+      "type": 0,
+      "url": "https://jx.xmflv.com/?url="
+    },
+    {
+      "name": "-bozrc-",
+      "type": 0,
+      "url": "https://jx.bozrc.com:4433/player/?url=",
+      "ext": {
+        "flag": [
+          "qq",
+          "鑵捐",
+          "qiyi",
+          "鐖卞鑹�",
+          "濂囪壓",
+          "youku",
+          "浼橀叿",
+          "mgtv",
+          "鑺掓灉",
+          "letv",
+          "涔愯",
+          "pptv",
+          "PPTV",
+          "sohu",
+          "bilibili",
+          "鍝斿摡鍝斿摡",
+          "鍝斿摡"
+        ]
+      }
+    },
+    {
+      "name": "-okjx-",
+      "type": 0,
+      "url": "http://okjx.cc/?url=",
+      "parse": "1",
+      "ext": {
+        "flag": [
+          "qq",
+          "鑵捐",
+          "qiyi",
+          "鐖卞鑹�",
+          "濂囪壓",
+          "youku",
+          "浼橀叿",
+          "mgtv",
+          "鑺掓灉",
+          "letv",
+          "涔愯",
+          "pptv",
+          "PPTV",
+          "sohu",
+          "bilibili",
+          "鍝斿摡鍝斿摡",
+          "鍝斿摡"
+        ]
+      }
+    },
+    {
+      "name": "-ypa-",
+      "type": 0,
+      "url": "https://jx.yparse.com/index.php?url="
+    },
+    {
+      "name": "-json-",
+      "type": 0,
+      "url": "https://jx.jsonplayer.com/player/?url="
+    },
+    {
+      "name": "-鐖辫眴-",
+      "type": 0,
+      "url": "https://jx.aidouer.net/?url="
+    },
+    {
+      "name": "-qua-",
+      "type": 0,
+      "url": "https://jx.quankan.app/?url="
+    },
+    {
+      "name": "CK",
+      "type": 0,
+      "url": "https://www.ckplayer.vip/jiexi/?url="
+    },
+    {
+      "name": "ypa2",
+      "type": 0,
+      "url": "https://yparse.jn1.cc/index.php?url="
+    },
+    {
+      "name": "-鐩樺彜-",
+      "type": 0,
+      "url": "https://www.pangujiexi.cc/jiexi.php?url=",
+      "ext": {
+        "flag": [
+          "qq",
+          "鑵捐",
+          "qiyi",
+          "鐖卞鑹�",
+          "濂囪壓",
+          "youku",
+          "浼橀叿",
+          "mgtv",
+          "鑺掓灉",
+          "letv",
+          "涔愯",
+          "pptv",
+          "PPTV",
+          "sohu",
+          "bilibili",
+          "鍝斿摡鍝斿摡",
+          "鍝斿摡"
+        ]
+      }
+    },
+    {
+      "name": "-鐑墽鐚�-",
+      "type": 1,
+      "url": "http://jx.daenys.vip:2587/tjxdsg.php?url="
+    },
+    {
+      "name": "-鍜搁奔-",
+      "type": 0,
+      "url": "https://jx.xyflv.com/?url="
+    },
+    {
+      "name": "閲忓瓙",
+      "type": 0,
+      "url": "https://jx.jsonplayer.com/player/?url=",
+      "header": {
+        "User-Agent": "Mozilla/5.0"
+      }
+    },
+    {
+      "name": "777鐖辫吘",
+      "type": 0,
+      "url": "https://jx.777jiexi.com/player/?url="
+    },
+    {
+      "name": "centos",
+      "type": 0,
+      "url": "https://jx.centos.chat/?url="
+    },
+    {
+      "name": "static",
+      "type": 0,
+      "url": "https://dx.maclsj.com/players/json.php?url="
+    },
+    {
+      "name": "钃濆厜绉掓挱",
+      "type": 1,
+      "url": "http://43.143.107.57:417/api/?key=73259318e3d893e5b73fd87f20fbc2f7&url=",
+      "ext": {
+        "flag": [
+          "qq",
+          "qiyi",
+          "mgtv",
+          "youku",
+          "letv",
+          "sohu",
+          "xigua",
+          "1905",
+          "浼樻挱绾胯矾",
+          "鑵炬挱绾胯矾"
+        ],
+        "header": {
+          "User-Agent": "Dart/2.14 (dart:io)"
+        }
+      }
+    },
+    {
+      "name": "666",
+      "type": 1,
+      "url": "http://jx.fuqizhishi.com:63/鎺ュ彛鍦板潃www.鑲ョ尗.love/鑲ョ尗涓撶敤.php?url="
+    },
+    {
+      "name": "777",
+      "type": 1,
+      "url": "http://27.124.4.42:4567/jhjson/ceshi.php?url="
+    },
+    {
+      "name": "灏忓煄瑙ｆ瀽",
+      "type": 1,
+      "url": "https://jx.ccabc.cc/xc/?key=5567332json&url="
+    },
+    {
+      "name": "鏄熻景浜戣В鏋�",
+      "type": 1,
+      "url": "https://json.key521.cn/api/?key=df27d9ca9ec97e22c47f8565a50aa6f5&url="
+    },
+    {
+      "name": "灏忔柊瑙ｆ瀽",
+      "type": 1,
+      "url": "http://xiaoxin.1080p.me/home/api?type=ys&uid=2781037&key=eijkoqxBDFGILRTUWZ&url="
+    },
+    {
+      "name": "灏忛奔瑙ｆ瀽",
+      "type": 1,
+      "url": "http://json.84jia.com/home/api?type=ys&uid=335253&key=fjklpqsyCDGMNQRWX8&url="
+    },
+    {
+      "name": "parwix绋冲畾",
+      "type": 0,
+      "url": "https://jx.bozrc.com:4433/player/?url=",
+      "ext": {
+        "flag": [
+          "qq",
+          "鑵捐",
+          "qiyi",
+          "iqiyi",
+          "鐖卞鑹�",
+          "濂囪壓",
+          "youku",
+          "浼橀叿",
+          "mgtv",
+          "鑺掓灉",
+          "letv",
+          "涔愯",
+          "pptv",
+          "PPTV",
+          "sohu",
+          "bilibili",
+          "鍝斿摡鍝斿摡",
+          "鍝斿摡"
+        ]
+      }
+    },
+    {
+      "name": "keyu",
+      "type": 1,
+      "url": "http://newjiexi.gotka.top/keyu3.php?url=",
+      "ext": {
+        "flag": [
+          "qq",
+          "鑵捐",
+          "qiyi",
+          "鐖卞鑹�",
+          "濂囪壓",
+          "youku",
+          "浼橀叿",
+          "mgtv",
+          "鑺掓灉",
+          "letv",
+          "涔愯",
+          "pptv",
+          "PPTV",
+          "sohu",
+          "bilibili",
+          "鍝斿摡鍝斿摡",
+          "鍝斿摡"
+        ],
+        "header": {
+          "User-Agent": "okhttp/4.1.0"
+        }
+      }
+    },
+    {
+      "name": "lk",
+      "type": 1,
+      "url": "https://k.json.icu/home/api?type=ys&uid=6399107&key=bdlmrswBDHIKZ01238&url="
+    },
+    {
+      "name": "TVB浜戞挱",
+      "type": 1,
+      "url": "https://jxm.qwrev534.top/?url="
+    },
+    {
+      "name": "777",
+      "type": 0,
+      "url": "https://jx.777jiexi.com/player/?url="
+    },
+    {
+      "name": "1",
+      "type": 0,
+      "url": "https://jxdp.codermart.net/?url="
+    },
+    {
+      "name": "AG",
+      "type": 0,
+      "url": "https://www.codjx.com/?url="
+    },
+    {
+      "name": "鏈�",
+      "type": 0,
+      "url": "https://jx.xmflv.com/?url="
+    },
+    {
+      "name": "鍏�",
+      "type": 1,
+      "url": "http://pandown.pro/app/ysmjx.php?url=",
+      "ext": {
+        "flag": [
+          "qq",
+          "鑵捐",
+          "qiyi",
+          "鐖卞鑹�",
+          "濂囪壓",
+          "youku",
+          "浼橀叿",
+          "mgtv",
+          "鑺掓灉",
+          "letv",
+          "涔愯",
+          "pptv",
+          "PPTV",
+          "sohu",
+          "bilibili",
+          "鍝斿摡鍝斿摡",
+          "鍝斿摡"
+        ],
+        "header": {
+          "User-Agent": "okhttp/4.1.0"
+        }
+      }
+    },
+    {
+      "name": "瀹�",
+      "type": 1,
+      "url": "http://jx.fuqizhishi.com:63/API.php?appkey=feimao&url="
+    },
+    {
+      "name": "鐩�",
+      "type": 0,
+      "url": " https://tljiaqing.nde.tw/m3u8/?url="
+    },
+    {
+      "name": "BOX",
+      "type": 1,
+      "url": "http://45.248.10.163:4433/json.php?wap=0&url="
+    },
+    {
+      "name": "瑙ｆ瀽",
+      "type": 0,
+      "url": "https://h5.freejson.xyz/player/?url="
+    },
+    {
+      "name": "瑙ｆ瀽2",
+      "type": 1,
+      "url": "rxjx.kuanjv.com/allm3u8.php?url="
+    },
+    {
+      "name": "瑙ｆ瀽4",
+      "type": 1,
+      "url": "http://lanlan.ckflv.cn/?url=",
+      "ext": {
+        "flag": [
+          "qiyi",
+          "qq",
+          "letv",
+          "sohu",
+          "youku",
+          "mgtv",
+          "bilibili",
+          "wasu",
+          "xigua",
+          "1905"
+        ]
+      }
+    },
+    {
+      "name": "瑙ｆ瀽5",
+      "type": 1,
+      "url": "https://www.1920lgzy.top/json.php?url=",
+      "ext": {
+        "header": {
+          "User-Agent": "Mozilla/5.0"
+        }
+      }
+    },
+    {
+      "name": "瑙ｆ瀽6",
+      "type": 1,
+      "url": "https://hc.izny.cn/json.php?url="
+    },
+    {
+      "name": "瑙ｆ瀽7",
+      "type": 1,
+      "url": "https://rx.bt5v.com/json/jsonindex.php/?url="
+    },
+    {
+      "name": "瑙ｆ瀽8",
+      "type": 1,
+      "url": "https://www.nxflv.com/?url=",
+      "header": {
+        "User-Agent": "Mozilla/5.0"
+      }
+    },
+    {
+      "name": "瑙ｆ瀽9",
+      "type": 1,
+      "url": "http://3.37.195.161:54371/parse/api/鏃犲悕.js?url=",
+      "header": {
+        "User-Agent": "Mozilla/5.0"
+      }
+    },
+    {
+      "name": "椤鸿储",
+      "type": 0,
+      "url": "https://svip.cygc.xyz/api/?key=cygctest&url="
+    },
+    {
+      "name": "鍏ㄨВ",
+      "type": 1,
+      "url": "http://119.91.123.253:2345/Api/yun.php?url=",
+      "ext": {
+        "flag": [
+          "360",
+          "qq",
+          "鑵捐",
+          "浼侀箙",
+          "IQiYi",
+          "qiyi",
+          "鐖卞鑹�",
+          "濂囪壓",
+          "youku",
+          "YouKu",
+          "浼橀叿",
+          "sohu",
+          "SoHu",
+          "鎼滅嫄",
+          "letv",
+          "LeShi",
+          "涔愯",
+          "imgo",
+          "mgtv",
+          "MangGuo",
+          "鑺掓灉",
+          "SLYS4k",
+          "BYGA",
+          "luanzi",
+          "AliS",
+          "dxzy",
+          "bilibili",
+          "QEYSS",
+          "xigua",
+          "瑗跨摐瑙嗛",
+          "鑵捐瑙嗛",
+          "濂囪壓瑙嗛",
+          "浼橀叿瑙嗛",
+          "鑺掓灉瑙嗛",
+          "涔愯瑙嗛"
+        ],
+        "header": {
+          "User-Agent": "Dart/2.18 (dart:io)"
+        }
+      }
+    },
+    {
+      "name": "榛勯噾",
+      "type": 1,
+      "url": "http://jx.xn--od1aq39b.net:8899/api/?key=uxD8rsV2ISvNHowx5i&url=",
+      "ext": {
+        "flag": [
+          "360",
+          "YuMi",
+          "SMD",
+          "FYNB",
+          "qq",
+          "鑵捐",
+          "qiyi",
+          "鐖卞鑹�",
+          "濂囪壓",
+          "youku",
+          "浼橀叿",
+          "mgtv",
+          "鑺掓灉",
+          "letv",
+          "涔愯",
+          "pptv",
+          "PPTV",
+          "sohu",
+          "bilibili",
+          "鍝斿摡鍝斿摡",
+          "鍝斿摡"
+        ],
+        "header": {
+          "User-Agent": "okhttp/3.12.11"
+        }
+      }
+    },
+    {
+      "name": "瓒呰В",
+      "type": 1,
+      "url": "https://api.json.icu/api/?key=c60086bb91997b98358194263f13e670&url=",
+      "ext": {
+        "flag": [
+          "360",
+          "qq",
+          "鑵捐",
+          "浼侀箙",
+          "IQiYi",
+          "qiyi",
+          "鐖卞鑹�",
+          "濂囪壓",
+          "youku",
+          "YouKu",
+          "浼橀叿",
+          "sohu",
+          "SoHu",
+          "鎼滅嫄",
+          "letv",
+          "LeShi",
+          "涔愯",
+          "imgo",
+          "mgtv",
+          "MangGuo",
+          "鑺掓灉",
+          "SMD",
+          "YuMi",
+          "luanzi",
+          "AliS",
+          "dxzy",
+          "bilibili",
+          "QEYSS",
+          "xigua",
+          "瑗跨摐瑙嗛",
+          "鑵捐瑙嗛",
+          "濂囪壓瑙嗛",
+          "浼橀叿瑙嗛",
+          "鑺掓灉瑙嗛",
+          "涔愯瑙嗛"
+        ],
+        "header": {
+          "User-Agent": "okhttp/3.12.11"
+        }
+      }
+    },
+    {
+      "name": "瑗跨背",
+      "type": 0,
+      "url": "https://jx.xmflv.com/?url=",
+      "ext": {
+        "flag": [
+          "qq",
+          "鑵捐",
+          "qiyi",
+          "鐖卞鑹�",
+          "濂囪壓",
+          "youku",
+          "浼橀叿",
+          "mgtv",
+          "鑺掓灉",
+          "imgo",
+          "letv",
+          "涔愯",
+          "pptv",
+          "PPTV",
+          "sohu",
+          "bilibili",
+          "鍝斿摡鍝斿摡",
+          "鍝斿摡"
+        ],
+        "header": {
+          "User-Agent": "okhttp/4.1.0"
+        }
+      }
+    },
+    {
+      "name": "浼樼埍鑵�",
+      "type": 0,
+      "url": "https://jx.jsonplayer.com/player/?url=",
+      "ext": {
+        "flag": [
+          "youku",
+          "YouKu",
+          "浼橀叿",
+          "浼橀叿瑙嗛",
+          "iqiyi",
+          "IQiYi",
+          "qiyi",
+          "鐖卞鑹�",
+          "濂囪壓",
+          "濂囪壓瑙嗛",
+          "qq",
+          "鑵捐",
+          "浼侀箙",
+          "鑵捐瑙嗛",
+          "bilibili",
+          "鍝斿摡",
+          "鍝斿摡鍝斿摡",
+          "letv",
+          "leshi",
+          "LS",
+          "涔愯瑙嗛",
+          "pptv",
+          "PPTV",
+          "sohu",
+          "SoHu",
+          "鎼滅嫄",
+          "鎼滅嫄瑙嗛"
+        ]
+      }
+    },
+    {
+      "name": "鑺掓灉鑵捐涓撶敤",
+      "type": 0,
+      "url": "https://jx.xmflv.com/?url=",
+      "ext": {
+        "flag": [
+          "qq",
+          "鑵捐",
+          "qiyi",
+          "鐖卞鑹�",
+          "濂囪壓",
+          "youku",
+          "浼橀叿",
+          "mgtv",
+          "鑺掓灉",
+          "letv",
+          "涔愯",
+          "pptv",
+          "PPTV",
+          "sohu",
+          "bilibili",
+          "鍝斿摡鍝斿摡",
+          "鍝斿摡"
+        ],
+        "header": {
+          "User-Agent": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Mobile Safari/537.36"
+        }
+      }
+    },
+    {
+      "name": "灏忛奔瑙ｆ瀽",
+      "type": 1,
+      "url": "http://json.84jia.com/home/api?type=ys&uid=335253&key=acefhmqsxEMPRVYZ26&url="
+    },
+    {
+      "name": "Vip鏅鸿兘瑙ｆ瀽绯荤粺",
+      "type": 1,
+      "url": "https://svip.bljiex.cc/?v=",
+      "ext": {
+        "flag": [
+          "qq",
+          "鑵捐",
+          "qiyi",
+          "鐖卞鑹�",
+          "濂囪壓",
+          "youku",
+          "浼橀叿",
+          "mgtv",
+          "鑺掓灉",
+          "letv",
+          "涔愯",
+          "pptv",
+          "PPTV",
+          "sohu",
+          "bilibili",
+          "鍝斿摡鍝斿摡",
+          "鍝斿摡",
+          "鎼滅嫄",
+          "MP4",
+          "M3U8",
+          "FLV"
+        ]
+      }
+    },
+    {
+      "name": "椤哄瓙",
+      "type": 1,
+      "url": "http://121.4.51.101:86/api/?key=8Ra8u8H5f4iWjeb3G4&url="
+    },
+    {
+      "name": "閲忓瓙",
+      "type": 1,
+      "url": "https://lziplayer.com/?url="
+    },
+    {
+      "name": "闈炲嚒",
+      "type": 1,
+      "url": "https://ffzyplayer.com/?url="
+    },
+    {
+      "name": "澶滃箷鍡呮帰",
+      "url": "https://www.yemu.xyz/?url=",
+      "type": 0,
+      "ext": {
+        "flag": [
+          "qiyi",
+          "imgo",
+          "鐖卞鑹�",
+          "濂囪壓",
+          "qq",
+          "鑵捐",
+          "youku",
+          "浼橀叿",
+          "pptv",
+          "PPTV",
+          "letv",
+          "涔愯",
+          "leshi",
+          "bilibili",
+          "鍝斿摡鍝斿摡",
+          "鍝斿摡",
+          "mgtv",
+          "鑺掓灉",
+          "sohu",
+          "xigua",
+          "fun",
+          "椋庤"
+        ],
+        "header": {
+          "User-Agent": "Mozilla/5.0"
+        }
+      },
+      "header": {
+        "User-Agent": "Mozilla/5.0"
+      }
+    },
+    {
+      "name": "宸﹀哺瑙ｆ瀽",
+      "type": 1,
+      "url": "http://110.42.2.247:880/analysis/json/?uid=2449&my=acfgikquvzFGJRW459&url="
+    },
+    {
+      "name": "浼樼埍鑵�",
+      "type": 0,
+      "url": "https://jx.jsonplayer.com/player/?url=",
+      "ext": {
+        "flag": [
+          "youku",
+          "YouKu",
+          "浼橀叿",
+          "浼橀叿瑙嗛",
+          "iqiyi",
+          "IQiYi",
+          "qiyi",
+          "鐖卞鑹�",
+          "濂囪壓",
+          "濂囪壓瑙嗛",
+          "qq",
+          "鑵捐",
+          "浼侀箙",
+          "鑵捐瑙嗛",
+          "bilibili",
+          "鍝斿摡",
+          "鍝斿摡鍝斿摡",
+          "letv",
+          "leshi",
+          "LS",
+          "涔愯瑙嗛",
+          "pptv",
+          "PPTV",
+          "sohu",
+          "SoHu",
+          "鎼滅嫄",
+          "鎼滅嫄瑙嗛"
+        ]
+      }
+    },
+    {
+      "name": "m3u8",
+      "type": 0,
+      "url": "https://jx.m3u8.tv/jiexi/?url="
+    },
+    {
+      "name": "777",
+      "type": 0,
+      "url": "https://jx.777jiexi.com/player/?url="
+    },
+    {
+      "name": "鑺掗珮/濂囧紓",
+      "type": 0,
+      "url": "https://jx.bozrc.com:4433/player/?url=",
+      "ext": {
+        "flag": [
+          "qiyi",
+          "iqiyi",
+          "鐖卞鑹�",
+          "濂囪壓",
+          "pptv",
+          "PPTV",
+          "letv",
+          "涔愯",
+          "leshi",
+          "bilibili",
+          "鍝斿摡鍝斿摡",
+          "鍝斿摡",
+          "mgtv",
+          "imgo",
+          "鑺掓灉",
+          "sohu",
+          "鎼滅嫄",
+          "xigua",
+          "fun",
+          "leshi",
+          "椋庤"
+        ],
+        "header": {
+          "User-Agent": "okhttp/4.1.0"
+        }
+      }
+    },
+    {
+      "name": "钃濆厜绉掓挱",
+      "type": 1,
+      "url": "http://27.124.4.42:4567/jhjson/ceshi.php?url=",
+      "ext": {
+        "flag": [
+          "qq",
+          "qiyi",
+          "mgtv",
+          "youku",
+          "letv",
+          "sohu",
+          "xigua",
+          "1905",
+          "浼樻挱绾胯矾",
+          "鑵炬挱绾胯矾"
+        ],
+        "header": {
+          "User-Agent": "Dart/2.14 (dart:io)"
+        }
+      }
+    },
+    {
+      "name": "鏉版．",
+      "type": 0,
+      "url": "https://jx.jsonplayer.com/player/?url="
+    },
+    {
+      "name": "鎴樼嫾",
+      "type": 0,
+      "url": "https://jx.zhanlangbu.com/?url="
+    },
+    {
+      "name": "ok",
+      "type": 0,
+      "url": "https://okjx.cc/?url="
+    },
+    {
+      "name": "bozrc",
+      "type": 0,
+      "url": "https://jx.bozrc.com:4433/player/?url=",
+      "ext": {
+        "flag": [
+          "qq",
+          "鑵捐",
+          "qiyi",
+          "鐖卞鑹�",
+          "濂囪壓",
+          "youku",
+          "浼橀叿",
+          "mgtv",
+          "鑺掓灉",
+          "letv",
+          "leshi",
+          "LS",
+          "pptv",
+          "PPTV",
+          "sohu",
+          "bilibili",
+          "鍝斿摡鍝斿摡",
+          "鍝斿摡"
+        ],
+        "header": {
+          "User-Agent": ""
+        }
+      }
+    },
+    {
+      "name": "涓嶇疮",
+      "type": 0,
+      "url": "https://blbfq.f3322.net/player/analysis.php?v=",
+      "ext": {
+        "flag": [
+          "qiyi",
+          "qq",
+          "letv",
+          "sohu",
+          "youku",
+          "mgtv",
+          "bilibili",
+          "wasu",
+          "xigua",
+          "1905"
+        ]
+      }
+    },
+    {
+      "name": "cod",
+      "type": 0,
+      "url": "https://ksksl.codjx.com/?url="
+    },
+    {
+      "name": "byg瑙ｆ瀽",
+      "type": 0,
+      "url": "https://byg.ziqj5.shop/?url="
+    },
+    {
+      "name": "xmflv",
+      "type": 0,
+      "url": "https://jx.xmflv.com/?url="
+    },
+    {
+      "name": "365",
+      "type": 0,
+      "url": "https://chaxun.truechat365.com/?url=",
+      "ext": {
+        "flag": [
+          "qq",
+          "鑵捐",
+          "qiyi",
+          "iqiyi",
+          "鐖卞鑹�",
+          "濂囪壓",
+          "youku",
+          "浼橀叿",
+          "mgtv",
+          "鑺掓灉",
+          "letv",
+          "涔愯",
+          "pptv",
+          "PPTV",
+          "sohu",
+          "bilibili",
+          "鍝斿摡鍝斿摡",
+          "鍝斿摡"
+        ]
+      }
+    },
+    {
+      "name": "26db",
+      "type": 0,
+      "url": "http://vip.26db.cn/g/?url="
+    },
+    {
+      "name": "鐪嬬湅",
+      "type": 0,
+      "url": "https://jx.m3u8.pw/?url="
+    },
+    {
+      "name": "FreeOK",
+      "type": 0,
+      "url": "https://play.86516.tk/OKPlayer/?url="
+    },
+    {
+      "name": "free",
+      "type": 0,
+      "url": "https://h5.freejson.xyz/player/?url="
+    },
+    {
+      "name": "LR",
+      "type": 1,
+      "url": "http://27.124.4.42:4567/jhjson/ceshi.php?url="
+    },
+    {
+      "name": "绱㈠凹璧勬簮瑙ｆ瀽",
+      "type": 3,
+      "url": "https://www.snplayer.com/?url="
+    },
+    {
+      "name": "鐢滆湝瑙ｆ瀽",
+      "type": 3,
+      "url": "https://timizy10.cc/m3u8.php?url="
+    },
+    {
+      "name": "榄旈兘瑙ｆ瀽",
+      "type": 3,
+      "url": "https://www.moduzy.com/jiexi/?url="
+    },
+    {
+      "name": "缇庡墽铏�",
+      "type": 0,
+      "url": "https://jx.daiguaji.com/?url=",
+      "ext": {
+        "flag": [
+          "zijian"
+        ]
+      }
+    },
+    {
+      "name": "miao",
+      "type": 0,
+      "url": "https://jx.58g8.com/1/?url=",
+      "ext": {
+        "flag": [
+          "miaoparty"
+        ]
+      }
+    },
+    {
+      "name": "m3u8",
+      "type": 0,
+      "url": "https://jx.m3u8.tv/jiexi/?url="
+    },
+    {
+      "name": "椋炰簯",
+      "type": 1,
+      "url": "https://daina.hk/api/?key=e1e84ecae847b6e4a1a27fd4611f45f5&url=",
+      "ext": {
+        "flag": [
+          "FYNB",
+          "mgtv",
+          "qiyi",
+          "imgo",
+          "鐖卞鑹�",
+          "濂囪壓",
+          "qq",
+          "鑵捐",
+          "youku",
+          "浼橀叿",
+          "pptv",
+          "PPTV",
+          "letv",
+          "涔愯",
+          "leshi",
+          "bilibili",
+          "鍝斿摡鍝斿摡",
+          "鍝斿摡",
+          "mgtv",
+          "鑺掓灉"
+        ],
+        "header": {
+          "User-Agent": "okhttp/4.1.0"
+        }
+      }
+    },
+    {
+      "name": "绫抽キ",
+      "type": 1,
+      "url": "https://api.json.icu/api/?key=b1f3b1a9e1c0a42ae969db10bd315a95&url=",
+      "ext": {
+        "flag": [
+          "鐖卞鑹�",
+          "濂囪壓",
+          "qq",
+          "鑵捐",
+          "youku",
+          "浼橀叿",
+          "pptv",
+          "PPTV",
+          "letv",
+          "涔愯",
+          "leshi",
+          "bilibili",
+          "鍝斿摡鍝斿摡",
+          "鍝斿摡",
+          "mgtv",
+          "鑺掓灉",
+          "鑺掓灉"
+        ],
+        "header": {
+          "User-Agent": "okhttp/4.1.0"
+        }
+      }
+    },
+    {
+      "name": "楗キ",
+      "type": 1,
+      "url": "http://api.888484.xyz/绁炵鍝ュ摜/super.php?v=",
+      "ext": {
+        "flag": [
+          "qq",
+          "鑵捐",
+          "qiyi",
+          "鐖卞鑹�",
+          "濂囪壓",
+          "youku",
+          "浼橀叿",
+          "tucheng",
+          "sohu",
+          "鎼滅嫄",
+          "letv",
+          "涔愯",
+          "mgtv",
+          "鑺掓灉",
+          "tnmb",
+          "seven",
+          "yzm",
+          "aliyun",
+          "RJuMao",
+          "bilibili",
+          "1905",
+          "xinvip",
+          "XAL",
+          "qiqi",
+          "XALS",
+          "YuMi-vip"
+        ]
+      }
+    },
+    {
+      "name": "铏剧背1",
+      "type": 0,
+      "url": "https://jx.xmflv.com/?url=",
+      "ext": {
+        "flag": [
+          "qq",
+          "鑵捐",
+          "qiyi",
+          "鐖卞鑹�",
+          "濂囪壓",
+          "youku",
+          "浼橀叿",
+          "sohu",
+          "鎼滅嫄",
+          "letv",
+          "涔愯",
+          "mgtv",
+          "鑺掓灉",
+          "imgo",
+          "rx",
+          "ltnb",
+          "bilibili",
+          "1905",
+          "xigua"
+        ]
+      }
+    },
+    {
+      "name": "PM",
+      "url": "https://www.playm3u8.cn/jiexi.php?url=",
+      "type": 0,
+      "ext": {
+        "flag": [
+          "qiyi",
+          "imgo",
+          "鐖卞鑹�",
+          "濂囪壓",
+          "qq",
+          "鑵捐",
+          "youku",
+          "浼橀叿",
+          "pptv",
+          "PPTV",
+          "letv",
+          "涔愯",
+          "leshi",
+          "bilibili",
+          "鍝斿摡鍝斿摡",
+          "鍝斿摡",
+          "mgtv",
+          "鑺掓灉",
+          "sohu",
+          "xigua",
+          "fun",
+          "椋庤"
+        ],
+        "header": {
+          "User-Agent": "Mozilla/5.0"
+        }
+      },
+      "header": {
+        "User-Agent": "Mozilla/5.0"
+      }
+    },
+    {
+      "name": "m3u8",
+      "type": 0,
+      "url": "https://jx.m3u8.tv/jiexi/?url="
+    },
+    {
+      "name": "鐪嬬湅",
+      "type": 0,
+      "url": "https://jx.m3u8.pw/?url="
+    },
+    {
+      "name": "宸ф妧",
+      "type": 1,
+      "url": "http://pandown.pro/app/kkdy.php?url=",
+      "ext": {
+        "flag": [
+          "qq",
+          "鑵捐",
+          "qiyi",
+          "鐖卞鑹�",
+          "濂囪壓",
+          "youku",
+          "浼橀叿",
+          "sohu",
+          "鎼滅嫄",
+          "letv",
+          "涔愯",
+          "mgtv",
+          "鑺掓灉",
+          "rx",
+          "ltnb",
+          "bilibili",
+          "1905",
+          "xigua"
+        ]
+      }
+    },
+    {
+      "name": "宸﹀哺",
+      "type": 1,
+      "url": "https://api.tyun77.cn/api.php/provide/parseDicturl?url=",
+      "ext": {
+        "flag": [
+          "鐖卞鑹�",
+          "濂囪壓",
+          "qq",
+          "鑵捐",
+          "youku",
+          "浼橀叿",
+          "pptv",
+          "PPTV",
+          "letv",
+          "涔愯",
+          "leshi",
+          "bilibili",
+          "鍝斿摡鍝斿摡",
+          "鍝斿摡",
+          "mgtv",
+          "鑺掓灉",
+          "鑺掓灉"
+        ],
+        "header": {
+          "User-Agent": "okhttp/3.12.0"
+        }
+      }
+    },
+    {
+      "name": "涓栫晫",
+      "type": 1,
+      "url": "http://175.178.183.192:84/api/?key=f3913eb3f85a8298b3e6e427b8712b2e&url=",
+      "ext": {
+        "flag": [
+          "qq",
+          "mgtv",
+          "YuMi-vip"
+        ]
+      }
+    },
+    {
+      "name": "鍜搁奔",
+      "type": 0,
+      "url": "https://jx.xyflv.cc/?url=",
+      "ext": {
+        "header": {
+          "user-agent": "Mozilla/5.0(Linux;Android13;V2049ABuild/TP1A.220624.014;wv)AppleWebKit/537.36(KHTML,likeGecko)Version/4.0Chrome/116.0.0.0MobileSafari/537.36",
+          "referer": "https://www.xyflv.cc/"
+        }
+      }
+    },
+    {
+      "name": "[鍏彿]",
+      "type": 0,
+      "url": "https://api.52wyb.com/index/?url=",
+      "ext": {
+        "header": {
+          "referer": "http://www.8hyyb.com/",
+          "User-Agent": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.163 Safari/535.1"
+        },
+        "flag": [
+          "qq",
+          "鑵捐",
+          "qiyi",
+          "iqiyi",
+          "鐖卞鑹�",
+          "濂囪壓",
+          "youku",
+          "浼橀叿",
+          "mgtv",
+          "imgo",
+          "鑺掓灉"
+        ]
+      }
+    },
+    {
+      "name": "骞跺彂",
+      "type": 2,
+      "url": "Parallel"
+    },
+    {
+      "name": "杞",
+      "type": 2,
+      "url": "Sequence"
+    },
+    {
+      "name": "瑙ｆ瀽1",
+      "type": 1,
+      "url": "https://rx.bt5v.com/json/jsonindex.php/?url="
+    },
+    {
+      "name": "瑙ｆ瀽3",
+      "type": 1,
+      "url": "http://81.69.23.108:7788/json.php?url="
+    },
+    {
+      "name": "锔忚В鏋�5",
+      "type": 0,
+      "url": "https://jx.m3u8.tv/jiexi/?url="
+    },
+    {
+      "name": "锔忥笍瑙ｆ瀽8",
+      "type": 0,
+      "url": "https://dm.xmflv.com:4433/?url="
+    },
+    {
+      "name": "锔忥笍瑙ｆ瀽9",
+      "type": 0,
+      "url": "http://www.ckmov.vip/api.php?url="
+    },
+    {
+      "name": "锔忚В鏋�10",
+      "type": 0,
+      "url": "https://www.8090g.cn/?url="
+    },
+    {
+      "name": "榛樿",
+      "url": "https://api.jhdyw.vip/?url="
+    },
+    {
+      "name": "80tv",
+      "url": "https://1.api.80tvs.cn/?url="
+    },
+    {
+      "name": "BL瑙ｆ瀽",
+      "url": "https://vip.bljiex.com/?v="
+    },
+    {
+      "name": "涔呯湅瑙ｆ瀽",
+      "url": "https://9kjx.com/?url="
+    },
+    {
+      "name": "60瑙ｆ瀽",
+      "url": "http://60jx.com/?url="
+    },
+    {
+      "name": "鍏ㄦ皯瑙ｆ瀽",
+      "url": "https://jx.quanmingjiexi.com/?url="
+    },
+    {
+      "name": "parwix瑙ｆ瀽",
+      "url": "https://jx.parwix.com:4433/player/?url="
+    },
+    {
+      "name": "CKMOV瑙ｆ瀽",
+      "url": "https://ckmov.ccyjjd.com/ckmov/?url="
+    },
+    {
+      "name": "M3U8",
+      "url": "https://jx.m3u8.tv/jiexi/?url="
+    },
+    {
+      "name": "鐩樺彜",
+      "url": "https://www.pangujiexi.cc/jiexi.php?url="
+    },
+    {
+      "name": "H8",
+      "url": "https://www.h8jx.com/jiexi.php?url="
+    },
+    {
+      "name": "缁村",
+      "url": "https://jx.ivito.cn/?url="
+    },
+    {
+      "name": "17浜�",
+      "url": "https://www.1717yun.com/jx/ty.php?url="
+    },
+    {
+      "name": "116",
+      "url": "https://jx.116kan.com/?url="
+    },
+    {
+      "name": "200",
+      "url": "https://vip.66parse.club/?url="
+    },
+    {
+      "name": "鏆厜瑙ｆ瀽",
+      "url": "https://muguang.mgtv.com.muguangys.com/jiexi.php?url="
+    },
+    {
+      "name": "Parwix瑙ｆ瀽",
+      "url": "https://vip.parwix.com:4433/player/?url="
+    },
+    {
+      "name": "Json.M3u8",
+      "url": "https://json.m3u8.tv:7788/json.php?url=",
+      "type": 1
+    },
+    {
+      "name": "绾噣瑙ｆ瀽",
+      "url": "https://z1.m1907.cn/?jx="
+    },
+    {
+      "name": "楂橀€熸帴鍙�1",
+      "url": "https://jsap.attakids.com/?url="
+    },
+    {
+      "name": "B绔欒В鏋�2",
+      "url": "https://www.cuan.la/m3u8.php?url="
+    },
+    {
+      "name": "Mao瑙ｆ瀽",
+      "url": "https://qd.hxys.tv/m3u8.php?url="
+    },
+    {
+      "name": "SSAMAO",
+      "url": "https://www.ssamao.com/jx/?url="
+    },
+    {
+      "name": "鏃犳瀬",
+      "url": "https://da.wujiys.com/?url="
+    },
+    {
+      "name": "618G",
+      "url": "https://jx.618g.com/?url="
+    },
+    {
+      "name": "ckmov",
+      "url": "https://www.ckmov.vip/api.php?url="
+    },
+    {
+      "name": "绂忔槦",
+      "url": "https://jx.popo520.cn/jiexi/?url="
+    },
+    {
+      "name": "RDHK",
+      "url": "https://jx.rdhk.net/?v="
+    },
+    {
+      "name": "涔呮挱",
+      "url": "https://jx.jiubojx.com/vip.php?url="
+    },
+    {
+      "name": "MUTV",
+      "url": "https://jiexi.janan.net/jiexi/?url="
+    },
+    {
+      "name": "涔呮挱",
+      "url": "https://jx.jiubojx.com/vip/?url="
+    },
+    {
+      "name": "纾ㄨ弴",
+      "url": "https://jx.wzslw.cn/?url="
+    },
+    {
+      "name": "灏忕嫾",
+      "url": "https://jx.yaohuaxuan.com/?url="
+    },
+    {
+      "name": "鏅鸿兘",
+      "url": "https://vip.kurumit3.top/?v="
+    },
+    {
+      "name": "鏈堜寒",
+      "url": "https://api.yueliangjx.com/?url="
+    },
+    {
+      "name": "66",
+      "url": "https://api.3jx.top/vip/?url="
+    },
+    {
+      "name": "浜戞瀽",
+      "url": "https://jx.yparse.com/index.php?url="
+    },
+    {
+      "name": "U鐚�",
+      "url": "http://jiex.cf/?url="
+    },
+    {
+      "name": "绾噣1",
+      "url": "https://z1.m1907.cn/?jx="
+    },
+    {
+      "name": "B绔�1",
+      "url": "https://vip.parwix.com:4433/player/?url="
+    },
+    {
+      "name": "鍐拌眴",
+      "url": "https://api.qianqi.net/vip/?url="
+    },
+    {
+      "name": "鐧惧煙",
+      "url": "https://jx.618g.com/?url="
+    },
+    {
+      "name": "ckmov",
+      "url": "https://www.ckmov.vip/api.php?url="
+    },
+    {
+      "name": "澶х櫧",
+      "url": "https://api.myzch.cn/?url="
+    },
+    {
+      "name": "澶у箷",
+      "url": "https://jx.52damu.com/dmjx/jiexi.php?url="
+    },
+    {
+      "name": "绂忔槦",
+      "url": "https://jx.popo520.cn/jiexi/?url="
+    },
+    {
+      "name": "璺熷墽",
+      "url": "https://www.5igen.com/dmplayer/player/?url="
+    },
+    {
+      "name": "RDHK",
+      "url": "https://jx.rdhk.net/?v=",
+      "t": "m"
+    },
+    {
+      "name": "H8",
+      "url": "https://www.h8jx.com/jiexi.php?url="
+    },
+    {
+      "name": "姹熸箹",
+      "url": "https://api.jhdyw.vip/?url=",
+      "t": "m"
+    },
+    {
+      "name": "瑙ｆ瀽la",
+      "url": "https://api.jiexi.la/?url="
+    },
+    {
+      "name": "涔呮挱",
+      "url": "https://jx.jiubojx.com/vip.php?url="
+    },
+    {
+      "name": "鎳掔尗",
+      "url": "https://api.lanmaody.com/dm/?url=",
+      "t": "m"
+    },
+    {
+      "name": "涔愬",
+      "url": "https://api.leduotv.com/wp-api/ifr.php?isDp=1&vid=",
+      "t": "m"
+    },
+    {
+      "name": "Mao",
+      "url": "https://qd.hxys.tv/m3u8.php?url="
+    },
+    {
+      "name": "M3U8",
+      "url": "https://jx.m3u8.tv/jiexi/?url="
+    },
+    {
+      "name": "MUTV",
+      "url": "https://jiexi.janan.net/jiexi/?url="
+    },
+    {
+      "name": "纾ㄨ弴",
+      "url": "https://jx.wzslw.cn/?url="
+    },
+    {
+      "name": "璇鸿",
+      "url": "https://www.ckmov.com/?url="
+    },
+    {
+      "name": "鐩樺彜",
+      "url": "https://www.pangujiexi.cc/jiexi.php?url="
+    },
+    {
+      "name": "濂囩背",
+      "url": "https://qimihe.com/?url="
+    },
+    {
+      "name": "SSAMAO",
+      "url": "https://www.ssamao.com/jx/?url="
+    },
+    {
+      "name": "鎬濆彜",
+      "url": "https://api.sigujx.com/?url="
+    },
+    {
+      "name": "鎬濆彜2",
+      "url": "https://api.bbbbbb.me/jx/?url="
+    },
+    {
+      "name": "娣樼數褰�",
+      "url": "https://jx.vodjx.top/vip/?url="
+    },
+    {
+      "name": "鍚箰",
+      "url": "https://jx.dj6u.com/?url=",
+      "t": "m"
+    },
+    {
+      "name": "缁村",
+      "url": "https://jx.ivito.cn/?url="
+    },
+    {
+      "name": "灏忕嫾",
+      "url": "https://jx.yaohuaxuan.com/?url="
+    },
+    {
+      "name": "鏈堜寒",
+      "url": "https://api.yueliangjx.com/?url="
+    },
+    {
+      "name": "浜戠偣鎾�",
+      "url": "https://api.iopenyun.com:88/vip/?url="
+    },
+    {
+      "name": "浜戞瀽",
+      "url": "https://jx.yparse.com/index.php?url="
+    },
+    {
+      "name": "0523",
+      "url": "https://go.yh0523.cn/y.cy?url="
+    },
+    {
+      "name": "17浜�",
+      "url": "https://www.1717yun.com/jx/ty.php?url="
+    },
+    {
+      "name": "66",
+      "url": "https://api.3jx.top/vip/?url="
+    },
+    {
+      "name": "116",
+      "url": "https://jx.116kan.com/?url="
+    },
+    {
+      "name": "200",
+      "url": "https://vip.66parse.club/?url="
+    },
+    {
+      "name": "789pan",
+      "url": "https://vip.gaotian.love/api/?key=GiML8kaI6DnlpAahLM&url="
+    },
+    {
+      "name": "lekanzyw",
+      "url": "https://bak.ojbkjx.com/?url="
+    },
+    {
+      "name": "鑿滈笩杩藉墽1",
+      "type": 1,
+      "url": "http://106.52.51.138:52013/lt.php?url=",
+      "ext": {
+        "flag": [
+          "ltnb"
+        ]
+      }
+    },
+    {
+      "name": "灏忕櫧鍔ㄦ极",
+      "type": 1,
+      "url": "http://121.62.60.222:1314/lt.php?url=",
+      "ext": {
+        "flag": [
+          "ltnb",
+          "longteng"
+        ]
+      }
+    },
+    {
+      "name": "300鐪嬩笘鐣�2",
+      "type": 1,
+      "url": "https://jx.300ys.xyz/json/m3u8.php/?url=",
+      "ext": {
+        "flag": [
+          "ftqp4",
+          "xuanfeng"
+        ]
+      }
+    },
+    {
+      "name": "300鐪嬩笘鐣�3",
+      "type": 1,
+      "url": "http://jx.300ys.xyz/json/m3u8.php/?url=",
+      "ext": {
+        "flag": [
+          "zy1080",
+          "xkys"
+        ]
+      }
+    },
+    {
+      "name": "鐖辩湅缇庡墽1",
+      "type": 1,
+      "url": "https://play.akmeiju.cc:553/akmeiju.php?url=",
+      "ext": {
+        "flag": [
+          "aikan"
+        ]
+      }
+    },
+    {
+      "name": "鐙挱绀�",
+      "type": 1,
+      "url": "https://ltnb.jeeves.vip/home/api?type=ys&uid=2492729&key=bkmopwEFMNQSUWXZ67&url=",
+      "ext": {
+        "flag": [
+          "ltnb",
+          "ziqie"
+        ]
+      }
+    },
+    {
+      "name": "鐖辫タ瑗�",
+      "type": 1,
+      "url": "http://jx.laodi.xyz:6699/api.php/user/jx?uid=4&ldkey=BLsUKYVZiWdmQc7bbpT3&url=",
+      "ext": {
+        "flag": [
+          "laodim3u8"
+        ]
+      }
+    },
+    {
+      "name": "鐧藉珫褰辫",
+      "type": 1,
+      "url": "http://ts.yjhan.com:8090/api/?key=Y4GefMCIQJz23mc06R&url=",
+      "ext": {
+        "flag": [
+          "CL4K"
+        ]
+      }
+    },
+    {
+      "name": "鐖辩湅缇庡墽",
+      "type": 1,
+      "url": "http://ts.yjhan.com:8090/api/?key=P6XfOl9hD3LpqOFdRJ&url=",
+      "ext": {
+        "flag": [
+          "CL4K"
+        ]
+      }
+    },
+    {
+      "name": "澶╄瘹褰辫1",
+      "type": 1,
+      "url": "https://yun.nbjx.vip:4399/json/?uid=6&tokey=befhmoqFHMOQRTUXZ7&url=",
+      "ext": {
+        "flag": [
+          "qiyi",
+          "鐖卞鑹�",
+          "濂囪壓"
+        ]
+      }
+    },
+    {
+      "name": "鐩婅揪褰遍櫌1",
+      "type": 1,
+      "url": "https://ltnb.jeeves.vip/home/api?type=ys&uid=2509623&key=glnpyADKLMNOTU0249&url=",
+      "ext": {
+        "flag": [
+          "ltnb",
+          "ziqie"
+        ]
+      }
+    },
+    {
+      "name": "300鐪嬩笘鐣�",
+      "type": 1,
+      "url": "https://jx.300ys.xyz/json/jh.php/?url=",
+      "ext": {
+        "flag": [
+          "youku",
+          "浼橀叿",
+          "qiyi",
+          "鐖卞鑹�",
+          "濂囪壓",
+          "renrenmi",
+          "qq",
+          "鑵捐",
+          "letv",
+          "涔愯"
+        ]
+      }
+    },
+    {
+      "name": "鐞崇悈褰遍櫌",
+      "type": 1,
+      "url": "http://ts.yjhan.com:8090/api/?key=njU0bfiF05eODFfktq&url=",
+      "ext": {
+        "flag": [
+          "CL4K"
+        ]
+      }
+    },
+    {
+      "name": "鐖遍叿褰辫",
+      "type": 1,
+      "url": "https://yun.nbjx.vip:4399/json/?uid=5&tokey=ikmnorsvxyzCFKQU59&url=",
+      "ext": {
+        "flag": [
+          "qq",
+          "鑵捐",
+          "qiyi",
+          "鐖卞鑹�",
+          "濂囪壓",
+          "youku",
+          "浼橀叿",
+          "letv",
+          "涔愯"
+        ]
+      }
+    },
+    {
+      "name": "灏忕櫧鍔ㄦ极1",
+      "type": 1,
+      "url": "https://ltnb.jeeves.vip/home/api?type=ys&uid=2753644&key=bdgipszEOPQUXZ3569&url=",
+      "ext": {
+        "flag": [
+          "ltnb",
+          "longteng"
+        ]
+      }
+    },
+    {
+      "name": "4K褰遍櫌",
+      "type": 1,
+      "url": "http://47.100.138.210:91/home/api?type=ys&uid=7593435&key=ehortuyAHMNQTWX457&url=",
+      "ext": {
+        "flag": [
+          "qiyi",
+          "鐖卞鑹�",
+          "濂囪壓",
+          "qq",
+          "鑵捐",
+          "youku",
+          "浼橀叿",
+          "pptv",
+          "PPTV",
+          "letv",
+          "涔愯",
+          "mgtv",
+          "鑺掓灉"
+        ]
+      }
+    },
+    {
+      "name": "楗悗鐢靛奖",
+      "type": 1,
+      "url": "http://ts.yjhan.com:8090/api/?key=yNSLsBLOaUkKp2kZ6i&url=",
+      "ext": {
+        "flag": [
+          "CL4K"
+        ]
+      }
+    },
+    {
+      "name": "楹荤摐瑙嗛",
+      "type": 1,
+      "url": "https://kuba.renrenmi.cc:2266/api/?key=a2bSwx5iAGx1g2qn4h&url=",
+      "ext": {
+        "flag": [
+          "renrenmi"
+        ]
+      }
+    },
+    {
+      "name": "闆跺埢褰遍櫌",
+      "type": 1,
+      "url": "http://ys.ling00.cn/json/?url=",
+      "ext": {
+        "flag": [
+          "CL4K"
+        ]
+      }
+    },
+    {
+      "name": "300鐪嬩笘鐣�",
+      "type": 1,
+      "url": "https://languangyingshiziyuan.1080zy.top/longteng.php/?url=",
+      "ext": {
+        "flag": [
+          "ltnb"
+        ]
+      }
+    },
+    {
+      "name": "绮夎薄瑙嗙晫",
+      "type": 1,
+      "url": "http://47.100.138.210:91/home/api?type=ys&uid=4476440&key=eghkvwxyFHORVX3478&url=",
+      "ext": {
+        "flag": [
+          "mgtv",
+          "鑺掓灉",
+          "renrenmi",
+          "youku",
+          "浼橀叿",
+          "qiyi",
+          "鐖卞鑹�",
+          "濂囪壓"
+        ]
+      }
+    },
+    {
+      "name": "鐖遍叿褰辫6",
+      "type": 1,
+      "url": "https://jb.vjiangbei.com/home/api?type=ys&uid=646808&key=gklpqrtwyDIJKMP467&url=",
+      "ext": {
+        "flag": [
+          "qq",
+          "鑵捐",
+          "letv",
+          "涔愯",
+          "youku",
+          "浼橀叿"
+        ]
+      }
+    },
+    {
+      "name": "鐩婅揪褰遍櫌6",
+      "type": 1,
+      "url": "https://jb.vjiangbei.com/home/api?type=ys&uid=281459&key=cfnoprCDJKLNPQTY34&url=",
+      "ext": {
+        "flag": [
+          "ltnb",
+          "ziqie",
+          "qq",
+          "鑵捐",
+          "youku",
+          "浼橀叿",
+          "qiyi",
+          "鐖卞鑹�",
+          "濂囪壓",
+          "mgtv",
+          "鑺掓灉",
+          "letv",
+          "涔愯"
+        ]
+      }
+    },
+    {
+      "name": "鎬濅箰褰辫1",
+      "type": 1,
+      "url": "https://jb.vjiangbei.com/home/api?type=ys&uid=2534396&key=ejovwzABDKTUXY1357&url=",
+      "ext": {
+        "flag": [
+          "mgtv",
+          "鑺掓灉",
+          "qq",
+          "鑵捐",
+          "qiyi",
+          "鐖卞鑹�",
+          "濂囪壓",
+          "youku",
+          "浼橀叿"
+        ]
+      }
+    },
+    {
+      "name": "鐞呯悐褰辫",
+      "type": 1,
+      "url": "https://ltjx.jeeves.vip/home/api?type=ys&uid=1589472&key=aehjpzAHILOPQRU456&url=",
+      "ext": {
+        "flag": [
+          "ltnb"
+        ]
+      }
+    },
+    {
+      "name": "DC褰辫2",
+      "type": 1,
+      "url": "https://ltjx.jeeves.vip/home/api?type=ys&uid=461939&key=adfgilmotCEPRSXY06&url=",
+      "ext": {
+        "flag": [
+          "ltnb"
+        ]
+      }
+    },
+    {
+      "name": "鎶硅尪鐚�",
+      "type": 1,
+      "url": "https://ltjx.jeeves.vip/home/api?type=ys&uid=1136443&key=bhijopryzBJKLMSUX8&url=",
+      "ext": {
+        "flag": [
+          "ltnb"
+        ]
+      }
+    },
+    {
+      "name": "鐖遍叿褰辫9",
+      "type": 1,
+      "url": "https://jx.zhanlangbu.com/json.php/?url=",
+      "ext": {
+        "flag": [
+          "xueren"
+        ]
+      }
+    },
+    {
+      "name": "鎬濅箰褰辫",
+      "type": 1,
+      "url": "https://ltjx.jeeves.vip/home/api?type=ys&uid=1427917&key=bdfilpqsxzDEGHRW04&url=",
+      "ext": {
+        "flag": [
+          "ltnb"
+        ]
+      }
+    },
+    {
+      "name": "鍗楀簻杩藉墽1",
+      "type": 1,
+      "url": "https://jx.ncxmid.cn/sb/?url=",
+      "ext": {
+        "flag": [
+          "qq",
+          "鑵捐",
+          "qiyi",
+          "鐖卞鑹�",
+          "濂囪壓",
+          "youku",
+          "浼橀叿"
+        ]
+      }
+    },
+    {
+      "name": "缁跨褰辫",
+      "type": 1,
+      "url": "https://ltjx.jeeves.vip/home/api?type=ys&uid=803828&key=cdefimpzDQTUW23679&url=",
+      "ext": {
+        "flag": [
+          "ltnb"
+        ]
+      }
+    },
+    {
+      "name": "灏忕櫧鍔ㄦ极2",
+      "type": 1,
+      "url": "https://ltjx.jeeves.vip/home/api?type=ys&uid=1284948&key=bdehjlqtDEHJPZ0156&url=",
+      "ext": {
+        "flag": [
+          "ltnb",
+          "longteng"
+        ]
+      }
+    },
+    {
+      "name": "绮夎薄瑙嗙晫",
+      "type": 1,
+      "url": "http://api.vip123kan.vip/?url=",
+      "ext": {
+        "flag": [
+          "qq",
+          "鑵捐",
+          "mgtv",
+          "鑺掓灉",
+          "youku",
+          "浼橀叿"
+        ]
+      }
+    },
+    {
+      "name": "鐞呯悐褰辫8",
+      "type": 1,
+      "url": "https://jf.96ym.cn/api/?key=13FXcA46Nzg4QeFHbq&url=",
+      "ext": {
+        "flag": [
+          "ziqie",
+          "ltnb",
+          "youku",
+          "浼橀叿",
+          "qiyi",
+          "鐖卞鑹�",
+          "濂囪壓",
+          "qq",
+          "鑵捐",
+          "letv",
+          "涔愯"
+        ]
+      }
+    },
+    {
+      "name": "铏庣尗瑙嗛",
+      "type": 1,
+      "url": "https://humaosp.com/json.php?url=",
+      "ext": {
+        "flag": [
+          "qq",
+          "鑵捐"
+        ]
+      }
+    },
+    {
+      "name": "澶╄瘹褰辫2",
+      "type": 1,
+      "url": "https://svip.renrenmi.cc:2222/api/?key=hWip8WQvRg7oniSF0M&url=",
+      "ext": {
+        "flag": [
+          "qiyi",
+          "鐖卞鑹�",
+          "濂囪壓"
+        ]
+      }
+    },
+    {
+      "name": "DC褰辫",
+      "type": 1,
+      "url": "https://jb.vjiangbei.com/home/api?type=ys&uid=2219260&key=bcdjqBEFGLMPW01457&url=",
+      "ext": {
+        "flag": [
+          "ziqie",
+          "ltnb",
+          "qq",
+          "鑵捐"
+        ]
+      }
+    },
+    {
+      "name": "鍗楀簻杩藉墽1",
+      "type": 1,
+      "url": "https://vvip.muxvip.com:8866/api/?key=xJvC19KWkxoyQO71hk&url=",
+      "ext": {
+        "flag": [
+          "muxm3u8"
+        ]
+      }
+    },
+    {
+      "name": "绮夎薄瑙嗙晫1",
+      "type": 1,
+      "url": "https://www.xinkanke.com/jiexi/go.php?url=",
+      "ext": {
+        "flag": [
+          "ltnb"
+        ]
+      }
+    },
+    {
+      "name": "澶х唺褰辫1",
+      "type": 1,
+      "url": "https://a.dxzj88.com/jianghujx/?url=",
+      "ext": {
+        "flag": [
+          "qq",
+          "鑵捐",
+          "youku",
+          "浼橀叿",
+          "qiyi",
+          "鐖卞鑹�",
+          "濂囪壓",
+          "bilibili",
+          "鍝斿摡鍝斿摡",
+          "鍝斿摡",
+          "mgtv",
+          "鑺掓灉"
+        ]
+      }
+    },
+    {
+      "name": "绮夎薄瑙嗙晫1",
+      "type": 1,
+      "url": "https://json.pangujiexi.com:12345/json.php?url=",
+      "ext": {
+        "flag": [
+          "youku",
+          "浼橀叿",
+          "qq",
+          "鑵捐",
+          "qiyi",
+          "鐖卞鑹�",
+          "濂囪壓",
+          "mgtv",
+          "鑺掓灉"
+        ]
+      }
+    },
+    {
+      "name": "鎵嬫寚",
+      "type": 1,
+      "url": "https://a.dxzj88.com/ddzy/dd.php?url=",
+      "ext": {
+        "flag": [
+          "miaoparty",
+          "qiyi",
+          "鐖卞鑹�",
+          "濂囪壓",
+          "qq",
+          "鑵捐",
+          "youku",
+          "浼橀叿",
+          "mgtv",
+          "鑺掓灉",
+          "letv",
+          "涔愯",
+          "pptv",
+          "PPTV",
+          "miaoparty3"
+        ]
+      }
+    },
+    {
+      "name": "铚滆渹褰辫",
+      "type": 1,
+      "url": "http://23.224.174.74:5577/home/api?type=ys&uid=19722&key=aghknrsvxCDEGNRSUZ&url=",
+      "ext": {
+        "flag": [
+          "qiyi",
+          "鐖卞鑹�",
+          "濂囪壓",
+          "pptv",
+          "PPTV",
+          "qq",
+          "鑵捐"
+        ]
+      }
+    },
+    {
+      "name": "娈靛弸褰辫1",
+      "type": 1,
+      "url": "https://api.m3u8.tv:5678/home/api?type=ys&uid=998036&key=afhlnuvzDJLMOX3689&url=",
+      "ext": {
+        "flag": [
+          "qq",
+          "鑵捐"
+        ]
+      }
+    },
+    {
+      "name": "绮夎薄瑙嗙晫5",
+      "type": 1,
+      "url": "https://vip.xfyun.one/home/api?type=ys&uid=2581923&key=aefiklotwzCEFHJO48&url=",
+      "ext": {
+        "flag": [
+          "xfyun"
+        ]
+      }
+    },
+    {
+      "name": "铚滆渹褰辫4",
+      "type": 1,
+      "url": "https://xrjson.qd234.cn/home/api?type=ys&uid=366750&key=afgrstxFGHJKLMQVX1&url=",
+      "ext": {
+        "flag": [
+          "ltnb",
+          "xueren",
+          "renrenmi"
+        ]
+      }
+    },
+    {
+      "name": "鑿滈笩杩藉墽",
+      "type": 1,
+      "url": "https://apis.jxcxin.cn/api/jx?url=",
+      "ext": {
+        "flag": [
+          "qq",
+          "鑵捐",
+          "mgtv",
+          "鑺掓灉"
+        ]
+      }
+    },
+    {
+      "name": "澶╄瘹褰辫5",
+      "type": 1,
+      "url": "http://json.1920lgzy.top/api/?key=K6ROZoQ9Y5FxzkdgTT&url=",
+      "ext": {
+        "flag": [
+          "1920l",
+          "qiyi",
+          "鐖卞鑹�",
+          "濂囪壓"
+        ]
+      }
+    },
+    {
+      "name": "鍏妸鍒€褰遍櫌",
+      "type": 1,
+      "url": "https://vip.aiaine.com/api/?key=pJiKdUKoatLiVha0el&url=",
+      "ext": {
+        "flag": [
+          "miaoparty",
+          "miaoparty3"
+        ]
+      }
+    },
+    {
+      "name": "鐞呯悐褰辫7",
+      "type": 1,
+      "url": "https://api.m3u8.tv:5678/home/api?type=ys&uid=123503&key=ghinorsuvBCMOQTY68&url=",
+      "ext": {
+        "flag": [
+          "ziqie",
+          "qiyi",
+          "鐖卞鑹�",
+          "濂囪壓",
+          "qq",
+          "鑵捐",
+          "mgtv",
+          "鑺掓灉"
+        ]
+      }
+    },
+    {
+      "name": "楗悗鐢靛奖1",
+      "type": 1,
+      "url": "http://jx.yinliub.cn/home/api?type=ys&uid=512130&key=dinstuwBGJRTUY0369&url=",
+      "ext": {
+        "flag": [
+          "ltnb",
+          "qq",
+          "鑵捐",
+          "qiyi",
+          "鐖卞鑹�",
+          "濂囪壓",
+          "letv",
+          "涔愯",
+          "rx",
+          "youku",
+          "浼橀叿",
+          "mgtv",
+          "鑺掓灉"
+        ]
+      }
+    },
+    {
+      "name": "澶╄瘹褰辫",
+      "type": 1,
+      "url": "http://jf.tcspvip.com:246/api/?key=Yz4WsVTuG4PaM07i0f&url=",
+      "ext": {
+        "flag": [
+          "1920l",
+          "qiyi",
+          "鐖卞鑹�",
+          "濂囪壓"
+        ]
+      }
+    },
+    {
+      "name": "4K褰遍櫌",
+      "type": 1,
+      "url": "https://www.aiaine.com/api/?key=e4keFpymfY5keNsavC&url=",
+      "ext": {
+        "flag": [
+          "qq",
+          "鑵捐",
+          "qiyi",
+          "鐖卞鑹�",
+          "濂囪壓",
+          "pptv",
+          "PPTV",
+          "mgtv",
+          "鑺掓灉",
+          "youku",
+          "浼橀叿"
+        ]
+      }
+    },
+    {
+      "name": "鏃犱笂",
+      "type": "1",
+      "url": "https://mfjx.iwsyy.xyz/?url=",
+      "ext": {
+        "flag": [
+          "qq",
+          "鑵捐",
+          "qiyi",
+          "鐖卞鑹�",
+          "濂囪壓",
+          "youku",
+          "浼橀叿",
+          "sohu",
+          "鎼滅嫄",
+          "letv",
+          "涔愯",
+          "mgtv",
+          "鑺掓灉",
+          "tnmb",
+          "seven",
+          "bilibili",
+          "1905"
+        ],
+        "header": {
+          "User-Agent": "okhttp/4.9.1"
+        }
+      }
+    },
+    {
+      "name": "宸ц",
+      "type": 1,
+      "url": "https://zy.qiaoji8.com/xiafan.php?url=",
+      "ext": {
+        "flag": [
+          "QD4K",
+          "iyf",
+          "duanju",
+          "gzcj",
+          "GTV",
+          "GZYS",
+          "weggz",
+          "Ace"
+        ],
+        "header": {
+          "User-Agent": "okhttp/4.9.1"
+        }
+      }
+    },
+    {
+      "name": "鏋侀€�",
+      "type": 0,
+      "url": "https://jx.2s0.cn/player/?url=",
+      "ext": {
+        "flag": [
+          "qq",
+          "鑵捐",
+          "qiyi",
+          "鐖卞鑹�",
+          "濂囪壓",
+          "youku",
+          "浼橀叿",
+          "mgtv",
+          "鑺掓灉",
+          "letv",
+          "涔愯",
+          "pptv",
+          "PPTV",
+          "sohu",
+          "bilibili",
+          "鍝斿摡鍝斿摡",
+          "鍝斿摡"
+        ],
+        "ext": {
+          "header": {
+            "user-agent": "Mozilla/5.0 (Linux; Android 13; V2049A Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/116.0.0.0 Mobile Safari/537.36"
+          }
+        }
+      }
+    },
+    {
+      "name": "NMTV",
+      "type": 0,
+      "url": "https://nm.xxxc137.top/static/player/artplayer.html?url="
+    },
+    {
+      "name": "澶у巶",
+      "type": 0,
+      "url": "https://t2.qlplayer.cyou/player/analysis.php?v="
+    },
+    {
+      "name": "铏剧背鍝�",
+      "type": 0,
+      "url": "https://jx.xmflv.com/?url=",
+      "ext": {
+        "header": {
+          "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.57"
+        }
+      }
+    },
+    {
+      "name": "澶滒煢愬箷",
+      "type": 0,
+      "url": "https://yemu.xyz/?url=",
+      "ext": {
+        "header": {
+          "user-agent": "Mozilla/5.0 (Linux; Android 13; V2049A Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/116.0.0.0 Mobile Safari/537.36"
+        }
+      }
+    },
+    {
+      "name": "8090g",
+      "url": "https://www.8090g.cn/jiexi/?url=",
+      "type": 0,
+      "ext": {
+        "flag": [
+          "qiyi",
+          "imgo",
+          "鐖卞鑹�",
+          "濂囪壓",
+          "qq",
+          "qq 棰勫憡鍙婅姳绲�",
+          "鑵捐",
+          "youku",
+          "浼橀叿",
+          "pptv",
+          "PPTV",
+          "letv",
+          "涔愯",
+          "leshi",
+          "mgtv",
+          "鑺掓灉",
+          "sohu",
+          "xigua",
+          "fun",
+          "椋庤"
+        ]
+      },
+      "header": {
+        "User-Agent": "Mozilla/5.0"
+      }
+    },
+    {
+      "name": "999",
+      "type": 0,
+      "url": "https://huayong.net/999/?v="
+    },
+    {
+      "name": "鍗庡媷",
+      "type": 0,
+      "url": "https://huayong.net/vip4/?url="
+    },
+    {
+      "name": "鍓栦簯",
+      "type": 0,
+      "url": "https://www.pouyun.com/?url="
+    },
+    {
+      "name": "鍏ㄨ兘",
+      "type": 0,
+      "url": "https://jx.xmflv.com/?url=",
+      "ext": {
+        "flag": [
+          "bilibili1",
+          "qiyi",
+          "imgo",
+          "鐖卞鑹�",
+          "濂囪壓",
+          "qq",
+          "qq 棰勫憡鍙婅姳绲�",
+          "鑵捐",
+          "youku",
+          "浼橀叿",
+          "pptv",
+          "PPTV",
+          "letv",
+          "涔愯",
+          "leshi",
+          "mgtv",
+          "鑺掓灉",
+          "sohu",
+          "xigua",
+          "fun",
+          "椋庤"
+        ],
+        "header": {
+          "User-Agent": "okhttp/4.1.0"
+        }
+      }
+    },
+    {
+      "name": "铏剧背2",
+      "url": "https://jx.xmflv.cc/?url=",
+      "type": 0,
+      "ext": {
+        "flag": [
+          "qiyi",
+          "imgo",
+          "鐖卞鑹�",
+          "濂囪壓",
+          "qq",
+          "qq 棰勫憡鍙婅姳绲�",
+          "鑵捐",
+          "youku",
+          "浼橀叿",
+          "pptv",
+          "PPTV",
+          "letv",
+          "涔愯",
+          "leshi",
+          "mgtv",
+          "鑺掓灉",
+          "JL4K",
+          "sohu",
+          "xigua",
+          "fun",
+          "椋庤"
+        ]
+      },
+      "header": {
+        "User-Agent": "Mozilla/5.0"
+      }
+    },
+    {
+      "name": "hls",
+      "url": "https://jx.hls.one/?url=",
+      "type": 0,
+      "ext": {
+        "flag": [
+          "qiyi",
+          "imgo",
+          "鐖卞鑹�",
+          "濂囪壓",
+          "qq",
+          "qq 棰勫憡鍙婅姳绲�",
+          "鑵捐",
+          "youku",
+          "浼橀叿",
+          "pptv",
+          "PPTV",
+          "letv",
+          "涔愯",
+          "leshi",
+          "mgtv",
+          "鑺掓灉",
+          "JL4K",
+          "sohu",
+          "xigua",
+          "fun",
+          "椋庤"
+        ]
+      },
+      "header": {
+        "User-Agent": "Mozilla/5.0"
+      }
+    },
+    {
+      "name": "鑷宠嚮",
+      "type": 1,
+      "url": "http://yunhai.qijiyun.vip/home/api?type=ys&uid=177259&key=dijnouxKNOQSTUWXY5&url=",
+      "ext": {
+        "flag": [
+          "qq",
+          "鑵捐",
+          "qiyi",
+          "鐖卞鑹�",
+          "濂囪壓",
+          "youku",
+          "浼橀叿",
+          "sohu",
+          "鎼滅嫄",
+          "letv",
+          "涔愯",
+          "mgtv",
+          "鑺掓灉",
+          "tnmb",
+          "seven",
+          "bilibili",
+          "1905"
+        ],
+        "header": {
+          "User-Agent": "okhttp/4.9.1"
+        }
+      }
+    },
+    {
+      "name": "鏃犲弻",
+      "type": 1,
+      "url": "http://1.94.221.189:88/algorithm.php?url=",
+      "ext": {
+        "flag": [
+          "hgvip"
+        ],
+        "header": {
+          "User-Agent": "okhttp/4.9.1"
+        }
+      }
+    },
+    {
+      "name": "QD4K",
+      "type": 1,
+      "url": "https://zy.qiaoji8.com/xiafan.php?url=",
+      "ext": {
+        "flag": [
+          "QD4K",
+          "iyf",
+          "duanju",
+          "gzcj",
+          "GTV",
+          "GZYS",
+          "weggz",
+          "Ace"
+        ],
+        "header": {
+          "User-Agent": "okhttp/4.9.1"
+        }
+      }
+    },
+    {
+      "name": "娣樼墖",
+      "type": 0,
+      "url": "https://jx.yparse.com/index.php?url=",
+      "ext": {
+        "header": {
+          "user-agent": "Mozilla/5.0 (Linux; Android 13; V2049A Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/116.0.0.0 Mobile Safari/537.36"
+        }
+      }
+    },
+    {
+      "name": "涓冧竷",
+      "type": 0,
+      "url": "https://jx.77flv.cc/?url=",
+      "ext": {
+        "header": {
+          "user-agent": "Mozilla/5.0 (Linux; Android 13; V2049A Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/116.0.0.0 Mobile Safari/537.36"
+        }
+      }
+    },
+    {
+      "name": "澶滃箷",
+      "type": 0,
+      "url": "https://yemu.xyz/?url=",
+      "ext": {
+        "header": {
+          "user-agent": "Mozilla/5.0 (Linux; Android 13; V2049A Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/116.0.0.0 Mobile Safari/537.36"
+        }
+      }
+    },
+    {
+      "name": "Json",
+      "type": 2,
+      "url": "Sequence"
+    },
+    {
+      "name": "LLTV_1",
+      "type": "1",
+      "url": "https://mfjx.iwsyy.xyz/?url=",
+      "ext": {
+        "flag": [
+          "qq",
+          "鑵捐",
+          "qiyi",
+          "鐖卞鑹�",
+          "濂囪壓",
+          "youku",
+          "浼橀叿",
+          "sohu",
+          "鎼滅嫄",
+          "letv",
+          "涔愯",
+          "mgtv",
+          "鑺掓灉",
+          "tnmb",
+          "seven",
+          "bilibili",
+          "1905",
+          "NetFilx"
+        ],
+        "header": {
+          "User-Agent": "okhttp/4.9.1"
+        }
+      }
+    },
+    {
+      "name": "LLTV_2",
+      "type": 0,
+      "url": "https://jx.xmflv.com/?url=",
+      "ext": {
+        "header": {
+          "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.57"
+        }
+      }
+    },
+    {
+      "name": "LLTV_3",
+      "type": 0,
+      "url": "https://bd.jx.cn/?url=",
+      "ext": {
+        "header": {
+          "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.57"
+        }
+      }
+    }
+  ]
+}
