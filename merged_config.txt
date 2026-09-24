@@ -1,6 +1,375 @@
 ﻿{
   "sites": [
     {
+      "key": "js豆瓣1",
+      "name": "豆瓣 | 精选",
+      "type": 3,
+      "api": "./lib/drpy2.min.js",
+      "ext": "./lib/douban.js",
+      "searchable": 0,
+      "quickSearch": 0,
+      "filterable": 0,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ]
+    },
+    {
+      "key": "吃瓜",
+      "name": "🧿我要┃吃瓜",
+      "type": 3,
+      "api": "https://pan.szfx.top/down.php/9e279c961bceb59a7999404388ffa748.py",
+      "searchable": 1,
+      "quickSearch": 0,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ]
+    },
+    {
+      "key": "艾旦影视",
+      "name": "🧿艾旦┃蓝光",
+      "type": 1,
+      "api": "https://lovedan.net/api.php/provide/vod/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "categories": [
+        "动作片",
+        "喜剧片",
+        "爱情片",
+        "科幻片",
+        "恐怖片",
+        "犯罪片",
+        "战争片",
+        "剧情片",
+        "动画电影",
+        "国产剧",
+        "港台剧",
+        "日韩剧",
+        "欧美剧",
+        "海外剧",
+        "三级伦理",
+        "网红主播",
+        "日韩综艺",
+        "港台综艺",
+        "欧美综艺",
+        "大陆综艺",
+        "国产动漫",
+        "日韩动漫",
+        "欧美动漫",
+        "海外动漫",
+        "海外抖音",
+        "影视解说",
+        "港台三级",
+        "韩国伦理",
+        "西方伦理",
+        "日本伦理",
+        "直播"
+      ],
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ]
+    },
+    {
+      "key": "csp_XBPQ_起看",
+      "name": "🧿悦享┃蓝光",
+      "type": 3,
+      "api": "csp_XBPQ",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "ext": {
+        "请求头": "User-Agent$MOBILE_UA",
+        "编码": "UTF-8",
+        "主页url": "https://m.yncmfs.com/",
+        "数组": "class=\"module-item-pic\"&&</div>",
+        "链接": "href=\"&&\"",
+        "图片": "data-src=\"&&\"",
+        "标题": "title=\"&&\"",
+        "播放数组": "class=\"scroll-content\"&&</div>",
+        "播放列表": "<a&&a>[不包含:дрр滈凊]",
+        "播放链接": "href=\"&&\"",
+        "播放标题": ">&&</",
+        "线路数组": "class=\"module-tab-item&&</div>",
+        "线路标题": "<span>&&</span>",
+        "跳转播放链接": "var player_*\"url\":\"&&\"",
+        "分类url": "https://m.yncmfs.com/vssysw/{cateId}-{area}-{by}-{class}-{lang}-{letter}---{catePg}---{year}.html",
+        "分类": "电影$1#电视剧$2#综艺$3#动漫$4#短剧$31"
+      },
+      "jar": "https://gitee.com/lwlxh/tvhome/raw/master/o.jar",
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ]
+    },
+    {
+      "key": "lebo",
+      "name": "🧿乐播┃资源",
+      "type": 1,
+      "api": "https://lbapi9.com/api.php/provide/vod/at/json/?ac=list",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ]
+    },
+    {
+      "key": "dadi",
+      "name": "🧿量子┃资源",
+      "type": 1,
+      "api": "https://cj.lziapi.com/api.php/provide/vod/?ac=list",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ]
+    },
+    {
+      "key": "gay",
+      "name": "🧿gay┃资源",
+      "type": 1,
+      "api": "https://slapibf.com/api.php/provide/vod/?ac=list",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ]
+    },
+    {
+      "key": "taohua",
+      "name": "🧿桃花┃资源",
+      "type": 1,
+      "api": "https://thzy1.me/api.php/provide/vod/?ac=list",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ]
+    },
+    {
+      "key": "zp011",
+      "name": "🧿正品┃影视",
+      "type": 1,
+      "api": "https://lbapi9.com/api.php/provide/vod/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ]
+    },
+    {
+      "key": "大地专场",
+      "name": "🧿大地┃采集",
+      "type": 0,
+      "api": "https://dadiapi.com/api.php",
+      "playUrl": "",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "categories": [
+        "日韩无码",
+        "强奸乱伦",
+        "欧美精品",
+        "国产精品",
+        "人妻系列",
+        "中文字幕",
+        "动漫精品",
+        "伦理影片",
+        "日韩精品",
+        "制服诱惑",
+        "自拍偷拍",
+        "AV明星",
+        "3P合辑",
+        "巨乳系列",
+        "颜射系列",
+        "口交视频",
+        "自慰系列",
+        "SM重味",
+        "教师学生",
+        "大秀视频",
+        "AV明星1"
+      ],
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ]
+    },
+    {
+      "key": "fh资源",
+      "name": "🧿凤凰┃影视",
+      "type": 1,
+      "api": "http://fhapi9.com/api.php/provide/vod/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ]
+    },
+    {
+      "key": "牛Y",
+      "name": "🧿妞妞┃影视",
+      "type": 1,
+      "api": "https://api.niuniuzy.me/api.php/provide/vod/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "categories": [
+        "4K电影",
+        "动作片",
+        "喜剧片",
+        "爱情片",
+        "科幻片",
+        "恐怖片",
+        "港台三级",
+        "韩国伦理",
+        "日本伦理",
+        "西方伦理",
+        "剧情片",
+        "战争片",
+        "国产剧",
+        "欧美剧",
+        "韩剧",
+        "日剧",
+        "港剧",
+        "台剧",
+        "泰剧",
+        "海外剧",
+        "纪录片",
+        "大陆综艺",
+        "日韩综艺",
+        "港台综艺",
+        "欧美综艺",
+        "国产动漫",
+        "日韩动漫",
+        "欧美动漫",
+        "动画片",
+        "港台动漫",
+        "海外动漫",
+        "演唱会",
+        "体育赛事",
+        "篮球",
+        "足球",
+        "预告片",
+        "爽文短剧",
+        "影视解说"
+      ],
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ]
+    },
+    {
+      "key": "22",
+      "name": "接口仅供测试，请勿贩售",
+      "type": 0,
+      "api": "",
+      "searchable": 1,
+      "quickSearch": 0,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ]
+    },
+    {
+      "key": "18",
+      "name": "请勿相信视频中的任何广告",
+      "type": 0,
+      "api": "",
+      "searchable": 1,
+      "quickSearch": 0,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ]
+    },
+    {
       "key": "155-公子-高天流云9918",
       "name": "🔞155",
       "type": 1,
@@ -191,46 +560,6 @@
       ]
     },
     {
-      "key": "乐播资源",
-      "api": "https://lbapi9.com/api.php/provide/vod/",
-      "searchable": 1,
-      "quickSearch": 1,
-      "name": "🔞乐播资源",
-      "type": 1,
-      "filterable": 1,
-      "flags": [
-        "youku",
-        "qq",
-        "qiyi",
-        "lmgt",
-        "wymv",
-        "bilibili",
-        "duanju"
-      ]
-    },
-    {
-      "key": "番号",
-      "style": {
-        ",type": "rect",
-        "ratio": 1.485
-      },
-      "api": "http://fhapi9.com/api.php/provide/vod/",
-      "searchable": 1,
-      "name": "🔞番号",
-      "type": 1,
-      "quickSearch": 0,
-      "filterable": 1,
-      "flags": [
-        "youku",
-        "qq",
-        "qiyi",
-        "lmgt",
-        "wymv",
-        "bilibili",
-        "duanju"
-      ]
-    },
-    {
       "key": "semaozy.com-高天流云9918,",
       "api": "https://caiji.semaozy.net/inc/apijson_vod.php",
       "playurl": "https://jiexi.semaozy.cc/m3u8/?url=",
@@ -368,7 +697,7 @@
     {
       "key": "php_madou",
       "name": "🔞麻豆xx",
-      "type": 4,
+      "type": 3,
       "api": "https://t4.doube.eu.org/madou.php",
       "searchable": 1,
       "quickSearch": 0,
@@ -586,48 +915,6 @@
       ]
     },
     {
-      "key": "大地专场",
-      "name": "🔞大地采集",
-      "type": 0,
-      "api": "https://dadiapi.com/api.php",
-      "playUrl": "",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "categories": [
-        "日韩无码",
-        "强奸乱伦",
-        "欧美精品",
-        "国产精品",
-        "人妻系列",
-        "中文字幕",
-        "动漫精品",
-        "伦理影片",
-        "日韩精品",
-        "制服诱惑",
-        "自拍偷拍",
-        "AV明星",
-        "3P合辑",
-        "巨乳系列",
-        "颜射系列",
-        "口交视频",
-        "自慰系列",
-        "SM重味",
-        "教师学生",
-        "大秀视频",
-        "AV明星1"
-      ],
-      "flags": [
-        "youku",
-        "qq",
-        "qiyi",
-        "lmgt",
-        "wymv",
-        "bilibili",
-        "duanju"
-      ]
-    },
-    {
       "key": "小姐姐资源",
       "name": "*🔞小姐姐资源",
       "type": 0,
@@ -774,29 +1061,6 @@
       ]
     },
     {
-      "key": "bttcj.com",
-      "name": "成人05",
-      "type": 0,
-      "api": "http://bttcj.com/inc/sapi.php",
-      "searchable": 1,
-      "recordable": 0,
-      "style": {
-        "type": "rect",
-        "ratio": 1.33
-      },
-      "quickSearch": 0,
-      "filterable": 1,
-      "flags": [
-        "youku",
-        "qq",
-        "qiyi",
-        "lmgt",
-        "wymv",
-        "bilibili",
-        "duanju"
-      ]
-    },
-    {
       "key": "cjmygzy.com",
       "name": "成人06",
       "type": 0,
@@ -912,52 +1176,6 @@
       ]
     },
     {
-      "key": "kxgav.com",
-      "name": "成人19",
-      "type": 0,
-      "api": "https://www.kxgav.com/api/xml.php",
-      "searchable": 1,
-      "recordable": 0,
-      "style": {
-        "type": "rect",
-        "ratio": 1.33
-      },
-      "quickSearch": 0,
-      "filterable": 1,
-      "flags": [
-        "youku",
-        "qq",
-        "qiyi",
-        "lmgt",
-        "wymv",
-        "bilibili",
-        "duanju"
-      ]
-    },
-    {
-      "key": "pgxdy.com",
-      "name": "成人21",
-      "type": 0,
-      "api": "https://www.pgxdy.com/api/xml.php",
-      "searchable": 1,
-      "recordable": 0,
-      "style": {
-        "type": "rect",
-        "ratio": 1.33
-      },
-      "quickSearch": 0,
-      "filterable": 1,
-      "flags": [
-        "youku",
-        "qq",
-        "qiyi",
-        "lmgt",
-        "wymv",
-        "bilibili",
-        "duanju"
-      ]
-    },
-    {
       "key": "afasu.com",
       "name": "成人22",
       "type": 0,
@@ -1004,170 +1222,6 @@
       ]
     },
     {
-      "key": "lbapi9.com",
-      "name": "成人26",
-      "type": 1,
-      "api": "https://lbapi9.com/api.php/provide/vod/",
-      "searchable": 1,
-      "recordable": 0,
-      "style": {
-        "type": "rect",
-        "ratio": 1.33
-      },
-      "quickSearch": 0,
-      "filterable": 1,
-      "flags": [
-        "youku",
-        "qq",
-        "qiyi",
-        "lmgt",
-        "wymv",
-        "bilibili",
-        "duanju"
-      ]
-    },
-    {
-      "key": "csp_XBPQ_人兽香蕉",
-      "name": "🔞人兽香蕉",
-      "type": 3,
-      "api": "csp_XBPQ",
-      "jar": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/lishuncai8881/c/jar/xyqxbpq.jar",
-      "searchable": 1,
-      "quickSearch": 0,
-      "filterable": 1,
-      "ext": {
-        "请求头": "User-Agent$MOBILE_UA",
-        "编码": "UTF-8",
-        "播放数组": "<a class=\"play-active\"&&</a>",
-        "直接播放": "1",
-        "主页url": "https://e--ubuyiaz.renshouxiangjiao.com/",
-        "分类url": "https://e--ubuyiaz.renshouxiangjiao.com/vodshow/{cateId}-{area}-{by}-{class}-{lang}----{catePg}---{year}/",
-        "分类": "奥斯卡资源$20#黄瓜资源$110#JKUN 资源网$21#奶香香资源$22#siwa 资源$23",
-        "类型": "国产视频$24#中文字幕$25#国产传媒$26#日本有码$27#日本无码$28#欧美无码$29#强奸乱伦$30#制服诱惑$31#国产主播$32#激情动漫$33#明星换脸$34#抖阴视频$35#女优明星$36#网曝黑料$40#伦理三级$41#AV解说$42#SM调教$43#萝莉少女$45#极品媚黑$46#女同性恋$47||国产精品$111#绿帽淫妻$112#国产探花$113#美女主播$114#明星淫梦$115#TS人妖$116#麻豆传媒$117#兔子先生$118#天美传媒$119#SA国际传媒$120#性世界$121#扣扣传媒$122#精东影业$123#蜜桃传媒$124#网曝门事件$125#杏吧传媒$139#果冻传媒$126#星空无限$127#葫芦影业$128#起点传媒$129||国产传媒$66#中文字幕$53#日本有码$54#日本无码$55#AV解说$56#cosplay$57#黑丝诱惑$58#SWAG$59#自拍偷拍$60#激情动漫$61#网红主播$62#探花系列$63#三级伦理$64#VR视角$65#素人搭讪$67#门事件$68||国产自拍$72#主播诱惑$73#探花约炮$74#偷拍偷窥$75#网曝吃瓜$76#抖阴短片$77#传媒剧情$78#日韩无码$80#中文字幕$81#AV解说$82#换脸明星$83#强奸乱伦$84#女优明星$85#欧美激情$86#重口激情$87#VR视角$92#剧情动漫$89#SM调教$90#女同性恋$91||亚洲无码$93#亚洲有码$94#欧美情色$95#中文字幕$96#动漫卡通$97#美女主播$98#人妻熟女$99#日韩伦理$101#国产自拍$102#精选口爆$103#同性同志$104#重口味$105#91大神$107#AV解说$108"
-      },
-      "flags": [
-        "youku",
-        "qq",
-        "qiyi",
-        "lmgt",
-        "wymv",
-        "bilibili",
-        "duanju"
-      ]
-    },
-    {
-      "key": "csp_XBPQ_6黑料网曝9",
-      "name": "🔞6黑料网曝9",
-      "type": 3,
-      "api": "csp_XBPQ",
-      "jar": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/lishuncai8881/c/jar/xbpq.jar",
-      "searchable": 1,
-      "quickSearch": 0,
-      "filterable": 1,
-      "ext": {
-        "请求头": "User-Agent$MOBILE_UA",
-        "编码": "UTF-8",
-        "播放数组": "<a class=\"play-active\"&&</a>",
-        "直接播放": "1",
-        "分类url": "https://www.diyise22.top/index.php/vod/type/id/{cateId}/page/{catePg}.html",
-        "分类": "黑料网曝$33#网红黑料$34#自拍偷拍$35#少女合集$36#中文高清$37#日本热播$38#"
-      },
-      "flags": [
-        "youku",
-        "qq",
-        "qiyi",
-        "lmgt",
-        "wymv",
-        "bilibili",
-        "duanju"
-      ]
-    },
-    {
-      "key": "csp_XBPQ_WakuWaku",
-      "name": "🔞WakuWaku",
-      "type": 3,
-      "api": "csp_XBPQ",
-      "jar": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/lishuncai8881/c/jar/xbpq.jar",
-      "searchable": 1,
-      "quickSearch": 0,
-      "filterable": 1,
-      "ext": {
-        "请求头": "User-Agent$MOBILE_UA",
-        "编码": "UTF-8",
-        "链接": "href=\"&&\"[替换:voddetail>>v]",
-        "直接播放": "1",
-        "分类url": "https://b9t9a-61362-sz0803.wakuwakutvww3.cfd/t/{cateId}-{catePg}/",
-        "分类": "国产$20#日本有码$21#传媒系列$117#探花系列$153#上头黑料$155#里番动漫$24#翻牌子$45#令人上头$179#小清新$159#欧美$23#伦理$25#另类$41#国产精品$26#国产自拍$29#国产剧情$27#国产偷拍$30#国产女奴$81#国产主播$35#国模私拍$85"
-      },
-      "flags": [
-        "youku",
-        "qq",
-        "qiyi",
-        "lmgt",
-        "wymv",
-        "bilibili",
-        "duanju"
-      ]
-    },
-    {
-      "key": "csp_XBPQ_91国产经典",
-      "name": "🔞91国产经典",
-      "type": 3,
-      "api": "csp_XBPQ",
-      "jar": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/lishuncai8881/c/jar/xbpq.jar",
-      "searchable": 1,
-      "quickSearch": 0,
-      "filterable": 1,
-      "ext": {
-        "请求头": "User-Agent$MOBILE_UA",
-        "编码": "UTF-8",
-        "播放数组": "<a class=\"play-active\"&&</a>",
-        "直接播放": "1",
-        "分类url": "https://www.91gcjd20.xyz/index.php/vod/type/id/{cateId}/page/{catePg}.html",
-        "分类": "91国产经典$13#国产必看$15#高清无码$16#热门视频$2#今日黑料$14#性爱直播$21#国产偷拍$22#萝莉少女$23#热门事件$24"
-      },
-      "flags": [
-        "youku",
-        "qq",
-        "qiyi",
-        "lmgt",
-        "wymv",
-        "bilibili",
-        "duanju"
-      ]
-    },
-    {
-      "key": "csp_XBPQ_灰灰影音",
-      "name": "🔞灰灰影音",
-      "type": 3,
-      "api": "csp_XBPQ",
-      "jar": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/lishuncai8881/c/jar/xbpq.jar",
-      "searchable": 1,
-      "quickSearch": 0,
-      "filterable": 1,
-      "ext": {
-        "链接": "href=\"&&\"[替换:detail>>play]",
-        "链接前缀": "https://235kl.huahua47.top",
-        "链接后缀": "/sid/1/nid/1.html",
-        "直接播放": "1",
-        "请求头": "User-Agent$MOBILE_UA",
-        "编码": "UTF-8",
-        "搜索url": "https://235kl.huahua47.top/index.php/vod/search.html?wd={wd}",
-        "主页url": "https://235kl.huahua47.top/",
-        "分类url": "https://235kl.huahua47.top/index.php/vod/type/id/{cateId}/page/{catePg}.html",
-        "分类": "视频一区$1#中文字幕$7#国产视频$6#国产传媒$8#日本有码$9#日本无码$10#欧美无码$11#视频二区$2#女优明星$20#网曝黑料$21#伦理三级$22#制服诱惑$13#激情动漫$14#抖阴视频$16#视频三区$3#萝莉少女$23#SM调教$24#女同性恋$25#人妖系列$26#极品媚黑$27#强奸乱伦$28#视频四区$4#明星换脸$15#VR视角$34#网红头条$30#国产主播$31#韩国主播$32#AV解说$33"
-      },
-      "flags": [
-        "youku",
-        "qq",
-        "qiyi",
-        "lmgt",
-        "wymv",
-        "bilibili",
-        "duanju"
-      ]
-    },
-    {
       "key": "XMVideo",
       "name": "🔞熊猫视频",
       "type": 3,
@@ -1175,218 +1229,7 @@
       "quickSearch": 0,
       "searchable": 1,
       "filterable": 1,
-      "jar": "https://py.nxog.eu.org/https://raw.githubusercontent.com/guot55/yg/main/jar/182.jar",
-      "flags": [
-        "youku",
-        "qq",
-        "qiyi",
-        "lmgt",
-        "wymv",
-        "bilibili",
-        "duanju"
-      ]
-    },
-    {
-      "key": "csp_https://18hr.life/label/sort",
-      "name": "🔞18禁AV",
-      "type": 3,
-      "api": "csp_XBPQ",
-      "jar": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/lishuncai8881/c/jar/xyqxbpq.jar",
-      "searchable": 1,
-      "quickSearch": 0,
-      "filterable": 1,
-      "ext": {
-        "直接播放": "1",
-        "播放线路": "<div class=\"play-left\">&&</div>",
-        "分类url": "https://18hr.life/show/{cateId}/by/{by}/nid/1/page/{catePg}/sid/1/",
-        "分类": "国产$1#日韩$2#欧美$3#伦理$4#动漫$16",
-        "类型": "国产自拍$5#主播大秀$6#国产探花$7#偷拍偷窥$8#伦理系列$9#网爆吃瓜$10#抖音风格$11#传媒剧情$12#福利姬$20#主播诱惑$36#侵犯系列$37||日韩自拍$13#日本无码$14#日本字母$15#AV解说$17#换脸明星$18||欧美自拍$21#欧美字母$22#重口味$23||伦理三级$29#日韩伦理$30||剧集动漫$26#3D动漫$27#次元动漫$28",
-        "排序": "最新$time#日榜$hits_day#月榜$hits_week"
-      },
-      "flags": [
-        "youku",
-        "qq",
-        "qiyi",
-        "lmgt",
-        "wymv",
-        "bilibili",
-        "duanju"
-      ]
-    },
-    {
-      "key": "csp_XBPQ_欧美日韩精品",
-      "name": "🔞欧美日韩精品",
-      "type": 3,
-      "api": "csp_XBPQ",
-      "jar": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/lishuncai8881/c/jar/xyqxbpq.jar",
-      "searchable": 1,
-      "quickSearch": 0,
-      "filterable": 1,
-      "ext": {
-        "请求头": "User-Agent$MOBILE_UA",
-        "编码": "UTF-8",
-        "链接": "href=\"&&\"[替换:vod>>shenma#.html>>-1-1.html]",
-        "直接播放": "1",
-        "搜索url": "https://www.fswst.com/vodsearch/{by}-------------.html",
-        "主页url": "https://www.fswst.com/",
-        "分类url": "https://www.fswst.com/play/{cateId}-{catePg}.html",
-        "分类": "中文字幕$20#国产自拍$21#日韩无码$22#极骚萝莉$23#强奸乱伦$24#欧美极品$25#三级自慰$26#激情口交$27"
-      },
-      "flags": [
-        "youku",
-        "qq",
-        "qiyi",
-        "lmgt",
-        "wymv",
-        "bilibili",
-        "duanju"
-      ]
-    },
-    {
-      "key": "麻豆",
-      "name": "🔞麻豆",
-      "type": 3,
-      "changeable": 1,
-      "searchable": 1,
-      "quickSearch": 0,
-      "filterable": 1,
-      "api": "csp_XBPQ",
-      "jar": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/lishuncai8881/c/jar/xyqxbpq.jar",
-      "style": {
-        "ratio": 1.7
-      },
-      "ext": {
-        "搜索url": "http://gcmd.cc/index.php/vod/search/page/{pg}/wd/{wd}.html",
-        "分类": "日本视频$1#麻豆视频$2#国产视频$3",
-        "分类url": "http://gcmd.cc/index.php/vod/show/class/{class}/id/{cateId}/page/{catePg}.html",
-        "直接播放": "1",
-        "剧情": "大乳房&体内射精&水手服&紧身衣&单一作品&荡妇&脏话&女同性恋&业余&角色扮演&和服&女教师&连裤袜||麻豆&天美&蜜桃&皇家&精东&星空&萝莉社&糖心Vlog&乐播&兔子先生&杏吧&果冻&PsychoPorn||无",
-        "剧情值": "*"
-      },
-      "flags": [
-        "youku",
-        "qq",
-        "qiyi",
-        "lmgt",
-        "wymv",
-        "bilibili",
-        "duanju"
-      ]
-    },
-    {
-      "key": "乐草",
-      "name": "🔞乐草",
-      "type": 3,
-      "jar": "https://mirror.ghproxy.com/https://github.com/lishuncai8881/c/blob/jar/xbpq.jar",
-      "api": "csp_XBPQ",
-      "searchable": 1,
-      "quickSearch": 0,
-      "filterable": 1,
-      "ext": {
-        "直接播放": "1",
-        "编码": "UTF-8",
-        "请求头": "User-Agent$MOBILE_UA",
-        "主页url": "https://lecao2.top/",
-        "分类url": "https://lecao2.top/index.php/vod/type/id/{cateId}/page/{catePg}.html",
-        "分类": "国产自拍$20#网红主播$21#探花系列$23#传媒出品$25#日本无码$26#日本有码$27#中文字幕$28#欧美精品$29#三级伦理$30#人妻熟女$31#口爆颜射$32#SM调教$33#制服诱惑$34#多人群交$35#女同性爱$36#萝莉少女$38#成人动漫$39"
-      },
-      "flags": [
-        "youku",
-        "qq",
-        "qiyi",
-        "lmgt",
-        "wymv",
-        "bilibili",
-        "duanju"
-      ]
-    },
-    {
-      "key": "花影视",
-      "name": "🏆花影视",
-      "type": 3,
-      "api": "csp_XBPQ",
-      "jar": "https://py.nxog.eu.org/https://github.com/lishuncai8881/c/blob/jar/xbpq.jar",
-      "ext": {
-        "数组": "col-6 col-sm-4 col-lg-3\">&&</div></div>",
-        "图片": "data-original=\"&&\"",
-        "标题": "<h6 class=\"title\"><a href=*>&&</a>",
-        "播放数组": "class=\"item line\">&&</div>",
-        "线路数组": "class=\"item line\">&&</div>",
-        "分类url": "https://www.ajfdvv.com/typegaokk/{cateId}_{catePg}.html[https://www.ajfdvv.com/typegaokk/{cateId}.html]",
-        "分类": "推荐视频$5#日韩$2#巨乳$7#中文$4#口交$8#制服$9#无码$11#女优$18#人妻$19#独家$22#潮吹$24#三级$12#动漫成人$14#主播视频$16#重味3P$13#同性人妖$6#巨乳颜射$7#强奸乱伦$17"
-      },
-      "searchable": 1,
-      "quickSearch": 0,
-      "filterable": 1,
-      "flags": [
-        "youku",
-        "qq",
-        "qiyi",
-        "lmgt",
-        "wymv",
-        "bilibili",
-        "duanju"
-      ]
-    },
-    {
-      "key": "沙咖影院",
-      "name": "🏆沙咖影院",
-      "type": 3,
-      "api": "csp_XBPQ",
-      "jar": "https://github.moeyy.xyz/https://raw.githubusercontent.com/guot55/yg/main/jar/hl.jar",
-      "searchable": 1,
-      "quickSearch": 0,
-      "filterable": 1,
-      "ext": {
-        "数组": "stui-vodlist__thumb lazyload&&</a",
-        "图片": "data-original=\"&&\"",
-        "图片代理": "1",
-        "副标题": "pic-text text-right\">&&</span>",
-        "简介": "description\" content=\"&&\"",
-        "链接": "href=\"/voddetail/&&.html\"",
-        "链接前缀": "https://sar.sarga.cc/vodplay/",
-        "链接后缀": "-1-1.html",
-        "跳转播放链接": "urlDecode(var player*url\":\"&&\")",
-        "搜索url": "https://sar.sarga.cc/vodsearch/{wd}----------{pg}---.html",
-        "分类url": "https://sar.sarga.cc/vodtype/{cateId}-{catePg}.html;;z",
-        "分类": "中文新作$20#国语视频$21#有码精品$24#动漫专场$23#经典伦理$25#欧美性爱$22"
-      },
-      "flags": [
-        "youku",
-        "qq",
-        "qiyi",
-        "lmgt",
-        "wymv",
-        "bilibili",
-        "duanju"
-      ]
-    },
-    {
-      "key": "成人重口",
-      "name": "🏆成人重口",
-      "type": 3,
-      "api": "csp_XBPQ",
-      "jar": "https://github.moeyy.xyz/https://raw.githubusercontent.com/fish2018/tvbox/master/jar/最新.jar",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "ext": {
-        "发布地址": "1:https://www.crzk11.buzz/,2:www.crzk3.top",
-        "主页url": "https://www.crzk22.buzz",
-        "数组": "<li class=\"content-item&&</li",
-        "图片": "data-original=\"&&\"",
-        "标题": "title=\"&&\"",
-        "副标题": "text-bg-r\">&&</span>",
-        "简介": "description\" content=\"&&剧情",
-        "链接": "https://www.crzk22.buzz/index.php/vod/play/id/+href=\"/index.php/vod/detail/id/&&.html\"+/sid/1/nid/1.html",
-        "跳转播放链接": "urlDecode(var player_*url\":\"&&\")",
-        "搜��模式": "1",
-        "搜索url": "https://www.crzk22.buzz/index.php/vod/search/page/{pg}/wd/{wd}.html",
-        "分类数组": "<a&&/a",
-        "分类标题": ">&&<",
-        "分类ID": "/index.php/vod/type/id/&&.html",
-        "分类url": "https://www.crzk22.buzz/index.php/vod/type/id/{cateId}/page/{catePg}.html;;z"
-      },
+      "jar": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/guot55/yg/main/jar/182.jar",
       "flags": [
         "youku",
         "qq",
@@ -1436,24 +1279,6 @@
       ]
     },
     {
-      "key": "*黄AV资源",
-      "name": "🏆黄AV",
-      "type": 0,
-      "api": "https://www.pgxdy.com/api/xml.php",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 0,
-      "flags": [
-        "youku",
-        "qq",
-        "qiyi",
-        "lmgt",
-        "wymv",
-        "bilibili",
-        "duanju"
-      ]
-    },
-    {
       "key": "*鸡坤资源",
       "name": "🏆鸡坤资源",
       "type": 1,
@@ -1479,87 +1304,6 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "flags": [
-        "youku",
-        "qq",
-        "qiyi",
-        "lmgt",
-        "wymv",
-        "bilibili",
-        "duanju"
-      ]
-    },
-    {
-      "key": "*AIvin",
-      "name": "*🔞AIvin",
-      "type": 0,
-      "api": "http://lbapiby.com/api.php/provide/vod/at/xml",
-      "searchable": 1,
-      "quickSearch": 0,
-      "filterable": 1,
-      "flags": [
-        "youku",
-        "qq",
-        "qiyi",
-        "lmgt",
-        "wymv",
-        "bilibili",
-        "duanju"
-      ]
-    },
-    {
-      "key": "*白嫖资源",
-      "name": "*🔞白嫖资源",
-      "type": 0,
-      "api": "https://www.kxgav.com/api/xml.php",
-      "searchable": 0,
-      "quickSearch": 0,
-      "filterable": 1,
-      "flags": [
-        "youku",
-        "qq",
-        "qiyi",
-        "lmgt",
-        "wymv",
-        "bilibili",
-        "duanju"
-      ]
-    },
-    {
-      "key": "155专场",
-      "name": "🔞155采集",
-      "type": 1,
-      "api": "https://155api.com/api.php/provide/vod/",
-      "playUrl": "",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "categories": [
-        "无码专区",
-        "麻豆传媒",
-        "制服诱惑",
-        "三级伦理",
-        "AI换脸",
-        "中文字幕",
-        "卡通动漫",
-        "欧美系列",
-        "美女主播",
-        "国产自拍",
-        "熟女人妻",
-        "萝莉少女",
-        "女同性爱",
-        "多人群交",
-        "美乳巨乳",
-        "强奸乱伦",
-        "抖音视频",
-        "韩国主播",
-        "网红头条",
-        "网爆黑料",
-        "欧美无码",
-        "女优明星",
-        "SM调教",
-        "AV解说"
-      ],
       "flags": [
         "youku",
         "qq",
@@ -1628,65 +1372,6 @@
       ]
     },
     {
-      "key": "地瓜",
-      "name": "🔞地瓜",
-      "type": 3,
-      "api": "csp_XBPQ",
-      "searchable": 1,
-      "quickSearch": 0,
-      "filterable": 1,
-      "ext": {
-        "播放数组": "v_con_box&&</div>",
-        "主页url": "https://www.112vv.me/",
-        "分类url": "https://www.112vv.me/vodtype/{cateId}/{class}/area/{area}/by/{by}/page/{catePg}/year/{year}.html",
-        "分类": "国产视频$6#国产自拍$7#国产偷拍$8#网红主播$9#清纯学生$10#国产探花$36#少妇淫妻$21#明星换脸$11#国产传媒$12#亚洲专区$22#日韩无码$23#欧美无码$24#中文字幕$25#三级伦理$26#卡通动漫$27#巨乳美乳$28#强奸乱伦$29#制服丝袜$30#少女萝莉$31#人妻熟女$32#群交口交$33#日本素人$37#高清名优$38"
-      },
-      "jar": "https://github.moeyy.xyz/https://github.com/lishuncai8881/c/blob/jar/spider.jar",
-      "flags": [
-        "youku",
-        "qq",
-        "qiyi",
-        "lmgt",
-        "wymv",
-        "bilibili",
-        "duanju"
-      ]
-    },
-    {
-      "key": "36D蜜桃臀",
-      "name": "🔞36D蜜桃臀",
-      "type": 3,
-      "api": "csp_XBPQ",
-      "searchable": 1,
-      "quickSearch": 0,
-      "filterable": 1,
-      "ext": {
-        "站名": "36D蜜桃臀",
-        "主页url": "https://o3p4q5r6.nxcy96.buzz/",
-        "直接播放": "1",
-        "搜索url": "/vodsearch/{wd}-------------.html",
-        "分类标题": ">&&/a>",
-        "分类ID": "/vodtype/&&.html",
-        "数组": "<dl&&</dl>",
-        "图片": "data-original=\"&&\"",
-        "标题": "<h3&&</h3>",
-        "链接": "href=\"&&\"[替换:voddetail>>vodplay#.html>>-1-1.html]",
-        "分类url": "https://o3p4q5r6.nxcy96.buzz/vodtype/{cateId}-{catePg}.html",
-        "分类": "国产传媒$1#精品资源$4#乱伦三级$54#精东影业$27#蜜桃传媒$24#天美传媒$23#皇家华人$24#麻豆视频$21#兔子先生$30#91制片厂$22#星空传媒$26#特色仓库$5#SM调教$56#网红头条$60#极品媚黑$58#萝莉少女$57#VR视角$63#人妖系列$61#韩国主播$62#女同性恋$59#必射精选$161#偷拍自拍$163#国产大作$164#乱伦毁三观$165#嫖妓全过程$166#淫乱学生妹$167#黑料不打烊$168#监控摄像头$169#主播网红$170#中文字幕$15#调教中文$150#制服中文$148#人妻中文$149#无码中文$144#强奸中文$145#出轨中文$151#乱伦中文$147#巨乳中文$146",
-        "免嗅": "0"
-      },
-      "jar": "https://github.moeyy.xyz/https://github.com/lishuncai8881/c/blob/jar/spider.jar",
-      "flags": [
-        "youku",
-        "qq",
-        "qiyi",
-        "lmgt",
-        "wymv",
-        "bilibili",
-        "duanju"
-      ]
-    },
-    {
       "key": "hipy_js乐草",
       "name": "🏆乐草",
       "type": 3,
@@ -1696,26 +1381,6 @@
       "filterable": 1,
       "order_num": 0,
       "ext": "https://mirror.ghproxy.com/https://raw.bgithub.xyz/xiaolinshao/dr_py/main/乐草TV[密].js",
-      "flags": [
-        "youku",
-        "qq",
-        "qiyi",
-        "lmgt",
-        "wymv",
-        "bilibili",
-        "duanju"
-      ]
-    },
-    {
-      "key": "hipy_js_地瓜视频[密]",
-      "name": "🏆地瓜视频",
-      "type": 3,
-      "api": "https://mirror.ghproxy.com/https://raw.bgithub.xyz/xiaolinshao/dr_py/main/drpy2.min.js",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "order_num": 0,
-      "ext": "https://mirror.ghproxy.com/https://raw.bgithub.xyz/xiaolinshao/dr_py/main/地瓜视频[密].js",
       "flags": [
         "youku",
         "qq",
@@ -1754,25 +1419,6 @@
       "quickSearch": 1,
       "filterable": 1,
       "ext": "https://gitee.com/hd2019/OneClickRun/raw/master/xpath/yanet.json",
-      "flags": [
-        "youku",
-        "qq",
-        "qiyi",
-        "lmgt",
-        "wymv",
-        "bilibili",
-        "duanju"
-      ]
-    },
-    {
-      "key": ",00色猫资源",
-      "api": "https://api.maozyapi.com/inc/apijson_vod.php",
-      "playUrl": "https://api.maozyapi.com/m3u8/?url=",
-      "searchable": 1,
-      "quickSearch": 1,
-      "name": "🔞色猫",
-      "type": 1,
-      "filterable": 1,
       "flags": [
         "youku",
         "qq",
@@ -1831,29 +1477,6 @@
       "api": "http://secj8.com/inc/sapi.php?ac=videolist",
       "searchable": 1,
       "name": "成人07,",
-      "type": 3,
-      "quickSearch": 0,
-      "filterable": 1,
-      "flags": [
-        "youku",
-        "qq",
-        "qiyi",
-        "lmgt",
-        "wymv",
-        "bilibili",
-        "duanju"
-      ]
-    },
-    {
-      "key": ",f2dcj6.com",
-      ",type": 0,
-      "style": {
-        ",type": "rect",
-        "ratio": 1.485
-      },
-      "api": "http://f2dcj6.com/sapi?ac=videolist",
-      "searchable": 1,
-      "name": "成人11,",
       "type": 3,
       "quickSearch": 0,
       "filterable": 1,
@@ -2379,5 +2002,5 @@
   ],
   "图片代理": "https://images.weserv.nl/?url=",
   "warningText": "勿信视频中任何广告！",
-  "spider": "https://reian99.coding.net/p/maotv/d/CatVodTVSpider/git/raw/master/jar/custom_spider.jar"
+  "spider": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/lishuncai8881/c/jar/xyqxbpq.jar"
 }
