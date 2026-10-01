@@ -1,4 +1,4 @@
-﻿{
+{
   "sites": [
     {
       "key": "csp_XBPQ_起看",
@@ -16331,25 +16331,7 @@
       "name": "我的直播(5698频道)",
       "type": 0,
       "playerType": 1,
-      "url": "https://raw.githubusercontent.com/666tv/69/main/live.m3u",
-      "epg": "http://epg.112114.xyz/?ch={name}&date={date}",
-      "logo": "https://epg.112114.xyz/logo/{name}.png",
-      "timeout": 10
-    },
-    {
-      "name": "我的直播(5698频道)",
-      "type": 0,
-      "playerType": 1,
-      "url": "https://raw.githubusercontent.com/666tv/69/main/live.m3u",
-      "epg": "http://epg.112114.xyz/?ch={name}&date={date}",
-      "logo": "https://epg.112114.xyz/logo/{name}.png",
-      "timeout": 10
-    },
-    {
-      "name": "我的直播(6563频道)",
-      "type": 0,
-      "playerType": 1,
-      "url": "https://raw.githubusercontent.com/666tv/69/main/live.m3u",
+      "url": "./live.m3u",
       "epg": "http://epg.112114.xyz/?ch={name}&date={date}",
       "logo": "https://epg.112114.xyz/logo/{name}.png",
       "timeout": 10
@@ -16374,5 +16356,5 @@
   ],
   "图片代理": "https://images.weserv.nl/?url=",
   "warningText": "勿信视频中任何广告！",
-  "spider": "http://192.168.0.104:8080/jar/spider.jar"
+  "spider": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
 }
