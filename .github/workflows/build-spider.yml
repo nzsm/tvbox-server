@@ -112,30 +112,43 @@ jobs:
           md5sum spider.jar | awk '{print $1}' > spider.jar.md5
           echo "✅ 产出: spider.jar ($(du -h spider.jar | cut -f1))"
 
-      - name: 回写本仓库 jar/spider.jar（tvbox-server，自持闭环）
+      - name: 回写本仓库 jar/spider.jar（GitHub API 直传，tvbox-server）
         run: |
           set -e
-          # 独立浅克隆本仓库，避免污染 CatVodSpider 检出区的 git 历史
-          git clone --depth 1 "https://x-access-token:${GITHUB_TOKEN}@github.com/nzsm/tvbox-server.git" tvbox_repo
-          mkdir -p tvbox_repo/jar
-          cp spider.jar tvbox_repo/jar/spider.jar
-          cp spider.jar.md5 tvbox_repo/jar/spider.jar.md5
-          cd tvbox_repo
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          echo "--- 本地变更 ---"
-          git status --short
-          if git diff --quiet && git diff --cached --quiet; then
-            echo "⚠️ 无变更：产物与仓库里文件完全一致，无需提交"
-            exit 0
+          # 不用 git push（GITHUB_TOKEN 走 git 协议常认证失败），改用 GitHub Contents API 直传，
+          # 错误信息明确：401=token 无效 / 403=无写权限 / 200=成功
+          SHA=""
+          EXIST=$(curl -s -o /tmp/exist.json -w "%{http_code}" -H "Authorization: Bearer ${GITHUB_TOKEN}" \
+            "https://api.github.com/repos/nzsm/tvbox-server/contents/jar/spider.jar")
+          if [ "$EXIST" = "200" ]; then
+            SHA=$(python3 -c "import json; print(json.load(open('/tmp/exist.json')).get('sha',''))")
+            echo "检测到已存在 jar/spider.jar，将覆盖更新 (sha=$SHA)"
+          else
+            echo "jar/spider.jar 不存在，将新建（API 状态 $EXIST）"
           fi
-          git add -A
-          git commit -m "auto: 云编译 spider.jar $(date +%Y%m%d-%H%M)"
-          echo "--- push 到 main ---"
-          git push origin HEAD:main
-          echo "--- 验证远端 ---"
-          git ls-remote origin refs/heads/main
-
+          B64=$(base64 -w0 spider.jar)
+          if [ -n "$SHA" ]; then
+            RESULT=$(curl -s -X PUT -H "Authorization: Bearer ${GITHUB_TOKEN}" \
+              "https://api.github.com/repos/nzsm/tvbox-server/contents/jar/spider.jar" \
+              -d "{\"message\":\"auto: 云编译 spider.jar $(date +%Y%m%d-%H%M)\",\"content\":\"$B64\",\"sha\":\"$SHA\"}")
+          else
+            RESULT=$(curl -s -X PUT -H "Authorization: Bearer ${GITHUB_TOKEN}" \
+              "https://api.github.com/repos/nzsm/tvbox-server/contents/jar/spider.jar" \
+              -d "{\"message\":\"auto: 云编译 spider.jar $(date +%Y%m%d-%H%M)\",\"content\":\"$B64\"}")
+          fi
+          echo "$RESULT" | python3 -c "
+          import json,sys
+          try:
+              d=json.load(sys.stdin)
+              if 'content' in d and d.get('content',{}).get('sha'):
+                  print('OK 写回成功! sha:', d['content']['sha'][:10], 'size:', d['content'].get('size','?'))
+              else:
+                  print('FAIL 写回失败:', json.dumps(d, ensure_ascii=False)[:400])
+                  sys.exit(1)
+          except Exception as e:
+              print('FAIL 响应异常:', e)
+              sys.exit(1)
+          "
       - name: 上传附件（网页可直接下载）
         uses: actions/upload-artifact@v4
         with:
