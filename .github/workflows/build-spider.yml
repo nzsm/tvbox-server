@@ -114,6 +114,7 @@ jobs:
 
       - name: 回写本仓库 jar/spider.jar（tvbox-server，自持闭环）
         run: |
+          set -e
           # 独立浅克隆本仓库，避免污染 CatVodSpider 检出区的 git 历史
           git clone --depth 1 "https://x-access-token:${GITHUB_TOKEN}@github.com/nzsm/tvbox-server.git" tvbox_repo
           mkdir -p tvbox_repo/jar
@@ -122,9 +123,18 @@ jobs:
           cd tvbox_repo
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          echo "--- 本地变更 ---"
+          git status --short
+          if git diff --quiet && git diff --cached --quiet; then
+            echo "⚠️ 无变更：产物与仓库里文件完全一致，无需提交"
+            exit 0
+          fi
           git add -A
-          git commit -m "auto: 云编译 spider.jar $(date +%Y%m%d-%H%M)" || echo "无变更"
-          git push origin HEAD || echo "推送完成或无需推送"
+          git commit -m "auto: 云编译 spider.jar $(date +%Y%m%d-%H%M)"
+          echo "--- push 到 main ---"
+          git push origin HEAD:main
+          echo "--- 验证远端 ---"
+          git ls-remote origin refs/heads/main
 
       - name: 上传附件（网页可直接下载）
         uses: actions/upload-artifact@v4
