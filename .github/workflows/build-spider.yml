@@ -125,12 +125,14 @@ jobs:
       - name: 回写本仓库 jar/spider.jar（GitHub API 直传，tvbox-server）
         run: |
           set -e
-          echo "=== 调试: 回写时 GITHUB_TOKEN ==="
-          echo "token 长度: ${#GITHUB_TOKEN}"
-          echo "token 前6位: ${GITHUB_TOKEN:0:6}"
+          echo "=== 调试: token 对比 ==="
+          echo "环境变量 GITHUB_TOKEN 长度: ${#GITHUB_TOKEN}"
+          echo -n '${{ github.token }}' > /tmp/tok.txt
+          echo "上下文 github.token 长度: $(wc -c < /tmp/tok.txt)"
+          echo "上下文前6位: $(head -c 6 /tmp/tok.txt)"
           # 用 GitHub Contents API 直传；401=token 无效/为空 / 403=无写权限 / 201=新建成功 / 200=更新成功
           SHA=""
-          EXIST=$(curl -s -o /tmp/exist.json -w "%{http_code}" -H "Authorization: Bearer ${GITHUB_TOKEN}" \
+          EXIST=$(curl -s -o /tmp/exist.json -w "%{http_code}" -H "Authorization: Bearer ${{ github.token }}" \
             "https://api.github.com/repos/nzsm/tvbox-server/contents/jar/spider.jar")
           if [ "$EXIST" = "200" ]; then
             SHA=$(python3 -c 'import json; print(json.load(open("/tmp/exist.json")).get("sha",""))')
@@ -149,7 +151,7 @@ jobs:
             fi
           } > /tmp/payload.json
           echo "payload 大小: $(stat -c %s /tmp/payload.json) 字节"
-          curl -s -X PUT -H "Authorization: Bearer ${GITHUB_TOKEN}" \
+          curl -s -X PUT -H "Authorization: Bearer ${{ github.token }}" \
             --data-binary @/tmp/payload.json \
             "https://api.github.com/repos/nzsm/tvbox-server/contents/jar/spider.jar" > /tmp/result.json || true
           python3 -c 'import json,sys; d=json.load(open("/tmp/result.json")); ok=d.get("content",{}).get("sha"); print(("OK 写回成功 sha="+ok[:10]+" size="+str(d["content"].get("size",""))) if ok else ("FAIL "+str(d.get("message","未知响应"))[:300])); sys.exit(0 if ok else 1)'
