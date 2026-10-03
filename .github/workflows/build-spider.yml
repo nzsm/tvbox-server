@@ -115,40 +115,35 @@ jobs:
       - name: 回写本仓库 jar/spider.jar（GitHub API 直传，tvbox-server）
         run: |
           set -e
-          # 不用 git push（GITHUB_TOKEN 走 git 协议常认证失败），改用 GitHub Contents API 直传，
-          # 错误信息明确：401=token 无效 / 403=无写权限 / 200=成功
+          echo "=== 调试: GITHUB_TOKEN ==="
+          echo "token 长度: ${#GITHUB_TOKEN}"
+          echo "token 前6位: ${GITHUB_TOKEN:0:6}"
+          # 用 GitHub Contents API 直传；401=token 无效/为空 / 403=无写权限 / 201=新建成功 / 200=更新成功
           SHA=""
           EXIST=$(curl -s -o /tmp/exist.json -w "%{http_code}" -H "Authorization: Bearer ${GITHUB_TOKEN}" \
             "https://api.github.com/repos/nzsm/tvbox-server/contents/jar/spider.jar")
           if [ "$EXIST" = "200" ]; then
-            SHA=$(python3 -c "import json; print(json.load(open('/tmp/exist.json')).get('sha',''))")
+            SHA=$(python3 -c 'import json; print(json.load(open("/tmp/exist.json")).get("sha",""))')
             echo "检测到已存在 jar/spider.jar，将覆盖更新 (sha=$SHA)"
           else
             echo "jar/spider.jar 不存在，将新建（API 状态 $EXIST）"
           fi
-          B64=$(base64 -w0 spider.jar)
-          if [ -n "$SHA" ]; then
-            RESULT=$(curl -s -X PUT -H "Authorization: Bearer ${GITHUB_TOKEN}" \
-              "https://api.github.com/repos/nzsm/tvbox-server/contents/jar/spider.jar" \
-              -d "{\"message\":\"auto: 云编译 spider.jar $(date +%Y%m%d-%H%M)\",\"content\":\"$B64\",\"sha\":\"$SHA\"}")
-          else
-            RESULT=$(curl -s -X PUT -H "Authorization: Bearer ${GITHUB_TOKEN}" \
-              "https://api.github.com/repos/nzsm/tvbox-server/contents/jar/spider.jar" \
-              -d "{\"message\":\"auto: 云编译 spider.jar $(date +%Y%m%d-%H%M)\",\"content\":\"$B64\"}")
-          fi
-          echo "$RESULT" | python3 -c "
-          import json,sys
-          try:
-              d=json.load(sys.stdin)
-              if 'content' in d and d.get('content',{}).get('sha'):
-                  print('OK 写回成功! sha:', d['content']['sha'][:10], 'size:', d['content'].get('size','?'))
-              else:
-                  print('FAIL 写回失败:', json.dumps(d, ensure_ascii=False)[:400])
-                  sys.exit(1)
-          except Exception as e:
-              print('FAIL 响应异常:', e)
-              sys.exit(1)
-          "
+          # JSON body 写入文件再上传，避免 base64 塞命令行导致 Argument list too long
+          {
+            printf '{"message":"auto: 云编译 spider.jar %s","content":"' "$(date +%Y%m%d-%H%M)"
+            base64 -w0 spider.jar
+            if [ -n "$SHA" ]; then
+              printf '","sha":"%s"}' "$SHA"
+            else
+              printf '"}'
+            fi
+          } > /tmp/payload.json
+          echo "payload 大小: $(stat -c %s /tmp/payload.json) 字节"
+          curl -s -X PUT -H "Authorization: Bearer ${GITHUB_TOKEN}" \
+            --data-binary @/tmp/payload.json \
+            "https://api.github.com/repos/nzsm/tvbox-server/contents/jar/spider.jar" > /tmp/result.json || true
+          python3 -c 'import json,sys; d=json.load(open("/tmp/result.json")); ok=d.get("content",{}).get("sha"); print(("OK 写回成功 sha="+ok[:10]+" size="+str(d["content"].get("size",""))) if ok else ("FAIL "+str(d.get("message","未知响应"))[:300])); sys.exit(0 if ok else 1)'
+
       - name: 上传附件（网页可直接下载）
         uses: actions/upload-artifact@v4
         with:
