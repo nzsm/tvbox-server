@@ -1,0 +1,133 @@
+# ============================================================
+# 云编译 spider.jar —— GitHub Actions 全自动管线（tvbox-server 版）
+#
+# ★ 与旧版的区别：编译产物【直接写回 nzsm/tvbox-server 仓库】，
+#   和你上传的合并配置（merged_config.txt）在同一个仓库里。
+#   jar 地址 = 配置地址 = 都在你自己的 tvbox-server 下，一个仓库全闭环。
+#
+# 原理：
+#   源码（CatVodSpider）只读拉取 → 云端编译 → 产物写回本仓库 jar/spider.jar
+#   全程只用 Actions 自带 token，不需要任何 PAT/个人令牌。
+#
+# 使用步骤：
+#   1. 打开 https://github.com/nzsm/tvbox-server → 新建文件：
+#      .github/workflows/build-spider.yml（内容粘贴本文件）
+#   2. 打开该仓库 Actions 页 → 左侧 "Build Spider Jar"
+#      → Run workflow → 运行
+#   3. 跑完，本仓库出现 jar/spider.jar —— 属于你的 jar
+#      配置地址：
+#      https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar
+#   4. 以后更新：再点一次 Run workflow，全程不用开电脑
+# ============================================================
+name: Build Spider Jar
+
+on:
+  workflow_dispatch:
+    inputs:
+      merge_old:
+        description: '合并增强：把仓库现有 jar 独有的爬虫也合进来（推荐）'
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 只读检出 CatVodSpider 编译源码（来自自己的 fork，自持）
+        uses: actions/checkout@v4
+        with:
+          repository: nzsm/CatVodSpider
+          ref: main
+          fetch-depth: 1
+
+      - name: 安装 JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: 准备 Android SDK
+        run: |
+          yes | sdkmanager --licenses >/dev/null 2>&1 || true
+          sdkmanager "platforms;android-33" "build-tools;33.0.1" >/dev/null 2>&1 || true
+
+      - name: Gradle 编译（R8 混淆）
+        run: |
+          chmod +x gradlew
+          # 仅本次构建把 targetSdk 提到 33，规避 lintVitalRelease 的
+          # "Google Play requires target API 31+" 检查（不影响仓库提交）
+          sed -i 's/targetSdk 28/targetSdk 33/' app/build.gradle
+          ./gradlew :app:assembleRelease -x lint -x lintVitalRelease --no-daemon --stacktrace
+
+      - name: 打包（合并增强：把 tvbox-server 现有 jar 独有爬虫并入）
+        run: |
+          set -e
+          DEX="app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex"
+          ls -la "$DEX"
+          # ---- 反编译新源码的 dex ----
+          rm -rf smali_new && mkdir -p smali_new
+          java -jar jar/3rd/baksmali-2.5.2.jar d "$DEX" -o smali_new
+          SPIDER_DIR="smali_new/com/github/catvod/spider"
+          PARSER_DIR="smali_new/com/github/catvod/parser"
+          JS_DIR="smali_new/com/github/catvod/js"
+          echo "新源码爬虫类数: $(find $SPIDER_DIR -name '*.smali' 2>/dev/null | wc -l)"
+
+          # ---- 合并增强：拉取本仓库现有 jar/spider.jar，把独有类补进来 ----
+          if [ "${{ github.event.inputs.merge_old }}" = "true" ]; then
+            echo "进入合并增强模式……"
+            OLD_JAR="old_spider.jar"
+            curl -L -m 120 -o "$OLD_JAR" "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar" || true
+            if [ -s "$OLD_JAR" ]; then
+              rm -rf smali_old && mkdir -p smali_old
+              java -jar jar/3rd/baksmali-2.5.2.jar d "$OLD_JAR" -o smali_old || true
+              OLD_SPIDER="smali_old/com/github/catvod/spider"
+              if [ -d "$OLD_SPIDER" ]; then
+                ADD=0
+                for f in "$OLD_SPIDER"/*.smali; do
+                  b=$(basename "$f")
+                  if [ ! -f "$SPIDER_DIR/$b" ]; then
+                    cp "$f" "$SPIDER_DIR/$b"; ADD=$((ADD+1))
+                  fi
+                done
+                echo "✅ 合并补入旧 jar 独有爬虫类: $ADD 个"
+              fi
+            fi
+            echo "合并后爬虫类总数: $(find $SPIDER_DIR -name '*.smali' | wc -l)"
+          fi
+
+          # ---- apktool 重打包 ----
+          rm -rf spider_build && cp -r jar/spider.jar spider_build
+          rm -rf spider_build/smali/com/github/catvod/spider \
+                 spider_build/smali/com/github/catvod/parser \
+                 spider_build/smali/com/github/catvod/js
+          mkdir -p spider_build/smali/com/github/catvod
+          mv "$SPIDER_DIR" spider_build/smali/com/github/catvod/ 2>/dev/null || true
+          mv "$PARSER_DIR" spider_build/smali/com/github/catvod/ 2>/dev/null || true
+          mv "$JS_DIR" spider_build/smali/com/github/catvod/ 2>/dev/null || true
+          java -jar jar/3rd/apktool_2.4.1.jar b spider_build -c
+          cp spider_build/dist/dex.jar spider.jar
+          md5sum spider.jar | awk '{print $1}' > spider.jar.md5
+          echo "✅ 产出: spider.jar ($(du -h spider.jar | cut -f1))"
+
+      - name: 回写本仓库 jar/spider.jar（tvbox-server，自持闭环）
+        run: |
+          # 独立浅克隆本仓库，避免污染 CatVodSpider 检出区的 git 历史
+          git clone --depth 1 "https://x-access-token:${GITHUB_TOKEN}@github.com/nzsm/tvbox-server.git" tvbox_repo
+          mkdir -p tvbox_repo/jar
+          cp spider.jar tvbox_repo/jar/spider.jar
+          cp spider.jar.md5 tvbox_repo/jar/spider.jar.md5
+          cd tvbox_repo
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "auto: 云编译 spider.jar $(date +%Y%m%d-%H%M)" || echo "无变更"
+          git push origin HEAD || echo "推送完成或无需推送"
+
+      - name: 上传附件（网页可直接下载）
+        uses: actions/upload-artifact@v4
+        with:
+          name: spider_jar
+          path: spider.jar
