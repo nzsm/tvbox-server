@@ -35,6 +35,11 @@ jobs:
           distribution: temurin
           java-version: 17
 
+      - name: 安装 Gradle 7.5（官方源，绕过腾讯云镜像）
+        uses: gradle/actions/setup-gradle@v3
+        with:
+          gradle-version: 7.5
+
       - name: 准备 Android SDK Platform 34
         run: |
           if command -v sdkmanager >/dev/null 2>&1; then
@@ -46,8 +51,12 @@ jobs:
       - name: 编译全部 APK 变体
         working-directory: box-src
         run: |
-          chmod +x gradlew
-          ./gradlew assembleRelease --no-daemon --stacktrace
+          echo "=== 环境诊断 ==="
+          java -version 2>&1 | head -2
+          gradle --version 2>&1 | head -8
+          echo "=== 开始编译（输出会完整记录到日志） ==="
+          gradle assembleRelease --no-daemon --stacktrace 2>&1 | tee /tmp/gradle.log
+          echo "=== 编译退出码: ${PIPESTATUS[0]} ==="
 
       - name: 收集 APK
         run: |
