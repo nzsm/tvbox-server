@@ -19788,6 +19788,13 @@
       "logo": "https://epg.112114.xyz/logo/{name}.png"
     },
     {
+      "name": "Guovin",
+      "type": 0,
+      "url": "https://cdn.jsdelivr.net/gh/Guovin/iptv-api@gd/output/result.m3u",
+      "epg": "http://epg.112114.xyz/?ch={name}&date={date}",
+      "logo": "https://epg.112114.xyz/logo/{name}.png"
+    },
+    {
       "name": "港澳台",
       "type": 0,
       "url": "http://rihou.cc:567/gggg.nzk",
@@ -20123,5 +20130,5 @@
   },
   "图片代理": "https://images.weserv.nl/?url=",
   "warningText": "勿信视频中任何广告！",
-  "spider": "http://192.168.0.108:8080/jar/spider.jar"
+  "spider": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
 }
