@@ -40,6 +40,11 @@ jobs:
         with:
           gradle-version: 7.5
 
+      - name: 安装 Python 3.9（chaquo 交叉编译必需，3.12+ 会报 pip 兼容错误）
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.9'
+
       - name: 准备 Android SDK Platform 34
         run: |
           if command -v sdkmanager >/dev/null 2>&1; then
@@ -51,8 +56,18 @@ jobs:
       - name: 编译全部 APK 变体
         working-directory: box-src
         run: |
+          echo "=== 应用修复 ==="
+          # 1) chaquo 插件需要 local.properties（含 sdk.dir），源码缺失会导致构建失败
+          echo "sdk.dir=$ANDROID_SDK_ROOT" > local.properties
+          # 2) Box 源码写死了 Windows 的 Python 路径，改为 PATH 里的 python（3.9）
+          sed -i 's|buildPython("D:/Programs/Python/Python38/python.exe")|buildPython("python")|' pyramid/build.gradle
+          # 3) chaquo 预编译仓库 cssselect 最高 1.2.0，pyquery 最新版要求 >=1.5.0，
+          #    固定 pyquery 1.4.3（API 完全兼容，Box 只用基础 PyQuery API）
+          sed -i 's|install "pyquery"|install "pyquery==1.4.3"|' pyramid/build.gradle
+          grep -n "buildPython\|pyquery" pyramid/build.gradle
           echo "=== 环境诊断 ==="
           java -version 2>&1 | head -2
+          python --version 2>&1
           gradle --version 2>&1 | head -8
           echo "=== 开始编译（输出会完整记录到日志） ==="
           gradle assembleRelease --no-daemon --stacktrace 2>&1 | tee /tmp/gradle.log
