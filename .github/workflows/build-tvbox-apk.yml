@@ -1,0 +1,108 @@
+# ============================================================
+# 云编译 TVBox APK（takagen99/Box 最新源码）
+# 用法：放进你的仓库 .github/workflows/ 后，Actions 页 Run workflow
+# 每次运行：自动拉取 Box 最新 main → 编译 → 回写本仓库 apk/ 目录
+# 产出（一次出全）：
+#   TVBox_release-armeabi-generic-java.apk    32位标准
+#   TVBox_release-arm64-generic-java.apk      64位标准
+#   TVBox_release-armeabi-generic-python.apk  32位+Python
+#   TVBox_release-arm64-generic-python.apk    64位+Python ← 推荐装这个
+#   （另含 hisense 海信定制包，用不到可无视）
+# ============================================================
+name: 云编译 TVBox APK
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: 云编译 TVBox APK（全变体）
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - name: 检出本仓库（tvbox-server）
+        uses: actions/checkout@v4
+
+      - name: 拉取 Box 最新源码
+        run: |
+          git clone --depth 1 --branch main https://github.com/takagen99/Box.git box-src
+          echo "--- 源码结构 ---"
+          ls box-src | head -15
+
+      - name: 设置 JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+
+      - name: 准备 Android SDK Platform 34
+        run: |
+          if command -v sdkmanager >/dev/null 2>&1; then
+            yes | sdkmanager "platforms;android-34" "build-tools;34.0.0" >/dev/null 2>&1 || echo "SDK 组件已存在或安装跳过"
+          fi
+          echo "SDK 已装平台："
+          ls "$ANDROID_SDK_ROOT/platforms" 2>/dev/null || ls /usr/local/lib/android/sdk/platforms 2>/dev/null || true
+
+      - name: 编译全部 APK 变体
+        working-directory: box-src
+        run: |
+          chmod +x gradlew
+          ./gradlew assembleRelease --no-daemon --stacktrace
+
+      - name: 收集 APK
+        run: |
+          mkdir -p apk-out
+          find box-src -name "TVBox_release-*.apk" -exec cp {} apk-out/ \;
+          echo "--- 编译产物 ---"
+          ls -la apk-out/
+
+      - name: 用正式签名重签 APK（如仓库有 keystore）
+        run: |
+          KS="keystore/tvbox.keystore"
+          if [ -f "$KS" ]; then
+            echo "发现 keystore，开始正式签名..."
+            BT=$(ls -d "$ANDROID_SDK_ROOT"/build-tools/*/ 2>/dev/null | tail -1)
+            ZA="${BT}zipalign"
+            APKS="${BT}apksigner"
+            for f in apk-out/TVBox_*.apk; do
+              "$ZA" -f 4 "$f" "$f.align"
+              "$APKS" sign --ks "$KS" --ks-pass pass:tvbox2026 --key-pass pass:tvbox2026 --out "$f.signed" "$f.align"
+              mv -f "$f.signed" "$f"
+              rm -f "$f.align"
+              "$APKS" verify "$f" >/dev/null 2>&1 && echo "签名验证通过: $f" || echo "签名验证失败: $f"
+            done
+          else
+            echo "仓库无 keystore/tvbox.keystore，使用默认 debug 签名（装前需卸载旧版）"
+          fi
+
+      - name: 上传 Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: TVBox-APK全变体
+          path: apk-out/*
+          if-no-files-found: error
+
+      - name: 回写 APK 到本仓库 apk/ 目录
+        run: |
+          set -e
+          TOKEN="${{ github.token }}"
+          REPO="${{ github.repository }}"
+          BRANCH="${{ github.ref_name }}"
+          cd apk-out
+          for f in TVBox_*.apk; do
+            echo "上传 ${f} ..."
+            python3 -c "import base64,json,sys; fn=sys.argv[1]; json.dump({'message':'云编译 TVBox APK '+fn,'content':base64.b64encode(open(fn,'rb').read()).decode()}, open('/tmp/payload.json','w'))" "$f"
+            for i in 1 2 3 4 5; do
+              curl -s -X PUT -H "Authorization: Bearer ${TOKEN}" -H "Content-Type: application/json" \
+                --data-binary @/tmp/payload.json \
+                "https://api.github.com/repos/${REPO}/contents/apk/${f}" -o /tmp/up_resp.json
+              MSG=$(python3 -c "import json;d=json.load(open('/tmp/up_resp.json'));print(d.get('message',''))" 2>/dev/null || echo "")
+              if [ -z "$MSG" ] || [ "$MSG" = "created" ] || [ "$MSG" = "updated" ]; then
+                echo "OK -> apk/${f}"
+                break
+              fi
+              echo "第 ${i} 次失败: ${MSG}，3 秒后重试..."
+              sleep 3
+            done
+          done
+          echo "--- 完成，仓库 apk/ 目录已更新 ---"
