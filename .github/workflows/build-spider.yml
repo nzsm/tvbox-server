@@ -66,6 +66,81 @@ jobs:
           # ---- 反编译新源码的 dex ----
           rm -rf smali_new && mkdir -p smali_new
           java -jar jar/3rd/baksmali-2.5.2.jar d "$DEX" -o smali_new
+          # 配置引用的目标爬虫类：只合并这些，避免方法总数超 dex 65535 上限
+          export V18_BUDGET=55000
+          # ---- 旧 jar 独有爬虫类并入（V18_USED 统计前）----
+          rm -rf smali_old && mkdir -p smali_old
+          java -jar jar/3rd/baksmali-2.5.2.jar d jar/spider.jar -o smali_old || true
+          python3 << 'PYX'
+          import os, shutil
+          new = 'smali_new/com/github/catvod/spider'
+          old = 'smali_old/com/github/catvod/spider'
+          existing = set()
+          for dp, dn, fns in os.walk(new):
+              for fn in fns:
+                  existing.add(os.path.relpath(os.path.join(dp, fn), new))
+          added = 0
+          for dp, dn, fns in os.walk(old):
+              for fn in fns:
+                  if fn.endswith('.smali'):
+                      rel = os.path.relpath(os.path.join(dp, fn), old)
+                      if rel not in existing:
+                          dest = os.path.join(new, rel)
+                          os.makedirs(os.path.dirname(dest), exist_ok=True)
+                          shutil.copy(os.path.join(dp, fn), dest); added += 1
+          print(f'旧jar独有合并: {added} 类')
+          PYX
+          export V18_USED=$(python3 << 'PYX' > /tmp/v18_used.txt
+          import os
+          t = 0
+          for dp, dn, fns in os.walk('smali_new'):
+              for fn in fns:
+                  if fn.endswith('.smali'):
+            with open(os.path.join(dp, fn), encoding='utf-8', errors='ignore') as f:
+                for ln in f:
+                    if ln.strip().startswith('.method'): t += 1
+          print(t)
+          PYX)
+          V18_USED=$(cat /tmp/v18_used.txt)
+          merge_ext() {
+            local SPID="$1"
+            local R
+            R=$(python3 - "$SPID" << 'PYX'
+          import os, sys, shutil
+          spid = sys.argv[1]
+          BUDGET = int(os.environ.get('V18_BUDGET', '59000'))
+          used = int(os.environ.get('V18_USED', '0'))
+          TARGETS = set(os.environ.get('TARGET_CLASSES', '').split())
+          cands = []
+          for dp, dn, fns in os.walk(spid):
+              for fn in fns:
+                  if not fn.endswith('.smali'): continue
+                  p = os.path.join(dp, fn)
+                  rel = os.path.relpath(p, spid)
+                  dest = 'smali_new/com/github/catvod/spider/' + rel
+                  if os.path.exists(dest): continue
+                  mcnt = sum(1 for ln in open(p, encoding='utf-8', errors='ignore') if ln.strip().startswith('.method'))
+                  is_t = fn[:-6] in TARGETS
+                  cands.append((0 if is_t else 1, mcnt, p, dest, fn[:-6]))
+          cands.sort(key=lambda x: (x[0], x[1]))
+          added = 0; n = 0; tg = 0
+          for _, mcnt, p, dest, cls in cands:
+              is_t = cls in TARGETS
+              if not is_t and used + mcnt > BUDGET: continue
+              os.makedirs(os.path.dirname(dest), exist_ok=True)
+              shutil.copy(p, dest)
+              if not is_t: used += mcnt
+              added += mcnt; n += 1
+              if is_t: tg += 1
+          import sys
+          print(f"{n}类/{added}方法(目标{tg})", file=sys.stderr)
+          print(added)
+          PYX)
+            echo "  → 本次新增 ${R} 方法" >&2
+          V18_USED=$((V18_USED + ${R:-0}))
+                    }
+
+          TARGET_CLASSES="AList AList_2 Aid Alist Anime1 App99 AppDrama AppFerr AppLY AppRJ AppV6Amns AppV7Amns AppYs AppYsV2 BLSGod BddjAmns Bili Bili_meishi Bili_youer Cg51 Config Ddrk Dm84 Doll Douban Duboku Eighteen FirstAid FourKHDR Gz360 HHkkAmns Hanime HuyaLiveAmns IQIYI Ikanbot Iktv Jable JavBus JavDb JianPian Keke Kkys KubaCL LiteApple Live2Vod Live2Vod_1 LocalFile Market MeijuMi MeijuTT Mgtv Miss Mp4Mov NanGua New6v NewGrV2Amns NiNi PanWebShare PanWebShareKF Push QQ SMB SNzy SP33 SP360 SeHuaTang SeedHub ShuangXing Smb4nas Taohuazu TianQuanGuard TingShijie WexMingriys Wexduanjuvmp Wexduanjuvop Wexxpgtv WoGG WoGG_2 Wobg Wogg XBPQ XBPQ_ XBPQ_6 XBPQ_6V XBPQ_91 XBPQ_AV XBPQ_JAV XBPQ_WakuWaku XBPQ_vstv XBPQ_zhuijuba XMVideo XPath XPath_ XYQHiker XYQHiker_ XYQHiker_777 XYQHiker_91 Xb6v Xinsj Xunlei8 YQKan Ying Yinyuetai Ysj appys_ djtv xBPQ xBPQ_ xBPQ_91 xBPQ_tt xml_ xml___ xml___U xml_ikun xpath_yinfans"
           SPIDER_DIR="smali_new/com/github/catvod/spider"
           PARSER_DIR="smali_new/com/github/catvod/parser"
           JS_DIR="smali_new/com/github/catvod/js"
@@ -160,38 +235,7 @@ jobs:
                 java -jar jar/3rd/baksmali-2.5.2.jar d "ext_$jn" -o smali_e || true
                 EXT_SPIDER="smali_e/com/github/catvod/spider"
                 if [ -d "$EXT_SPIDER" ]; then
-          python3 << 'PYX'
-          import os
-          THRESH = 8000
-          skipped = []
-          for dp, dn, fns in os.walk("smali_e/com/github/catvod/spider"):
-              for fn in fns:
-                  if not fn.endswith('.smali'): continue
-                  p = os.path.join(dp, fn)
-                  lines = open(p, encoding='utf-8', errors='ignore').readlines()
-                  in_m = False; start = 0
-                  for i, ln in enumerate(lines):
-                      s = ln.strip()
-                      if s.startswith('.method') and not in_m:
-                          in_m = True; start = i
-                      elif s == '.end method' and in_m:
-                          if i - start > THRESH:
-                              skipped.append(os.path.basename(p)); os.remove(p); break
-                          in_m = False
-          if skipped:
-              print("clean ext big: %d -> %s" % (len(skipped), ", ".join(skipped[:6])))
-          PYX
-                  ADD=0
-                  # 只拷贝 spider 目录（递归，含辅助子包），跳过已存在 → 避免 dex 溢出
-                  for f in $(find "$EXT_SPIDER" -name '*.smali'); do
-                    rel="${f#$EXT_SPIDER/}"
-                    dest="$SPIDER_DIR/$rel"
-                    if [ ! -f "$dest" ]; then
-                      mkdir -p "$(dirname "$dest")"
-                      cp "$f" "$dest"; ADD=$((ADD+1))
-                    fi
-                  done
-                  echo "✅ $jn 补入 $ADD 个独有爬虫类"
+                  merge_ext "$EXT_SPIDER" || true
                 fi
               else
                 echo "⚠️ $jn 拉取失败，跳过"
@@ -213,37 +257,7 @@ jobs:
                 java -jar jar/3rd/baksmali-2.5.2.jar d "ext_u_$(basename $jn)" -o smali_eu || true
                 EXT_SPIDER="smali_eu/com/github/catvod/spider"
                 if [ -d "$EXT_SPIDER" ]; then
-          python3 << 'PYX'
-          import os
-          THRESH = 8000
-          skipped = []
-          for dp, dn, fns in os.walk("smali_eu/com/github/catvod/spider"):
-              for fn in fns:
-                  if not fn.endswith('.smali'): continue
-                  p = os.path.join(dp, fn)
-                  lines = open(p, encoding='utf-8', errors='ignore').readlines()
-                  in_m = False; start = 0
-                  for i, ln in enumerate(lines):
-                      s = ln.strip()
-                      if s.startswith('.method') and not in_m:
-                          in_m = True; start = i
-                      elif s == '.end method' and in_m:
-                          if i - start > THRESH:
-                              skipped.append(os.path.basename(p)); os.remove(p); break
-                          in_m = False
-          if skipped:
-              print("clean ext big: %d -> %s" % (len(skipped), ", ".join(skipped[:6])))
-          PYX
-                  ADD=0
-                  for f in $(find "$EXT_SPIDER" -name '*.smali'); do
-                    rel="${f#$EXT_SPIDER/}"
-                    dest="$SPIDER_DIR/$rel"
-                    if [ ! -f "$dest" ]; then
-                      mkdir -p "$(dirname "$dest")"
-                      cp "$f" "$dest"; ADD=$((ADD+1))
-                    fi
-                  done
-                  echo "✅ $jn 补入 $ADD 个独有爬虫类"
+                  merge_ext "$EXT_SPIDER" || true
                 fi
               fi
             done
@@ -255,37 +269,7 @@ jobs:
                 java -jar jar/3rd/baksmali-2.5.2.jar d "ext_u_$(basename $jn)" -o smali_eu || true
                 EXT_SPIDER="smali_eu/com/github/catvod/spider"
                 if [ -d "$EXT_SPIDER" ]; then
-          python3 << 'PYX'
-          import os
-          THRESH = 8000
-          skipped = []
-          for dp, dn, fns in os.walk("smali_eu/com/github/catvod/spider"):
-              for fn in fns:
-                  if not fn.endswith('.smali'): continue
-                  p = os.path.join(dp, fn)
-                  lines = open(p, encoding='utf-8', errors='ignore').readlines()
-                  in_m = False; start = 0
-                  for i, ln in enumerate(lines):
-                      s = ln.strip()
-                      if s.startswith('.method') and not in_m:
-                          in_m = True; start = i
-                      elif s == '.end method' and in_m:
-                          if i - start > THRESH:
-                              skipped.append(os.path.basename(p)); os.remove(p); break
-                          in_m = False
-          if skipped:
-              print("clean ext big: %d -> %s" % (len(skipped), ", ".join(skipped[:6])))
-          PYX
-                  ADD=0
-                  for f in $(find "$EXT_SPIDER" -name '*.smali'); do
-                    rel="${f#$EXT_SPIDER/}"
-                    dest="$SPIDER_DIR/$rel"
-                    if [ ! -f "$dest" ]; then
-                      mkdir -p "$(dirname "$dest")"
-                      cp "$f" "$dest"; ADD=$((ADD+1))
-                    fi
-                  done
-                  echo "✅ $jn 补入 $ADD 个独有爬虫类"
+                  merge_ext "$EXT_SPIDER" || true
                 fi
               fi
             done
