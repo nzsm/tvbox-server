@@ -209,23 +209,17 @@ jobs:
             EXT_DIR="smali_ext"
             rm -rf "$EXT_DIR" && mkdir -p "$EXT_DIR"
             # 外部 jar 清单（666tv/69 大而全包）
-            # 外部 jar 清单（大而全包，含 pg/66tv/PGYdanmu/ttkx/maotv/Yu/og + 用户 TVbox 仓库的 lem/wex）
+            # 外部 jar 清单（大而全包：pg/66tv/Yoursmile/CFlLnSbJ + 用户 TVbox 仓库 lem/wex/duo）
             EXT_JARS=(
               "pg.jar"
               "66tv.jar"
               "Yoursmile2.jar"
               "CFlLnSbJ"
-              "PGYdanmu.jar"
-              "ttkx240722.jar"
-              "maotv.jar"
-              "Yu.jar"
-              "og.php"
-            )
+                                                                                  )
             # 用户 nzsm/TVbox 仓库的补全包（Live2Vod/Wexxpgtv 等独有爬虫）
             EXT_JARS_USER=(
               "jar/lem1225.jar"
               "jar/wex.jar"
-              "jar/dd.jar"
               "jar/duo.jar"
             )
             for jn in "${EXT_JARS[@]}"; do
