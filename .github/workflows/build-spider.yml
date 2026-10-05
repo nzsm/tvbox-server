@@ -71,11 +71,44 @@ jobs:
           JS_DIR="smali_new/com/github/catvod/js"
           echo "新源码爬虫类数: $(find $SPIDER_DIR -name '*.smali' 2>/dev/null | wc -l)"
 
+          # ---- 防御：清理超大方法类（单方法 > ~64KB，dex 硬限制，重编译必炸）----
+          python3 << 'PYX'
+import os, re
+THRESH = 12000  # smali 行数 → code 超 64KB 的方法通常 > 12000 行
+def scan_remove(root, tag):
+    removed = []
+    for dp, dn, fns in os.walk(root):
+        for fn in fns:
+            if not fn.endswith('.smali'): continue
+            p = os.path.join(dp, fn)
+            with open(p, encoding='utf-8', errors='ignore') as f:
+                lines = f.readlines()
+            # 找超大 .method 块
+            in_m = False; start = 0; cnt = 0
+            for i, ln in enumerate(lines):
+                s = ln.strip()
+                if s.startswith('.method') and not in_m:
+                    in_m = True; start = i; cnt = 0
+                elif s == '.end method' and in_m:
+                    if i - start > THRESH:
+                        removed.append((os.path.relpath(p, root), i - start + 1))
+                        break
+                    in_m = False
+            if removed and removed[-1][0] == os.path.relpath(p, root):
+                os.remove(p)
+    return removed
+r1 = scan_remove('smali_new/com/github/catvod', 'new')
+r2 = scan_remove('smali_new', 'all') if os.path.isdir('smali_new/com/github/catvob') else []
+print(f"清理超大方法类: 新catvod {len(r1)} 个, catvob等 {len(r2)} 个")
+for r in (r1 + r2)[:8]:
+    print("  -", r[0], f"({r[1]}行)")
+PYX
+
           # ---- 合并增强①：拉取本仓库现有 jar/spider.jar 独有类 ----
           if [ "${{ github.event.inputs.merge_old }}" = "true" ]; then
             echo "进入合并增强模式①（旧 jar）……"
             OLD_JAR="old_spider.jar"
-            curl -L -m 120 -o "$OLD_JAR" "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar" || true
+            curl -L -m 120 -o "$OLD_JAR" "https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar" || true
             if [ -s "$OLD_JAR" ]; then
               rm -rf smali_old && mkdir -p smali_old
               java -jar jar/3rd/baksmali-2.5.2.jar d "$OLD_JAR" -o smali_old || true
@@ -204,6 +237,34 @@ jobs:
           rm -rf spider_build/smali/com/github/catvod
           mkdir -p spider_build/smali/com/github
           mv smali_new/com/github/catvod spider_build/smali/com/github/catvod
+          # 最终保险：打包前再清一次超大方法类（覆盖合并①下载的旧 jar 残留）
+          python3 << 'PYX'
+import os
+THRESH = 12000
+removed = []
+for dp, dn, fns in os.walk('spider_build/smali'):
+    for fn in fns:
+        if not fn.endswith('.smali'): continue
+        p = os.path.join(dp, fn)
+        with open(p, encoding='utf-8', errors='ignore') as f:
+            lines = f.readlines()
+        in_m = False; start = 0
+        for i, ln in enumerate(lines):
+            s = ln.strip()
+            if s.startswith('.method') and not in_m:
+                in_m = True; start = i
+            elif s == '.end method' and in_m:
+                if i - start > THRESH:
+                    removed.append(os.path.relpath(p, 'spider_build/smali'))
+                    in_m = False
+                    break
+                in_m = False
+        if removed and removed[-1] == os.path.relpath(p, 'spider_build/smali'):
+            os.remove(p)
+print(f"最终清理超大方法类: {len(removed)} 个")
+for r in removed[:8]:
+    print("  -", r)
+PYX
           java -jar jar/3rd/apktool_2.4.1.jar b spider_build -c
           cp spider_build/dist/dex.jar spider.jar
           md5sum spider.jar | awk '{print $1}' > spider.jar.md5
