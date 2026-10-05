@@ -331,7 +331,37 @@ jobs:
           for r in removed[:8]:
               print("  -", r)
           PYX
-          java -jar jar/3rd/apktool_2.4.1.jar b spider_build -c
+          # ---- 迭代式打包：失败自动解析毒类删除重试（最多6轮）----
+          for attempt in 1 2 3 4 5 6; do
+            if java -jar jar/3rd/apktool_2.4.1.jar b spider_build -c 2>apktool_err.log; then
+              echo "✅ apktool b 成功 (第 $attempt 轮)"
+              break
+            fi
+            cls=$(grep -oP 'Lcom/[a-zA-Z0-9/$_]+' apktool_err.log | head -1)
+            if [ -z "$cls" ]; then
+              echo "❌ 无法解析报错类，日志前30行："
+              head -30 apktool_err.log
+              exit 1
+            fi
+            rel=$(echo "$cls" | sed 's/^L//;s/;$//')
+            # 核心基类保护：Spider 基类绝不能删（删了全部爬虫失效）
+            case "$rel" in
+              com/github/catvod/crawler/Spider|com/github/catvod/crawler/SpiderReq|com/github/catvod/crawler/SpiderReq*)
+                echo "❌ 报错的是核心基类 $rel —— 说明 R8 产物异常，终止"
+                head -30 apktool_err.log
+                exit 1
+                ;;
+            esac
+            f="spider_build/smali/$rel.smali"
+            if [ -f "$f" ]; then
+              echo "⚠️ 第 $attempt 轮: 删除毒类 $rel"
+              rm -f "$f"
+            else
+              echo "❌ 报错类 $rel 不在 smali 中，终止"
+              head -30 apktool_err.log
+              exit 1
+            fi
+          done
           cp spider_build/dist/dex.jar spider.jar
           md5sum spider.jar | awk '{print $1}' > spider.jar.md5
           echo "✅ 产出: spider.jar ($(du -h spider.jar | cut -f1))"
