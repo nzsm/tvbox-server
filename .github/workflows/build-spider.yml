@@ -137,7 +137,7 @@ jobs:
           print(added)
           PYX)
             echo "  → 本次新增 ${R} 方法" >&2
-          V18_USED=$((V18_USED + ${R:-0}))
+          export V18_USED=$((V18_USED + ${R:-0}))
                     }
 
           TARGET_CLASSES="AList AList_2 Aid Alist Anime1 App99 AppDrama AppFerr AppLY AppRJ AppV6Amns AppV7Amns AppYs AppYsV2 BLSGod BddjAmns Bili Bili_meishi Bili_youer Cg51 Config Ddrk Dm84 Doll Douban Duboku Eighteen FirstAid FourKHDR Gz360 HHkkAmns Hanime HuyaLiveAmns IQIYI Ikanbot Iktv Jable JavBus JavDb JianPian Keke Kkys KubaCL LiteApple Live2Vod Live2Vod_1 LocalFile Market MeijuMi MeijuTT Mgtv Miss Mp4Mov NanGua New6v NewGrV2Amns NiNi PanWebShare PanWebShareKF Push QQ SMB SNzy SP33 SP360 SeHuaTang SeedHub ShuangXing Smb4nas Taohuazu TianQuanGuard TingShijie WexMingriys Wexduanjuvmp Wexduanjuvop Wexxpgtv WoGG WoGG_2 Wobg Wogg XBPQ XBPQ_ XBPQ_6 XBPQ_6V XBPQ_91 XBPQ_AV XBPQ_JAV XBPQ_WakuWaku XBPQ_vstv XBPQ_zhuijuba XMVideo XPath XPath_ XYQHiker XYQHiker_ XYQHiker_777 XYQHiker_91 Xb6v Xinsj Xunlei8 YQKan Ying Yinyuetai Ysj appys_ djtv xBPQ xBPQ_ xBPQ_91 xBPQ_tt xml_ xml___ xml___U xml_ikun xpath_yinfans"
