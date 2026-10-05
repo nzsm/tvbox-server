@@ -67,29 +67,10 @@ jobs:
           rm -rf smali_new && mkdir -p smali_new
           java -jar jar/3rd/baksmali-2.5.2.jar d "$DEX" -o smali_new
           # 配置引用的目标爬虫类：只合并这些，避免方法总数超 dex 65535 上限
-          export V18_BUDGET=55000
-          # ---- 旧 jar 独有爬虫类并入（V18_USED 统计前）----
+          export V18_BUDGET=52000
+          # ---- 旧 jar 独有爬虫类：反编译备用（预算截断合并稍后执行）----
           rm -rf smali_old && mkdir -p smali_old
           java -jar jar/3rd/baksmali-2.5.2.jar d jar/spider.jar -o smali_old || true
-          python3 << 'PYX'
-          import os, shutil
-          new = 'smali_new/com/github/catvod/spider'
-          old = 'smali_old/com/github/catvod/spider'
-          existing = set()
-          for dp, dn, fns in os.walk(new):
-              for fn in fns:
-                  existing.add(os.path.relpath(os.path.join(dp, fn), new))
-          added = 0
-          for dp, dn, fns in os.walk(old):
-              for fn in fns:
-                  if fn.endswith('.smali'):
-                      rel = os.path.relpath(os.path.join(dp, fn), old)
-                      if rel not in existing:
-                          dest = os.path.join(new, rel)
-                          os.makedirs(os.path.dirname(dest), exist_ok=True)
-                          shutil.copy(os.path.join(dp, fn), dest); added += 1
-          print(f'旧jar独有合并: {added} 类')
-          PYX
           export V18_USED=$(python3 << 'PYX' > /tmp/v18_used.txt
           import os
           t = 0
@@ -140,6 +121,46 @@ jobs:
           export V18_USED=$((V18_USED + ${R:-0}))
                     }
 
+          merge_all() {
+            local SPID="$1"
+            local R
+            R=$(python3 - "$SPID" << 'PYX'
+          import os, sys, shutil
+          spid = sys.argv[1]
+          BUDGET = int(os.environ.get('V18_BUDGET', '55000'))
+          used = int(os.environ.get('V18_USED', '0'))
+          cands = []
+          for dp, dn, fns in os.walk(spid):
+              for fn in fns:
+                  if not fn.endswith('.smali'): continue
+                  p = os.path.join(dp, fn)
+                  rel = os.path.relpath(p, spid)
+                  dest = 'smali_new/com/github/catvod/spider/' + rel
+                  if os.path.exists(dest): continue
+                  mcnt = sum(1 for ln in open(p, encoding='utf-8', errors='ignore') if ln.strip().startswith('.method'))
+                  cands.append((mcnt, p, dest))
+          cands.sort(key=lambda x: x[0])
+          added = 0; n = 0
+          for mcnt, p, dest in cands:
+              if used + mcnt > BUDGET: continue
+              os.makedirs(os.path.dirname(dest), exist_ok=True)
+              shutil.copy(p, dest)
+              used += mcnt; added += mcnt; n += 1
+          print(f"{n}类/{added}方法", file=sys.stderr)
+          print(added)
+          PYX)
+            echo "  → 本次新增 ${R} 方法"
+            export V18_USED=$((V18_USED + ${R:-0}))
+                    }
+
+          # ---- 旧 jar 独有类合并（预算截断：目标类也占预算，防大包撑爆）----
+          if [ "${{ github.event.inputs.merge_old }}" = "true" ]; then
+            OLD_SPIDER="smali_old/com/github/catvod/spider"
+            if [ -d "$OLD_SPIDER" ]; then
+              echo "--- 旧 jar 独有类（预算截断）---"
+              merge_all "$OLD_SPIDER" || true
+            fi
+          fi
           TARGET_CLASSES="AList AList_2 Aid Alist Anime1 App99 AppDrama AppFerr AppLY AppRJ AppV6Amns AppV7Amns AppYs AppYsV2 BLSGod BddjAmns Bili Bili_meishi Bili_youer Cg51 Config Ddrk Dm84 Doll Douban Duboku Eighteen FirstAid FourKHDR Gz360 HHkkAmns Hanime HuyaLiveAmns IQIYI Ikanbot Iktv Jable JavBus JavDb JianPian Keke Kkys KubaCL LiteApple Live2Vod Live2Vod_1 LocalFile Market MeijuMi MeijuTT Mgtv Miss Mp4Mov NanGua New6v NewGrV2Amns NiNi PanWebShare PanWebShareKF Push QQ SMB SNzy SP33 SP360 SeHuaTang SeedHub ShuangXing Smb4nas Taohuazu TianQuanGuard TingShijie WexMingriys Wexduanjuvmp Wexduanjuvop Wexxpgtv WoGG WoGG_2 Wobg Wogg XBPQ XBPQ_ XBPQ_6 XBPQ_6V XBPQ_91 XBPQ_AV XBPQ_JAV XBPQ_WakuWaku XBPQ_vstv XBPQ_zhuijuba XMVideo XPath XPath_ XYQHiker XYQHiker_ XYQHiker_777 XYQHiker_91 Xb6v Xinsj Xunlei8 YQKan Ying Yinyuetai Ysj appys_ djtv xBPQ xBPQ_ xBPQ_91 xBPQ_tt xml_ xml___ xml___U xml_ikun xpath_yinfans"
           SPIDER_DIR="smali_new/com/github/catvod/spider"
           PARSER_DIR="smali_new/com/github/catvod/parser"
@@ -179,29 +200,6 @@ jobs:
           for r in (r1 + r2)[:8]:
               print("  -", r[0], "lines", r[1])
           PYX
-
-          # ---- 合并增强①：拉取本仓库现有 jar/spider.jar 独有类 ----
-          if [ "${{ github.event.inputs.merge_old }}" = "true" ]; then
-            echo "进入合并增强模式①（旧 jar）……"
-            OLD_JAR="old_spider.jar"
-            curl -L -m 120 -o "$OLD_JAR" "https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar" || true
-            if [ -s "$OLD_JAR" ]; then
-              rm -rf smali_old && mkdir -p smali_old
-              java -jar jar/3rd/baksmali-2.5.2.jar d "$OLD_JAR" -o smali_old || true
-              OLD_SPIDER="smali_old/com/github/catvod/spider"
-              if [ -d "$OLD_SPIDER" ]; then
-                ADD=0
-                for f in "$OLD_SPIDER"/*.smali; do
-                  b=$(basename "$f")
-                  if [ ! -f "$SPIDER_DIR/$b" ]; then
-                    cp "$f" "$SPIDER_DIR/$b"; ADD=$((ADD+1))
-                  fi
-                done
-                echo "✅ 合并补入旧 jar 独有爬虫类: $ADD 个"
-              fi
-            fi
-            echo "合并①后爬虫类总数: $(find $SPIDER_DIR -name '*.smali' | wc -l)"
-          fi
 
           # ---- 合并增强②：拉取外部大 jar（666tv/69），全包补入独有类（含依赖）----
           if [ "${{ github.event.inputs.merge_external }}" = "true" ]; then
