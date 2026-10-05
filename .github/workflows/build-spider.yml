@@ -74,7 +74,7 @@ jobs:
           # ---- 防御：清理超大方法类（单方法 > ~64KB，dex 硬限制，重编译必炸）----
           python3 << 'PYX'
           import os, re
-          THRESH = 12000
+          THRESH = 8000
           import shutil
           shutil.rmtree('smali_new/com/github/catvob', ignore_errors=True)
           def scan_remove(root, tag):
@@ -160,6 +160,27 @@ jobs:
                 java -jar jar/3rd/baksmali-2.5.2.jar d "ext_$jn" -o smali_e || true
                 EXT_SPIDER="smali_e/com/github/catvod/spider"
                 if [ -d "$EXT_SPIDER" ]; then
+          python3 << 'PYX'
+          import os
+          THRESH = 8000
+          skipped = []
+          for dp, dn, fns in os.walk("smali_e/com/github/catvod/spider"):
+              for fn in fns:
+                  if not fn.endswith('.smali'): continue
+                  p = os.path.join(dp, fn)
+                  lines = open(p, encoding='utf-8', errors='ignore').readlines()
+                  in_m = False; start = 0
+                  for i, ln in enumerate(lines):
+                      s = ln.strip()
+                      if s.startswith('.method') and not in_m:
+                          in_m = True; start = i
+                      elif s == '.end method' and in_m:
+                          if i - start > THRESH:
+                              skipped.append(os.path.basename(p)); os.remove(p); break
+                          in_m = False
+          if skipped:
+              print("clean ext big: %d -> %s" % (len(skipped), ", ".join(skipped[:6])))
+          PYX
                   ADD=0
                   # 只拷贝 spider 目录（递归，含辅助子包），跳过已存在 → 避免 dex 溢出
                   for f in $(find "$EXT_SPIDER" -name '*.smali'); do
@@ -192,6 +213,27 @@ jobs:
                 java -jar jar/3rd/baksmali-2.5.2.jar d "ext_u_$(basename $jn)" -o smali_eu || true
                 EXT_SPIDER="smali_eu/com/github/catvod/spider"
                 if [ -d "$EXT_SPIDER" ]; then
+          python3 << 'PYX'
+          import os
+          THRESH = 8000
+          skipped = []
+          for dp, dn, fns in os.walk("smali_eu/com/github/catvod/spider"):
+              for fn in fns:
+                  if not fn.endswith('.smali'): continue
+                  p = os.path.join(dp, fn)
+                  lines = open(p, encoding='utf-8', errors='ignore').readlines()
+                  in_m = False; start = 0
+                  for i, ln in enumerate(lines):
+                      s = ln.strip()
+                      if s.startswith('.method') and not in_m:
+                          in_m = True; start = i
+                      elif s == '.end method' and in_m:
+                          if i - start > THRESH:
+                              skipped.append(os.path.basename(p)); os.remove(p); break
+                          in_m = False
+          if skipped:
+              print("clean ext big: %d -> %s" % (len(skipped), ", ".join(skipped[:6])))
+          PYX
                   ADD=0
                   for f in $(find "$EXT_SPIDER" -name '*.smali'); do
                     rel="${f#$EXT_SPIDER/}"
@@ -213,6 +255,27 @@ jobs:
                 java -jar jar/3rd/baksmali-2.5.2.jar d "ext_u_$(basename $jn)" -o smali_eu || true
                 EXT_SPIDER="smali_eu/com/github/catvod/spider"
                 if [ -d "$EXT_SPIDER" ]; then
+          python3 << 'PYX'
+          import os
+          THRESH = 8000
+          skipped = []
+          for dp, dn, fns in os.walk("smali_eu/com/github/catvod/spider"):
+              for fn in fns:
+                  if not fn.endswith('.smali'): continue
+                  p = os.path.join(dp, fn)
+                  lines = open(p, encoding='utf-8', errors='ignore').readlines()
+                  in_m = False; start = 0
+                  for i, ln in enumerate(lines):
+                      s = ln.strip()
+                      if s.startswith('.method') and not in_m:
+                          in_m = True; start = i
+                      elif s == '.end method' and in_m:
+                          if i - start > THRESH:
+                              skipped.append(os.path.basename(p)); os.remove(p); break
+                          in_m = False
+          if skipped:
+              print("clean ext big: %d -> %s" % (len(skipped), ", ".join(skipped[:6])))
+          PYX
                   ADD=0
                   for f in $(find "$EXT_SPIDER" -name '*.smali'); do
                     rel="${f#$EXT_SPIDER/}"
@@ -241,7 +304,7 @@ jobs:
           # 最终保险：打包前再清一次超大方法类
           python3 << 'PYX'
           import os
-          THRESH = 12000
+          THRESH = 8000
           import shutil
           shutil.rmtree('spider_build/smali/com/github/catvob', ignore_errors=True)
           removed = []
