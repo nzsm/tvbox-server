@@ -1,23 +1,12 @@
 # ============================================================
-# 云编译 spider.jar —— GitHub Actions 全自动管线（tvbox-server 版）
+# 云编译 spider.jar —— GitHub Actions 全自动管线 v8（增强版）
 #
-# ★ 与旧版的区别：编译产物【直接写回 nzsm/tvbox-server 仓库】，
-#   和你上传的合并配置（merged_config.txt）在同一个仓库里。
-#   jar 地址 = 配置地址 = 都在你自己的 tvbox-server 下，一个仓库全闭环。
+# ★ v8 新增：合并外部大 jar 的独有爬虫（666tv/69 的 pg/66tv 等）
+#   你的配置里 csp_ 引用的爬虫类，除 CatVodSpider 源码自带外，
+#   还来自这几个大 jar。v8 在编译时自动把它们并进 spider.jar。
 #
-# 原理：
-#   源码（CatVodSpider）只读拉取 → 云端编译 → 产物写回本仓库 jar/spider.jar
-#   全程只用 Actions 自带 token，不需要任何 PAT/个人令牌。
-#
-# 使用步骤：
-#   1. 打开 https://github.com/nzsm/tvbox-server → 新建文件：
-#      .github/workflows/build-spider.yml（内容粘贴本文件）
-#   2. 打开该仓库 Actions 页 → 左侧 "Build Spider Jar"
-#      → Run workflow → 运行
-#   3. 跑完，本仓库出现 jar/spider.jar —— 属于你的 jar
-#      配置地址：
-#      https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar
-#   4. 以后更新：再点一次 Run workflow，全程不用开电脑
+# 使用：覆盖 .github/workflows/build-spider.yml 后 Run workflow
+# 地址：https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar
 # ============================================================
 name: Build Spider Jar
 
@@ -28,6 +17,10 @@ on:
         description: '合并增强：把仓库现有 jar 独有的爬虫也合进来（推荐）'
         type: boolean
         default: true
+      merge_external:
+        description: '合并外部大 jar（666tv/69 的 pg/66tv 等，补全 csp 爬虫）'
+        type: boolean
+        default: true
 
 permissions:
   contents: write
@@ -36,12 +29,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: 调试 - 检出前 GITHUB_TOKEN 状态（验证是否被跨仓库检出清空）
-        run: |
-          echo "检出前 GITHUB_TOKEN 长度: ${#GITHUB_TOKEN}"
-          echo "检出前 GITHUB_TOKEN 前6位: ${GITHUB_TOKEN:0:6}"
-
-      - name: 检出自仓库 tvbox-server（GITHUB_TOKEN 正常注入）
+      - name: 检出自仓库 tvbox-server
         uses: actions/checkout@v4
         with:
           fetch-depth: 1
@@ -66,12 +54,10 @@ jobs:
         run: |
           cd src
           chmod +x gradlew
-          # 仅本次构建把 targetSdk 提到 33，规避 lintVitalRelease 的
-          # "Google Play requires target API 31+" 检查（不影响仓库提交）
           sed -i 's/targetSdk 28/targetSdk 33/' app/build.gradle
           ./gradlew :app:assembleRelease -x lint -x lintVitalRelease --no-daemon --stacktrace
 
-      - name: 打包（合并增强：把 tvbox-server 现有 jar 独有爬虫并入）
+      - name: 打包（合并增强：旧 jar + 外部大 jar 独有爬虫并入）
         run: |
           set -e
           cd src
@@ -85,9 +71,9 @@ jobs:
           JS_DIR="smali_new/com/github/catvod/js"
           echo "新源码爬虫类数: $(find $SPIDER_DIR -name '*.smali' 2>/dev/null | wc -l)"
 
-          # ---- 合并增强：拉取本仓库现有 jar/spider.jar，把独有类补进来 ----
+          # ---- 合并增强①：拉取本仓库现有 jar/spider.jar 独有类 ----
           if [ "${{ github.event.inputs.merge_old }}" = "true" ]; then
-            echo "进入合并增强模式……"
+            echo "进入合并增强模式①（旧 jar）……"
             OLD_JAR="old_spider.jar"
             curl -L -m 120 -o "$OLD_JAR" "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar" || true
             if [ -s "$OLD_JAR" ]; then
@@ -105,7 +91,108 @@ jobs:
                 echo "✅ 合并补入旧 jar 独有爬虫类: $ADD 个"
               fi
             fi
-            echo "合并后爬虫类总数: $(find $SPIDER_DIR -name '*.smali' | wc -l)"
+            echo "合并①后爬虫类总数: $(find $SPIDER_DIR -name '*.smali' | wc -l)"
+          fi
+
+          # ---- 合并增强②：拉取外部大 jar（666tv/69），全包补入独有类（含依赖）----
+          if [ "${{ github.event.inputs.merge_external }}" = "true" ]; then
+            echo "进入合并增强模式②（外部大 jar）……"
+            EXT_DIR="smali_ext"
+            rm -rf "$EXT_DIR" && mkdir -p "$EXT_DIR"
+            # 外部 jar 清单（666tv/69 大而全包）
+            # 外部 jar 清单（大而全包，含 pg/66tv/PGYdanmu/ttkx/maotv/Yu/og + 用户 TVbox 仓库的 lem/wex）
+            EXT_JARS=(
+              "pg.jar"
+              "66tv.jar"
+              "Yoursmile2.jar"
+              "CFlLnSbJ"
+              "PGYdanmu.jar"
+              "ttkx240722.jar"
+              "maotv.jar"
+              "Yu.jar"
+              "og.php"
+            )
+            # 用户 nzsm/TVbox 仓库的补全包（Live2Vod/Wexxpgtv 等独有爬虫）
+            EXT_JARS_USER=(
+              "jar/lem1225.jar"
+              "jar/wex.jar"
+              "jar/dd.jar"
+              "jar/duo.jar"
+            )
+            for jn in "${EXT_JARS[@]}"; do
+              curl -L -m 120 -o "ext_$jn" "https://ghfast.top/https://raw.githubusercontent.com/666tv/69/main/jar/$jn" || true
+              if [ -s "ext_$jn" ]; then
+                rm -rf smali_e && mkdir -p smali_e
+                java -jar jar/3rd/baksmali-2.5.2.jar d "ext_$jn" -o smali_e || true
+                EXT_SPIDER="smali_e/com/github/catvod/spider"
+                if [ -d "$EXT_SPIDER" ]; then
+                  ADD=0
+                  # 只拷贝 spider 目录（递归，含辅助子包），跳过已存在 → 避免 dex 溢出
+                  for f in $(find "$EXT_SPIDER" -name '*.smali'); do
+                    rel="${f#$EXT_SPIDER/}"
+                    dest="$SPIDER_DIR/$rel"
+                    if [ ! -f "$dest" ]; then
+                      mkdir -p "$(dirname "$dest")"
+                      cp "$f" "$dest"; ADD=$((ADD+1))
+                    fi
+                  done
+                  echo "✅ $jn 补入 $ADD 个独有爬虫类"
+                fi
+              else
+                echo "⚠️ $jn 拉取失败，跳过"
+              fi
+            done
+            # 影视仓大包（124.71.19.220：含 App99/AppDrama/AppLY/AppRJ/Gz360/PanWebShare/PanWebShareKF/ShuangXing/TingShijie + 全套 APP/网盘类）
+            EXT_JARS_URL=(
+              "http://124.71.19.220/jar/1/spider.jar"
+              "https://gitee.com/lwlxh/tvhome/raw/master/o.jar"
+              "https://file.icve.com.cn/file_doc/81/326/14751AFEF3EF30B1AFFFA398F1E9D961.png"
+              "https://file.icve.com.cn/file_doc/874/405/DAB654F794A271C3D7A33D18ACFBFA95.jpg"
+              "http://oss4liview.moji.com/thd_file/2026/09/24/06cf2230c30d9c26fa46ea79147b330d.jpg"
+              "https://szyyds.cn/tv/x.jpg"
+            )
+            for jn in "${EXT_JARS_URL[@]}"; do
+              curl -L -m 120 -H "User-Agent: okhttp/3.12.1" -o "ext_u_$(basename $jn)" "$jn" || true
+              if [ -s "ext_u_$(basename $jn)" ]; then
+                rm -rf smali_eu && mkdir -p smali_eu
+                java -jar jar/3rd/baksmali-2.5.2.jar d "ext_u_$(basename $jn)" -o smali_eu || true
+                EXT_SPIDER="smali_eu/com/github/catvod/spider"
+                if [ -d "$EXT_SPIDER" ]; then
+                  ADD=0
+                  for f in $(find "$EXT_SPIDER" -name '*.smali'); do
+                    rel="${f#$EXT_SPIDER/}"
+                    dest="$SPIDER_DIR/$rel"
+                    if [ ! -f "$dest" ]; then
+                      mkdir -p "$(dirname "$dest")"
+                      cp "$f" "$dest"; ADD=$((ADD+1))
+                    fi
+                  done
+                  echo "✅ $jn 补入 $ADD 个独有爬虫类"
+                fi
+              fi
+            done
+            # 用户 nzsm/TVbox 仓库的补全包
+            for jn in "${EXT_JARS_USER[@]}"; do
+              curl -L -m 120 -o "ext_u_$(basename $jn)" "https://ghfast.top/https://raw.githubusercontent.com/nzsm/TVbox/main/$jn" || true
+              if [ -s "ext_u_$(basename $jn)" ]; then
+                rm -rf smali_eu && mkdir -p smali_eu
+                java -jar jar/3rd/baksmali-2.5.2.jar d "ext_u_$(basename $jn)" -o smali_eu || true
+                EXT_SPIDER="smali_eu/com/github/catvod/spider"
+                if [ -d "$EXT_SPIDER" ]; then
+                  ADD=0
+                  for f in $(find "$EXT_SPIDER" -name '*.smali'); do
+                    rel="${f#$EXT_SPIDER/}"
+                    dest="$SPIDER_DIR/$rel"
+                    if [ ! -f "$dest" ]; then
+                      mkdir -p "$(dirname "$dest")"
+                      cp "$f" "$dest"; ADD=$((ADD+1))
+                    fi
+                  done
+                  echo "✅ $jn 补入 $ADD 个独有爬虫类"
+                fi
+              fi
+            done
+            echo "合并②后爬虫类总数: $(find $SPIDER_DIR -name '*.smali' | wc -l)"
           fi
 
           # ---- apktool 重打包 ----
@@ -113,10 +200,10 @@ jobs:
           rm -rf spider_build/smali/com/github/catvod/spider \
                  spider_build/smali/com/github/catvod/parser \
                  spider_build/smali/com/github/catvod/js
-          mkdir -p spider_build/smali/com/github/catvod
-          mv "$SPIDER_DIR" spider_build/smali/com/github/catvod/ 2>/dev/null || true
-          mv "$PARSER_DIR" spider_build/smali/com/github/catvod/ 2>/dev/null || true
-          mv "$JS_DIR" spider_build/smali/com/github/catvod/ 2>/dev/null || true
+          # 全包替换（含辅助类）
+          rm -rf spider_build/smali/com/github/catvod
+          mkdir -p spider_build/smali/com/github
+          mv smali_new/com/github/catvod spider_build/smali/com/github/catvod
           java -jar jar/3rd/apktool_2.4.1.jar b spider_build -c
           cp spider_build/dist/dex.jar spider.jar
           md5sum spider.jar | awk '{print $1}' > spider.jar.md5
@@ -125,22 +212,13 @@ jobs:
       - name: 回写本仓库 jar/spider.jar（GitHub API 直传，tvbox-server）
         run: |
           set -e
-          echo "=== 调试: token 对比 ==="
-          echo "环境变量 GITHUB_TOKEN 长度: ${#GITHUB_TOKEN}"
-          echo -n '${{ github.token }}' > /tmp/tok.txt
-          echo "上下文 github.token 长度: $(wc -c < /tmp/tok.txt)"
-          echo "上下文前6位: $(head -c 6 /tmp/tok.txt)"
-          # 用 GitHub Contents API 直传；401=token 无效/为空 / 403=无写权限 / 201=新建成功 / 200=更新成功
           SHA=""
           EXIST=$(curl -s -o /tmp/exist.json -w "%{http_code}" -H "Authorization: Bearer ${{ github.token }}" \
             "https://api.github.com/repos/nzsm/tvbox-server/contents/jar/spider.jar")
           if [ "$EXIST" = "200" ]; then
             SHA=$(python3 -c 'import json; print(json.load(open("/tmp/exist.json")).get("sha",""))')
             echo "检测到已存在 jar/spider.jar，将覆盖更新 (sha=$SHA)"
-          else
-            echo "jar/spider.jar 不存在，将新建（API 状态 $EXIST）"
           fi
-          # JSON body 写入文件再上传，避免 base64 塞命令行导致 Argument list too long
           {
             printf '{"message":"auto: 云编译 spider.jar %s","content":"' "$(date +%Y%m%d-%H%M)"
             base64 -w0 src/spider.jar
