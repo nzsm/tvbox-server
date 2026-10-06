@@ -68,6 +68,9 @@ jobs:
           java -jar jar/3rd/baksmali-2.5.2.jar d "$DEX" -o smali_new
           # 配置引用的目标爬虫类：只合并这些，避免方法总数超 dex 65535 上限
           export V18_BUDGET=52000
+          # ---- 提前删除 catvob（非配置爬虫，避免占用 dex 方法预算）----
+          python3 -c "import shutil; shutil.rmtree('smali_new/com/github/catvob', ignore_errors=True)"
+          echo "已删除 catvob，V18_USED 将只统计 catvod"
           # ---- 旧 jar 独有爬虫类：反编译备用（预算截断合并稍后执行）----
           rm -rf smali_old && mkdir -p smali_old
           java -jar jar/3rd/baksmali-2.5.2.jar d jar/spider.jar -o smali_old || true
@@ -77,9 +80,9 @@ jobs:
           for dp, dn, fns in os.walk('smali_new'):
               for fn in fns:
                   if fn.endswith('.smali'):
-            with open(os.path.join(dp, fn), encoding='utf-8', errors='ignore') as f:
-                for ln in f:
-                    if ln.strip().startswith('.method'): t += 1
+                      with open(os.path.join(dp, fn), encoding='utf-8', errors='ignore') as f:
+                          for ln in f:
+                              if ln.strip().startswith('.method'): t += 1
           print(t)
           PYX)
           V18_USED=$(cat /tmp/v18_used.txt)
@@ -129,6 +132,7 @@ jobs:
           spid = sys.argv[1]
           BUDGET = int(os.environ.get('V18_BUDGET', '55000'))
           used = int(os.environ.get('V18_USED', '0'))
+          TARGETS = set(os.environ.get('TARGET_CLASSES', '').split())
           cands = []
           for dp, dn, fns in os.walk(spid):
               for fn in fns:
@@ -138,15 +142,19 @@ jobs:
                   dest = 'smali_new/com/github/catvod/spider/' + rel
                   if os.path.exists(dest): continue
                   mcnt = sum(1 for ln in open(p, encoding='utf-8', errors='ignore') if ln.strip().startswith('.method'))
-                  cands.append((mcnt, p, dest))
-          cands.sort(key=lambda x: x[0])
-          added = 0; n = 0
-          for mcnt, p, dest in cands:
-              if used + mcnt > BUDGET: continue
+                  is_t = fn[:-6] in TARGETS
+                  cands.append((0 if is_t else 1, mcnt, p, dest, fn[:-6]))
+          cands.sort(key=lambda x: (x[0], x[1]))
+          added = 0; n = 0; tg = 0
+          for _, mcnt, p, dest, cls in cands:
+              is_t = cls in TARGETS
+              if not is_t and used + mcnt > BUDGET: continue
               os.makedirs(os.path.dirname(dest), exist_ok=True)
               shutil.copy(p, dest)
-              used += mcnt; added += mcnt; n += 1
-          print(f"{n}类/{added}方法", file=sys.stderr)
+              if not is_t: used += mcnt
+              added += mcnt; n += 1
+              if is_t: tg += 1
+          print(f"{n}类/{added}方法(目标{tg})", file=sys.stderr)
           print(added)
           PYX)
             echo "  → 本次新增 ${R} 方法"
@@ -158,10 +166,10 @@ jobs:
             OLD_SPIDER="smali_old/com/github/catvod/spider"
             if [ -d "$OLD_SPIDER" ]; then
               echo "--- 旧 jar 独有类（预算截断）---"
+          export TARGET_CLASSES="AList Alist Anime1 App99 AppDrama AppFerr AppLY AppRJ AppV6Amns AppV7Amns AppYs AppYsV2 BLSGod BddjAmns Bili Cg51 Ddrk Dm84 Doll Duboku Eighteen FirstAid FourKHDR Gz360 HHkkAmns Hanime HuyaLiveAmns IQIYI Ikanbot Iktv Jable JavBus JavDb JianPian Keke Kkys KubaCL LiteApple Live2Vod MeijuMi MeijuTT Mgtv Miss Mp4Mov NanGua New6v NewGrV2Amns NiNi PanWebShare PanWebShareKF Push QQ SP33 SP360 SeHuaTang SeedHub ShuangXing Smb4nas Taohuazu TianQuanGuard TingShijie WexMingriys Wexduanjuvmp Wexduanjuvop Wexxpgtv WoGG Wobg Wogg XBPQ XMVideo XPath XYQHiker Xb6v Xinsj Xunlei8 YQKan Ying Yinyuetai Ysj"
               merge_all "$OLD_SPIDER" || true
             fi
           fi
-          TARGET_CLASSES="AList AList_2 Aid Alist Anime1 App99 AppDrama AppFerr AppLY AppRJ AppV6Amns AppV7Amns AppYs AppYsV2 BLSGod BddjAmns Bili Bili_meishi Bili_youer Cg51 Config Ddrk Dm84 Doll Douban Duboku Eighteen FirstAid FourKHDR Gz360 HHkkAmns Hanime HuyaLiveAmns IQIYI Ikanbot Iktv Jable JavBus JavDb JianPian Keke Kkys KubaCL LiteApple Live2Vod Live2Vod_1 LocalFile Market MeijuMi MeijuTT Mgtv Miss Mp4Mov NanGua New6v NewGrV2Amns NiNi PanWebShare PanWebShareKF Push QQ SMB SNzy SP33 SP360 SeHuaTang SeedHub ShuangXing Smb4nas Taohuazu TianQuanGuard TingShijie WexMingriys Wexduanjuvmp Wexduanjuvop Wexxpgtv WoGG WoGG_2 Wobg Wogg XBPQ XBPQ_ XBPQ_6 XBPQ_6V XBPQ_91 XBPQ_AV XBPQ_JAV XBPQ_WakuWaku XBPQ_vstv XBPQ_zhuijuba XMVideo XPath XPath_ XYQHiker XYQHiker_ XYQHiker_777 XYQHiker_91 Xb6v Xinsj Xunlei8 YQKan Ying Yinyuetai Ysj appys_ djtv xBPQ xBPQ_ xBPQ_91 xBPQ_tt xml_ xml___ xml___U xml_ikun xpath_yinfans"
           SPIDER_DIR="smali_new/com/github/catvod/spider"
           PARSER_DIR="smali_new/com/github/catvod/parser"
           JS_DIR="smali_new/com/github/catvod/js"
@@ -181,7 +189,7 @@ jobs:
                       p = os.path.join(dp, fn)
                       with open(p, encoding='utf-8', errors='ignore') as f:
                           lines = f.readlines()
-                      in_m = False; start = 0
+                      in_m = False; start = 0; drop = []
                       for i, ln in enumerate(lines):
                           s = ln.strip()
                           if s.startswith('.method') and not in_m:
@@ -189,10 +197,12 @@ jobs:
                           elif s == '.end method' and in_m:
                               if i - start > THRESH:
                                   removed.append((os.path.relpath(p, root), i - start + 1))
-                                  break
+                                  drop.append((start, i + 1))
                               in_m = False
-                      if removed and removed[-1][0] == os.path.relpath(p, root):
-                          os.remove(p)
+                      if drop:
+                          keep = [ln for idx, ln in enumerate(lines) if not any(a <= idx < b for a, b in drop)]
+                          with open(p, 'w', encoding='utf-8') as f:
+                              f.writelines(keep)
               return removed
           r1 = scan_remove('smali_new/com/github/catvod', 'new')
           r2 = scan_remove('smali_new', 'all') if os.path.isdir('smali_new/com/github/catvob') else []
@@ -358,7 +368,7 @@ jobs:
               exit 1
             fi
           done
-          cp spider_build/dist/dex.jar spider.jar
+          cp spider_build/dist/spider.jar spider.jar
           md5sum spider.jar | awk '{print $1}' > spider.jar.md5
           echo "✅ 产出: spider.jar ($(du -h spider.jar | cut -f1))"
 
