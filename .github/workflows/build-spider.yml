@@ -268,12 +268,25 @@ jobs:
             echo "合并②后爬虫类总数: $(find $SPIDER_DIR -name '*.smali' | wc -l)"
           fi
 
-          # ---- apktool 重打包 ----
-          rm -rf spider_build && cp -r jar/spider.jar spider_build
-          rm -rf spider_build/smali/com/github/catvod/spider \
-                 spider_build/smali/com/github/catvod/parser \
-                 spider_build/smali/com/github/catvod/js
-          # 全包替换（含辅助类）
+          # ---- apktool 重打包（模板 = baksmali 反编译目录 + 动态 apktool.yml）----
+          rm -rf spider_build && mkdir -p spider_build
+          java -jar jar/3rd/baksmali-2.5.2.jar d jar/spider.jar -o spider_build/smali || true
+          cat > spider_build/apktool.yml << 'YML'
+          !!brut.androlib.meta.MetaInfo
+          apkFileName: spider.jar
+          compressionType: false
+          doNotCompress: null
+          isFrameworkApk: false
+          packageInfo: null
+          sdkInfo: null
+          sharedLibrary: false
+          sparseResources: false
+          unknownFiles: {}
+          usesFramework: null
+          version: 2.4.1_0303
+          versionInfo: null
+          YML
+          # 模板 catvod 全部替换为新合并产物（框架类源码 dex 已含）
           rm -rf spider_build/smali/com/github/catvod
           mkdir -p spider_build/smali/com/github
           mv smali_new/com/github/catvod spider_build/smali/com/github/catvod
@@ -330,6 +343,13 @@ jobs:
             esac
             f="spider_build/smali/$rel.smali"
             if [ -f "$f" ]; then
+              # 配置引用的目标类保护：宁可失败也不删（删了对应影视源失效）
+              clsname=$(basename "$rel" .smali)
+              if echo "$TARGET_CLASSES" | grep -qw "$clsname"; then
+                echo "❌ 报错的是配置引用目标类 $rel —— 预算仍不足，终止（请降低 V18_BUDGET 重跑）"
+                head -30 apktool_err.log
+                exit 1
+              fi
               echo "⚠️ 第 $attempt 轮: 删除毒类 $rel"
               rm -f "$f"
             else
