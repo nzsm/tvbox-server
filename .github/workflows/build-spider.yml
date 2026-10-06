@@ -61,6 +61,21 @@ jobs:
         run: |
           set -e
           cd src
+          # ---- 工具链自举：baksmali / apktool 缺失则自动下载（不依赖仓库文件）----
+          mkdir -p jar/3rd
+          if [ ! -s jar/3rd/baksmali-2.5.2.jar ]; then
+            echo "下载 baksmali-2.5.2.jar ..."
+            curl -L -m 180 -o jar/3rd/baksmali-2.5.2.jar "https://ghfast.top/https://github.com/google/baksmali/releases/download/v2.5.2/baksmali-2.5.2.jar" || curl -L -m 180 -o jar/3rd/baksmali-2.5.2.jar "https://github.com/google/baksmali/releases/download/v2.5.2/baksmali-2.5.2.jar"
+            ls -la jar/3rd/baksmali-2.5.2.jar
+          fi
+          if [ ! -s jar/3rd/apktool_2.4.1.jar ]; then
+            echo "下载 apktool_2.4.1.jar ..."
+            curl -L -m 180 -o jar/3rd/apktool_2.4.1.jar "https://ghfast.top/https://github.com/iBotPeaches/Apktool/releases/download/v2.4.1/apktool_2.4.1.jar" || curl -L -m 180 -o jar/3rd/apktool_2.4.1.jar "https://github.com/iBotPeaches/Apktool/releases/download/v2.4.1/apktool_2.4.1.jar"
+            ls -la jar/3rd/apktool_2.4.1.jar
+          fi
+          head -c 2 jar/3rd/baksmali-2.5.2.jar | grep -q 'PK' || { echo "❌ baksmali 下载失败"; exit 1; }
+          head -c 2 jar/3rd/apktool_2.4.1.jar | grep -q 'PK' || { echo "❌ apktool 下载失败"; exit 1; }
+          echo "✅ 工具链就绪: baksmali $(stat -c%s jar/3rd/baksmali-2.5.2.jar)B / apktool $(stat -c%s jar/3rd/apktool_2.4.1.jar)B"
           DEX="app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex"
           ls -la "$DEX"
           # ---- 反编译新源码的 dex ----
