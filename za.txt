@@ -104,7 +104,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "lebo",
@@ -212,7 +212,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_XBPQ_韩片",
@@ -249,7 +249,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "C影院",
@@ -275,7 +275,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_XBPQ_zhuijuba",
@@ -298,7 +298,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "大师兄",
@@ -322,7 +322,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "多影视",
@@ -346,7 +346,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "兔兔影院",
@@ -395,7 +395,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "真鹏影院",
@@ -452,7 +452,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_XBPQ_6V",
@@ -472,7 +472,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "好看影视",
@@ -509,7 +509,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "时光影视",
@@ -532,7 +532,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "龛影影视",
@@ -555,7 +555,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "星空影视",
@@ -578,7 +578,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "sm影视",
@@ -602,7 +602,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "好剧影视",
@@ -625,7 +625,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "kankan影视",
@@ -648,7 +648,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "花姐影院",
@@ -680,7 +680,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "xbpq_高清剧场",
@@ -705,7 +705,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "iysdq",
@@ -728,7 +728,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_河马",
@@ -752,7 +752,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_大海",
@@ -776,7 +776,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "胖虎影视",
@@ -800,7 +800,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "片库影视",
@@ -824,7 +824,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "322影视",
@@ -848,7 +848,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "zp011",
@@ -992,7 +992,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "SOAV",
@@ -1027,7 +1027,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "快活影網",
@@ -1056,7 +1056,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "jap影網",
@@ -1085,7 +1085,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "牛Y",
@@ -1169,7 +1169,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "玩偶哥哥",
@@ -1197,7 +1197,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "木偶",
@@ -1226,7 +1226,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "蜡笔",
@@ -1255,7 +1255,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "多多",
@@ -1283,7 +1283,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "欧哥",
@@ -1312,7 +1312,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "二小",
@@ -1341,7 +1341,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "快映",
@@ -1367,7 +1367,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "虎斑",
@@ -1393,7 +1393,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "双星",
@@ -1415,7 +1415,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "夸父",
@@ -1445,7 +1445,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "name": "🍁┃夏天┃秒播",
@@ -1466,7 +1466,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "name": "🍁┃特狗┃秒播",
@@ -1487,7 +1487,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "name": "🍁┃ACE┃秒播",
@@ -1508,7 +1508,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "name": "🍁┃独家┃秒播",
@@ -1529,7 +1529,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "华谊",
@@ -1560,7 +1560,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "热播影视",
@@ -1583,7 +1583,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "剧圈99",
@@ -1612,7 +1612,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "天堂",
@@ -1643,7 +1643,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "苹果",
@@ -1674,7 +1674,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "爱看机器人",
@@ -1693,7 +1693,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "瓜子影视",
@@ -1712,7 +1712,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "独播影视",
@@ -1731,7 +1731,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "荐片",
@@ -1750,7 +1750,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "世界听书",
@@ -1772,7 +1772,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "feifan",
@@ -1847,7 +1847,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "name": "🎬拜拜┃短剧",
@@ -1868,7 +1868,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "戏曲多多",
@@ -1890,7 +1890,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "name": "📡虎牙┃Live",
@@ -1914,7 +1914,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "戏 曲",
@@ -1934,7 +1934,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "相声小品",
@@ -1954,7 +1954,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "演唱会",
@@ -1974,7 +1974,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "MTV",
@@ -1994,7 +1994,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "哔哩哔哩",
@@ -2014,7 +2014,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_Bili短剧",
@@ -2034,7 +2034,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "影视解说",
@@ -2054,7 +2054,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "腾讯(官源)",
@@ -4446,7 +4446,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_JavDb",
@@ -4472,7 +4472,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "nivod18",
@@ -4555,7 +4555,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "泥巴",
@@ -4575,7 +4575,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "量子",
@@ -4645,7 +4645,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "18AV",
@@ -4669,7 +4669,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "18A貓",
@@ -4716,7 +4716,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "MissAV",
@@ -4740,7 +4740,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "Hanime",
@@ -4764,7 +4764,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "国产",
@@ -4792,7 +4792,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "姐姐",
@@ -4821,7 +4821,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "玉兔资源",
@@ -5705,7 +5705,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "直播转点播",
@@ -5818,7 +5818,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "Iktv",
@@ -5838,7 +5838,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_XBPQ_爱看影院",
@@ -5860,7 +5860,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_毒蛇影视",
@@ -5880,7 +5880,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "秒播短剧",
@@ -5900,7 +5900,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "极品短剧",
@@ -5920,7 +5920,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "XBPQ_短剧TV",
@@ -5943,7 +5943,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "快看采集",
@@ -6142,7 +6142,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_XBPQ_量子资源网",
@@ -6164,7 +6164,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_XBPQ_歪片星球",
@@ -6186,7 +6186,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_XBPQ_新视觉影院",
@@ -6208,7 +6208,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_XBPQ_奇优影院",
@@ -6230,7 +6230,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "FREEOK",
@@ -6263,7 +6263,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "360_spider",
@@ -6282,7 +6282,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_IQIYI",
@@ -6301,7 +6301,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "teng",
@@ -6320,7 +6320,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "MGT",
@@ -6339,7 +6339,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "白嫖电影",
@@ -6363,7 +6363,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "忘川影视",
@@ -6397,7 +6397,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "小鸭影音",
@@ -6421,7 +6421,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "一起看1XBPQ",
@@ -6444,7 +6444,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_appys_影探",
@@ -6466,7 +6466,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "酷看",
@@ -6486,7 +6486,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "酷影视",
@@ -6506,7 +6506,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "Xinsj",
@@ -6527,7 +6527,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "DiDuan",
@@ -6548,7 +6548,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_xBPQ_文才影视",
@@ -6568,7 +6568,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_月亮影视",
@@ -6595,7 +6595,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_麻花影视",
@@ -6618,7 +6618,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "金鱼影视",
@@ -6638,7 +6638,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "天龙影视",
@@ -6658,7 +6658,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "黑木耳资源",
@@ -6678,7 +6678,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "剧圈圈",
@@ -6700,7 +6700,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "XBPQ_文才",
@@ -6754,7 +6754,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "XBPQ_黑狐影院",
@@ -6805,7 +6805,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "XBPQ_电影先生",
@@ -6838,7 +6838,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "XBPQ_麻衣影院",
@@ -6861,7 +6861,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_XBPQ_伊人观影",
@@ -6889,7 +6889,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_XBPQ_小林子影视",
@@ -6915,7 +6915,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": " csp_xBPQ_天空影视",
@@ -6939,7 +6939,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_XBPQ_悠云影视",
@@ -6972,7 +6972,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "baipiaoys",
@@ -7005,7 +7005,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "可可影视",
@@ -7033,7 +7033,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "玩你网盘",
@@ -7055,7 +7055,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "mingriyingshi",
@@ -7081,7 +7081,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "Wexxpgtv",
@@ -7101,7 +7101,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "采采_米星",
@@ -7124,7 +7124,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "采采_五五",
@@ -7147,7 +7147,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_SNzy",
@@ -7430,7 +7430,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_djtv",
@@ -7458,7 +7458,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_XBPQ_vstv",
@@ -7481,7 +7481,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "yqkan_open",
@@ -7500,7 +7500,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_短剧网香",
@@ -7580,7 +7580,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "xkanzy.com",
@@ -7641,7 +7641,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "新6V",
@@ -7663,7 +7663,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "4KHDR",
@@ -7685,7 +7685,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_xpath_yinfans",
@@ -7705,7 +7705,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_xml_爱坤",
@@ -7773,7 +7773,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "南瓜",
@@ -7794,7 +7794,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "加速",
@@ -7814,7 +7814,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "Xinsj_2",
@@ -7835,7 +7835,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "相声",
@@ -7880,7 +7880,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "评书",
@@ -7925,7 +7925,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "49zy",
@@ -8449,7 +8449,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "索尼",
@@ -8526,7 +8526,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_WoGG_2",
@@ -8547,7 +8547,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "陌陌",
@@ -8568,7 +8568,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "drpy_js_drpy",
@@ -9180,7 +9180,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_New6v",
@@ -9200,7 +9200,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_SeedHub",
@@ -9220,7 +9220,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_KubaCL",
@@ -9240,7 +9240,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_MeijuTT",
@@ -9260,7 +9260,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_MeijuMi",
@@ -9280,7 +9280,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_BLSGod",
@@ -9300,7 +9300,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_Xunlei8",
@@ -9320,7 +9320,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_Dm84",
@@ -9339,7 +9339,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_Ying",
@@ -9358,7 +9358,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_Anime1",
@@ -9377,7 +9377,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_Ysj",
@@ -9396,7 +9396,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "第一动漫",
@@ -9416,7 +9416,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "Bili",
@@ -9441,7 +9441,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "js_B站精简",
@@ -9481,7 +9481,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_Aid",
@@ -9505,7 +9505,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "Excel教程",
@@ -9525,7 +9525,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "吾爱PS",
@@ -9545,7 +9545,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "吾爱乐器",
@@ -9565,7 +9565,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "美食",
@@ -9585,7 +9585,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "哔哩",
@@ -9606,7 +9606,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "吾爱舞蹈",
@@ -9626,7 +9626,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "吾爱户外",
@@ -9646,7 +9646,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "吾爱戏曲",
@@ -9666,7 +9666,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "吾爱搭配",
@@ -9686,7 +9686,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "吾爱解说",
@@ -9706,7 +9706,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "吾爱演唱会",
@@ -9726,7 +9726,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "吾爱经典",
@@ -9746,7 +9746,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "吾爱球星",
@@ -9766,7 +9766,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "drpy_js_JustLive",
@@ -9900,7 +9900,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "88js",
@@ -10015,7 +10015,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_XYQHiker_兔小贝2",
@@ -10035,7 +10035,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "py_cctv_1",
@@ -10074,7 +10074,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "童趣",
@@ -10113,7 +10113,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "益智",
@@ -10133,7 +10133,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "少儿教育",
@@ -10153,7 +10153,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "幼儿乐园",
@@ -10173,7 +10173,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "儿童",
@@ -10193,7 +10193,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "学习",
@@ -10213,7 +10213,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "幼小衔接",
@@ -10233,7 +10233,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "小灯塔",
@@ -10253,7 +10253,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "小灯塔科学",
@@ -10273,7 +10273,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "小灯塔地理",
@@ -10293,7 +10293,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "小灯塔国学",
@@ -10313,7 +10313,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "小灯塔人文",
@@ -10333,7 +10333,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "儿童拼音",
@@ -10353,7 +10353,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "儿童识字",
@@ -10373,7 +10373,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "儿童英语",
@@ -10393,7 +10393,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "儿童硬笔",
@@ -10413,7 +10413,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "儿童思维",
@@ -10433,7 +10433,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "儿童口才",
@@ -10453,7 +10453,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "儿童编程",
@@ -10473,7 +10473,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "儿童武术",
@@ -10493,7 +10493,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "兴趣培养",
@@ -10513,7 +10513,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "小学",
@@ -10533,7 +10533,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "初中",
@@ -10553,7 +10553,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "高中",
@@ -10573,7 +10573,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "py_youer",
@@ -10650,7 +10650,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "drpy_js_小品网",
@@ -10732,7 +10732,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "Biliych",
@@ -10757,7 +10757,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_Bili_meishi",
@@ -10777,7 +10777,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_Bili_youer",
@@ -10797,7 +10797,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "drpy_js_兔小贝",
@@ -10836,7 +10836,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "初中课堂",
@@ -10856,7 +10856,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "高中教育",
@@ -10876,7 +10876,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "drpy_js_虎牙",
@@ -11084,7 +11084,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "ss直播",
@@ -11127,7 +11127,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "站名": "2028P",
@@ -12827,7 +12827,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "天天影视",
@@ -12849,7 +12849,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "浪酷影视",
@@ -12871,7 +12871,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "甜圈短剧",
@@ -12891,7 +12891,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "菲儿影视",
@@ -12911,7 +12911,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "苹果影视",
@@ -12930,7 +12930,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "✨PTT短剧✨",
@@ -12996,7 +12996,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "✨天龙影院✨",
@@ -13035,7 +13035,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_xBPQ_稻田影视",
@@ -13060,7 +13060,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_XBPQ_游子视频",
@@ -13088,7 +13088,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "狐狸君",
@@ -13129,7 +13129,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "https://www.vsyingyuan.ccVS影院",
@@ -13156,7 +13156,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "🎃南瓜影院",
@@ -13182,7 +13182,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "鲨鱼影视",
@@ -13229,7 +13229,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "奇优影院",
@@ -13257,7 +13257,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_XBPQ_短剧网",
@@ -13285,7 +13285,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "XBPQ_短剧影院网",
@@ -13314,7 +13314,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "✳️天天影视",
@@ -13343,7 +13343,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "🎆LIBVIO电影",
@@ -13372,7 +13372,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "ptt",
@@ -13402,7 +13402,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": " 网飞猫 ",
@@ -13433,7 +13433,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_XBPQ_老王影视",
@@ -13466,7 +13466,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "飞快TV",
@@ -13491,7 +13491,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "皮皮蛋",
@@ -13515,7 +13515,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "影视大全",
@@ -13549,7 +13549,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "乌卡猫影院",
@@ -13575,7 +13575,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "纽约影院",
@@ -13610,7 +13610,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "一起看呀吧",
@@ -13641,7 +13641,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "雪糕影院",
@@ -13684,7 +13684,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "纵横|影视",
@@ -13722,7 +13722,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "影视森林",
@@ -13749,7 +13749,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "黑夜影视",
@@ -13775,7 +13775,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "xBPQ_网飞猫",
@@ -13808,7 +13808,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": " 网飞猫 _2",
@@ -13828,7 +13828,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "鬼片之家",
@@ -13854,7 +13854,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "js_星芽短剧",
@@ -13919,7 +13919,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_XBPQ_若片电影",
@@ -13946,7 +13946,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_XBPQ_好剧屋",
@@ -13973,7 +13973,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_吉吉短剧",
@@ -14001,7 +14001,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_成全影视",
@@ -14029,7 +14029,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_555电影",
@@ -14055,7 +14055,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "可可",
@@ -14076,7 +14076,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "毒蛇",
@@ -14125,7 +14125,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "好趣网",
@@ -14170,7 +14170,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_妖狐影视",
@@ -14203,7 +14203,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "厂长影院",
@@ -14446,7 +14446,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_蚂蚁影库",
@@ -14471,7 +14471,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "drpy_xbpq_毒舌影视",
@@ -14507,7 +14507,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "xBPQ_网飞猫_2",
@@ -14541,7 +14541,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "rarbt1",
@@ -14566,7 +14566,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_XBPQ_皮皮影视",
@@ -14591,7 +14591,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "爱电影",
@@ -14634,7 +14634,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_XBPQ_八戒影视",
@@ -14659,7 +14659,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "统一影视",
@@ -14683,7 +14683,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "ptt_2",
@@ -14712,7 +14712,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "蚂蚁秒播",
@@ -15077,7 +15077,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "360",
@@ -15148,7 +15148,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "中医药",
@@ -15172,7 +15172,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "MV",
@@ -15196,7 +15196,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "歌舞",
@@ -15220,7 +15220,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "舞蹈",
@@ -15244,7 +15244,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "hipy_js_KTV歌厅[听]",
@@ -15319,7 +15319,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "樱花动漫官方网站",
@@ -15345,7 +15345,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "樱花动漫网站",
@@ -15371,7 +15371,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "动漫岛",
@@ -15397,7 +15397,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "动漫网",
@@ -15423,7 +15423,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "哔咪动漫",
@@ -15449,7 +15449,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "drpy_js_奇珍异兽",
@@ -15554,7 +15554,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_XBPQ_人兽香蕉",
@@ -15583,7 +15583,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_XBPQ_6黑料网曝9",
@@ -15610,7 +15610,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_XBPQ_WakuWaku",
@@ -15637,7 +15637,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_XBPQ_91国产经典",
@@ -15664,7 +15664,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_XBPQ_AV在线看",
@@ -15693,7 +15693,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_XBPQ_灰灰影音",
@@ -15724,7 +15724,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "XMVideo",
@@ -15743,7 +15743,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_https://18hr.life/label/sort",
@@ -15770,7 +15770,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_XBPQ_欧美日韩精品",
@@ -15799,7 +15799,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "麻豆",
@@ -15830,7 +15830,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "乐草",
@@ -15857,7 +15857,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "花影视",
@@ -15885,7 +15885,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "麻豆_2",
@@ -15914,7 +15914,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_顶级网曝",
@@ -15952,7 +15952,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "糖心",
@@ -15981,7 +15981,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "纤纤影视福利版",
@@ -16028,7 +16028,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "小幺女|床吧",
@@ -16062,7 +16062,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_XBPQ_花心小妞",
@@ -16101,7 +16101,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_XYQHiker_777影院",
@@ -16121,7 +16121,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_91黑料",
@@ -16157,7 +16157,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "沙咖影院",
@@ -16190,7 +16190,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "努可影院",
@@ -16223,7 +16223,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "天美",
@@ -16252,7 +16252,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "色最色",
@@ -16279,7 +16279,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "爱豆传媒",
@@ -16310,7 +16310,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "传媒二区",
@@ -16343,7 +16343,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "高清xxxx黑料",
@@ -16379,7 +16379,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "黑料",
@@ -16411,7 +16411,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "暗网色库",
@@ -16434,7 +16434,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "女优色库",
@@ -16457,7 +16457,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "BuzzAV",
@@ -16487,7 +16487,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "51黑料福利社",
@@ -16521,7 +16521,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "Cg51",
@@ -16540,7 +16540,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "成人重口",
@@ -16576,7 +16576,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "18insta",
@@ -16611,7 +16611,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "玩偶妹妹",
@@ -16636,7 +16636,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "TaiAv",
@@ -16671,7 +16671,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_xBPQ_香蕉AV解说",
@@ -16691,7 +16691,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_xBPQ_香蕉超清",
@@ -16711,7 +16711,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_xBPQ_香蕉国产",
@@ -16731,7 +16731,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_xBPQ_香蕉久久热",
@@ -16751,7 +16751,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_xBPQ_香蕉废柴",
@@ -16771,7 +16771,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_香蕉资源",
@@ -16791,7 +16791,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_香蕉视频",
@@ -16811,7 +16811,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_xBPQ_香蕉直播",
@@ -16831,7 +16831,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_xBPQ_天天直播",
@@ -16851,7 +16851,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_xBPQ_香蕉搜索",
@@ -16871,7 +16871,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_麻豆映画",
@@ -16891,7 +16891,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "www.17c.com",
@@ -16925,7 +16925,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_XBPQ_天天综合",
@@ -16945,7 +16945,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_xBPQ_tt",
@@ -17254,7 +17254,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "富二代",
@@ -17692,7 +17692,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "丝袜",
@@ -17920,7 +17920,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "Taohuazu",
@@ -17942,7 +17942,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_xBPQ_91色",
@@ -17962,7 +17962,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "天美AV",
@@ -18535,7 +18535,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "xin91",
@@ -18567,7 +18567,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_XBPQ_JAV目錄大全",
@@ -18615,7 +18615,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_888",
@@ -18637,7 +18637,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "小幺女|床吧_2",
@@ -18672,7 +18672,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "视色",
@@ -18706,7 +18706,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_顶级网曝_2",
@@ -18744,7 +18744,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "我爱AV",
@@ -18777,7 +18777,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "地瓜",
@@ -18802,7 +18802,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_玉满堂",
@@ -18829,7 +18829,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_XBPQ_四虎影院",
@@ -18857,7 +18857,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_麻豆视频1",
@@ -18886,7 +18886,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_91短视频",
@@ -18915,7 +18915,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "36D蜜桃臀",
@@ -18949,7 +18949,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "射了么https://shelm1.xyz",
@@ -18978,7 +18978,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "土豪精",
@@ -19006,7 +19006,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "淫水机网",
@@ -19034,7 +19034,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "背德人妻",
@@ -19064,7 +19064,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "PWXXX.com",
@@ -19093,7 +19093,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "狗连女视频//https://gouln.xyz",
@@ -19124,7 +19124,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "https://www.qqdsp.cc",
@@ -19153,7 +19153,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "真黄涩仓库",
@@ -19178,7 +19178,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "爱看视频",
@@ -19207,7 +19207,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "色佬街视频",
@@ -19236,7 +19236,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "女子学院",
@@ -19265,7 +19265,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "H色车房https://hskffby.com/",
@@ -19294,7 +19294,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "妹妹的妹妹",
@@ -19323,7 +19323,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "av帝王",
@@ -19352,7 +19352,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "X社区xxxav.tv",
@@ -19381,7 +19381,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "https://www.bihc13.top",
@@ -19410,7 +19410,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "yiren1.cc [1至53] yiren53.cc",
@@ -19439,7 +19439,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "肉铺",
@@ -19468,7 +19468,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "香蕉午夜",
@@ -19497,7 +19497,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "纤纤影视福利版_2",
@@ -19544,7 +19544,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "爱丽丝",
@@ -19583,7 +19583,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "✨R撸巴✨",
@@ -19611,7 +19611,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "农夫与少妇",
@@ -19649,7 +19649,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "hipy_js_小女18[密]",
@@ -19831,7 +19831,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_大炮色",
@@ -19855,7 +19855,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_XYQHiker_鲨鱼AV🔞",
@@ -19875,7 +19875,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_XYQHiker_91在线视频",
@@ -19895,7 +19895,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp__色花堂",
@@ -19915,7 +19915,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "csp_Ikanbot",
@@ -19934,7 +19934,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "subaibai",
@@ -20011,7 +20011,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "dingjiguochan",
@@ -20062,7 +20062,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     },
     {
       "key": "renrenys",
@@ -20155,7 +20155,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
     }
   ],
   "lives": [
@@ -20501,8 +20501,7 @@
     },
     "enabled": true
   },
-  "图片代理": "https://images.weserv.nl/?url=",
   "warningText": "勿信视频中任何广告！",
-  "spider": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar",
-  "jar": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar"
+  "spider": "https://raw.liucn.cc/box/libs/jar/HCCX.jar",
+  "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
 }
