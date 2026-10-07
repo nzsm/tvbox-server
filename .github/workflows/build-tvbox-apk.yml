@@ -43,7 +43,7 @@ jobs:
       - name: 安装 Gradle（用 wrapper 版本）
         uses: gradle/actions/setup-gradle@v4
 
-      - name: 应用版本号 + 加大编译内存
+      - name: 应用版本号 + 创建 local.properties + 加大编译内存
         working-directory: tvboxos-src
         run: |
           TAG=$(date +%Y%m%d-%H%M)
@@ -51,6 +51,14 @@ jobs:
           # 版本号替换为编译时间
           sed -i "/versionName/s#[0-9a-zA-Z_\.\'\"-]\+\$#\'${TAG}\'#" app/build.gradle || true
           grep -n "versionName" app/build.gradle | head -3 || true
+          # 【关键修复】创建 local.properties 指向 Android SDK
+          # pyramid 模块配置时必读此文件，缺失会导致编译直接失败
+          if [ -n "$ANDROID_HOME" ]; then
+            echo "sdk.dir=$ANDROID_HOME" > local.properties
+          else
+            echo "sdk.dir=/usr/local/lib/android/sdk" > local.properties
+          fi
+          cat local.properties
           # 加大 Gradle JVM 堆（防 OOM）
           if [ -f gradle.properties ]; then
             echo "org.gradle.jvmargs=-Xmx4g -XX:MaxMetaspaceSize=1g" >> gradle.properties
