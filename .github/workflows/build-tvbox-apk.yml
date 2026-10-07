@@ -17,7 +17,8 @@ on:
 jobs:
   build:
     name: 云编译 TVBoxOS APK（arm64 稳定版）
-    runs-on: ubuntu-latest
+    # v6: 固定 ubuntu-24.04，不受 10/19 ubuntu-latest 迁移 Ubuntu 26 影响
+    runs-on: ubuntu-24.04
     timeout-minutes: 90
     steps:
       - name: 检出本仓库（tvbox-server）
@@ -30,7 +31,8 @@ jobs:
           ls tvboxos-src | head -20
 
       - name: 设置 JDK 17
-        uses: actions/setup-java@v4
+        # v6: setup-java v4 已弃用，升到 v5
+        uses: actions/setup-java@v5
         with:
           distribution: temurin
           java-version: 17
@@ -86,12 +88,14 @@ jobs:
             exit 1
           fi
 
-      - name: 收集 APK
+      - name: 收集 APK（只收本次新编译产物）
         run: |
           set -e
           mkdir -p apk-out
           FOUND=0
-          for f in $(find ~ -name "*.apk" 2>/dev/null | grep -i "release"); do
+          # v6 修复: 只找 tvboxos-src 编译输出目录里的 APK，
+          # 不再全盘 find ~（之前把仓库 apk/ 里 8 个旧 Box APK 也收进来，导致 285MB）
+          for f in $(find tvboxos-src/app/build/outputs -name "*.apk" 2>/dev/null | grep -i "release"); do
             cp "$f" "apk-out/$(basename "$f")"
             FOUND=1
           done
