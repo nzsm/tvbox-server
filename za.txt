@@ -103,7 +103,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "lebo",
@@ -210,7 +211,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_XBPQ_韩片",
@@ -246,7 +248,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "C影院",
@@ -271,7 +274,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_XBPQ_zhuijuba",
@@ -293,7 +297,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "大师兄",
@@ -316,7 +321,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "多影视",
@@ -339,7 +345,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "兔兔影院",
@@ -387,7 +394,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "真鹏影院",
@@ -443,7 +451,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_XBPQ_6V",
@@ -462,7 +471,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "好看影视",
@@ -498,7 +508,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "时光影视",
@@ -520,7 +531,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "龛影影视",
@@ -542,7 +554,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "星空影视",
@@ -564,7 +577,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "sm影视",
@@ -587,7 +601,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "好剧影视",
@@ -609,7 +624,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "kankan影视",
@@ -631,7 +647,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "花姐影院",
@@ -662,7 +679,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "xbpq_高清剧场",
@@ -686,7 +704,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "iysdq",
@@ -708,7 +727,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_河马",
@@ -731,7 +751,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_大海",
@@ -754,7 +775,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "胖虎影视",
@@ -777,7 +799,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "片库影视",
@@ -800,7 +823,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "322影视",
@@ -823,7 +847,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "zp011",
@@ -966,7 +991,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "SOAV",
@@ -1000,7 +1026,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "快活影網",
@@ -1028,7 +1055,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "jap影網",
@@ -1056,7 +1084,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "牛Y",
@@ -1139,7 +1168,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "玩偶哥哥",
@@ -1166,7 +1196,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "木偶",
@@ -1194,7 +1225,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "蜡笔",
@@ -1222,7 +1254,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "多多",
@@ -1249,7 +1282,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "欧哥",
@@ -1277,7 +1311,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "二小",
@@ -1305,7 +1340,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "快映",
@@ -1330,7 +1366,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "虎斑",
@@ -1355,7 +1392,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "双星",
@@ -1376,7 +1414,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "夸父",
@@ -1405,7 +1444,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "name": "🍁┃夏天┃秒播",
@@ -1425,7 +1465,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "name": "🍁┃特狗┃秒播",
@@ -1445,7 +1486,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "name": "🍁┃ACE┃秒播",
@@ -1465,7 +1507,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "name": "🍁┃独家┃秒播",
@@ -1485,7 +1528,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "华谊",
@@ -1515,7 +1559,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "热播影视",
@@ -1537,7 +1582,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "剧圈99",
@@ -1565,7 +1611,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "天堂",
@@ -1595,7 +1642,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "苹果",
@@ -1625,7 +1673,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "爱看机器人",
@@ -1643,7 +1692,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "瓜子影视",
@@ -1661,7 +1711,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "独播影视",
@@ -1679,7 +1730,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "荐片",
@@ -1697,7 +1749,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "世界听书",
@@ -1718,7 +1771,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "feifan",
@@ -1792,7 +1846,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "name": "🎬拜拜┃短剧",
@@ -1812,7 +1867,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "戏曲多多",
@@ -1833,7 +1889,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "name": "📡虎牙┃Live",
@@ -1856,7 +1913,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "戏 曲",
@@ -1875,7 +1933,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "相声小品",
@@ -1894,7 +1953,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "演唱会",
@@ -1913,7 +1973,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "MTV",
@@ -1932,7 +1993,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "哔哩哔哩",
@@ -1951,7 +2013,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_Bili短剧",
@@ -1970,7 +2033,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "影视解说",
@@ -1989,7 +2053,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "腾讯(官源)",
@@ -4380,7 +4445,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_JavDb",
@@ -4405,7 +4471,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "nivod18",
@@ -4487,7 +4554,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "泥巴",
@@ -4506,7 +4574,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "量子",
@@ -4575,7 +4644,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "18AV",
@@ -4598,7 +4668,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "18A貓",
@@ -4644,7 +4715,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "MissAV",
@@ -4667,7 +4739,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "Hanime",
@@ -4690,7 +4763,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "国产",
@@ -4717,7 +4791,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "姐姐",
@@ -4745,7 +4820,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "玉兔资源",
@@ -5628,7 +5704,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "直播转点播",
@@ -5740,7 +5817,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "Iktv",
@@ -5759,7 +5837,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_XBPQ_爱看影院",
@@ -5780,7 +5859,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_毒蛇影视",
@@ -5799,7 +5879,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "秒播短剧",
@@ -5818,7 +5899,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "极品短剧",
@@ -5837,7 +5919,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "XBPQ_短剧TV",
@@ -5859,7 +5942,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "快看采集",
@@ -6057,7 +6141,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_XBPQ_量子资源网",
@@ -6078,7 +6163,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_XBPQ_歪片星球",
@@ -6099,7 +6185,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_XBPQ_新视觉影院",
@@ -6120,7 +6207,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_XBPQ_奇优影院",
@@ -6141,7 +6229,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "FREEOK",
@@ -6173,7 +6262,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "360_spider",
@@ -6191,7 +6281,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_IQIYI",
@@ -6209,7 +6300,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "teng",
@@ -6227,7 +6319,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "MGT",
@@ -6245,7 +6338,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "白嫖电影",
@@ -6268,7 +6362,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "忘川影视",
@@ -6301,7 +6396,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "小鸭影音",
@@ -6324,7 +6420,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "一起看1XBPQ",
@@ -6346,7 +6443,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_appys_影探",
@@ -6367,7 +6465,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "酷看",
@@ -6386,7 +6485,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "酷影视",
@@ -6405,7 +6505,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "Xinsj",
@@ -6425,7 +6526,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "DiDuan",
@@ -6445,7 +6547,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_xBPQ_文才影视",
@@ -6464,7 +6567,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_月亮影视",
@@ -6490,7 +6594,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_麻花影视",
@@ -6512,7 +6617,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "金鱼影视",
@@ -6531,7 +6637,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "天龙影视",
@@ -6550,7 +6657,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "黑木耳资源",
@@ -6569,7 +6677,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "剧圈圈",
@@ -6590,7 +6699,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "XBPQ_文才",
@@ -6643,7 +6753,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "XBPQ_黑狐影院",
@@ -6693,7 +6804,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "XBPQ_电影先生",
@@ -6725,7 +6837,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "XBPQ_麻衣影院",
@@ -6747,7 +6860,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_XBPQ_伊人观影",
@@ -6774,7 +6888,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_XBPQ_小林子影视",
@@ -6799,7 +6914,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": " csp_xBPQ_天空影视",
@@ -6822,7 +6938,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_XBPQ_悠云影视",
@@ -6854,7 +6971,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "baipiaoys",
@@ -6886,7 +7004,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "可可影视",
@@ -6913,7 +7032,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "玩你网盘",
@@ -6934,7 +7054,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "mingriyingshi",
@@ -6959,7 +7080,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "Wexxpgtv",
@@ -6978,7 +7100,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "采采_米星",
@@ -7000,7 +7123,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "采采_五五",
@@ -7022,7 +7146,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_SNzy",
@@ -7304,7 +7429,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_djtv",
@@ -7331,7 +7457,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_XBPQ_vstv",
@@ -7353,7 +7480,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "yqkan_open",
@@ -7371,7 +7499,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_短剧网香",
@@ -7450,7 +7579,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "xkanzy.com",
@@ -7510,7 +7640,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "新6V",
@@ -7531,7 +7662,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "4KHDR",
@@ -7552,7 +7684,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_xpath_yinfans",
@@ -7571,7 +7704,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_xml_爱坤",
@@ -7638,7 +7772,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "南瓜",
@@ -7658,7 +7793,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "加速",
@@ -7677,7 +7813,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "Xinsj_2",
@@ -7697,7 +7834,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "相声",
@@ -7741,7 +7879,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "评书",
@@ -7785,7 +7924,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "49zy",
@@ -8308,7 +8448,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "索尼",
@@ -8384,7 +8525,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_WoGG_2",
@@ -8404,7 +8546,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "陌陌",
@@ -8424,7 +8567,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "drpy_js_drpy",
@@ -9035,7 +9179,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_New6v",
@@ -9054,7 +9199,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_SeedHub",
@@ -9073,7 +9219,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_KubaCL",
@@ -9092,7 +9239,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_MeijuTT",
@@ -9111,7 +9259,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_MeijuMi",
@@ -9130,7 +9279,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_BLSGod",
@@ -9149,7 +9299,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_Xunlei8",
@@ -9168,7 +9319,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_Dm84",
@@ -9186,7 +9338,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_Ying",
@@ -9204,7 +9357,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_Anime1",
@@ -9222,7 +9376,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_Ysj",
@@ -9240,7 +9395,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "第一动漫",
@@ -9259,7 +9415,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "Bili",
@@ -9283,7 +9440,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "js_B站精简",
@@ -9322,7 +9480,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_Aid",
@@ -9345,7 +9504,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "Excel教程",
@@ -9364,7 +9524,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "吾爱PS",
@@ -9383,7 +9544,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "吾爱乐器",
@@ -9402,7 +9564,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "美食",
@@ -9421,7 +9584,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "哔哩",
@@ -9441,7 +9605,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "吾爱舞蹈",
@@ -9460,7 +9625,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "吾爱户外",
@@ -9479,7 +9645,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "吾爱戏曲",
@@ -9498,7 +9665,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "吾爱搭配",
@@ -9517,7 +9685,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "吾爱解说",
@@ -9536,7 +9705,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "吾爱演唱会",
@@ -9555,7 +9725,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "吾爱经典",
@@ -9574,7 +9745,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "吾爱球星",
@@ -9593,7 +9765,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "drpy_js_JustLive",
@@ -9726,7 +9899,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "88js",
@@ -9840,7 +10014,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_XYQHiker_兔小贝2",
@@ -9859,7 +10034,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "py_cctv_1",
@@ -9897,7 +10073,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "童趣",
@@ -9935,7 +10112,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "益智",
@@ -9954,7 +10132,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "少儿教育",
@@ -9973,7 +10152,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "幼儿乐园",
@@ -9992,7 +10172,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "儿童",
@@ -10011,7 +10192,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "学习",
@@ -10030,7 +10212,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "幼小衔接",
@@ -10049,7 +10232,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "小灯塔",
@@ -10068,7 +10252,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "小灯塔科学",
@@ -10087,7 +10272,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "小灯塔地理",
@@ -10106,7 +10292,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "小灯塔国学",
@@ -10125,7 +10312,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "小灯塔人文",
@@ -10144,7 +10332,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "儿童拼音",
@@ -10163,7 +10352,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "儿童识字",
@@ -10182,7 +10372,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "儿童英语",
@@ -10201,7 +10392,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "儿童硬笔",
@@ -10220,7 +10412,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "儿童思维",
@@ -10239,7 +10432,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "儿童口才",
@@ -10258,7 +10452,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "儿童编程",
@@ -10277,7 +10472,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "儿童武术",
@@ -10296,7 +10492,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "兴趣培养",
@@ -10315,7 +10512,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "小学",
@@ -10334,7 +10532,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "初中",
@@ -10353,7 +10552,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "高中",
@@ -10372,7 +10572,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "py_youer",
@@ -10448,7 +10649,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "drpy_js_小品网",
@@ -10529,7 +10731,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "Biliych",
@@ -10553,7 +10756,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_Bili_meishi",
@@ -10572,7 +10776,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_Bili_youer",
@@ -10591,7 +10796,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "drpy_js_兔小贝",
@@ -10629,7 +10835,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "初中课堂",
@@ -10648,7 +10855,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "高中教育",
@@ -10667,7 +10875,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "drpy_js_虎牙",
@@ -10874,7 +11083,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "ss直播",
@@ -10916,7 +11126,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "站名": "2028P",
@@ -12615,7 +12826,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "天天影视",
@@ -12636,7 +12848,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "浪酷影视",
@@ -12657,7 +12870,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "甜圈短剧",
@@ -12676,7 +12890,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "菲儿影视",
@@ -12695,7 +12910,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "苹果影视",
@@ -12713,7 +12929,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "✨PTT短剧✨",
@@ -12778,7 +12995,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "✨天龙影院✨",
@@ -12816,7 +13034,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_xBPQ_稻田影视",
@@ -12840,7 +13059,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_XBPQ_游子视频",
@@ -12867,7 +13087,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "狐狸君",
@@ -12907,7 +13128,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "https://www.vsyingyuan.ccVS影院",
@@ -12933,7 +13155,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "🎃南瓜影院",
@@ -12958,7 +13181,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "鲨鱼影视",
@@ -13004,7 +13228,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "奇优影院",
@@ -13031,7 +13256,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_XBPQ_短剧网",
@@ -13058,7 +13284,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "XBPQ_短剧影院网",
@@ -13086,7 +13313,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "✳️天天影视",
@@ -13114,7 +13342,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "🎆LIBVIO电影",
@@ -13142,7 +13371,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "ptt",
@@ -13171,7 +13401,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": " 网飞猫 ",
@@ -13201,7 +13432,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_XBPQ_老王影视",
@@ -13233,7 +13465,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "飞快TV",
@@ -13257,7 +13490,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "皮皮蛋",
@@ -13280,7 +13514,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "影视大全",
@@ -13313,7 +13548,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "乌卡猫影院",
@@ -13338,7 +13574,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "纽约影院",
@@ -13372,7 +13609,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "一起看呀吧",
@@ -13402,7 +13640,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "雪糕影院",
@@ -13444,7 +13683,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "纵横|影视",
@@ -13481,7 +13721,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "影视森林",
@@ -13507,7 +13748,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "黑夜影视",
@@ -13532,7 +13774,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "xBPQ_网飞猫",
@@ -13564,7 +13807,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": " 网飞猫 _2",
@@ -13583,7 +13827,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "鬼片之家",
@@ -13608,7 +13853,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "js_星芽短剧",
@@ -13672,7 +13918,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_XBPQ_若片电影",
@@ -13698,7 +13945,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_XBPQ_好剧屋",
@@ -13724,7 +13972,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_吉吉短剧",
@@ -13751,7 +14000,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_成全影视",
@@ -13778,7 +14028,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_555电影",
@@ -13803,7 +14054,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "可可",
@@ -13823,7 +14075,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "毒蛇",
@@ -13871,7 +14124,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "好趣网",
@@ -13915,7 +14169,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_妖狐影视",
@@ -13947,7 +14202,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "厂长影院",
@@ -14189,7 +14445,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_蚂蚁影库",
@@ -14213,7 +14470,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "drpy_xbpq_毒舌影视",
@@ -14248,7 +14506,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "xBPQ_网飞猫_2",
@@ -14281,7 +14540,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "rarbt1",
@@ -14305,7 +14565,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_XBPQ_皮皮影视",
@@ -14329,7 +14590,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "爱电影",
@@ -14371,7 +14633,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_XBPQ_八戒影视",
@@ -14395,7 +14658,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "统一影视",
@@ -14418,7 +14682,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "ptt_2",
@@ -14446,7 +14711,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "蚂蚁秒播",
@@ -14810,7 +15076,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "360",
@@ -14880,7 +15147,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "中医药",
@@ -14903,7 +15171,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "MV",
@@ -14926,7 +15195,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "歌舞",
@@ -14949,7 +15219,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "舞蹈",
@@ -14972,7 +15243,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "hipy_js_KTV歌厅[听]",
@@ -15046,7 +15318,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "樱花动漫官方网站",
@@ -15071,7 +15344,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "樱花动漫网站",
@@ -15096,7 +15370,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "动漫岛",
@@ -15121,7 +15396,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "动漫网",
@@ -15146,7 +15422,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "哔咪动漫",
@@ -15171,7 +15448,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "drpy_js_奇珍异兽",
@@ -15275,7 +15553,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_XBPQ_人兽香蕉",
@@ -15303,7 +15582,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_XBPQ_6黑料网曝9",
@@ -15329,7 +15609,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_XBPQ_WakuWaku",
@@ -15355,7 +15636,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_XBPQ_91国产经典",
@@ -15381,7 +15663,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_XBPQ_AV在线看",
@@ -15409,7 +15692,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_XBPQ_灰灰影音",
@@ -15439,7 +15723,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "XMVideo",
@@ -15457,7 +15742,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_https://18hr.life/label/sort",
@@ -15483,7 +15769,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_XBPQ_欧美日韩精品",
@@ -15511,7 +15798,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "麻豆",
@@ -15541,7 +15829,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "乐草",
@@ -15567,7 +15856,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "花影视",
@@ -15594,7 +15884,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "麻豆_2",
@@ -15622,7 +15913,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_顶级网曝",
@@ -15659,7 +15951,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "糖心",
@@ -15687,7 +15980,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "纤纤影视福利版",
@@ -15733,7 +16027,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "小幺女|床吧",
@@ -15766,7 +16061,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_XBPQ_花心小妞",
@@ -15804,7 +16100,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_XYQHiker_777影院",
@@ -15823,7 +16120,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_91黑料",
@@ -15858,7 +16156,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "沙咖影院",
@@ -15890,7 +16189,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "努可影院",
@@ -15922,7 +16222,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "天美",
@@ -15950,7 +16251,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "色最色",
@@ -15976,7 +16278,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "爱豆传媒",
@@ -16006,7 +16309,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "传媒二区",
@@ -16038,7 +16342,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "高清xxxx黑料",
@@ -16073,7 +16378,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "黑料",
@@ -16104,7 +16410,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "暗网色库",
@@ -16126,7 +16433,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "女优色库",
@@ -16148,7 +16456,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "BuzzAV",
@@ -16177,7 +16486,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "51黑料福利社",
@@ -16210,7 +16520,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "Cg51",
@@ -16228,7 +16539,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "成人重口",
@@ -16263,7 +16575,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "18insta",
@@ -16297,7 +16610,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "玩偶妹妹",
@@ -16321,7 +16635,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "TaiAv",
@@ -16355,7 +16670,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_xBPQ_香蕉AV解说",
@@ -16374,7 +16690,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_xBPQ_香蕉超清",
@@ -16393,7 +16710,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_xBPQ_香蕉国产",
@@ -16412,7 +16730,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_xBPQ_香蕉久久热",
@@ -16431,7 +16750,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_xBPQ_香蕉废柴",
@@ -16450,7 +16770,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_香蕉资源",
@@ -16469,7 +16790,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_香蕉视频",
@@ -16488,7 +16810,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_xBPQ_香蕉直播",
@@ -16507,7 +16830,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_xBPQ_天天直播",
@@ -16526,7 +16850,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_xBPQ_香蕉搜索",
@@ -16545,7 +16870,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_麻豆映画",
@@ -16564,7 +16890,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "www.17c.com",
@@ -16597,7 +16924,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_XBPQ_天天综合",
@@ -16616,7 +16944,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_xBPQ_tt",
@@ -16924,7 +17253,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "富二代",
@@ -17361,7 +17691,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "丝袜",
@@ -17588,7 +17919,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "Taohuazu",
@@ -17609,7 +17941,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_xBPQ_91色",
@@ -17628,7 +17961,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "天美AV",
@@ -18200,7 +18534,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "xin91",
@@ -18231,7 +18566,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_XBPQ_JAV目錄大全",
@@ -18278,7 +18614,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_888",
@@ -18299,7 +18636,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "小幺女|床吧_2",
@@ -18333,7 +18671,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "视色",
@@ -18366,7 +18705,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_顶级网曝_2",
@@ -18403,7 +18743,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "我爱AV",
@@ -18435,7 +18776,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "地瓜",
@@ -18459,7 +18801,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_玉满堂",
@@ -18485,7 +18828,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_XBPQ_四虎影院",
@@ -18512,7 +18856,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_麻豆视频1",
@@ -18540,7 +18885,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_91短视频",
@@ -18568,7 +18914,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "36D蜜桃臀",
@@ -18601,7 +18948,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "射了么https://shelm1.xyz",
@@ -18629,7 +18977,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "土豪精",
@@ -18656,7 +19005,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "淫水机网",
@@ -18683,7 +19033,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "背德人妻",
@@ -18712,7 +19063,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "PWXXX.com",
@@ -18740,7 +19092,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "狗连女视频//https://gouln.xyz",
@@ -18770,7 +19123,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "https://www.qqdsp.cc",
@@ -18798,7 +19152,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "真黄涩仓库",
@@ -18822,7 +19177,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "爱看视频",
@@ -18850,7 +19206,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "色佬街视频",
@@ -18878,7 +19235,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "女子学院",
@@ -18906,7 +19264,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "H色车房https://hskffby.com/",
@@ -18934,7 +19293,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "妹妹的妹妹",
@@ -18962,7 +19322,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "av帝王",
@@ -18990,7 +19351,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "X社区xxxav.tv",
@@ -19018,7 +19380,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "https://www.bihc13.top",
@@ -19046,7 +19409,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "yiren1.cc [1至53] yiren53.cc",
@@ -19074,7 +19438,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "肉铺",
@@ -19102,7 +19467,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "香蕉午夜",
@@ -19130,7 +19496,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "纤纤影视福利版_2",
@@ -19176,7 +19543,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "爱丽丝",
@@ -19214,7 +19582,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "✨R撸巴✨",
@@ -19241,7 +19610,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "农夫与少妇",
@@ -19278,7 +19648,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "hipy_js_小女18[密]",
@@ -19459,7 +19830,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_大炮色",
@@ -19482,7 +19854,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_XYQHiker_鲨鱼AV🔞",
@@ -19501,7 +19874,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_XYQHiker_91在线视频",
@@ -19520,7 +19894,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp__色花堂",
@@ -19539,7 +19914,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "csp_Ikanbot",
@@ -19557,7 +19933,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "subaibai",
@@ -19633,7 +20010,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "dingjiguochan",
@@ -19683,7 +20061,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     },
     {
       "key": "renrenys",
@@ -19775,7 +20154,8 @@
         "wymv",
         "bilibili",
         "duanju"
-      ]
+      ],
+      "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
     }
   ],
   "lives": [
@@ -20123,5 +20503,6 @@
   },
   "图片代理": "https://images.weserv.nl/?url=",
   "warningText": "勿信视频中任何广告！",
-  "spider": "http://192.168.0.108:8080/jar/spider.jar"
+  "spider": "http://192.168.0.108:8080/jar/spider.jar",
+  "jar": "https://nzsm.github.io/tvbox-server/jar/spider.jar"
 }
