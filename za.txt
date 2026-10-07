@@ -73,7 +73,7 @@
       "key": "csp_XBPQ_起看",
       "name": "🧿悦享┃蓝光",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
@@ -104,7 +104,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "lebo",
@@ -182,7 +182,7 @@
       "key": "csp_XBPQ_六八",
       "name": "🧿秒播┃蓝光",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
@@ -212,13 +212,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "csp_XBPQ_韩片",
       "name": "🧿韩片┃蓝光",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
@@ -249,13 +249,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "C影院",
       "name": "🧿大众┃蓝光",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
@@ -275,13 +275,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "csp_XBPQ_zhuijuba",
       "name": "🧿追剧┃蓝光",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
@@ -298,13 +298,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "大师兄",
       "name": "🧿拾光┃蓝光",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "ext": {
         "简介": "请勿相信影片中的广告，以免上当受骗❗️+剧情介绍：&&</p >",
         "分类url": "https://www.dsxysproo.com/dqvodshow/{cateId}-{area}--{class}-----{catePg}---{year}.html",
@@ -322,13 +322,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "多影视",
       "name": "🧿喜多┃影视",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 0,
       "quickSearch": 0,
       "filterable": 1,
@@ -346,13 +346,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "兔兔影院",
       "name": "🧿兔兔┃影视",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
@@ -395,13 +395,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "真鹏影院",
       "name": "🧿真鹏┃影视",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
@@ -452,13 +452,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "csp_XBPQ_6V",
       "name": "🧿艾多┃影视",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
@@ -472,13 +472,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "好看影视",
       "name": "🧿苹果┃蓝光",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
@@ -509,13 +509,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "时光影视",
       "name": "🧿时光┃蓝光",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
@@ -532,13 +532,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "龛影影视",
       "name": "🧿看影┃蓝光",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
@@ -555,13 +555,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "星空影视",
       "name": "🧿星空┃蓝光",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
@@ -578,13 +578,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "sm影视",
       "name": "🧿神马┃蓝光",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
@@ -602,13 +602,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "好剧影视",
       "name": "🧿好剧┃蓝光",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
@@ -625,13 +625,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "kankan影视",
       "name": "🧿看看屋┃蓝光",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
@@ -648,13 +648,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "花姐影院",
       "name": "🧿花姐┃影视",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
@@ -680,13 +680,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "xbpq_高清剧场",
       "name": "🧿高清┃影视",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "ext": {
         "分类url": "https://www.ikanbd.com/s/{cateId}-{area}-{by}------{catePg}---{year}.html",
         "分类": "电影$movie#连续剧$series#动漫$anime#综艺$variety#动画片$animation#纪录片$documentary#电影解说$jieshuo#网络短剧$skit#体育$sports",
@@ -705,13 +705,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "iysdq",
       "name": "🧿爱优┃影视",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
@@ -728,13 +728,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "csp_河马",
       "name": "🧿河马┃影视",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
@@ -752,13 +752,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "csp_大海",
       "name": "🧿大海┃秒播",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
@@ -776,13 +776,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "胖虎影视",
       "name": "🧿胖虎┃蓝光",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
@@ -800,13 +800,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "片库影视",
       "name": "🧿片库┃蓝光",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
@@ -824,13 +824,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "322影视",
       "name": "🧿瓜瓜┃蓝光",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
@@ -848,7 +848,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "zp011",
@@ -969,7 +969,7 @@
       "key": "JAVSB",
       "name": "🧿春堂┃资源",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "ext": {
         "主页url": "https://jav.sb/",
         "直接播放": "1",
@@ -992,13 +992,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "SOAV",
       "name": "🧿搜视┃影视",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "style": {
         "type": "rect",
         "ratio": 1.5
@@ -1027,13 +1027,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "快活影網",
       "name": "🧿快活┃影视",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
@@ -1056,13 +1056,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "jap影網",
       "name": "🧿流云┃影视",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
@@ -1085,7 +1085,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "牛Y",
@@ -1169,7 +1169,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "玩偶哥哥",
@@ -1197,7 +1197,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "木偶",
@@ -1226,7 +1226,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "蜡笔",
@@ -1255,7 +1255,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "多多",
@@ -1283,7 +1283,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "欧哥",
@@ -1312,7 +1312,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "二小",
@@ -1341,7 +1341,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "快映",
@@ -1367,7 +1367,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "虎斑",
@@ -1393,7 +1393,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "双星",
@@ -1415,7 +1415,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "夸父",
@@ -1445,13 +1445,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "name": "🍁┃夏天┃秒播",
       "key": "NewGrV2",
       "type": 3,
-      "api": "csp_NewGrV2Amns",
+      "api": "com.github.catvod.spider.NewGrV2Amns",
       "searchable": 1,
       "quickSearch": 1,
       "changeable": 0,
@@ -1466,13 +1466,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "name": "🍁┃特狗┃秒播",
       "key": "AppV6Tg",
       "type": 3,
-      "api": "csp_AppV6Amns",
+      "api": "com.github.catvod.spider.AppV6Amns",
       "searchable": 1,
       "quickSearch": 1,
       "changeable": 0,
@@ -1487,13 +1487,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "name": "🍁┃ACE┃秒播",
       "key": "AppV7Xhr",
       "type": 3,
-      "api": "csp_AppV7Amns",
+      "api": "com.github.catvod.spider.AppV7Amns",
       "searchable": 1,
       "quickSearch": 1,
       "changeable": 0,
@@ -1508,13 +1508,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "name": "🍁┃独家┃秒播",
       "key": "AppV7Xyz",
       "type": 3,
-      "api": "csp_AppV7Amns",
+      "api": "com.github.catvod.spider.AppV7Amns",
       "searchable": 1,
       "quickSearch": 1,
       "changeable": 0,
@@ -1529,7 +1529,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "华谊",
@@ -1560,7 +1560,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "热播影视",
@@ -1583,7 +1583,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "剧圈99",
@@ -1612,7 +1612,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "天堂",
@@ -1643,7 +1643,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "苹果",
@@ -1674,7 +1674,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "爱看机器人",
@@ -1693,7 +1693,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XYQ.jar"
     },
     {
       "key": "瓜子影视",
@@ -1712,7 +1712,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "独播影视",
@@ -1731,7 +1731,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "荐片",
@@ -1750,7 +1750,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "世界听书",
@@ -1772,7 +1772,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "feifan",
@@ -1832,7 +1832,7 @@
       "name": "🎬豪堪┃短剧",
       "key": "HHkk",
       "type": 3,
-      "api": "csp_HHkkAmns",
+      "api": "com.github.catvod.spider.HHkkAmns",
       "searchable": 1,
       "quickSearch": 1,
       "changeable": 0,
@@ -1847,13 +1847,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "name": "🎬拜拜┃短剧",
       "key": "Bddj",
       "type": 3,
-      "api": "csp_BddjAmns",
+      "api": "com.github.catvod.spider.BddjAmns",
       "searchable": 1,
       "quickSearch": 1,
       "changeable": 0,
@@ -1868,7 +1868,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "戏曲多多",
@@ -1890,13 +1890,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "name": "📡虎牙┃Live",
       "key": "HuyaLive",
       "type": 3,
-      "api": "csp_HuyaLiveAmns",
+      "api": "com.github.catvod.spider.HuyaLiveAmns",
       "searchable": 1,
       "quickSearch": 1,
       "changeable": 0,
@@ -1914,7 +1914,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "戏 曲",
@@ -1934,7 +1934,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "相声小品",
@@ -1954,7 +1954,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "演唱会",
@@ -1974,7 +1974,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "MTV",
@@ -1994,7 +1994,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "哔哩哔哩",
@@ -2014,7 +2014,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "csp_Bili短剧",
@@ -2034,7 +2034,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "影视解说",
@@ -2054,7 +2054,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "腾讯(官源)",
@@ -4446,7 +4446,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "csp_JavDb",
@@ -4472,7 +4472,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "nivod18",
@@ -4541,7 +4541,7 @@
       "key": "csp_SMB目录",
       "name": "网络共享",
       "type": 3,
-      "api": "csp_Smb4nas",
+      "api": "com.github.catvod.spider.Smb4nas",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
@@ -4555,7 +4555,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "泥巴",
@@ -4575,7 +4575,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "量子",
@@ -4645,7 +4645,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "18AV",
@@ -4669,7 +4669,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "18A貓",
@@ -4716,7 +4716,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "MissAV",
@@ -4740,7 +4740,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "Hanime",
@@ -4764,13 +4764,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "国产",
       "name": "顶级国产",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "style": {
         "type": "rect",
         "ratio": 1.33
@@ -4792,13 +4792,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "姐姐",
       "name": "姐姐",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "style": {
         "type": "rect",
         "ratio": 1.33
@@ -4821,7 +4821,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "玉兔资源",
@@ -5705,7 +5705,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "直播转点播",
@@ -5818,7 +5818,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "Iktv",
@@ -5838,13 +5838,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "csp_XBPQ_爱看影院",
       "name": "🌺爱看影院🌺",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": "1",
       "quickSearch": "1",
       "filterable": "1",
@@ -5860,13 +5860,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "csp_毒蛇影视",
       "name": "🌺┃毒蛇┃影视",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
@@ -5880,13 +5880,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "秒播短剧",
       "name": "🌈秒播短剧",
       "type": 3,
-      "api": "csp_Wexduanjuvop",
+      "api": "com.github.catvod.spider.Wexduanjuvop",
       "searchable": 1,
       "changeable": 1,
       "quickSearch": 0,
@@ -5900,13 +5900,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "极品短剧",
       "name": "🌈极品短剧",
       "type": 3,
-      "api": "csp_Wexduanjuvmp",
+      "api": "com.github.catvod.spider.Wexduanjuvmp",
       "searchable": 1,
       "changeable": 1,
       "quickSearch": 0,
@@ -5920,7 +5920,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "XBPQ_短剧TV",
@@ -5929,7 +5929,7 @@
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "ext": {
         "分类": "抖音短剧$20#快手短剧$21#视频号短剧$22#热播短剧$23",
         "分类url": "http://www.duanjutv.cc/vodtype/{cateId}-{catePg}.html"
@@ -5943,7 +5943,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "快看采集",
@@ -6126,7 +6126,7 @@
       "key": "csp_XBPQ_非凡资源网",
       "name": "💚非凡资源网💚",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": "1",
       "quickSearch": "1",
       "filterable": "1",
@@ -6142,13 +6142,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "csp_XBPQ_量子资源网",
       "name": "💚量子资源网💚",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": "1",
       "quickSearch": "1",
       "filterable": "1",
@@ -6164,13 +6164,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "csp_XBPQ_歪片星球",
       "name": "❤️歪片星球️❤️",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": "1",
       "quickSearch": "1",
       "filterable": "1",
@@ -6186,13 +6186,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "csp_XBPQ_新视觉影院",
       "name": "❤️新视觉影院❤️",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": "1",
       "quickSearch": "1",
       "filterable": "1",
@@ -6208,13 +6208,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "csp_XBPQ_奇优影院",
       "name": "❤️奇优影院❤️",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": "1",
       "quickSearch": "1",
       "filterable": "1",
@@ -6230,13 +6230,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "FREEOK",
       "name": "🌸福瑞剧院",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "ext": {
         "分类": "电影$1#剧集$2#动漫$3#综艺$4#少儿$5",
         "分类url": "https://www.freeok.vip/vodshow/{cateId}-{area}-{by}-{class}-----{catePg}---{year}.html",
@@ -6263,7 +6263,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "360_spider",
@@ -6282,13 +6282,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XYQ.jar"
     },
     {
       "key": "csp_IQIYI",
       "name": "🥝爱奇艺视频",
       "type": 3,
-      "api": "com.github.catvod.spider.IQIYI",
+      "api": "com.github.catvod.spider.Iqiyi",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
@@ -6301,7 +6301,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "teng",
@@ -6320,7 +6320,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "MGT",
@@ -6339,13 +6339,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "白嫖电影",
       "name": "🌈白嫖电影",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "filterable": 1,
       "quickSearch": 0,
       "searchable": 1,
@@ -6363,13 +6363,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "忘川影视",
       "name": "🌈忘川影视",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "filterable": 1,
       "quickSearch": 0,
       "searchable": 1,
@@ -6397,13 +6397,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "小鸭影音",
       "name": "🌈小鸭影音",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "ext": {
         "简介": "小林子为您剧情介绍: +stui-content__desc col-pd clearfix\">&&</div>",
         "分类url": "https://777tv.ai/vod/show/area/{area}/id/{cateId}/page/{catePg}/year/{year}.html",
@@ -6421,13 +6421,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "一起看1XBPQ",
       "name": "🌈一起看┃XBPQ",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "filterable": 1,
       "quickSearch": 0,
       "searchable": 1,
@@ -6444,7 +6444,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "csp_appys_影探",
@@ -6466,13 +6466,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "酷看",
       "name": "🌈酷看┃秒播",
       "type": 3,
-      "api": "csp_Kkys",
+      "api": "com.github.catvod.spider.Kkys",
       "searchable": 1,
       "quickSearch": 0,
       "changeable": 1,
@@ -6486,7 +6486,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "酷影视",
@@ -6506,7 +6506,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "Xinsj",
@@ -6527,7 +6527,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "DiDuan",
@@ -6548,13 +6548,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "csp_xBPQ_文才影视",
       "name": "🌈秒播┃文才",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 0,
@@ -6568,13 +6568,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "csp_月亮影视",
       "name": "🌙月亮影院",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "filterable": 1,
       "quickSearch": 0,
@@ -6595,13 +6595,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "csp_麻花影视",
       "name": "🌈麻花影视",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
@@ -6618,13 +6618,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "金鱼影视",
       "name": "💘金鱼影视",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
@@ -6638,13 +6638,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "天龙影视",
       "name": "💘天龙影视",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
@@ -6658,13 +6658,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "黑木耳资源",
       "name": "💘黑木耳资源",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
@@ -6678,13 +6678,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "剧圈圈",
       "name": "💘剧圈圈",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
@@ -6700,13 +6700,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "XBPQ_文才",
       "name": "🌈文才|XBPQ",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
@@ -6754,13 +6754,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "XBPQ_黑狐影院",
       "name": "🌈黑狐影院|XBPQ",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "ext": {
         "站名": "黑狐影院",
         "主页url": "http://fagmn.com",
@@ -6805,13 +6805,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "XBPQ_电影先生",
       "name": "🌈电影先生|XBPQ",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "ext": {
         "分类url": "https://dianyi.ng/pianku-{cateId}-{area}-------{catePg}---{year}.html",
         "简介": "class=\"video-info-item video-info-content vod_content\">&&</span>",
@@ -6838,13 +6838,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "XBPQ_麻衣影院",
       "name": "🌈麻衣影院|XBPQ",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
@@ -6861,13 +6861,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "csp_XBPQ_伊人观影",
       "name": "🌈伊人观影",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "ext": {
         "简介": "剧情介绍: ",
         "数组": "fed-list-item fed-padding fed-col-xs4 fed-col-sm3 fed-col-md2\">&&</li>",
@@ -6889,13 +6889,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "csp_XBPQ_小林子影视",
       "name": "🌈小咪影视",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "ext": {
         "简介": "剧情介绍: +more-box\">&&</div>",
         "线路数组": "#ewave-playlist&&</li>",
@@ -6915,13 +6915,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": " csp_xBPQ_天空影视",
       "name": "🌈天空（邵氏）电影",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
@@ -6939,7 +6939,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "csp_XBPQ_悠云影视",
@@ -6949,7 +6949,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "ext": {
         "主页url": "https://yoyys1.com/",
         "副标题": "pic-text text-right\">&&</b>",
@@ -6972,7 +6972,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "baipiaoys",
@@ -6982,7 +6982,7 @@
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "ext": {
         "主页url": "https://www.baipiaoys.com:9092/",
         "副标题": "pic-text text-right\">&&</b>",
@@ -7005,7 +7005,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "可可影视",
@@ -7014,7 +7014,7 @@
       "searchable": 1,
       "quickSearch": 0,
       "changeable": 1,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "ext": {
         "简介": "detail-desc\">&&</div>",
         "图片": "data-original=\"&&\"[替换:/vod1>>https://vres.a357899.cn/vod1]",
@@ -7033,7 +7033,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "玩你网盘",
@@ -7055,7 +7055,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "mingriyingshi",
@@ -7081,13 +7081,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "Wexxpgtv",
       "name": "💘红富士TV",
       "type": 3,
-      "api": "csp_Wexxpgtv",
+      "api": "com.github.catvod.spider.Wexxpgtv",
       "searchable": 1,
       "changeable": 1,
       "quickSearch": 0,
@@ -7101,13 +7101,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "采采_米星",
       "name": "🌈大米",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
@@ -7124,13 +7124,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "采采_五五",
       "name": "🌈555",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
@@ -7147,7 +7147,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "csp_SNzy",
@@ -7430,14 +7430,14 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "csp_djtv",
       "name": "💚短剧二",
       "type": 3,
       "playerType": 2,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
@@ -7458,13 +7458,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "csp_XBPQ_vstv",
       "name": "💖短剧三",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
@@ -7481,7 +7481,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "yqkan_open",
@@ -7500,7 +7500,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "csp_短剧网香",
@@ -7580,7 +7580,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XYQ.jar"
     },
     {
       "key": "xkanzy.com",
@@ -7641,7 +7641,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "新6V",
@@ -7663,7 +7663,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "4KHDR",
@@ -7685,7 +7685,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "csp_xpath_yinfans",
@@ -7705,7 +7705,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "csp_xml_爱坤",
@@ -7773,7 +7773,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "南瓜",
@@ -7794,7 +7794,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "加速",
@@ -7814,7 +7814,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "Xinsj_2",
@@ -7835,7 +7835,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "相声",
@@ -7847,7 +7847,7 @@
         "ratio": 1.597
       },
       "quickSearch": 0,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "ext": {
         "主页url": "https://www.xsmp3.com",
         "数组二次截取": "<ul id=\"post_list_box\">&&</ul",
@@ -7880,7 +7880,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "评书",
@@ -7892,7 +7892,7 @@
         "ratio": 1.597
       },
       "quickSearch": 0,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "ext": {
         "主页url": "https://www.psmp3.com",
         "数组二次截取": "<ul id=\"post_list_box\">&&</ul",
@@ -7925,7 +7925,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "49zy",
@@ -8432,7 +8432,7 @@
       "key": "采采_五五_2",
       "name": "🦄555",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 0,
@@ -8449,7 +8449,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "索尼",
@@ -8526,7 +8526,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "csp_WoGG_2",
@@ -8547,7 +8547,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "陌陌",
@@ -8568,7 +8568,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "drpy_js_drpy",
@@ -9180,7 +9180,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XYQ.jar"
     },
     {
       "key": "csp_New6v",
@@ -9200,7 +9200,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XYQ.jar"
     },
     {
       "key": "csp_SeedHub",
@@ -9220,7 +9220,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "csp_KubaCL",
@@ -9240,7 +9240,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XYQ.jar"
     },
     {
       "key": "csp_MeijuTT",
@@ -9260,7 +9260,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XYQ.jar"
     },
     {
       "key": "csp_MeijuMi",
@@ -9280,7 +9280,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "csp_BLSGod",
@@ -9300,13 +9300,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "csp_Xunlei8",
       "name": "🧲迅雷吧",
       "type": 3,
-      "api": "csp_Xunlei8",
+      "api": "com.github.catvod.spider.Xunlei8",
       "playerType": 1,
       "searchable": 1,
       "quickSearch": 1,
@@ -9320,7 +9320,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "csp_Dm84",
@@ -9339,7 +9339,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "csp_Ying",
@@ -9358,7 +9358,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "csp_Anime1",
@@ -9377,7 +9377,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "csp_Ysj",
@@ -9396,7 +9396,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "第一动漫",
@@ -9416,7 +9416,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XYQ.jar"
     },
     {
       "key": "Bili",
@@ -9441,7 +9441,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "js_B站精简",
@@ -9481,7 +9481,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "csp_Aid",
@@ -9505,7 +9505,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "Excel教程",
@@ -9525,7 +9525,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "吾爱PS",
@@ -9545,7 +9545,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "吾爱乐器",
@@ -9565,7 +9565,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "美食",
@@ -9585,7 +9585,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "哔哩",
@@ -9606,7 +9606,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "吾爱舞蹈",
@@ -9626,7 +9626,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "吾爱户外",
@@ -9646,7 +9646,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "吾爱戏曲",
@@ -9666,7 +9666,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "吾爱搭配",
@@ -9686,7 +9686,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "吾爱解说",
@@ -9706,7 +9706,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "吾爱演唱会",
@@ -9726,7 +9726,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "吾爱经典",
@@ -9746,7 +9746,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "吾爱球星",
@@ -9766,7 +9766,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "drpy_js_JustLive",
@@ -9900,7 +9900,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "88js",
@@ -10015,7 +10015,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XYQ.jar"
     },
     {
       "key": "csp_XYQHiker_兔小贝2",
@@ -10035,7 +10035,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XYQ.jar"
     },
     {
       "key": "py_cctv_1",
@@ -10074,7 +10074,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "童趣",
@@ -10113,7 +10113,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "益智",
@@ -10133,7 +10133,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "少儿教育",
@@ -10153,7 +10153,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "幼儿乐园",
@@ -10173,7 +10173,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "儿童",
@@ -10193,7 +10193,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "学习",
@@ -10213,7 +10213,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "幼小衔接",
@@ -10233,7 +10233,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "小灯塔",
@@ -10253,7 +10253,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "小灯塔科学",
@@ -10273,7 +10273,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "小灯塔地理",
@@ -10293,7 +10293,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "小灯塔国学",
@@ -10313,7 +10313,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "小灯塔人文",
@@ -10333,7 +10333,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "儿童拼音",
@@ -10353,7 +10353,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "儿童识字",
@@ -10373,7 +10373,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "儿童英语",
@@ -10393,7 +10393,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "儿童硬笔",
@@ -10413,7 +10413,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "儿童思维",
@@ -10433,7 +10433,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "儿童口才",
@@ -10453,7 +10453,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "儿童编程",
@@ -10473,7 +10473,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "儿童武术",
@@ -10493,7 +10493,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "兴趣培养",
@@ -10513,7 +10513,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "小学",
@@ -10533,7 +10533,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "初中",
@@ -10553,7 +10553,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "高中",
@@ -10573,7 +10573,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "py_youer",
@@ -10650,7 +10650,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "drpy_js_小品网",
@@ -10732,7 +10732,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "Biliych",
@@ -10757,7 +10757,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "csp_Bili_meishi",
@@ -10777,7 +10777,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "csp_Bili_youer",
@@ -10797,7 +10797,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "drpy_js_兔小贝",
@@ -10836,7 +10836,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "初中课堂",
@@ -10856,7 +10856,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "高中教育",
@@ -10876,7 +10876,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "drpy_js_虎牙",
@@ -11084,7 +11084,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "ss直播",
@@ -11113,7 +11113,7 @@
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "ext": {
         "分类": "日韩爽片$1#国产精选$2#传媒合集$5#欧美激情$3#网爆吃瓜$26",
         "分类url": "https://ysys438.xyz/vodshow/{cateId}--{year}------{catePg}---{by}.html"
@@ -11127,7 +11127,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "站名": "2028P",
@@ -12813,7 +12813,7 @@
       "key": "03影院https://www.03yy.live",
       "name": "💥03影院💥",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
@@ -12827,7 +12827,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "天天影视",
@@ -12849,7 +12849,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "浪酷影视",
@@ -12871,13 +12871,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "甜圈短剧",
       "name": "❀甜圈┃短剧",
       "type": 3,
-      "api": "csp_TianQuanGuard",
+      "api": "com.github.catvod.spider.TianQuanGuard",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
@@ -12891,7 +12891,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "菲儿影视",
@@ -12900,7 +12900,7 @@
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
-      "api": "csp_AppFerr",
+      "api": "com.github.catvod.spider.AppFerr",
       "ext": "sHR2rlsfjI4L3t4RXQMkn/M3t4AXAKTrZj3tfhm1t/gMT3dOrHqIzUNqLUEOIDMvllTbX6e1hMhB2mfpOaCmHNOL1yBB3SmxNyqXlai90EIpdnwOOgCR9Z+YwCTj6ySjzJ2VBiH3eXeOGcavcNeVRA==",
       "flags": [
         "youku",
@@ -12911,7 +12911,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "苹果影视",
@@ -12930,13 +12930,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "✨PTT短剧✨",
       "name": "✨PTT短剧✨",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
@@ -12996,13 +12996,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "✨天龙影院✨",
       "name": "✨天龙短剧✨",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
@@ -13035,13 +13035,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "csp_xBPQ_稻田影视",
       "name": "♨️稻田影视",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
@@ -13060,13 +13060,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "csp_XBPQ_游子视频",
       "name": "♨️游子视频",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
@@ -13088,13 +13088,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "狐狸君",
       "name": "♨️狐狸君｜4K",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "changeable": 1,
       "searchable": 1,
       "quickSearch": 0,
@@ -13129,13 +13129,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "https://www.vsyingyuan.ccVS影院",
       "name": "♨️VS影院",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
@@ -13156,13 +13156,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "🎃南瓜影院",
       "name": "🎃南瓜影院",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
@@ -13182,13 +13182,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "鲨鱼影视",
       "name": "♻️鲨鱼影视┃秒看",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
@@ -13229,13 +13229,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "奇优影院",
       "name": "♻️奇优影院",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
@@ -13257,13 +13257,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "csp_XBPQ_短剧网",
       "name": "♨️短剧网",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
@@ -13285,7 +13285,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "XBPQ_短剧影院网",
@@ -13294,7 +13294,7 @@
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "ext": {
         "请求头": "User-Agent$MOBILE_UA",
         "编码": "UTF-8",
@@ -13314,13 +13314,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "✳️天天影视",
       "name": "❇️天天影视",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
@@ -13343,13 +13343,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "🎆LIBVIO电影",
       "name": "🎆LIBVIO电影",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
@@ -13372,13 +13372,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "ptt",
       "name": "🌈PTT视频",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
@@ -13402,13 +13402,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": " 网飞猫 ",
       "name": "😾网飞猫",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
@@ -13433,13 +13433,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "csp_XBPQ_老王影视",
       "name": "🎬老王影视",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
@@ -13466,13 +13466,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "飞快TV",
       "name": "🎬飞快TV",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
@@ -13491,13 +13491,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "皮皮蛋",
       "name": "🎬皮皮蛋",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
@@ -13515,13 +13515,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "影视大全",
       "name": "🎬影视┃大全",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
@@ -13549,13 +13549,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "乌卡猫影院",
       "name": "🐱乌猫┃影视",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
@@ -13575,13 +13575,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "纽约影院",
       "name": "🗽纽约┃影院",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
@@ -13610,13 +13610,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "一起看呀吧",
       "name": "👪一起看┃app",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
@@ -13641,13 +13641,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "雪糕影院",
       "name": "🧁雪糕┃影院",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
@@ -13684,13 +13684,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "纵横|影视",
       "name": "🧮纵横┃影视",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
@@ -13722,13 +13722,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "影视森林",
       "name": "🌲森林┃影视",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
@@ -13749,7 +13749,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "黑夜影视",
@@ -13759,7 +13759,7 @@
       "quickSearch": 0,
       "filterable": 1,
       "changeable": 1,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "ext": {
         "搜索url": "https://darkvod.com/tag/?wd={wd}",
         "线路标题": "[不包含:海外看资源#高清云播放器]",
@@ -13775,13 +13775,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "xBPQ_网飞猫",
       "name": "🎬网飞猫",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
@@ -13808,13 +13808,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": " 网飞猫 _2",
       "name": "😾网飞猫",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
@@ -13828,13 +13828,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "鬼片之家",
       "name": "☠鬼片之家",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
@@ -13854,7 +13854,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "js_星芽短剧",
@@ -13898,7 +13898,7 @@
       "key": "csp_XBPQ_云播短剧",
       "name": "💖云播短剧",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
@@ -13919,13 +13919,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "csp_XBPQ_若片电影",
       "name": "💖若片电影",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
@@ -13946,13 +13946,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "csp_XBPQ_好剧屋",
       "name": "💖好剧屋",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
@@ -13973,13 +13973,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "csp_吉吉短剧",
       "name": "💖吉吉短剧",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
@@ -14001,13 +14001,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "csp_成全影视",
       "name": "🌼成全影视",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
@@ -14029,13 +14029,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "csp_555电影",
       "name": "💕555电影",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
@@ -14055,7 +14055,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "可可",
@@ -14076,13 +14076,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "毒蛇",
       "name": "🌼毒蛇┃推荐",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
@@ -14125,7 +14125,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "好趣网",
@@ -14150,7 +14150,7 @@
       "key": "csp_xBPQ_神马影院(94smsm.cc)",
       "name": "🌺神马影院",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
@@ -14170,13 +14170,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "csp_妖狐影视",
       "name": "🦊妖狐影视",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
@@ -14203,13 +14203,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "厂长影院",
       "name": "🎬厂长┃影院",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 0,
       "changeable": 1,
@@ -14446,13 +14446,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "csp_蚂蚁影库",
       "name": "🎬蚂蚁影库",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
@@ -14471,7 +14471,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "drpy_xbpq_毒舌影视",
@@ -14481,7 +14481,7 @@
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "ext": {
         "数组": "module-item&&/span>",
         "副标题": "<span>&&<",
@@ -14507,13 +14507,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "xBPQ_网飞猫_2",
       "name": "🐉网飞猫",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
@@ -14541,13 +14541,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "rarbt1",
       "name": "🔴rarbt",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
@@ -14566,13 +14566,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "csp_XBPQ_皮皮影视",
       "name": "💖皮皮影视",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
@@ -14591,13 +14591,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "爱电影",
       "name": "🔥爱电影",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
@@ -14634,13 +14634,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "csp_XBPQ_八戒影视",
       "name": "🎬八戒影视",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
@@ -14659,13 +14659,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "统一影视",
       "name": "🎬统一影视",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
@@ -14683,13 +14683,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "ptt_2",
       "name": "🌈PTT-追剧之王",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
@@ -14712,7 +14712,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "蚂蚁秒播",
@@ -15056,7 +15056,7 @@
       "searchable": 1,
       "changeable": 1,
       "quickSearch": 0,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "ext": {
         "数组": "class=\"hl-item-thumb hl-lazy\"&&</div></li>",
         "简介": "class=\"hl-text-muted\">简介：</em>&&</li>",
@@ -15077,7 +15077,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "360",
@@ -15134,7 +15134,7 @@
       "key": "csp_Live2Vod_1",
       "name": "┃🖥网络电视┃",
       "type": 3,
-      "api": "csp_Live2Vod",
+      "api": "com.github.catvod.spider.Live2Vod",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
@@ -15148,7 +15148,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "中医药",
@@ -15172,7 +15172,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "MV",
@@ -15196,7 +15196,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "歌舞",
@@ -15220,7 +15220,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "舞蹈",
@@ -15244,7 +15244,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "hipy_js_KTV歌厅[听]",
@@ -15294,7 +15294,7 @@
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "ext": {
         "搜索模式": "1",
         "搜索url": "https://cn.agekkkk.com/search/-------------.html?wd=/{wd}",
@@ -15319,7 +15319,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "樱花动漫官方网站",
@@ -15329,7 +15329,7 @@
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "ext": {
         "主页url": "http://yhdm123.com/",
         "搜索url": "http://yhdm123.com/vodsearch/{wd}-------------.html",
@@ -15345,7 +15345,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "樱花动漫网站",
@@ -15355,7 +15355,7 @@
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "ext": {
         "主页url": "https://www.dmttang.com/",
         "搜索url": "https://www.dmttang.com/vodsearch/{wd}-------------.html",
@@ -15371,7 +15371,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "动漫岛",
@@ -15381,7 +15381,7 @@
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "ext": {
         "主页url": "http://www.dmand5.com/",
         "分类": "新番连载$1#热门国漫$4#剧场动漫$16#完结日漫$3",
@@ -15397,7 +15397,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "动漫网",
@@ -15407,7 +15407,7 @@
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "ext": {
         "主页url": "https://www.dongman8.cc/",
         "搜索url": "https://www.dongman8.cc/vodsearch/{wd}-------------.html",
@@ -15423,7 +15423,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "哔咪动漫",
@@ -15433,7 +15433,7 @@
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "ext": {
         "主页url": "http://m.dodoge.me/",
         "搜索url": "http://m.dodoge.me/vod/search/{wd}/",
@@ -15449,7 +15449,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "drpy_js_奇珍异兽",
@@ -15535,7 +15535,7 @@
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "ext": {
         "请求头": "User-Agent$MOBILE_UA",
         "编码": "UTF-8",
@@ -15554,13 +15554,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "csp_XBPQ_人兽香蕉",
       "name": "🔞人兽香蕉",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
@@ -15583,13 +15583,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "csp_XBPQ_6黑料网曝9",
       "name": "🔞6黑料网曝9",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
@@ -15610,13 +15610,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "csp_XBPQ_WakuWaku",
       "name": "🔞WakuWaku",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
@@ -15637,13 +15637,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "csp_XBPQ_91国产经典",
       "name": "🔞91国产经典",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
@@ -15664,13 +15664,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "csp_XBPQ_AV在线看",
       "name": "🔞AV在线看",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
@@ -15693,13 +15693,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "csp_XBPQ_灰灰影音",
       "name": "🔞灰灰影音",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
@@ -15724,7 +15724,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "XMVideo",
@@ -15743,13 +15743,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "csp_https://18hr.life/label/sort",
       "name": "🔞18禁AV",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
@@ -15770,13 +15770,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "csp_XBPQ_欧美日韩精品",
       "name": "🔞欧美日韩精品",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
@@ -15799,7 +15799,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "麻豆",
@@ -15809,7 +15809,7 @@
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "style": {
         "ratio": 1.7
       },
@@ -15830,13 +15830,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "乐草",
       "name": "🔞乐草",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
@@ -15857,13 +15857,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "花影视",
       "name": "🏆花影视",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "ext": {
         "数组": "col-6 col-sm-4 col-lg-3\">&&</div></div>",
         "图片": "data-original=\"&&\"",
@@ -15885,7 +15885,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "麻豆_2",
@@ -15895,7 +15895,7 @@
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "style": {
         "ratio": 1.7
       },
@@ -15914,13 +15914,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "csp_顶级网曝",
       "name": "🏆顶级网.曝",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "playerType": 2,
       "searchable": 1,
       "quickSearch": 0,
@@ -15952,13 +15952,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "糖心",
       "name": "🏆糖心次元",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "style": {
         "ratio": 1.7
       },
@@ -15981,13 +15981,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "纤纤影视福利版",
       "name": "🏆纤纤H版",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "playerType": 1,
       "searchable": 1,
       "quickSearch": 0,
@@ -16028,13 +16028,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "小幺女|床吧",
       "name": "🏆小幺女",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
@@ -16062,13 +16062,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "csp_XBPQ_花心小妞",
       "name": "🏆花心小妞",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
@@ -16101,7 +16101,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "csp_XYQHiker_777影院",
@@ -16121,13 +16121,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XYQ.jar"
     },
     {
       "key": "csp_91黑料",
       "name": "🏆91黑料",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
@@ -16157,13 +16157,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "沙咖影院",
       "name": "🏆沙咖影院",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
@@ -16190,13 +16190,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "努可影院",
       "name": "🏆努可影院",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
@@ -16223,13 +16223,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "天美",
       "name": "🏆天美之爱",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "ext": {
         "请求头": "User-Agent$PC_UA",
         "搜索链接": "http://www.xbyc.cc/index.php/vod/search/page/{pg}/wd/{wd}.html",
@@ -16252,13 +16252,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "色最色",
       "name": "🏆色最色",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "ext": {
         "请求头": "User-Agent$PC_UA",
         "主页url": "https://xn--zovv42dba.com/",
@@ -16279,13 +16279,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "爱豆传媒",
       "name": "🏆爱豆传媒",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "ext": {
         "主页url": "https://rourou.co/",
         "请求头": "User-Agent$PC_UA",
@@ -16310,13 +16310,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "传媒二区",
       "name": "🏆传媒二区",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
@@ -16343,13 +16343,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "高清xxxx黑料",
       "name": "🏆高清xxxx黑料",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
@@ -16379,13 +16379,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "黑料",
       "name": "🏆黑料网",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
@@ -16411,13 +16411,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "暗网色库",
       "name": "🏆暗网",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "style": {
         "ratio": 1.7
       },
@@ -16434,13 +16434,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "女优色库",
       "name": "🏆女优色库",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "style": {
         "ratio": 1.7
       },
@@ -16457,13 +16457,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "BuzzAV",
       "name": "🏆BuzzAV",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "ext": {
         "主页url": "https://www.buzzav.com/",
         "直接播放": "1",
@@ -16487,13 +16487,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "51黑料福利社",
       "name": "🏆51黑料福利社",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
@@ -16521,7 +16521,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "Cg51",
@@ -16540,13 +16540,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "成人重口",
       "name": "🏆成人重口",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
@@ -16576,13 +16576,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "18insta",
       "name": "🏆18INSTA",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "style": {
         "type": "rect",
         "ratio": 1.77
@@ -16611,13 +16611,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "玩偶妹妹",
       "name": "🏆玩偶妹妹",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
@@ -16636,13 +16636,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "TaiAv",
       "name": "🏆TaiAv",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "style": {
         "type": "rect",
         "ratio": 1.5
@@ -16671,13 +16671,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "csp_xBPQ_香蕉AV解说",
       "name": "🏆香蕉解说",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 0,
@@ -16691,13 +16691,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "csp_xBPQ_香蕉超清",
       "name": "🏆香蕉超清",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 0,
@@ -16711,13 +16711,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "csp_xBPQ_香蕉国产",
       "name": "🏆香蕉国产",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 0,
@@ -16731,13 +16731,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "csp_xBPQ_香蕉久久热",
       "name": "🏆香蕉久久热",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 0,
@@ -16751,13 +16751,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "csp_xBPQ_香蕉废柴",
       "name": "🏆香蕉废柴",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 0,
@@ -16771,13 +16771,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "csp_香蕉资源",
       "name": "🏆香蕉中文",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
@@ -16791,13 +16791,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "csp_香蕉视频",
       "name": "🏆香蕉视频",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
@@ -16811,13 +16811,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "csp_xBPQ_香蕉直播",
       "name": "🏆香蕉直播",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
@@ -16831,13 +16831,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "csp_xBPQ_天天直播",
       "name": "🏆天天直播",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
@@ -16851,13 +16851,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "csp_xBPQ_香蕉搜索",
       "name": "🏆麻豆女优",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
@@ -16871,13 +16871,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "csp_麻豆映画",
       "name": "🏆麻豆映画",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
@@ -16891,13 +16891,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "www.17c.com",
       "name": "🏆一起艹",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 0,
       "changeable": 1,
@@ -16925,13 +16925,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "csp_XBPQ_天天综合",
       "name": "🏆香蕉综合",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 0,
@@ -16945,13 +16945,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "csp_xBPQ_tt",
       "name": "🏆天天综合",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
@@ -17254,7 +17254,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "富二代",
@@ -17667,7 +17667,7 @@
       "key": "天美_2",
       "name": "🔞天美|doll",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "style": {
         "ratio": 1.7
       },
@@ -17692,7 +17692,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "丝袜",
@@ -17920,7 +17920,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "Taohuazu",
@@ -17942,13 +17942,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "csp_xBPQ_91色",
       "name": "🔞91色",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 0,
       "quickSearch": 0,
       "filterable": 0,
@@ -17962,7 +17962,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "天美AV",
@@ -18511,7 +18511,7 @@
       "key": "千百撸",
       "name": "🏆最新课程",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "ext": {
         "站名": "222av.me",
         "主页url": "http://041920.222av.me",
@@ -18535,13 +18535,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "xin91",
       "name": "🏆新91",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "style": {
         "type": "rect",
         "ratio": 1.5
@@ -18567,13 +18567,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "csp_XBPQ_JAV目錄大全",
       "name": "🏆JAV大全🪜",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
@@ -18615,13 +18615,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "csp_888",
       "name": "🏆8888🪜",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 1,
       "changeable": 1,
@@ -18637,14 +18637,14 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "小幺女|床吧_2",
       "name": "🏆小幺女🪜",
       "type": 3,
       "playerType": 2,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
@@ -18672,13 +18672,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "视色",
       "name": "🏆视色🪜",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "playerType": 1,
       "searchable": 1,
       "quickSearch": 1,
@@ -18706,13 +18706,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "csp_顶级网曝_2",
       "name": "🏆顶级网曝",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "playerType": 2,
       "searchable": 1,
       "quickSearch": 1,
@@ -18744,13 +18744,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "我爱AV",
       "name": "🏆我爱AV",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "playerType": 2,
       "searchable": 1,
       "quickSearch": 1,
@@ -18777,13 +18777,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "地瓜",
       "name": "🔞地瓜",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
@@ -18802,13 +18802,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "csp_玉满堂",
       "name": "🔞玉满堂",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
@@ -18829,13 +18829,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "csp_XBPQ_四虎影院",
       "name": "🔞四虎影院",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
@@ -18857,13 +18857,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "csp_麻豆视频1",
       "name": "🔞麻豆视频电信",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
@@ -18886,13 +18886,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "csp_91短视频",
       "name": "🔞91短视频",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
@@ -18915,13 +18915,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "36D蜜桃臀",
       "name": "🔞36D蜜桃臀",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
@@ -18949,13 +18949,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "射了么https://shelm1.xyz",
       "name": "🏆射了么",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "filterable": 1,
       "ext": {
         "分类url": "https://kkb.sixniceshelm.xyz/index.php/vod/type/id/{cateId}/page/{catePg}.html",
@@ -18978,13 +18978,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "土豪精",
       "name": "🏆土豪精",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "filterable": 0,
       "ext": {
         "分类url": "https://xn--8es785h.tuhao-av.sbs/index.php/vodtype/{cateId}-{catepg}.html",
@@ -19006,13 +19006,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "淫水机网",
       "name": "🏆老司机之家",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "filterable": 0,
       "ext": {
         "分类url": "https://xn--1rwa8485a.ysg-water.lol/index.php/vodtype/{cateId}-{catePg}.html",
@@ -19034,13 +19034,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "背德人妻",
       "name": "🏆背德人妻",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "filterable": 1,
       "ext": {
         "分类url": "https://www.bdrq15.buzz/vodtype/{cateId}-{catePg}.html",
@@ -19064,13 +19064,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "PWXXX.com",
       "name": "🏆PWXXX",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "filterable": 0,
       "ext": {
         "分类url": "https://www.pwxxx6.fun/pwxxx/vod/type/id/{cateId}/page/{catePg}.html",
@@ -19093,13 +19093,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "狗连女视频//https://gouln.xyz",
       "name": "🏆go男女",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "filterable": 0,
       "ext": {
         "分类url": "https://fbynv7.buzz/type/id/{cateId}/{catePg}.html",
@@ -19124,13 +19124,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "https://www.qqdsp.cc",
       "name": "🏆qqdsp",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "filterable": 0,
       "ext": {
         "分类url": "https://www.whhls07.buzz/index.php/vod/type/id/{cateId}/page/{catePg}.html",
@@ -19153,13 +19153,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "真黄涩仓库",
       "name": "🏆黄涩仓库",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "filterable": 1,
       "ext": {
         "分类url": "http://aanhsck.cc/vodtype/{cateId}-{catePg}.html",
@@ -19178,13 +19178,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "爱看视频",
       "name": "🏆爱看视频",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "filterable": 0,
       "style": {
         "type": "rect",
@@ -19207,13 +19207,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "色佬街视频",
       "name": "🏆色佬街视频",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "filterable": 0,
       "style": {
         "type": "rect",
@@ -19236,13 +19236,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "女子学院",
       "name": "🏆女子学院",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "filterable": 0,
       "style": {
         "type": "rect",
@@ -19265,13 +19265,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "H色车房https://hskffby.com/",
       "name": "🏆H色车房",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "filterable": 0,
       "style": {
         "type": "rect",
@@ -19294,13 +19294,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "妹妹的妹妹",
       "name": "🏆妹妹的",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "filterable": 0,
       "ext": {
         "分类url": "https://soe.mmhmm76.xyz/vodtype/{cateId}-{catePg}.html",
@@ -19323,13 +19323,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "av帝王",
       "name": "🏆av帝王",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "filterable": 0,
       "ext": {
         "分类url": "https://xn--ztty08b.avdw-mod.sbs/index.php/vodtype/{cateId}-{catePg}.html",
@@ -19352,13 +19352,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "X社区xxxav.tv",
       "name": "🏆X社区",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "filterable": 0,
       "ext": {
         "分类url": "https://xxxav6.cc/vodtype/{cateId}-{catePg}.html",
@@ -19381,13 +19381,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "https://www.bihc13.top",
       "name": "🏆幼幼girl",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "filterable": 0,
       "ext": {
         "分类url": "https://www.bihc20.top/vod/type/id/{cateId}/page/{catePg}.html",
@@ -19410,13 +19410,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "yiren1.cc [1至53] yiren53.cc",
       "name": "🏆伊人av",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "filterable": 0,
       "ext": {
         "分类url": "https://yiren2.cc/index.php/vod/type/id/{cateId}/page/{catePg}.html",
@@ -19439,13 +19439,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "肉铺",
       "name": "🏆肉铺",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "filterable": 0,
       "ext": {
         "分类url": "https://rroupu8.buzz/list/{cateId}/{catePg}.html",
@@ -19468,13 +19468,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "香蕉午夜",
       "name": "🏆香蕉午夜",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "filterable": 0,
       "ext": {
         "分类url": "https://www.xjys11.com/index.php/vod/show/class/{class}/id/{cateId}/page/{catePg}.html",
@@ -19497,13 +19497,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "纤纤影视福利版_2",
       "name": "🏆纤纤H版",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "playerType": 2,
       "searchable": 1,
       "quickSearch": 1,
@@ -19544,7 +19544,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "爱丽丝",
@@ -19555,7 +19555,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "ext": {
         "请求头": "手机",
         "发布地址": "www.ailisi.xyz",
@@ -19583,13 +19583,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "✨R撸巴✨",
       "name": "🏆R撸吧",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
@@ -19611,13 +19611,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "农夫与少妇",
       "name": "🏆农夫与少妇",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
@@ -19649,7 +19649,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "hipy_js_小女18[密]",
@@ -19831,13 +19831,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
     },
     {
       "key": "csp_大炮色",
       "name": "🏆大炮色",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
@@ -19855,7 +19855,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "csp_XYQHiker_鲨鱼AV🔞",
@@ -19875,7 +19875,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XYQ.jar"
     },
     {
       "key": "csp_XYQHiker_91在线视频",
@@ -19895,13 +19895,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XYQ.jar"
     },
     {
       "key": "csp__色花堂",
       "name": "🏆色花堂",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 0,
@@ -19915,7 +19915,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "csp_Ikanbot",
@@ -19934,13 +19934,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XYQ.jar"
     },
     {
       "key": "subaibai",
       "name": "💝素白白影视💝",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
@@ -20011,13 +20011,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "dingjiguochan",
       "name": "💝顶级国产💝",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
@@ -20062,13 +20062,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     },
     {
       "key": "renrenys",
       "name": "💝人人影视PRO💝",
       "type": 3,
-      "api": "com.github.catvod.spider.xBPQ",
+      "api": "com.github.catvod.spider.XBPQ",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
@@ -20155,7 +20155,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"
     }
   ],
   "lives": [
@@ -20502,6 +20502,6 @@
     "enabled": true
   },
   "warningText": "勿信视频中任何广告！",
-  "spider": "https://raw.liucn.cc/box/libs/jar/HCCX.jar",
-  "jar": "https://raw.liucn.cc/box/libs/jar/HCCX.jar"
+  "spider": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar",
+  "jar": "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"
 }
