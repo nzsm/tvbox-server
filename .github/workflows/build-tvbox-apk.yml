@@ -59,6 +59,11 @@ jobs:
             echo "sdk.dir=/usr/local/lib/android/sdk" > local.properties
           fi
           cat local.properties
+          # 【关键修复2】pyramid 模块把 buildPython 写死成 Windows 路径
+          # （D:/Programs/Python/Python38/python.exe），Linux 上不存在 → 编译必崩
+          # 改成 "python"，让 chaquo 用 PATH 里的 Python 3.9
+          sed -i 's#buildPython("D:[^"]*")#buildPython("python")#g' pyramid/build.gradle || true
+          grep -n "buildPython" pyramid/build.gradle || echo "（pyramid 无 buildPython 行）"
           # 加大 Gradle JVM 堆（防 OOM）
           if [ -f gradle.properties ]; then
             echo "org.gradle.jvmargs=-Xmx4g -XX:MaxMetaspaceSize=1g" >> gradle.properties
