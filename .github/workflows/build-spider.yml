@@ -1,8 +1,8 @@
 # ============================================================
-# 云编译 spider.jar —— GitHub Actions 全自动管线 v8（增强版）
+# 云编译 spider.jar —— GitHub Actions 全自动管线 v10（增强版）
 #
-# ★ v8 新增：合并外部大 jar 的独有爬虫（666tv/69 的 pg/66tv 等）
-#   你的配置里 csp_ 引用的爬虫类，除 CatVodSpider 源码自带外，
+# ★ v10 优先级反转：gao 第一 → 站主第二 → 我的 jar 垫底只补缺（重复类用 gao/站主实现，删除我的）
+#   （v8 已含 666tv/69 的 pg/66tv 与影视仓 124.71.19.220 大包）
 #   还来自这几个大 jar。v8 在编译时自动把它们并进 spider.jar。
 #
 # 使用：覆盖 .github/workflows/build-spider.yml 后 Run workflow
@@ -81,6 +81,9 @@ jobs:
           # ---- 反编译新源码的 dex ----
           rm -rf smali_new && mkdir -p smali_new
           java -jar jar/3rd/baksmali-2.5.2.jar d "$DEX" -o smali_new
+          # ---- v10 框架保护：记录新源码自带类清单（这些类绝不被外部覆盖，防 app 崩溃）----
+          export NEW_CORE_CLASSES=$(cd smali_new && find com/github/catvod/spider -name '*.smali' -printf '%f\n' 2>/dev/null | sed 's/\.smali$//' | tr '\n' ' ')
+          echo "新源码框架保护类数: $(echo $NEW_CORE_CLASSES | wc -w)"
           # 配置引用的目标爬虫类：只合并这些，避免方法总数超 dex 65535 上限
           export V18_BUDGET=52000
           # ---- 提前删除 catvob（非配置爬虫，避免占用 dex 方法预算）----
@@ -176,6 +179,48 @@ jobs:
             export V18_USED=$((V18_USED + ${R:-0}))
                     }
 
+          # v10 覆盖式合并：dest 已存在且不属于新源码框架类 → 删除我的实现，用本 jar 覆盖（gao 先来先得，站主次之）
+          merge_over() {
+            local SPID="$1"
+            local R
+            R=$(python3 - "$SPID" << 'PYX'
+          import os, sys, shutil
+          spid = sys.argv[1]
+          BUDGET = int(os.environ.get('V18_BUDGET', '52000'))
+          used = int(os.environ.get('V18_USED', '0'))
+          TARGETS = set(os.environ.get('TARGET_CLASSES', '').split())
+          NEW_CORE = set(os.environ.get('NEW_CORE_CLASSES', '').split())
+          cands = []
+          for dp, dn, fns in os.walk(spid):
+              for fn in fns:
+                  if not fn.endswith('.smali'): continue
+                  p = os.path.join(dp, fn)
+                  rel = os.path.relpath(p, spid)
+                  dest = 'smali_new/com/github/catvod/spider/' + rel
+                  cls = fn[:-6]
+                  if cls in NEW_CORE: continue
+                  if os.path.exists(dest): continue
+                  mcnt = sum(1 for ln in open(p, encoding='utf-8', errors='ignore') if ln.strip().startswith('.method'))
+                  is_t = cls in TARGETS
+                  cands.append((0 if is_t else 1, mcnt, p, dest, cls))
+          cands.sort(key=lambda x: (x[0], x[1]))
+          added = 0; n = 0; tg = 0
+          for _, mcnt, p, dest, cls in cands:
+              is_t = cls in TARGETS
+              if not is_t and used + mcnt > BUDGET: continue
+              os.makedirs(os.path.dirname(dest), exist_ok=True)
+              if os.path.exists(dest): os.remove(dest)
+              shutil.copy(p, dest)
+              if not is_t: used += mcnt
+              added += mcnt; n += 1
+              if is_t: tg += 1
+          print(f"{n}类/{added}方法(目标{tg})", file=sys.stderr)
+          print(added)
+          PYX)
+            echo "  → 本次覆盖新增 ${R} 方法"
+            export V18_USED=$((V18_USED + ${R:-0}))
+                    }
+
           # ---- 旧 jar 独有类合并（预算截断：目标类也占预算，防大包撑爆）----
           if [ "${{ github.event.inputs.merge_old }}" = "true" ]; then
             OLD_SPIDER="smali_old/com/github/catvod/spider"
@@ -258,9 +303,39 @@ jobs:
                 echo "⚠️ $jn 拉取失败，跳过"
               fi
             done
+            # v9 新增：gao 三件套（gaotianliuyun/gao 的 pg/XBPQ/XYQ：含 AliShare/P115Share/Olevod/JZU 等网盘新系独有类）
+            EXT_JARS_GAO=(
+              "pg.jar"
+              "XBPQ.jar"
+              "XYQ.jar"
+            )
+            for jn in "${EXT_JARS_GAO[@]}"; do
+              curl -L -m 120 -o "ext_gao_$jn" "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/$jn" || true
+              if [ -s "ext_gao_$jn" ]; then
+                rm -rf smali_gao && mkdir -p smali_gao
+                java -jar jar/3rd/baksmali-2.5.2.jar d "ext_gao_$jn" -o smali_gao || true
+                EXT_SPIDER="smali_gao/com/github/catvod/spider"
+                if [ -d "$EXT_SPIDER" ]; then
+                  merge_over "$EXT_SPIDER" || true
+                fi
+              else
+                echo "⚠️ gao $jn 拉取失败，跳过"
+              fi
+            done
+            # v10 第二优先：站主完整 jar（124.71.19.220）覆盖式合并（gao 已放的跳过，其余覆盖我的实现）
+            curl -L -m 120 -H "User-Agent: okhttp/3.12.1" -o "ext_zhuzhu.jar" "http://124.71.19.220/jar/1/spider.jar" || true
+            if [ -s "ext_zhuzhu.jar" ]; then
+              rm -rf smali_zz && mkdir -p smali_zz
+              java -jar jar/3rd/baksmali-2.5.2.jar d "ext_zhuzhu.jar" -o smali_zz || true
+              EXT_SPIDER="smali_zz/com/github/catvod/spider"
+              if [ -d "$EXT_SPIDER" ]; then
+                merge_over "$EXT_SPIDER" || true
+              fi
+            else
+              echo "⚠️ 站主 jar 拉取失败，跳过"
+            fi
             # 影视仓大包（124.71.19.220：含 App99/AppDrama/AppLY/AppRJ/Gz360/PanWebShare/PanWebShareKF/ShuangXing/TingShijie + 全套 APP/网盘类）
             EXT_JARS_URL=(
-              "http://124.71.19.220/jar/1/spider.jar"
               "https://gitee.com/lwlxh/tvhome/raw/master/o.jar"
               "https://file.icve.com.cn/file_doc/81/326/14751AFEF3EF30B1AFFFA398F1E9D961.png"
               "https://file.icve.com.cn/file_doc/874/405/DAB654F794A271C3D7A33D18ACFBFA95.jpg"
