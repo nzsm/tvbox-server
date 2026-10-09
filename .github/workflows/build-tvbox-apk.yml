@@ -1,11 +1,13 @@
 # ============================================================
-# 云编译 TVBoxOS APK（q215613905/TVBoxOS 最新源码）—— 稳定版 v7（无锁清晰度）
-# 用法：放进 tvbox-server/.github/workflows/ 后，Actions 页 Run workflow
-# v7 在 v6 基础上的补充：
+# 云编译 TVBoxOS APK（q215613905/TVBoxOS 最新源码）—— 稳定版 v8
+# v8 修复：v7 回写步骤的 heredoc 顶格行导致 YAML 解析失败、
+#         Run workflow 按钮不显示。v8 改用 base64 单行嵌入脚本。
+# v8 功能：
 #   1. 【权限】显式声明 contents: write，保证回写 APK 不会 403
 #   2. 【清理】回写前删除 apk/ 里所有旧 .apk，目录只留最新产物
 #   3. 【下载链接】回写后自动生成 apk/下载链接.txt（含 raw 直链）
 #   4. 【安全】keystore 密码优先读 GitHub Secrets.KEYSTORE_PASS，未设置时用默认
+# 用法：放进 tvbox-server/.github/workflows/ 后，Actions 页 Run workflow
 # 产物：单个 APK（arm64 python64），重签后回写仓库 apk/
 # ============================================================
 name: 云编译 TVBoxOS APK
@@ -127,47 +129,6 @@ jobs:
           REPO="${{ github.repository }}"
           BRANCH="${{ github.ref_name }}"
           cd apk-out
-          cat > /tmp/upload.py <<'PYEOF'
-import json, base64, sys, urllib.request, os
-TOKEN, REPO, APKDIR = sys.argv[1], sys.argv[2], sys.argv[3]
-def api(url, method='GET', data=None):
-    req = urllib.request.Request(url, method=method,
-        headers={'Authorization': 'Bearer ' + TOKEN, 'Content-Type': 'application/json'})
-    body = json.dumps(data).encode() if data is not None else None
-    try:
-        with urllib.request.urlopen(req, body) as r:
-            return json.loads(r.read().decode())
-    except Exception as e:
-        return {'error': str(e)}
-# 1) 删除 apk/ 下所有旧 .apk（目录只留最新产物）
-lst = api('https://api.github.com/repos/%s/contents/apk' % REPO)
-if isinstance(lst, list):
-    for it in lst:
-        if it.get('name', '').endswith('.apk'):
-            r = api(it['url'] + '?sha=' + it['sha'], 'DELETE')
-            print('删旧APK:', it['name'], '→', r.get('message', r))
-else:
-    print('apk/ 目录不存在或为空，跳过清理')
-# 2) 上传新 APK
-for fn in os.listdir(APKDIR):
-    if not fn.endswith('.apk'):
-        continue
-    content = base64.b64encode(open(os.path.join(APKDIR, fn), 'rb').read()).decode()
-    r = api('https://api.github.com/repos/%s/contents/apk/%s' % (REPO, fn), 'PUT',
-            {'message': '云编译 TVBoxOS APK ' + fn, 'content': content})
-    print('上传:', fn, '→', r.get('message', r))
-    if 'error' in r:
-        sys.exit('!!! 上传失败: ' + str(r))
-    raw = 'https://raw.githubusercontent.com/%s/main/apk/%s' % (REPO, fn)
-    pages = 'https://nzsm.github.io/tvbox-server/apk/%s' % fn
-    open('/tmp/link.txt', 'w', encoding='utf-8').write(
-        '最新 APK（手机浏览器打开即下载）：\n' + raw + '\n备用链接：\n' + pages + '\n')
-# 3) 上传下载链接文件
-if os.path.exists('/tmp/link.txt'):
-    content = base64.b64encode(open('/tmp/link.txt', 'rb').read()).decode()
-    r = api('https://api.github.com/repos/%s/contents/apk/下载链接.txt' % REPO, 'PUT',
-            {'message': '更新下载链接', 'content': content})
-    print('下载链接 →', r.get('message', r))
-PYEOF
+          echo 'aW1wb3J0IGpzb24sIGJhc2U2NCwgc3lzLCB1cmxsaWIucmVxdWVzdCwgb3MKVE9LRU4sIFJFUE8sIEFQS0RJUiA9IHN5cy5hcmd2WzFdLCBzeXMuYXJndlsyXSwgc3lzLmFyZ3ZbM10KZGVmIGFwaSh1cmwsIG1ldGhvZD0nR0VUJywgZGF0YT1Ob25lKToKICAgIHJlcSA9IHVybGxpYi5yZXF1ZXN0LlJlcXVlc3QodXJsLCBtZXRob2Q9bWV0aG9kLAogICAgICAgIGhlYWRlcnM9eydBdXRob3JpemF0aW9uJzogJ0JlYXJlciAnICsgVE9LRU4sICdDb250ZW50LVR5cGUnOiAnYXBwbGljYXRpb24vanNvbid9KQogICAgYm9keSA9IGpzb24uZHVtcHMoZGF0YSkuZW5jb2RlKCkgaWYgZGF0YSBpcyBub3QgTm9uZSBlbHNlIE5vbmUKICAgIHRyeToKICAgICAgICB3aXRoIHVybGxpYi5yZXF1ZXN0LnVybG9wZW4ocmVxLCBib2R5KSBhcyByOgogICAgICAgICAgICByZXR1cm4ganNvbi5sb2FkcyhyLnJlYWQoKS5kZWNvZGUoKSkKICAgIGV4Y2VwdCBFeGNlcHRpb24gYXMgZToKICAgICAgICByZXR1cm4geydlcnJvcic6IHN0cihlKX0KIyAxKSDliKDpmaQgYXBrLyDkuIvmiYDmnInml6cgLmFwa++8iOebruW9leWPqueVmeacgOaWsOS6p+eJqe+8iQpsc3QgPSBhcGkoJ2h0dHBzOi8vYXBpLmdpdGh1Yi5jb20vcmVwb3MvJXMvY29udGVudHMvYXBrJyAlIFJFUE8pCmlmIGlzaW5zdGFuY2UobHN0LCBsaXN0KToKICAgIGZvciBpdCBpbiBsc3Q6CiAgICAgICAgaWYgaXQuZ2V0KCduYW1lJywgJycpLmVuZHN3aXRoKCcuYXBrJyk6CiAgICAgICAgICAgIHIgPSBhcGkoaXRbJ3VybCddICsgJz9zaGE9JyArIGl0WydzaGEnXSwgJ0RFTEVURScpCiAgICAgICAgICAgIHByaW50KCfliKDml6dBUEs6JywgaXRbJ25hbWUnXSwgJy0+Jywgci5nZXQoJ21lc3NhZ2UnLCByKSkKZWxzZToKICAgIHByaW50KCdhcGsvIOebruW9leS4jeWtmOWcqOaIluS4uuepuu+8jOi3s+i/h+a4heeQhicpCiMgMikg5LiK5Lyg5pawIEFQSwpmb3IgZm4gaW4gb3MubGlzdGRpcihBUEtESVIpOgogICAgaWYgbm90IGZuLmVuZHN3aXRoKCcuYXBrJyk6CiAgICAgICAgY29udGludWUKICAgIGNvbnRlbnQgPSBiYXNlNjQuYjY0ZW5jb2RlKG9wZW4ob3MucGF0aC5qb2luKEFQS0RJUiwgZm4pLCAncmInKS5yZWFkKCkpLmRlY29kZSgpCiAgICByID0gYXBpKCdodHRwczovL2FwaS5naXRodWIuY29tL3JlcG9zLyVzL2NvbnRlbnRzL2Fway8lcycgJSAoUkVQTywgZm4pLCAnUFVUJywKICAgICAgICAgICAgeydtZXNzYWdlJzogJ+S6kee8luivkSBUVkJveE9TIEFQSyAnICsgZm4sICdjb250ZW50JzogY29udGVudH0pCiAgICBwcmludCgn5LiK5LygOicsIGZuLCAnLT4nLCByLmdldCgnbWVzc2FnZScsIHIpKQogICAgaWYgJ2Vycm9yJyBpbiByOgogICAgICAgIHN5cy5leGl0KCchISEg5LiK5Lyg5aSx6LSlOiAnICsgc3RyKHIpKQogICAgcmF3ID0gJ2h0dHBzOi8vcmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbS8lcy9tYWluL2Fway8lcycgJSAoUkVQTywgZm4pCiAgICBwYWdlcyA9ICdodHRwczovL256c20uZ2l0aHViLmlvL3R2Ym94LXNlcnZlci9hcGsvJXMnICUgZm4KICAgIG9wZW4oJy90bXAvbGluay50eHQnLCAndycsIGVuY29kaW5nPSd1dGYtOCcpLndyaXRlKAogICAgICAgICfmnIDmlrAgQVBL77yI5omL5py65rWP6KeI5Zmo5omT5byA5Y2z5LiL6L2977yJ77yaXG4nICsgcmF3ICsgJ1xu5aSH55So6ZO+5o6l77yaXG4nICsgcGFnZXMgKyAnXG4nKQojIDMpIOS4iuS8oOS4i+i9vemTvuaOpeaWh+S7tgppZiBvcy5wYXRoLmV4aXN0cygnL3RtcC9saW5rLnR4dCcpOgogICAgY29udGVudCA9IGJhc2U2NC5iNjRlbmNvZGUob3BlbignL3RtcC9saW5rLnR4dCcsICdyYicpLnJlYWQoKSkuZGVjb2RlKCkKICAgIHIgPSBhcGkoJ2h0dHBzOi8vYXBpLmdpdGh1Yi5jb20vcmVwb3MvJXMvY29udGVudHMvYXBrL+S4i+i9vemTvuaOpS50eHQnICUgUkVQTywgJ1BVVCcsCiAgICAgICAgICAgIHsnbWVzc2FnZSc6ICfmm7TmlrDkuIvovb3pk77mjqUnLCAnY29udGVudCc6IGNvbnRlbnR9KQogICAgcHJpbnQoJ+S4i+i9vemTvuaOpSAtPicsIHIuZ2V0KCdtZXNzYWdlJywgcikpCg==' | base64 -d > /tmp/upload.py
           python3 /tmp/upload.py "$TOKEN" "$REPO" "$(pwd)"
           echo "--- 完成，仓库 apk/ 已更新（只含最新 APK + 下载链接.txt） ---"
