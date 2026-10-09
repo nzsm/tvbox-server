@@ -30,6 +30,17 @@ jobs:
           echo "--- 源码结构 ---"
           ls tvboxos-src | head -20
 
+      - name: 应用锁清晰度补丁（固定最高清晰度，关闭自动码率切换）
+        working-directory: tvboxos-src
+        run: |
+          PATCH="../patches/lock_quality.patch"
+          if [ -f "$PATCH" ]; then
+            git apply "$PATCH" && echo "✅ 锁清晰度补丁应用成功"
+            grep -n "LOCK_QUALITY" app/src/main/java/com/github/tvbox/osc/util/HawkConfig.java || { echo "!!! 补丁未生效，中止编译"; exit 1; }
+          else
+            echo "未找到 patches/lock_quality.patch，跳过（不带锁清晰度功能）"
+          fi
+
       - name: 设置 JDK 17
         # v6: setup-java v4 已弃用，升到 v5
         uses: actions/setup-java@v5
