@@ -1,174 +1,43 @@
-# ============================================================
-# 云编译 TVBoxOS APK（q215613905/TVBoxOS 最新源码）—— 稳定版
-# 用法：放进 tvbox-server/.github/workflows/ 后，Actions 页 Run workflow
-# v3 改动（解决上次 assembleRelease 失败）：
-#   1. 只编译 python64 变体（arm64-v8a，iQOO 11 / 小米电视都支持）
-#      编译量减 2/3，不再因内存不足失败
-#   2. 降低并行度 + 加大 Gradle 内存，进一步防 OOM
-#   3. 修复 APK 收集/签名匹配（不再限定 TVBox_* 文件名）
-#   4. 签名失败/验证失败直接中止，绝不产出坏 APK
-# 产物：单个 APK（arm64），重签后回写仓库 apk/
-# ============================================================
-name: 云编译 TVBoxOS APK
-
+name: TVBox Build
 on:
-  workflow_dispatch:
-
+  push:
+    branches: [ main ]
 jobs:
   build:
-    name: 云编译 TVBoxOS APK（arm64 稳定版）
-    # v6: 固定 ubuntu-24.04，不受 10/19 ubuntu-latest 迁移 Ubuntu 26 影响
-    runs-on: ubuntu-24.04
-    timeout-minutes: 90
+    runs-on: ubuntu-latest
     steps:
-      - name: 检出本仓库（tvbox-server）
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: 拉取 TVBoxOS 最新源码
+      - name: echo ---- 源码结构 ----
         run: |
-          git clone --depth 1 --branch main https://github.com/q215613905/TVBoxOS.git tvboxos-src
-          echo "--- 源码结构 ---"
           ls tvboxos-src | head -20
 
-      - name: 应用锁清晰度补丁（固定最高清晰度，关闭自动码率切换）
-        working-directory: tvboxos-src
-        run: |
-          PATCH="../patches/lock_quality.patch"
-          if [ -f "$PATCH" ]; then
-            git apply "$PATCH" && echo "✅ 锁清晰度补丁应用成功"
-            grep -n "LOCK_QUALITY" app/src/main/java/com/github/tvbox/osc/util/HawkConfig.java || { echo "!!! 补丁未生效，中止编译"; exit 1; }
-          else
-            echo "未找到 patches/lock_quality.patch，跳过（不带锁清晰度功能）"
-          fi
-
       - name: 设置 JDK 17
-        # v6: setup-java v4 已弃用，升到 v5
+        # v6: setup-java v4 已弃用, 升到 v5
         uses: actions/setup-java@v5
         with:
-          distribution: temurin
-          java-version: 17
+          java-version: '17'
+          distribution: 'temurin'
 
-      - name: 安装 Python 3.9（chaquo 交叉编译必需）
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.9'
-
-      - name: 安装 Gradle（用 wrapper 版本）
-        uses: gradle/actions/setup-gradle@v4
-
-      - name: 应用版本号 + 创建 local.properties + 加大编译内存
-        working-directory: tvboxos-src
+      # 还原你的keystore签名文件
+      - name: Restore keystore
+        env:
+          KS_B64: ${{ secrets.KEYSTORE_FILE }}
         run: |
-          TAG=$(date +%Y%m%d-%H%M)
-          echo "TAG=${TAG}" >> $GITHUB_ENV
-          # 版本号替换为编译时间
-          sed -i "/versionName/s#[0-9a-zA-Z_\.\'\"-]\+\$#\'${TAG}\'#" app/build.gradle || true
-          grep -n "versionName" app/build.gradle | head -3 || true
-          # 【关键修复】创建 local.properties 指向 Android SDK
-          # pyramid 模块配置时必读此文件，缺失会导致编译直接失败
-          if [ -n "$ANDROID_HOME" ]; then
-            echo "sdk.dir=$ANDROID_HOME" > local.properties
-          else
-            echo "sdk.dir=/usr/local/lib/android/sdk" > local.properties
-          fi
-          cat local.properties
-          # 【关键修复2】pyramid 模块把 buildPython 写死成 Windows 路径
-          # （D:/Programs/Python/Python38/python.exe），Linux 上不存在 → 编译必崩
-          # 改成 "python"，让 chaquo 用 PATH 里的 Python 3.9
-          sed -i 's#buildPython("D:[^"]*")#buildPython("python")#g' pyramid/build.gradle || true
-          grep -n "buildPython" pyramid/build.gradle || echo "（pyramid 无 buildPython 行）"
-          # 加大 Gradle JVM 堆（防 OOM）
-          if [ -f gradle.properties ]; then
-            echo "org.gradle.jvmargs=-Xmx4g -XX:MaxMetaspaceSize=1g" >> gradle.properties
-          else
-            echo "org.gradle.jvmargs=-Xmx4g -XX:MaxMetaspaceSize=1g" > gradle.properties
-          fi
-          cat gradle.properties
+          echo "$KS_B64" | base64 -d > tvboxos-src/app/release.jks
 
-      - name: 编译 arm64 变体（python64）
-        working-directory: tvboxos-src
+      # 编译，开启并行加速
+      - name: Build Release APK
+        env:
+          KEYSTORE_PWD: ${{ secrets.KEYSTORE_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
+          KEY_PWD: ${{ secrets.KEY_PASSWORD }}
         run: |
-          chmod +x gradlew
-          echo "=== 编译 python64（arm64）变体，低并行防 OOM ==="
-          ./gradlew assemblePython64Release --no-daemon --max-workers=2 --stacktrace 2>&1 | tee /tmp/gradle.log
-          EXIT_CODE=${PIPESTATUS[0]}
-          echo "=== 编译退出码: ${EXIT_CODE} ==="
-          if [ ${EXIT_CODE} -ne 0 ]; then
-            echo "!!! 编译失败，最后 80 行日志："
-            tail -80 /tmp/gradle.log
-            exit 1
-          fi
+          cd tvboxos-src
+          ./gradlew :app:assembleRelease --parallel
 
-      - name: 收集 APK（只收本次新编译产物）
-        run: |
-          set -e
-          mkdir -p apk-out
-          FOUND=0
-          # v6 修复: 只找 tvboxos-src 编译输出目录里的 APK，
-          # 不再全盘 find ~（之前把仓库 apk/ 里 8 个旧 Box APK 也收进来，导致 285MB）
-          for f in $(find tvboxos-src/app/build/outputs -name "*.apk" 2>/dev/null | grep -i "release"); do
-            cp "$f" "apk-out/$(basename "$f")"
-            FOUND=1
-          done
-          echo "找到 APK 数量: ${FOUND}"
-          ls -la apk-out/
-          if [ ${FOUND} -eq 0 ]; then
-            echo "!!! 没有找到编译产物"
-            exit 1
-          fi
-
-      - name: 用正式签名重签 APK（失败即中止）
-        run: |
-          set -e
-          KS="keystore/tvbox.keystore"
-          if [ -f "$KS" ]; then
-            echo "发现 keystore，开始正式签名..."
-            BT=$(ls -d "$ANDROID_SDK_ROOT"/build-tools/*/ 2>/dev/null | tail -1)
-            ZA="${BT}zipalign"
-            APKS="${BT}apksigner"
-            for f in apk-out/*.apk; do
-              [ -f "$f" ] || continue
-              echo "签名中: $f"
-              "$ZA" -f 4 "$f" "$f.align"
-              "$APKS" sign --ks "$KS" --ks-pass pass:tvbox2026 --key-pass pass:tvbox2026 --out "$f.signed" "$f.align"
-              mv -f "$f.signed" "$f"
-              rm -f "$f.align"
-              "$APKS" verify "$f" || { echo "!!! 签名验证失败: $f"; exit 1; }
-              echo "签名验证通过: $f"
-            done
-          else
-            echo "仓库无 keystore/tvbox.keystore，使用编译产物原始签名（装前需卸载旧版）"
-          fi
-
-      - name: 上传 Artifacts
+      - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
-          name: TVBoxOS-APK-arm64
-          path: apk-out/*
-          if-no-files-found: error
-
-      - name: 回写 APK 到本仓库 apk/ 目录
-        run: |
-          set -e
-          TOKEN="${{ github.token }}"
-          REPO="${{ github.repository }}"
-          BRANCH="${{ github.ref_name }}"
-          cd apk-out
-          for f in *.apk; do
-            [ -f "$f" ] || continue
-            echo "上传 ${f} ..."
-            python3 -c "import base64,json,sys; fn=sys.argv[1]; json.dump({'message':'云编译 TVBoxOS APK '+fn,'content':base64.b64encode(open(fn,'rb').read()).decode()}, open('/tmp/payload.json','w'))" "$f"
-            for i in 1 2 3 4 5; do
-              curl -s -X PUT -H "Authorization: Bearer ${TOKEN}" -H "Content-Type: application/json" \
-                --data-binary @/tmp/payload.json \
-                "https://api.github.com/repos/${REPO}/contents/apk/${f}" -o /tmp/up_resp.json
-              MSG=$(python3 -c "import json;d=json.load(open('/tmp/up_resp.json'));print(d.get('message',''))" 2>/dev/null || echo "")
-              if [ -z "$MSG" ] || [ "$MSG" = "created" ] || [ "$MSG" = "updated" ]; then
-                echo "OK -> apk/${f}"
-                break
-              fi
-              echo "第 ${i} 次失败: ${MSG}，3 秒后重试..."
-              sleep 3
-            done
-          done
-          echo "--- 完成，仓库 apk/ 目录已更新 ---"
+          name: tvbox-apk
+          path: tvboxos-src/app/build/outputs/apk/release/app-release.apk
