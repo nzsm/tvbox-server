@@ -1,14 +1,16 @@
 # ============================================================
-# 云编译 TVBoxOS APK（q215613905/TVBoxOS 最新源码）—— 稳定版 v8
-# v8 修复：v7 回写步骤的 heredoc 顶格行导致 YAML 解析失败、
-#         Run workflow 按钮不显示。v8 改用 base64 单行嵌入脚本。
-# v8 功能：
-#   1. 【权限】显式声明 contents: write，保证回写 APK 不会 403
+# 云编译 TVBoxOS APK（q215613905/TVBoxOS 最新源码）—— 稳定版 v9.1
+# v9.1 修复：v9 用 git add -A 会把克隆源码 tvboxos-src/ 和编译临时目录
+#           apk-out/ 一起提交进仓库（污染+体积爆炸）。改为只提交 apk/。
+# v9 修复：v8 第12步用 Contents API 回写 APK 全部 422 失败（
+#         更新同名文件需 sha、大文件不稳）。v9 改为 git 直接提交推送。
+# v9 功能：
+#   1. 【权限】显式声明 contents: write，保证回写不 403
 #   2. 【清理】回写前删除 apk/ 里所有旧 .apk，目录只留最新产物
 #   3. 【下载链接】回写后自动生成 apk/下载链接.txt（含 raw 直链）
 #   4. 【安全】keystore 密码优先读 GitHub Secrets.KEYSTORE_PASS，未设置时用默认
 # 用法：放进 tvbox-server/.github/workflows/ 后，Actions 页 Run workflow
-# 产物：单个 APK（arm64 python64），重签后回写仓库 apk/
+# 产物：单个 APK（arm64 python64），重签后 git 回写仓库 apk/
 # ============================================================
 name: 云编译 TVBoxOS APK
 on:
@@ -44,20 +46,16 @@ jobs:
         run: |
           TAG=$(date +%Y%m%d-%H%M)
           echo "TAG=${TAG}" >> $GITHUB_ENV
-          # 版本号替换为编译时间
           sed -i "/versionName/s#[0-9a-zA-Z_\.\'\"-]\+\$#\'${TAG}\'#" app/build.gradle || true
           grep -n "versionName" app/build.gradle | head -3 || true
-          # 【关键修复】创建 local.properties 指向 Android SDK
           if [ -n "$ANDROID_HOME" ]; then
             echo "sdk.dir=$ANDROID_HOME" > local.properties
           else
             echo "sdk.dir=/usr/local/lib/android/sdk" > local.properties
           fi
           cat local.properties
-          # 【关键修复2】pyramid 模块把 buildPython 写死成 Windows 路径
           sed -i 's#buildPython("D:[^"]*")#buildPython("python")#g' pyramid/build.gradle || true
           grep -n "buildPython" pyramid/build.gradle || echo "（pyramid 无 buildPython 行）"
-          # 加大 Gradle JVM 堆（防 OOM）
           if [ -f gradle.properties ]; then
             echo "org.gradle.jvmargs=-Xmx4g -XX:MaxMetaspaceSize=1g" >> gradle.properties
           else
@@ -122,13 +120,28 @@ jobs:
           name: TVBoxOS-APK-arm64
           path: apk-out/*
           if-no-files-found: error
-      - name: 清理旧 APK + 回写最新 APK + 生成下载链接
+      - name: git 回写 APK 到仓库 apk/ 目录
         run: |
           set -e
           TOKEN="${{ github.token }}"
           REPO="${{ github.repository }}"
           BRANCH="${{ github.ref_name }}"
-          cd apk-out
-          echo 'aW1wb3J0IGpzb24sIGJhc2U2NCwgc3lzLCB1cmxsaWIucmVxdWVzdCwgb3MKVE9LRU4sIFJFUE8sIEFQS0RJUiA9IHN5cy5hcmd2WzFdLCBzeXMuYXJndlsyXSwgc3lzLmFyZ3ZbM10KZGVmIGFwaSh1cmwsIG1ldGhvZD0nR0VUJywgZGF0YT1Ob25lKToKICAgIHJlcSA9IHVybGxpYi5yZXF1ZXN0LlJlcXVlc3QodXJsLCBtZXRob2Q9bWV0aG9kLAogICAgICAgIGhlYWRlcnM9eydBdXRob3JpemF0aW9uJzogJ0JlYXJlciAnICsgVE9LRU4sICdDb250ZW50LVR5cGUnOiAnYXBwbGljYXRpb24vanNvbid9KQogICAgYm9keSA9IGpzb24uZHVtcHMoZGF0YSkuZW5jb2RlKCkgaWYgZGF0YSBpcyBub3QgTm9uZSBlbHNlIE5vbmUKICAgIHRyeToKICAgICAgICB3aXRoIHVybGxpYi5yZXF1ZXN0LnVybG9wZW4ocmVxLCBib2R5KSBhcyByOgogICAgICAgICAgICByZXR1cm4ganNvbi5sb2FkcyhyLnJlYWQoKS5kZWNvZGUoKSkKICAgIGV4Y2VwdCBFeGNlcHRpb24gYXMgZToKICAgICAgICByZXR1cm4geydlcnJvcic6IHN0cihlKX0KIyAxKSDliKDpmaQgYXBrLyDkuIvmiYDmnInml6cgLmFwa++8iOebruW9leWPqueVmeacgOaWsOS6p+eJqe+8iQpsc3QgPSBhcGkoJ2h0dHBzOi8vYXBpLmdpdGh1Yi5jb20vcmVwb3MvJXMvY29udGVudHMvYXBrJyAlIFJFUE8pCmlmIGlzaW5zdGFuY2UobHN0LCBsaXN0KToKICAgIGZvciBpdCBpbiBsc3Q6CiAgICAgICAgaWYgaXQuZ2V0KCduYW1lJywgJycpLmVuZHN3aXRoKCcuYXBrJyk6CiAgICAgICAgICAgIHIgPSBhcGkoaXRbJ3VybCddICsgJz9zaGE9JyArIGl0WydzaGEnXSwgJ0RFTEVURScpCiAgICAgICAgICAgIHByaW50KCfliKDml6dBUEs6JywgaXRbJ25hbWUnXSwgJy0+Jywgci5nZXQoJ21lc3NhZ2UnLCByKSkKZWxzZToKICAgIHByaW50KCdhcGsvIOebruW9leS4jeWtmOWcqOaIluS4uuepuu+8jOi3s+i/h+a4heeQhicpCiMgMikg5LiK5Lyg5pawIEFQSwpmb3IgZm4gaW4gb3MubGlzdGRpcihBUEtESVIpOgogICAgaWYgbm90IGZuLmVuZHN3aXRoKCcuYXBrJyk6CiAgICAgICAgY29udGludWUKICAgIGNvbnRlbnQgPSBiYXNlNjQuYjY0ZW5jb2RlKG9wZW4ob3MucGF0aC5qb2luKEFQS0RJUiwgZm4pLCAncmInKS5yZWFkKCkpLmRlY29kZSgpCiAgICByID0gYXBpKCdodHRwczovL2FwaS5naXRodWIuY29tL3JlcG9zLyVzL2NvbnRlbnRzL2Fway8lcycgJSAoUkVQTywgZm4pLCAnUFVUJywKICAgICAgICAgICAgeydtZXNzYWdlJzogJ+S6kee8luivkSBUVkJveE9TIEFQSyAnICsgZm4sICdjb250ZW50JzogY29udGVudH0pCiAgICBwcmludCgn5LiK5LygOicsIGZuLCAnLT4nLCByLmdldCgnbWVzc2FnZScsIHIpKQogICAgaWYgJ2Vycm9yJyBpbiByOgogICAgICAgIHN5cy5leGl0KCchISEg5LiK5Lyg5aSx6LSlOiAnICsgc3RyKHIpKQogICAgcmF3ID0gJ2h0dHBzOi8vcmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbS8lcy9tYWluL2Fway8lcycgJSAoUkVQTywgZm4pCiAgICBwYWdlcyA9ICdodHRwczovL256c20uZ2l0aHViLmlvL3R2Ym94LXNlcnZlci9hcGsvJXMnICUgZm4KICAgIG9wZW4oJy90bXAvbGluay50eHQnLCAndycsIGVuY29kaW5nPSd1dGYtOCcpLndyaXRlKAogICAgICAgICfmnIDmlrAgQVBL77yI5omL5py65rWP6KeI5Zmo5omT5byA5Y2z5LiL6L2977yJ77yaXG4nICsgcmF3ICsgJ1xu5aSH55So6ZO+5o6l77yaXG4nICsgcGFnZXMgKyAnXG4nKQojIDMpIOS4iuS8oOS4i+i9vemTvuaOpeaWh+S7tgppZiBvcy5wYXRoLmV4aXN0cygnL3RtcC9saW5rLnR4dCcpOgogICAgY29udGVudCA9IGJhc2U2NC5iNjRlbmNvZGUob3BlbignL3RtcC9saW5rLnR4dCcsICdyYicpLnJlYWQoKSkuZGVjb2RlKCkKICAgIHIgPSBhcGkoJ2h0dHBzOi8vYXBpLmdpdGh1Yi5jb20vcmVwb3MvJXMvY29udGVudHMvYXBrL+S4i+i9vemTvuaOpS50eHQnICUgUkVQTywgJ1BVVCcsCiAgICAgICAgICAgIHsnbWVzc2FnZSc6ICfmm7TmlrDkuIvovb3pk77mjqUnLCAnY29udGVudCc6IGNvbnRlbnR9KQogICAgcHJpbnQoJ+S4i+i9vemTvuaOpSAtPicsIHIuZ2V0KCdtZXNzYWdlJywgcikpCg==' | base64 -d > /tmp/upload.py
-          python3 /tmp/upload.py "$TOKEN" "$REPO" "$(pwd)"
+          # 生成下载链接（先写进工作区，随 git 一起提交）
+          FN=$(ls apk-out/*.apk | head -1 | xargs basename)
+          RAW="https://raw.githubusercontent.com/${REPO}/main/apk/${FN}"
+          PAGES="https://nzsm.github.io/tvbox-server/apk/${FN}"
+          printf '最新 APK（手机浏览器打开即下载）：\n%s\n备用链接：\n%s\n' "${RAW}" "${PAGES}" > apk/下载链接.txt
+          # 清空 apk/ 里旧 APK，只留本次产物
+          rm -f apk/*.apk
+          cp apk-out/*.apk apk/
+          ls -la apk/
+          # git 提交推送（用 GITHUB_TOKEN，无文件大小/校验码限制）
+          # 注意：只 add apk/，绝不 add -A（避免把 tvboxos-src/ 克隆源码、
+          #       apk-out/ 编译临时目录一起提交进仓库）
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git remote set-url origin "https://x-access-token:${TOKEN}@github.com/${REPO}.git"
+          git add apk/
+          git commit -m "云编译 TVBoxOS APK 更新"
+          git push origin "HEAD:${BRANCH}"
           echo "--- 完成，仓库 apk/ 已更新（只含最新 APK + 下载链接.txt） ---"
