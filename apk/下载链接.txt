@@ -1,0 +1,4 @@
+最新 APK（手机浏览器打开即下载）：
+https://raw.githubusercontent.com/nzsm/tvbox-server/main/apk/TVBox_release-python64.apk
+备用链接：
+https://nzsm.github.io/tvbox-server/apk/TVBox_release-python64.apk
