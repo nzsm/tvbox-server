@@ -1,14 +1,16 @@
 # ============================================================
-# 云编译 TVBoxOS APK（q215613905/TVBoxOS 最新源码）—— 稳定版 v9.1
+# 云编译 TVBoxOS APK（q215613905/TVBoxOS 最新源码）—— 稳定版 v9.2
+# v9.2 修复：v9.1 第12步 git push 被拒（编译期间 main 被他人更新，
+#           push 时远程已有本地没有的提交）。v9.2 回写前先
+#           fetch + reset --hard 对齐远程最新，再提交推送。
 # v9.1 修复：v9 用 git add -A 会把克隆源码 tvboxos-src/ 和编译临时目录
-#           apk-out/ 一起提交进仓库（污染+体积爆炸）。改为只提交 apk/。
-# v9 修复：v8 第12步用 Contents API 回写 APK 全部 422 失败（
-#         更新同名文件需 sha、大文件不稳）。v9 改为 git 直接提交推送。
-# v9 功能：
-#   1. 【权限】显式声明 contents: write，保证回写不 403
-#   2. 【清理】回写前删除 apk/ 里所有旧 .apk，目录只留最新产物
-#   3. 【下载链接】回写后自动生成 apk/下载链接.txt（含 raw 直链）
-#   4. 【安全】keystore 密码优先读 GitHub Secrets.KEYSTORE_PASS，未设置时用默认
+#           apk-out/ 一起提交进仓库。改为只提交 apk/。
+# v9 修复：v8 第12步用 Contents API 回写 APK 全部 422 失败，改 git 推送。
+# 功能：
+#   1. 【权限】contents: write，保证回写不 403
+#   2. 【清理】回写前删除 apk/ 里所有旧 .apk，只留最新产物
+#   3. 【下载链接】自动生成 apk/下载链接.txt（raw 直链）
+#   4. 【安全】keystore 密码优先读 Secrets.KEYSTORE_PASS，默认 tvbox2026
 # 用法：放进 tvbox-server/.github/workflows/ 后，Actions 页 Run workflow
 # 产物：单个 APK（arm64 python64），重签后 git 回写仓库 apk/
 # ============================================================
@@ -126,21 +128,22 @@ jobs:
           TOKEN="${{ github.token }}"
           REPO="${{ github.repository }}"
           BRANCH="${{ github.ref_name }}"
-          # 生成下载链接（先写进工作区，随 git 一起提交）
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git remote set-url origin "https://x-access-token:${TOKEN}@github.com/${REPO}.git"
+          # 【v9.2】先对齐远程最新，避免编译期间 main 被更新导致 push 被拒
+          git fetch origin
+          git reset --hard origin/${BRANCH}
+          # 对齐之后才准备 apk/ 内容（apk-out/ 是未跟踪目录，reset 不影响）
+          mkdir -p apk
           FN=$(ls apk-out/*.apk | head -1 | xargs basename)
           RAW="https://raw.githubusercontent.com/${REPO}/main/apk/${FN}"
           PAGES="https://nzsm.github.io/tvbox-server/apk/${FN}"
           printf '最新 APK（手机浏览器打开即下载）：\n%s\n备用链接：\n%s\n' "${RAW}" "${PAGES}" > apk/下载链接.txt
-          # 清空 apk/ 里旧 APK，只留本次产物
           rm -f apk/*.apk
           cp apk-out/*.apk apk/
           ls -la apk/
-          # git 提交推送（用 GITHUB_TOKEN，无文件大小/校验码限制）
-          # 注意：只 add apk/，绝不 add -A（避免把 tvboxos-src/ 克隆源码、
-          #       apk-out/ 编译临时目录一起提交进仓库）
-          git config user.name "github-actions"
-          git config user.email "actions@github.com"
-          git remote set-url origin "https://x-access-token:${TOKEN}@github.com/${REPO}.git"
+          # 只提交 apk/，绝不 add -A（避免把 tvboxos-src/、apk-out/ 提交进仓库）
           git add apk/
           git commit -m "云编译 TVBoxOS APK 更新"
           git push origin "HEAD:${BRANCH}"
