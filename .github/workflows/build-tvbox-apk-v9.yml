@@ -1,0 +1,157 @@
+# ============================================================
+# 云编译 TVBoxOS APK（q215613905/TVBoxOS 最新源码）—— 稳定版 v9.3
+# v9.3 改动：编译变体 python64 → java64（去掉 Python 引擎）。
+#           原因：python64 版 APK 40MB+、带解释器，国内手机安全库
+#           特征命中必报"风险隐患"；官方版是纯 Java（7MB 级）不报。
+#           java64 = arm64 纯 Java 版，APK 缩到 10MB 级、特征贴近官方，
+#           jar 源插件完全兼容（你的影视源都是 jar），仅 .py 插件不可用。
+#           想恢复 python 版：把 assembleJava64Release 改回 assemblePython64Release 即可。
+# v9.2 修复：v9.1 第12步 git push 被拒（编译期间 main 被他人更新，
+#           push 时远程已有本地没有的提交）。v9.2 回写前先
+#           fetch + reset --hard 对齐远程最新，再提交推送。
+# v9.1 修复：v9 用 git add -A 会把克隆源码 tvboxos-src/ 和编译临时目录
+#           apk-out/ 一起提交进仓库。改为只提交 apk/。
+# v9 修复：v8 第12步用 Contents API 回写 APK 全部 422 失败，改 git 推送。
+# 功能：
+#   1. 【权限】contents: write，保证回写不 403
+#   2. 【清理】回写前删除 apk/ 里所有旧 .apk，只留最新产物
+#   3. 【下载链接】自动生成 apk/下载链接.txt（raw 直链）
+#   4. 【安全】keystore 密码优先读 Secrets.KEYSTORE_PASS，默认 tvbox2026
+# 用法：放进 tvbox-server/.github/workflows/ 后，Actions 页 Run workflow
+# 产物：单个 APK（arm64 java64），重签后 git 回写仓库 apk/
+# ============================================================
+name: 云编译 TVBoxOS APK
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  build:
+    name: 云编译 TVBoxOS APK（arm64 稳定版）
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+      - name: 检出本仓库（tvbox-server）
+        uses: actions/checkout@v4
+      - name: 拉取 TVBoxOS 最新源码
+        run: |
+          git clone --depth 1 --branch main https://github.com/q215613905/TVBoxOS.git tvboxos-src
+          echo "--- 源码结构 ---"
+          ls tvboxos-src | head -20
+      - name: 设置 JDK 17
+        uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: 17
+      - name: 安装 Python 3.9（chaquo 交叉编译必需）
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.9'
+      - name: 安装 Gradle（用 wrapper 版本）
+        uses: gradle/actions/setup-gradle@v4
+      - name: 应用版本号 + 创建 local.properties + 加大编译内存
+        working-directory: tvboxos-src
+        run: |
+          TAG=$(date +%Y%m%d-%H%M)
+          echo "TAG=${TAG}" >> $GITHUB_ENV
+          sed -i "/versionName/s#[0-9a-zA-Z_\.\'\"-]\+\$#\'${TAG}\'#" app/build.gradle || true
+          grep -n "versionName" app/build.gradle | head -3 || true
+          if [ -n "$ANDROID_HOME" ]; then
+            echo "sdk.dir=$ANDROID_HOME" > local.properties
+          else
+            echo "sdk.dir=/usr/local/lib/android/sdk" > local.properties
+          fi
+          cat local.properties
+          sed -i 's#buildPython("D:[^"]*")#buildPython("python")#g' pyramid/build.gradle || true
+          grep -n "buildPython" pyramid/build.gradle || echo "（pyramid 无 buildPython 行）"
+          if [ -f gradle.properties ]; then
+            echo "org.gradle.jvmargs=-Xmx4g -XX:MaxMetaspaceSize=1g" >> gradle.properties
+          else
+            echo "org.gradle.jvmargs=-Xmx4g -XX:MaxMetaspaceSize=1g" > gradle.properties
+          fi
+          cat gradle.properties
+      - name: 编译 arm64 变体（java64，纯 Java 无 Python 引擎）
+        working-directory: tvboxos-src
+        run: |
+          chmod +x gradlew
+          echo "=== 编译 java64（arm64 纯 Java）变体，低并行防 OOM ==="
+          ./gradlew assembleJava64Release --no-daemon --max-workers=2 --stacktrace 2>&1 | tee /tmp/gradle.log
+          EXIT_CODE=${PIPESTATUS[0]}
+          echo "=== 编译退出码: ${EXIT_CODE} ==="
+          if [ ${EXIT_CODE} -ne 0 ]; then
+            echo "!!! 编译失败，最后 80 行日志："
+            tail -80 /tmp/gradle.log
+            exit 1
+          fi
+      - name: 收集 APK（只收本次新编译产物）
+        run: |
+          set -e
+          mkdir -p apk-out
+          FOUND=0
+          for f in $(find tvboxos-src/app/build/outputs -name "*.apk" 2>/dev/null | grep -i "release"); do
+            cp "$f" "apk-out/$(basename "$f")"
+            FOUND=1
+          done
+          echo "找到 APK 数量: ${FOUND}"
+          ls -la apk-out/
+          if [ ${FOUND} -eq 0 ]; then
+            echo "!!! 没有找到编译产物"
+            exit 1
+          fi
+      - name: 用正式签名重签 APK（失败即中止）
+        env:
+          KS_PASS: "${{ secrets.KEYSTORE_PASS || 'tvbox2026' }}"
+        run: |
+          set -e
+          KS="keystore/tvbox.keystore"
+          if [ -f "$KS" ]; then
+            echo "发现 keystore，开始正式签名..."
+            BT=$(ls -d "$ANDROID_SDK_ROOT"/build-tools/*/ 2>/dev/null | tail -1)
+            ZA="${BT}zipalign"
+            APKS="${BT}apksigner"
+            for f in apk-out/*.apk; do
+              [ -f "$f" ] || continue
+              echo "签名中: $f"
+              "$ZA" -f 4 "$f" "$f.align"
+              "$APKS" sign --ks "$KS" --ks-pass pass:${KS_PASS} --key-pass pass:${KS_PASS} --out "$f.signed" "$f.align"
+              mv -f "$f.signed" "$f"
+              rm -f "$f.align"
+              "$APKS" verify "$f" || { echo "!!! 签名验证失败: $f"; exit 1; }
+              echo "签名验证通过: $f"
+            done
+          else
+            echo "仓库无 keystore/tvbox.keystore，使用编译产物原始签名（装前需卸载旧版）"
+          fi
+      - name: 上传 Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: TVBoxOS-APK-arm64
+          path: apk-out/*
+          if-no-files-found: error
+      - name: git 回写 APK 到仓库 apk/ 目录
+        run: |
+          set -e
+          TOKEN="${{ github.token }}"
+          REPO="${{ github.repository }}"
+          BRANCH="${{ github.ref_name }}"
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git remote set-url origin "https://x-access-token:${TOKEN}@github.com/${REPO}.git"
+          # 【v9.2】先对齐远程最新，避免编译期间 main 被更新导致 push 被拒
+          git fetch origin
+          git reset --hard origin/${BRANCH}
+          # 对齐之后才准备 apk/ 内容（apk-out/ 是未跟踪目录，reset 不影响）
+          mkdir -p apk
+          FN=$(ls apk-out/*.apk | head -1 | xargs basename)
+          RAW="https://raw.githubusercontent.com/${REPO}/main/apk/${FN}"
+          PAGES="https://nzsm.github.io/tvbox-server/apk/${FN}"
+          printf '最新 APK（手机浏览器打开即下载）：\n%s\n备用链接：\n%s\n' "${RAW}" "${PAGES}" > apk/下载链接.txt
+          rm -f apk/*.apk
+          cp apk-out/*.apk apk/
+          ls -la apk/
+          # 只提交 apk/，绝不 add -A（避免把 tvboxos-src/、apk-out/ 提交进仓库）
+          git add apk/
+          git commit -m "云编译 TVBoxOS APK 更新"
+          git push origin "HEAD:${BRANCH}"
+          echo "--- 完成，仓库 apk/ 已更新（只含最新 APK + 下载链接.txt） ---"
+#（注：内容由AI生成）
