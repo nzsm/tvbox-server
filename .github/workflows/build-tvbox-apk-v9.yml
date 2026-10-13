@@ -38,6 +38,45 @@ jobs:
           git clone --depth 1 --branch main https://github.com/q215613905/TVBoxOS.git tvboxos-src
           echo "--- 源码结构 ---"
           ls tvboxos-src | head -20
+      - name: 应用多dex jar补丁（合并jar的classes2.dex可加载）
+        working-directory: tvboxos-src
+        run: |
+          python3 << 'PYEOF'
+          # -*- coding: utf-8 -*-
+          fn = 'app/src/main/java/com/github/catvod/crawler/JarLoader.java'
+          s = open(fn, encoding='utf-8').read()
+          old = 'DexClassLoader loader = new DexClassLoader(file.getAbsolutePath(), cachePath, cachePath, App.getInstance().getClassLoader());'
+          new = '''            // 多dex jar支持：合并jar的 classes2.dex 等不会被 DexClassLoader 自动加载，这里解压后一并加入 dexPath
+            StringBuilder dexPath = new StringBuilder(file.getAbsolutePath());
+            try (java.util.zip.ZipFile zf = new java.util.zip.ZipFile(file)) {
+                java.util.Enumeration<? extends java.util.zip.ZipEntry> en = zf.entries();
+                while (en.hasMoreElements()) {
+                    java.util.zip.ZipEntry ze = en.nextElement();
+                    String name = ze.getName();
+                    if (name.matches("classes\\.?\\d*\\.dex")) {
+                        File out = new File(cachePath, name);
+                        if (!out.exists()) {
+                            try (InputStream is = zf.getInputStream(ze);
+                                 FileOutputStream fos = new FileOutputStream(out)) {
+                                byte[] buf = new byte[8192];
+                                int len;
+                                while ((len = is.read(buf)) > 0) fos.write(buf, 0, len);
+                            }
+                        }
+                        dexPath.append(File.pathSeparator).append(out.getAbsolutePath());
+                    }
+                }
+            } catch (Throwable e) {
+                Log.i(TAG, "multidex scan error: " + e.getMessage());
+            }
+            DexClassLoader loader = new DexClassLoader(dexPath.toString(), cachePath, cachePath, App.getInstance().getClassLoader());'''
+          assert old in s, '目标行未找到，补丁中止'
+          s = s.replace(old, new, 1)
+          open(fn, 'w', encoding='utf-8').write(s)
+          print('✅ 多dex jar 补丁应用成功')
+          PYEOF
+          grep -n "multidex scan" app/src/main/java/com/github/catvod/crawler/JarLoader.java || { echo "!!! 补丁未生效，中止编译"; exit 1; }
+
       - name: 设置 JDK 17
         uses: actions/setup-java@v5
         with:
@@ -154,4 +193,3 @@ jobs:
           git commit -m "云编译 TVBoxOS APK 更新"
           git push origin "HEAD:${BRANCH}"
           echo "--- 完成，仓库 apk/ 已更新（只含最新 APK + 下载链接.txt） ---"
-#（注：内容由AI生成）
