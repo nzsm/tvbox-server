@@ -53,7 +53,7 @@ jobs:
                 while (en.hasMoreElements()) {
                     java.util.zip.ZipEntry ze = en.nextElement();
                     String name = ze.getName();
-                    if (name.matches("classes\\.?\\d*\\.dex")) {
+                    if (name.matches("classes[.]?[0-9]*[.]dex")) {
                         File out = new File(cachePath, name);
                         if (!out.exists()) {
                             try (InputStream is = zf.getInputStream(ze);
