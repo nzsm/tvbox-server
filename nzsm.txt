@@ -1169,6 +1169,26 @@
       ]
     },
     {
+      "key": "快看",
+      "name": "快看┃影视",
+      "type": 3,
+      "api": "csp_AppYsV2",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "changeable": 1,
+      "ext": "http://kkwk123.top/api.php/app/",
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ]
+    },
+    {
       "key": "厂长影视",
       "name": "厂长┃影视",
       "type": 3,
