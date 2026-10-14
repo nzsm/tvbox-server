@@ -1,1 +1,47 @@
-0
+name: Auto Subscribe Sync
+
+# 全自动订阅：每天定时抓对方加密配置 → 解密 → 合并 → 提交回仓库
+# 放置路径: .github/workflows/auto-sync.yml
+# 前置: 仓库 Settings → Actions → General → Workflow permissions → 选 Read and write permissions
+
+on:
+  schedule:
+    - cron: '17 2 * * *'      # 每天 02:17 UTC（北京时间 10:17）；配合脚本内 0~15 分钟随机延时，请求时间自然打散
+  workflow_dispatch: {}        # 也可在 Actions 页手动点 Run workflow
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出仓库
+        uses: actions/checkout@v4
+
+      - name: 安装 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 安装依赖
+        run: pip install pycryptodome
+
+      - name: 运行订阅脚本（抓取+解密+合并+生成）
+        env:
+          # 订阅源列表，格式: 标签|链接;标签|链接
+          SUB_SOURCES: "XC|https://ghfast.top/https://raw.githubusercontent.com/yoursmile66/TVBox/main/XC.json;宝盒|https://ghfast.top/https://raw.githubusercontent.com/guot55/yg/main/ygbox.json"
+        run: python subscribe.py
+
+      - name: 有变更则提交推送
+        run: |
+          git config user.name "nzsm-sub-bot"
+          git config user.email "nzsm-sub-bot@users.noreply.github.com"
+          git add nzsm_merge.json nzsm.txt
+          if git diff --cached --quiet; then
+            echo "✅ 内容无变化，跳过提交（对方未更新或合并结果一致）"
+          else
+            git commit -m "auto: 订阅同步 $(date +%Y%m%d-%H%M)"
+            git push
+            echo "✅ 已推送到仓库，TVBox 下次加载即同步"
+          fi
