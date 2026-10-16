@@ -17,13 +17,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "预告",
       "name": "新片┃预告",
       "type": 3,
-      "api": "csp_Douban",
+      "api": "csp_DouBan",
       "searchable": 0,
       "quickSearch": 0,
       "filterable": 1,
@@ -36,7 +36,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "本地",
@@ -55,7 +55,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "配置中心",
@@ -80,7 +80,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "应用商店",
@@ -101,7 +101,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "好剧",
@@ -133,7 +133,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "csp_臻彩",
@@ -163,7 +163,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "热播影视",
@@ -185,7 +185,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "天天影视",
@@ -207,7 +207,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "浪酷影视",
@@ -229,7 +229,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "菲儿影视",
@@ -253,7 +253,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "移动",
@@ -272,7 +272,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "仓鼠",
@@ -298,7 +298,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "水滴",
@@ -324,7 +324,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "咖啡",
@@ -350,7 +350,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "橘猫",
@@ -376,7 +376,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "诺雪",
@@ -402,7 +402,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "雄鹰",
@@ -428,7 +428,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "麻花",
@@ -454,7 +454,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "海豚",
@@ -480,7 +480,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "晓晓",
@@ -506,7 +506,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "溜溜",
@@ -532,7 +532,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "剧咖",
@@ -558,7 +558,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "瓜萌",
@@ -584,7 +584,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "忍者",
@@ -610,7 +610,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "晴天",
@@ -636,7 +636,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "再看",
@@ -662,7 +662,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "橘子",
@@ -688,7 +688,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "彼岸",
@@ -714,7 +714,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "雨滴",
@@ -740,7 +740,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "优质",
@@ -766,7 +766,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "木叶",
@@ -792,7 +792,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "米兔",
@@ -818,7 +818,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "人人",
@@ -844,7 +844,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "悠悠",
@@ -870,7 +870,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "在看",
@@ -896,7 +896,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "星河",
@@ -922,7 +922,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "若惜",
@@ -948,7 +948,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "外剧",
@@ -974,7 +974,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "趣看",
@@ -999,7 +999,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "柚子",
@@ -1024,7 +1024,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "火猫",
@@ -1049,7 +1049,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "哔哩视频",
@@ -1165,7 +1165,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "玩偶哥哥",
@@ -1185,7 +1185,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "木偶",
@@ -1205,7 +1205,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "蜡笔",
@@ -1226,7 +1226,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "至臻",
@@ -1247,7 +1247,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "多多",
@@ -1268,7 +1268,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "欧哥",
@@ -1289,7 +1289,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "二小",
@@ -1310,7 +1310,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "大玩",
@@ -1331,7 +1331,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "虎斑",
@@ -1352,7 +1352,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "闪电",
@@ -1373,7 +1373,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "奥秘",
@@ -1394,7 +1394,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "团长",
@@ -1414,13 +1414,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "雷鲸",
       "name": "雷鲸┃4K弹幕",
       "type": 3,
-      "api": "csp_PanWebShare",
+      "api": "csp_PanWebShareCloudLJ",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
@@ -1439,13 +1439,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "海绵",
       "name": "海绵┃4K弹幕",
       "type": 3,
-      "api": "csp_PanWebShare",
+      "api": "csp_PanWebShareCloudHM",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
@@ -1464,13 +1464,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "夸父",
       "name": "夸父┃4K弹幕",
       "type": 3,
-      "api": "csp_PanWebShareKF",
+      "api": "csp_PanWebShareCloudKF",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
@@ -1489,7 +1489,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "趣盘",
@@ -1516,7 +1516,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "盘库",
@@ -1539,7 +1539,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "双星",
@@ -1625,7 +1625,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "米搜",
@@ -1732,7 +1732,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "偷乐短剧",
@@ -1758,7 +1758,7 @@
       "key": "短剧网",
       "name": "短剧网┃短剧",
       "type": 3,
-      "api": "csp_xBPQ",
+      "api": "csp_HBPQ",
       "ext": "https://ygbh.site/max/XBPQ/短剧网.json",
       "searchable": 1,
       "quickSearch": 1,
@@ -1772,7 +1772,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "短剧屋",
@@ -1792,7 +1792,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "满分",
@@ -1812,7 +1812,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "顾我",
@@ -1833,7 +1833,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "起点",
@@ -1853,7 +1853,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "好感",
@@ -1873,7 +1873,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "金牌影视",
@@ -1956,7 +1956,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "厂长影视",
@@ -1977,7 +1977,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "私人影视",
@@ -1996,7 +1996,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "云播影视",
@@ -2015,7 +2015,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "奇优影视",
@@ -2034,7 +2034,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "苹果影视",
@@ -2053,7 +2053,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "全网影视",
@@ -2073,7 +2073,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "饺子影视",
@@ -2093,7 +2093,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "尘落影视",
@@ -2113,7 +2113,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "攻阁影视",
@@ -2133,7 +2133,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "鸭梨影视",
@@ -2152,13 +2152,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "绝对影视",
       "name": "绝对┃影视",
       "type": 3,
-      "api": "csp_FourKHDR",
+      "api": "csp_FourK",
       "ext": "https://www.4kvm.net",
       "searchable": 1,
       "quickSearch": 1,
@@ -2172,13 +2172,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "白白影视",
       "name": "白白┃影视",
       "type": 3,
-      "api": "csp_Subaibai",
+      "api": "csp_SuBaiBai",
       "ext": "https://www.subaibai.com",
       "searchable": 1,
       "quickSearch": 1,
@@ -2192,14 +2192,14 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "免费影视",
       "name": "️免费┃影视",
       "type": 3,
       "quickSearch": 1,
-      "api": "csp_FreeOK",
+      "api": "csp_FreeOk",
       "searchable": 1,
       "filterable": 1,
       "flags": [
@@ -2211,7 +2211,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "低端影视",
@@ -2230,7 +2230,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "来看影视",
@@ -2249,7 +2249,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "瓜子影视",
@@ -2268,7 +2268,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "快看影视",
@@ -2287,7 +2287,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "采集之王",
@@ -2325,13 +2325,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "可可影视",
       "name": "可可┃影视",
       "type": 3,
-      "api": "csp_xBPQ",
+      "api": "csp_HBPQ",
       "ext": "https://ygbh.site/max/XBPQ/可可影视.json",
       "searchable": 1,
       "quickSearch": 1,
@@ -2345,13 +2345,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "海纳影视",
       "name": "海纳┃影视",
       "type": 3,
-      "api": "csp_xBPQ",
+      "api": "csp_HBPQ",
       "ext": "https://ygbh.site/max/XBPQ/海纳影视.json",
       "searchable": 1,
       "quickSearch": 1,
@@ -2365,13 +2365,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "面包影视",
       "name": "面包┃影视",
       "type": 3,
-      "api": "csp_xBPQ",
+      "api": "csp_HBPQ",
       "ext": "https://ygbh.site/max/XBPQ/面包影视.json",
       "searchable": 1,
       "quickSearch": 1,
@@ -2385,13 +2385,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "永乐影视",
       "name": "永乐┃影视",
       "type": 3,
-      "api": "csp_xBPQ",
+      "api": "csp_HBPQ",
       "ext": "https://ygbh.site/max/XBPQ/永乐影视.json",
       "searchable": 1,
       "quickSearch": 1,
@@ -2405,13 +2405,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "雪糕影视",
       "name": "雪糕┃影视",
       "type": 3,
-      "api": "csp_xBPQ",
+      "api": "csp_HBPQ",
       "ext": "https://ygbh.site/max/XBPQ/雪糕影视.json",
       "searchable": 1,
       "quickSearch": 1,
@@ -2425,13 +2425,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "骚火影视",
       "name": "骚火┃影视",
       "type": 3,
-      "api": "csp_xBPQ",
+      "api": "csp_HBPQ",
       "ext": "https://ygbh.site/max/XBPQ/骚火影视.json",
       "searchable": 1,
       "quickSearch": 1,
@@ -2445,13 +2445,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "农民影视",
       "name": "农民┃影视",
       "type": 3,
-      "api": "csp_xBPQ",
+      "api": "csp_HBPQ",
       "ext": "https://ygbh.site/max/XBPQ/农民影视.json",
       "searchable": 1,
       "quickSearch": 1,
@@ -2465,13 +2465,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "七点影视",
       "name": "七点┃影视",
       "type": 3,
-      "api": "csp_xBPQ",
+      "api": "csp_HBPQ",
       "ext": "https://ygbh.site/max/XBPQ/七点影视.json",
       "searchable": 1,
       "quickSearch": 1,
@@ -2485,13 +2485,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "三九影视",
       "name": "三九┃影视",
       "type": 3,
-      "api": "csp_xBPQ",
+      "api": "csp_HBPQ",
       "ext": "https://ygbh.site/max/XBPQ/三九影视.json",
       "searchable": 1,
       "quickSearch": 1,
@@ -2505,13 +2505,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "三四影视",
       "name": "三四┃影视",
       "type": 3,
-      "api": "csp_xBPQ",
+      "api": "csp_HBPQ",
       "ext": "https://ygbh.site/max/XBPQ/三四影视.json",
       "searchable": 1,
       "quickSearch": 1,
@@ -2525,7 +2525,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "耐看影视",
@@ -2545,7 +2545,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "真心影视",
@@ -2564,7 +2564,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "思古影视",
@@ -2641,7 +2641,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "电影牛",
@@ -2661,7 +2661,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "剧圈圈",
@@ -2718,7 +2718,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "无上资源",
@@ -2752,7 +2752,7 @@
       "key": "哆啦新番社",
       "name": "哆啦┃新番社",
       "type": 3,
-      "api": "csp_xBPQ",
+      "api": "csp_HBPQ",
       "style": {
         "type": "list"
       },
@@ -2769,7 +2769,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "56动漫",
@@ -2852,7 +2852,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "稀饭动漫",
@@ -2878,7 +2878,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "咕咕动漫",
@@ -2904,7 +2904,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "米饭动漫",
@@ -2930,13 +2930,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "樱花动漫",
       "name": "樱花┃动漫",
       "type": 3,
-      "api": "csp_xBPQ",
+      "api": "csp_HBPQ",
       "ext": "https://ygbh.site/max/XBPQ/樱花动漫.json",
       "searchable": 1,
       "quickSearch": 1,
@@ -2950,7 +2950,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "巴士动漫",
@@ -2970,7 +2970,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "好看动漫",
@@ -3181,13 +3181,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "修罗影视",
       "name": "修罗┃磁力",
       "type": 3,
-      "api": "csp_xBPQ",
+      "api": "csp_HBPQ",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
@@ -3201,7 +3201,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "七味",
@@ -3220,7 +3220,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "80S",
@@ -3240,7 +3240,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "New6v",
@@ -3260,7 +3260,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "SeedHub",
@@ -3279,7 +3279,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "美剧迷",
@@ -3298,7 +3298,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "迅雷吧",
@@ -3317,7 +3317,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "电影港",
@@ -3337,13 +3337,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "狐狸君",
       "name": "狐狸君┃磁力",
       "type": 3,
-      "api": "csp_xBPQ",
+      "api": "csp_HBPQ",
       "changeable": 1,
       "searchable": 1,
       "quickSearch": 1,
@@ -3358,13 +3358,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "布谷TV",
       "name": "布谷TV┃磁力",
       "type": 3,
-      "api": "csp_xBPQ",
+      "api": "csp_HBPQ",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
@@ -3378,7 +3378,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "BT天堂",
@@ -3398,7 +3398,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "Mp4电影",
@@ -3417,7 +3417,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "酷吧电影",
@@ -3436,7 +3436,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "美剧天堂",
@@ -3455,7 +3455,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "电影天堂",
@@ -3474,7 +3474,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "阿里云盘",
@@ -3499,7 +3499,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "夸克云盘",
@@ -3524,13 +3524,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "UC",
       "name": "UC┃云盘",
       "type": 3,
-      "api": "csp_PanUC",
+      "api": "csp_PanUc",
       "searchable": 0,
       "filterable": 0,
       "changeable": 0,
@@ -3549,13 +3549,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "百度云盘",
       "name": "百度┃云盘",
       "type": 3,
-      "api": "csp_PanBaidu",
+      "api": "csp_PanBaiDu",
       "searchable": 0,
       "filterable": 0,
       "changeable": 0,
@@ -3573,7 +3573,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "短剧合集",
@@ -3641,7 +3641,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "网络直播",
@@ -3682,7 +3682,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "哔哩合集",
@@ -3710,7 +3710,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "哔哩哔哩演唱会",
@@ -3737,7 +3737,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "哔哩哔哩听书",
@@ -3764,7 +3764,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "哔哩哔哩相声",
@@ -3791,7 +3791,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "哔哩哔哩小品",
@@ -3818,7 +3818,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "哔哩哔哩戏曲",
@@ -3845,7 +3845,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "急救教学",
@@ -3870,13 +3870,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "养生堂",
       "name": "养生┃知识",
       "type": 3,
-      "api": "csp_xBPQ",
+      "api": "csp_HBPQ",
       "ext": "https://ygbh.site/max/XBPQ/养生堂.json",
       "style": {
         "type": "rect",
@@ -3894,7 +3894,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "push_agent",
@@ -3914,7 +3914,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://gitee.com/baohe2025/bh/raw/master/spider.jar"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "Tg豆瓣",
@@ -3941,7 +3941,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://jihulab.com/yoursmile77/TVBox/-/raw/master/Yoursmile.jar;md5;c6aaf6a9498e1e1d07126779c687bdd8"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/Yoursmile.jar"
     },
     {
       "key": "弹幕",
@@ -3983,7 +3983,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://jihulab.com/yoursmile77/TVBox/-/raw/master/Yoursmile.jar;md5;c6aaf6a9498e1e1d07126779c687bdd8"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/Yoursmile.jar"
     },
     {
       "name": "🍉瓜子",
@@ -4024,7 +4024,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://jihulab.com/yoursmile77/TVBox/-/raw/master/Yoursmile.jar;md5;c6aaf6a9498e1e1d07126779c687bdd8"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/Yoursmile.jar"
     },
     {
       "key": "金牌",
@@ -4044,7 +4044,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://jihulab.com/yoursmile77/TVBox/-/raw/master/Yoursmile.jar;md5;c6aaf6a9498e1e1d07126779c687bdd8"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/Yoursmile.jar"
     },
     {
       "key": "橘汁",
@@ -4074,7 +4074,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://jihulab.com/yoursmile77/TVBox/-/raw/master/Yoursmile.jar;md5;c6aaf6a9498e1e1d07126779c687bdd8"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/Yoursmile.jar"
     },
     {
       "key": "华谊",
@@ -4104,7 +4104,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://jihulab.com/yoursmile77/TVBox/-/raw/master/Yoursmile.jar;md5;c6aaf6a9498e1e1d07126779c687bdd8"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/Yoursmile.jar"
     },
     {
       "key": "苹果",
@@ -4134,7 +4134,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://jihulab.com/yoursmile77/TVBox/-/raw/master/Yoursmile.jar;md5;c6aaf6a9498e1e1d07126779c687bdd8"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/Yoursmile.jar"
     },
     {
       "key": "半日",
@@ -4162,7 +4162,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://jihulab.com/yoursmile77/TVBox/-/raw/master/Yoursmile.jar;md5;c6aaf6a9498e1e1d07126779c687bdd8"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/Yoursmile.jar"
     },
     {
       "key": "天堂",
@@ -4192,7 +4192,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://jihulab.com/yoursmile77/TVBox/-/raw/master/Yoursmile.jar;md5;c6aaf6a9498e1e1d07126779c687bdd8"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/Yoursmile.jar"
     },
     {
       "key": "剧圈",
@@ -4220,7 +4220,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://jihulab.com/yoursmile77/TVBox/-/raw/master/Yoursmile.jar;md5;c6aaf6a9498e1e1d07126779c687bdd8"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/Yoursmile.jar"
     },
     {
       "key": "王子",
@@ -4240,13 +4240,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://jihulab.com/yoursmile77/TVBox/-/raw/master/Yoursmile.jar;md5;c6aaf6a9498e1e1d07126779c687bdd8"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/Yoursmile.jar"
     },
     {
       "key": "动漫巴士",
       "name": "🚌动漫巴士",
       "type": 3,
-      "api": "csp_xBPQ",
+      "api": "csp_XBPQ",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
@@ -4271,7 +4271,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://jihulab.com/yoursmile77/TVBox/-/raw/master/Yoursmile.jar;md5;c6aaf6a9498e1e1d07126779c687bdd8"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/Yoursmile.jar"
     },
     {
       "key": "csp_Jianpian",
@@ -4291,7 +4291,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://jihulab.com/yoursmile77/TVBox/-/raw/master/Yoursmile.jar;md5;c6aaf6a9498e1e1d07126779c687bdd8"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/Yoursmile.jar"
     },
     {
       "key": "农民",
@@ -4311,13 +4311,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://jihulab.com/yoursmile77/TVBox/-/raw/master/Yoursmile.jar;md5;c6aaf6a9498e1e1d07126779c687bdd8"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/Yoursmile.jar"
     },
     {
       "key": "面包",
       "name": "🎁面包",
       "type": 3,
-      "api": "csp_xBPQ",
+      "api": "csp_XBPQ",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
@@ -4337,13 +4337,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://jihulab.com/yoursmile77/TVBox/-/raw/master/Yoursmile.jar;md5;c6aaf6a9498e1e1d07126779c687bdd8"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/Yoursmile.jar"
     },
     {
       "key": "追剧吧",
       "name": "🏃‍♀️追剧吧",
       "type": 3,
-      "api": "csp_xBPQ",
+      "api": "csp_XBPQ",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
@@ -4361,7 +4361,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://jihulab.com/yoursmile77/TVBox/-/raw/master/Yoursmile.jar;md5;c6aaf6a9498e1e1d07126779c687bdd8"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/Yoursmile.jar"
     },
     {
       "key": "csp_Dygang",
@@ -4380,7 +4380,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://jihulab.com/yoursmile77/TVBox/-/raw/master/Yoursmile.jar;md5;c6aaf6a9498e1e1d07126779c687bdd8"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/Yoursmile.jar"
     },
     {
       "key": "csp_New6v",
@@ -4399,7 +4399,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://jihulab.com/yoursmile77/TVBox/-/raw/master/Yoursmile.jar;md5;c6aaf6a9498e1e1d07126779c687bdd8"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/Yoursmile.jar"
     },
     {
       "key": "csp_MeijuMi",
@@ -4419,7 +4419,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://jihulab.com/yoursmile77/TVBox/-/raw/master/Yoursmile.jar;md5;c6aaf6a9498e1e1d07126779c687bdd8"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/Yoursmile.jar"
     },
     {
       "key": "csp_SP360",
@@ -4439,7 +4439,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://jihulab.com/yoursmile77/TVBox/-/raw/master/Yoursmile.jar;md5;c6aaf6a9498e1e1d07126779c687bdd8"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/Yoursmile.jar"
     },
     {
       "name": "📦蒙太奇",
@@ -5105,7 +5105,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://jihulab.com/yoursmile77/TVBox/-/raw/master/Yoursmile.jar;md5;c6aaf6a9498e1e1d07126779c687bdd8"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/Yoursmile.jar"
     },
     {
       "key": "pansou|fish",
@@ -5135,7 +5135,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://jihulab.com/yoursmile77/TVBox/-/raw/master/Yoursmile.jar;md5;c6aaf6a9498e1e1d07126779c687bdd8"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/Yoursmile.jar"
     },
     {
       "key": "玩偶",
@@ -5165,7 +5165,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://jihulab.com/yoursmile77/TVBox/-/raw/master/Yoursmile.jar;md5;c6aaf6a9498e1e1d07126779c687bdd8"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/Yoursmile.jar"
     },
     {
       "key": "花卷",
@@ -5191,7 +5191,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://jihulab.com/yoursmile77/TVBox/-/raw/master/Yoursmile.jar;md5;c6aaf6a9498e1e1d07126779c687bdd8"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/Yoursmile.jar"
     },
     {
       "key": "傻样",
@@ -5218,7 +5218,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://jihulab.com/yoursmile77/TVBox/-/raw/master/Yoursmile.jar;md5;c6aaf6a9498e1e1d07126779c687bdd8"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/Yoursmile.jar"
     },
     {
       "key": "歌",
@@ -5247,7 +5247,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://jihulab.com/yoursmile77/TVBox/-/raw/master/Yoursmile.jar;md5;c6aaf6a9498e1e1d07126779c687bdd8"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/Yoursmile.jar"
     },
     {
       "key": "剧透社",
@@ -5271,7 +5271,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://jihulab.com/yoursmile77/TVBox/-/raw/master/Yoursmile.jar;md5;c6aaf6a9498e1e1d07126779c687bdd8"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/Yoursmile.jar"
     },
     {
       "key": "FourKZN",
@@ -5295,7 +5295,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://jihulab.com/yoursmile77/TVBox/-/raw/master/Yoursmile.jar;md5;c6aaf6a9498e1e1d07126779c687bdd8"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/Yoursmile.jar"
     },
     {
       "key": "光鸭社区",
@@ -5319,7 +5319,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://jihulab.com/yoursmile77/TVBox/-/raw/master/Yoursmile.jar;md5;c6aaf6a9498e1e1d07126779c687bdd8"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/Yoursmile.jar"
     },
     {
       "key": "网盘集合",
@@ -5343,7 +5343,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://jihulab.com/yoursmile77/TVBox/-/raw/master/Yoursmile.jar;md5;c6aaf6a9498e1e1d07126779c687bdd8"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/Yoursmile.jar"
     },
     {
       "key": "Youtube",
@@ -5371,13 +5371,13 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://jihulab.com/yoursmile77/TVBox/-/raw/master/Yoursmile.jar;md5;c6aaf6a9498e1e1d07126779c687bdd8"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/Yoursmile.jar"
     },
     {
       "key": "TgYunPan|本地",
       "name": "🅿TgYunPan|本地",
       "type": 3,
-      "api": "csp_TGYunPanLocal",
+      "api": "csp_TgYunPanLocal",
       "searchable": 1,
       "filterable": 0,
       "switchable": 0,
@@ -5396,7 +5396,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://jihulab.com/yoursmile77/TVBox/-/raw/master/Yoursmile.jar;md5;c6aaf6a9498e1e1d07126779c687bdd8"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/Yoursmile.jar"
     },
     {
       "key": "虎牙",
@@ -5423,7 +5423,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://jihulab.com/yoursmile77/TVBox/-/raw/master/Yoursmile.jar;md5;c6aaf6a9498e1e1d07126779c687bdd8"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/Yoursmile.jar"
     },
     {
       "key": "斗鱼",
@@ -5447,7 +5447,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://jihulab.com/yoursmile77/TVBox/-/raw/master/Yoursmile.jar;md5;c6aaf6a9498e1e1d07126779c687bdd8"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/Yoursmile.jar"
     },
     {
       "key": "csp_Kugou",
@@ -5475,7 +5475,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://jihulab.com/yoursmile77/TVBox/-/raw/master/Yoursmile.jar;md5;c6aaf6a9498e1e1d07126779c687bdd8"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/Yoursmile.jar"
     },
     {
       "key": "酷我听书",
@@ -5500,7 +5500,7 @@
       "key": "DJ阁舞曲网",
       "name": "🎵DJ阁舞曲网",
       "type": 3,
-      "api": "csp_xBPQ",
+      "api": "csp_XBPQ",
       "ext": {
         "请求头": "User-Agent$PC_UA",
         "编码": "utf-8",
@@ -5530,7 +5530,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://jihulab.com/yoursmile77/TVBox/-/raw/master/Yoursmile.jar;md5;c6aaf6a9498e1e1d07126779c687bdd8"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/Yoursmile.jar"
     },
     {
       "key": "哔哩",
@@ -5558,7 +5558,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://jihulab.com/yoursmile77/TVBox/-/raw/master/Yoursmile.jar;md5;c6aaf6a9498e1e1d07126779c687bdd8"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/Yoursmile.jar"
     },
     {
       "key": "演唱会",
@@ -5586,7 +5586,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://jihulab.com/yoursmile77/TVBox/-/raw/master/Yoursmile.jar;md5;c6aaf6a9498e1e1d07126779c687bdd8"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/Yoursmile.jar"
     },
     {
       "key": "相声小品",
@@ -5614,7 +5614,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://jihulab.com/yoursmile77/TVBox/-/raw/master/Yoursmile.jar;md5;c6aaf6a9498e1e1d07126779c687bdd8"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/Yoursmile.jar"
     },
     {
       "key": "戏曲",
@@ -5642,7 +5642,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://jihulab.com/yoursmile77/TVBox/-/raw/master/Yoursmile.jar;md5;c6aaf6a9498e1e1d07126779c687bdd8"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/Yoursmile.jar"
     },
     {
       "key": "少儿",
@@ -5670,7 +5670,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://jihulab.com/yoursmile77/TVBox/-/raw/master/Yoursmile.jar;md5;c6aaf6a9498e1e1d07126779c687bdd8"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/Yoursmile.jar"
     },
     {
       "key": "小学",
@@ -5698,7 +5698,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://jihulab.com/yoursmile77/TVBox/-/raw/master/Yoursmile.jar;md5;c6aaf6a9498e1e1d07126779c687bdd8"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/Yoursmile.jar"
     },
     {
       "key": "初中",
@@ -5726,7 +5726,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://jihulab.com/yoursmile77/TVBox/-/raw/master/Yoursmile.jar;md5;c6aaf6a9498e1e1d07126779c687bdd8"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/Yoursmile.jar"
     },
     {
       "key": "高中",
@@ -5754,7 +5754,7 @@
         "bilibili",
         "duanju"
       ],
-      "jar": "https://jihulab.com/yoursmile77/TVBox/-/raw/master/Yoursmile.jar;md5;c6aaf6a9498e1e1d07126779c687bdd8"
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/Yoursmile.jar"
     }
   ],
   "lives": [
