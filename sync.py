@@ -213,6 +213,16 @@ def merge_configs(cfgs):
         if s.get("jar"):
             s["jar"] = self_host_jar(s["jar"])
         sites.append(s)
+    # v4.36.2 Douban 类修复：baohe jar 的 Douban 走 frodo.douban.com 被豆瓣风控（HTTP 400 invalid_request_997），
+    # csp_Douban 源无分类无内容；Yoursmile jar 的 Douban 走 m.douban.com（200 正常）。强制 Douban 类源用 Yoursmile，
+    # 并修正 csp_DouBan 大小写（jar 内实际类是 Douban）。
+    DOUBAN_JAR = "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/Yoursmile.jar"
+    for s in sites:
+        api = str(s.get("api", ""))
+        if api in ("csp_Douban", "csp_DouBan"):
+            s["jar"] = DOUBAN_JAR
+            if api == "csp_DouBan":
+                s["api"] = "csp_Douban"
     # 顶层 spider：取第一个有 spider 的配置（与 v4.34 一致），同样自托管改写
     spider = ""
     for cfg in cfgs:
