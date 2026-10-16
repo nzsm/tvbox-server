@@ -128,7 +128,7 @@ def self_host_jar(u):
 def download_rel_assets(cfgs_meta, merged):
     """自托管相对路径资源（drpy2 的 ./lib/、./js/ 文件）：
     收集合并配置里 api/ext 的相对路径 → 从来源仓库下载到本仓库同名路径。
-    下载后相对路径不变（TVBox 按订阅地址解析到本仓库 lib/js/，即自托管成功）。
+    下载后相对路径不变（TVBox 按订阅地址解析到本仓库 lib/js/py/，即自托管成功）。
     """
     need = {}  # relpath -> repo 根
     for meta in cfgs_meta:
@@ -138,7 +138,7 @@ def download_rel_assets(cfgs_meta, merged):
         for s in cfg.get("sites", []):
             for fld in ("api", "ext"):
                 v = s.get(fld)
-                if isinstance(v, str) and (v.startswith("./lib/") or v.startswith("./js/")):
+                if isinstance(v, str) and (v.startswith("./lib/") or v.startswith("./js/") or v.startswith("./py/")):
                     need.setdefault(v.lstrip("./"), repo)
     for rel, repo in sorted(need.items()):
         local = rel
