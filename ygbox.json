@@ -1,27 +1,61 @@
 {
-  "spider": "https://gitee.com/baohe2025/bh/raw/master/spider.jar",
-  "wallpaper": "http://bobohome.ignorelist.com:20247/bing",
-  "logo": "http://127.0.0.1:9978/file/TVBox/logo.png",
   "sites": [
     {
       "key": "豆瓣",
       "name": "🌈公众号【AI迷】",
       "type": 3,
       "api": "csp_Douban",
-      "searchable": 0
+      "searchable": 0,
+      "quickSearch": 0,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "预告",
       "name": "新片┃预告",
       "type": 3,
       "api": "csp_DouBan",
-      "searchable": 0
+      "searchable": 0,
+      "quickSearch": 0,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "本地",
       "name": "本地┃视频",
       "type": 3,
-      "api": "csp_LocalFile"
+      "api": "csp_LocalFile",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "配置中心",
@@ -34,7 +68,19 @@
       "style": {
         "type": "rect",
         "ratio": 1.597
-      }
+      },
+      "quickSearch": 0,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "应用商店",
@@ -43,7 +89,19 @@
       "api": "csp_Market",
       "searchable": 0,
       "changeable": 0,
-      "ext": "https://3043.kstore.space/bhvip/jpg/bh.json"
+      "ext": "https://3043.kstore.space/bhvip/jpg/bh.json",
+      "quickSearch": 0,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "好剧",
@@ -65,7 +123,17 @@
         "dataIv": "Z0qTnwyLAJCtuIkI",
         "deviceId": "",
         "version": ""
-      }
+      },
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "csp_臻彩",
@@ -85,7 +153,17 @@
         "4K热播剧",
         "4K动漫",
         "4K新电影"
-      ]
+      ],
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "热播影视",
@@ -97,7 +175,17 @@
       "filterable": 0,
       "ext": {
         "url": "http://v.rbotv.cn"
-      }
+      },
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "天天影视",
@@ -109,7 +197,17 @@
       "filterable": 0,
       "ext": {
         "url": "http://tt.ysdqjs.cn"
-      }
+      },
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "浪酷影视",
@@ -121,7 +219,17 @@
       "filterable": 0,
       "ext": {
         "url": "http://v.lkuys.cn"
-      }
+      },
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "菲儿影视",
@@ -132,7 +240,20 @@
         "url": "https://appcms.freehd.vip",
         "dataKey": "be5348dfb0c3c283",
         "dataIv": "5f5449dd14313217"
-      }
+      },
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "移动",
@@ -140,7 +261,18 @@
       "type": 3,
       "api": "csp_YD",
       "searchable": 1,
-      "quickSearch": 1
+      "quickSearch": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "仓鼠",
@@ -154,7 +286,19 @@
         "dataIv": "Z98KXaLtO2wC1Pte",
         "deviceId": "",
         "version": "120"
-      }
+      },
+      "searchable": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "水滴",
@@ -168,7 +312,19 @@
         "dataIv": "gKdQKLbwhhLp4Ytv",
         "deviceId": "",
         "version": ""
-      }
+      },
+      "searchable": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "咖啡",
@@ -182,7 +338,19 @@
         "dataIv": "qwertyuiopqwerty",
         "deviceId": "",
         "version": "120"
-      }
+      },
+      "searchable": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "橘猫",
@@ -196,7 +364,19 @@
         "dataIv": "pBVmysmGX8TsgrQN",
         "deviceId": "",
         "version": "120"
-      }
+      },
+      "searchable": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "诺雪",
@@ -210,7 +390,19 @@
         "dataIv": "ZX10ysTYZWtIJCTU",
         "deviceId": "",
         "version": "120"
-      }
+      },
+      "searchable": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "雄鹰",
@@ -224,7 +416,19 @@
         "dataIv": "ca94b06ca359d80e",
         "deviceId": "",
         "version": "120"
-      }
+      },
+      "searchable": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "麻花",
@@ -238,7 +442,19 @@
         "dataIv": "q7gj4f9br3fls6nh",
         "deviceId": "2112fc5eac600314ba95c4d65da9286b3",
         "version": "700"
-      }
+      },
+      "searchable": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "海豚",
@@ -252,7 +468,19 @@
         "dataIv": "7CYQQzwchRQpHCOj",
         "deviceId": "",
         "version": ""
-      }
+      },
+      "searchable": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "晓晓",
@@ -266,7 +494,19 @@
         "dataIv": "Z0qTnwyLAJCtuIkI",
         "deviceId": "",
         "version": ""
-      }
+      },
+      "searchable": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "溜溜",
@@ -280,7 +520,19 @@
         "dataIv": "NiDGaKiVnkO3QX1Q",
         "deviceId": "2fbaf48ee97783260bc907e3ab0bd40c3",
         "version": "200"
-      }
+      },
+      "searchable": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "剧咖",
@@ -294,7 +546,19 @@
         "dataIv": "jukayingshi88888",
         "deviceId": "20d9b2c01d130342a99fdc8d693bfc0cd",
         "version": "112"
-      }
+      },
+      "searchable": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "瓜萌",
@@ -308,7 +572,19 @@
         "dataIv": "f2A7D4B9E8C16531",
         "deviceId": "",
         "version": ""
-      }
+      },
+      "searchable": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "忍者",
@@ -322,7 +598,19 @@
         "dataIv": "1234567887654321",
         "deviceId": "",
         "version": ""
-      }
+      },
+      "searchable": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "晴天",
@@ -336,7 +624,19 @@
         "dataIv": "sBxqXVF5pAHbGzrH",
         "deviceId": "",
         "version": "119"
-      }
+      },
+      "searchable": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "再看",
@@ -350,7 +650,19 @@
         "dataIv": "123456789ABCDEFG",
         "deviceId": "2bb4c10f3e043307dbfc579bd0db23f4e",
         "version": "110"
-      }
+      },
+      "searchable": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "橘子",
@@ -364,7 +676,19 @@
         "dataIv": "2015692015692015",
         "deviceId": "",
         "version": "300"
-      }
+      },
+      "searchable": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "彼岸",
@@ -378,7 +702,19 @@
         "dataIv": "1234567887654321",
         "deviceId": "298e5fe29c74b35aabb9836ee2f6f449f",
         "version": "315"
-      }
+      },
+      "searchable": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "雨滴",
@@ -392,7 +728,19 @@
         "dataIv": "k9o3p2c8b7m3z0o8",
         "deviceId": "",
         "version": "100"
-      }
+      },
+      "searchable": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "优质",
@@ -406,7 +754,19 @@
         "dataIv": "apiapplbyskey168",
         "deviceId": "",
         "version": "107"
-      }
+      },
+      "searchable": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "木叶",
@@ -420,7 +780,19 @@
         "dataIv": "RuN9LRvwTRgpQnpK",
         "deviceId": "",
         "version": "547"
-      }
+      },
+      "searchable": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "米兔",
@@ -434,7 +806,19 @@
         "dataIv": "d032c12876bc6848",
         "deviceId": "",
         "version": "200"
-      }
+      },
+      "searchable": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "人人",
@@ -448,7 +832,19 @@
         "dataIv": "ENonBHeVBoYZhVUV",
         "deviceId": "298e5fe29c74b35aabb9836ee2f6f449f",
         "version": "166"
-      }
+      },
+      "searchable": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "悠悠",
@@ -462,7 +858,19 @@
         "dataIv": "RuN9LRvwTRgpQnpK",
         "deviceId": "298e5fe29c74b35aabb9836ee2f6f449f",
         "version": "547"
-      }
+      },
+      "searchable": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "在看",
@@ -476,7 +884,19 @@
         "dataIv": "123456789ABCDEFG",
         "deviceId": "",
         "version": ""
-      }
+      },
+      "searchable": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "星河",
@@ -490,7 +910,19 @@
         "dataIv": "f5e2tx53ykp6s2c9",
         "deviceId": "",
         "version": "361"
-      }
+      },
+      "searchable": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "若惜",
@@ -504,7 +936,19 @@
         "dataIv": "ebad3f1a58b13933",
         "deviceId": "",
         "version": ""
-      }
+      },
+      "searchable": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "外剧",
@@ -518,7 +962,19 @@
         "dataIv": "7xv16h7qgkrs9b1p",
         "deviceId": "",
         "version": ""
-      }
+      },
+      "searchable": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "趣看",
@@ -531,7 +987,19 @@
         "dataKey": "6a482a70b80eefc9",
         "dataIv": "c995826a3e86fedd",
         "jxurl": "https://www.ququkan.cc"
-      }
+      },
+      "searchable": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "柚子",
@@ -544,7 +1012,19 @@
         "dataKey": "3f94fca574a811a8",
         "dataIv": "3f94fca574a811a8",
         "jxurl": "http://172.247.192.140:12264"
-      }
+      },
+      "searchable": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "火猫",
@@ -557,7 +1037,19 @@
         "dataKey": "6b7cf13bf47ba2e6",
         "dataIv": "6b7cf13bf47ba2e6",
         "jxurl": "http://app.789dd.cn"
-      }
+      },
+      "searchable": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "哔哩视频",
@@ -566,41 +1058,114 @@
       "api": "https://ygbh.site/max/py/哔哩视频.py",
       "ext": {
         "json": "http://127.0.0.1:9978/file/TVBox/bili_cookie.txt"
-      }
+      },
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ]
     },
     {
       "key": "腾讯视频",
       "name": "腾讯┃视频",
       "type": 3,
       "api": "https://ygbh.site/max/js/drpy2.min.js",
-      "ext": "https://ygbh.site/max/js/腾讯视频.js"
+      "ext": "https://ygbh.site/max/js/腾讯视频.js",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ]
     },
     {
       "key": "优酷视频",
       "name": "优酷┃视频",
       "type": 3,
       "api": "https://ygbh.site/max/js/drpy2.min.js",
-      "ext": "https://ygbh.site/max/js/优酷视频.js"
+      "ext": "https://ygbh.site/max/js/优酷视频.js",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ]
     },
     {
       "key": "芒果视频",
       "name": "芒果┃视频",
       "type": 3,
       "api": "https://ygbh.site/max/js/drpy2.min.js",
-      "ext": "https://ygbh.site/max/js/芒果视频.js"
+      "ext": "https://ygbh.site/max/js/芒果视频.js",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ]
     },
     {
       "key": "爱奇艺",
       "name": "爱奇异┃视频",
       "type": 3,
       "api": "https://ygbh.site/max/js/drpy2.min.js",
-      "ext": "https://ygbh.site/max/js/爱奇艺.js"
+      "ext": "https://ygbh.site/max/js/爱奇艺.js",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ]
     },
     {
       "key": "三六零",
       "name": "三六零┃视频",
       "type": 3,
-      "api": "csp_SP360"
+      "api": "csp_SP360",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "玩偶哥哥",
@@ -610,7 +1175,17 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "ext": "https://ygbh.site/max/json/wogg.json"
+      "ext": "https://ygbh.site/max/json/wogg.json",
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "木偶",
@@ -620,7 +1195,17 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "ext": "https://ygbh.site/max/json/mogg.json"
+      "ext": "https://ygbh.site/max/json/mogg.json",
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "蜡笔",
@@ -631,7 +1216,17 @@
       "quickSearch": 1,
       "filterable": 1,
       "changeable": 1,
-      "ext": "https://ygbh.site/max/json/lb.json"
+      "ext": "https://ygbh.site/max/json/lb.json",
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "至臻",
@@ -642,7 +1237,17 @@
       "quickSearch": 1,
       "filterable": 1,
       "changeable": 1,
-      "ext": "https://ygbh.site/max/json/zz.json"
+      "ext": "https://ygbh.site/max/json/zz.json",
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "多多",
@@ -653,7 +1258,17 @@
       "quickSearch": 1,
       "filterable": 1,
       "changeable": 1,
-      "ext": "https://ygbh.site/max/json/yyds.json"
+      "ext": "https://ygbh.site/max/json/yyds.json",
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "欧哥",
@@ -664,7 +1279,17 @@
       "quickSearch": 1,
       "filterable": 1,
       "changeable": 1,
-      "ext": "https://ygbh.site/max/json/og.json"
+      "ext": "https://ygbh.site/max/json/og.json",
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "二小",
@@ -675,7 +1300,17 @@
       "quickSearch": 1,
       "filterable": 1,
       "changeable": 1,
-      "ext": "https://ygbh.site/max/json/ex.json"
+      "ext": "https://ygbh.site/max/json/ex.json",
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "大玩",
@@ -686,7 +1321,17 @@
       "quickSearch": 1,
       "filterable": 1,
       "changeable": 1,
-      "ext": "https://ygbh.site/max/json/dawo.json"
+      "ext": "https://ygbh.site/max/json/dawo.json",
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "虎斑",
@@ -697,7 +1342,17 @@
       "quickSearch": 1,
       "filterable": 1,
       "changeable": 1,
-      "ext": "https://ygbh.site/max/json/hb.json"
+      "ext": "https://ygbh.site/max/json/hb.json",
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "闪电",
@@ -708,7 +1363,17 @@
       "quickSearch": 1,
       "filterable": 1,
       "changeable": 1,
-      "ext": "https://ygbh.site/max/json/sd.json"
+      "ext": "https://ygbh.site/max/json/sd.json",
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "奥秘",
@@ -719,7 +1384,17 @@
       "quickSearch": 1,
       "filterable": 1,
       "changeable": 1,
-      "ext": "https://ygbh.site/max/json/am.json"
+      "ext": "https://ygbh.site/max/json/am.json",
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "团长",
@@ -729,7 +1404,17 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "changeable": 1
+      "changeable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "雷鲸",
@@ -744,7 +1429,17 @@
         "type": "list",
         "ratio": 1.433
       },
-      "ext": "https://ygbh.site/max/json/lj.json"
+      "ext": "https://ygbh.site/max/json/lj.json",
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "海绵",
@@ -759,7 +1454,17 @@
         "type": "list",
         "ratio": 1.433
       },
-      "ext": "https://ygbh.site/max/json/hm.json"
+      "ext": "https://ygbh.site/max/json/hm.json",
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "夸父",
@@ -774,7 +1479,17 @@
         "type": "list",
         "ratio": 1.433
       },
-      "ext": "https://ygbh.site/max/json/kf.json"
+      "ext": "https://ygbh.site/max/json/kf.json",
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "趣盘",
@@ -791,7 +1506,17 @@
       },
       "ext": {
         "url": "https://www.qupanshe.com"
-      }
+      },
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "盘库",
@@ -804,7 +1529,17 @@
       "changeable": 1,
       "ext": {
         "url": "https://panku8.com,https://yipanso.com"
-      }
+      },
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "双星",
@@ -814,7 +1549,19 @@
       "ext": "https://ygbh.site/max/js/双星.js",
       "style": {
         "type": "list"
-      }
+      },
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ]
     },
     {
       "key": "懒盘",
@@ -824,7 +1571,19 @@
       "ext": "https://ygbh.site/max/js/懒盘.js",
       "style": {
         "type": "list"
-      }
+      },
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ]
     },
     {
       "key": "百酷",
@@ -834,7 +1593,19 @@
       "ext": "https://ygbh.site/max/js/百酷.js",
       "style": {
         "type": "list"
-      }
+      },
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ]
     },
     {
       "key": "聚搜",
@@ -844,7 +1615,17 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "changeable": 1
+      "changeable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "米搜",
@@ -854,7 +1635,19 @@
       "ext": "https://ygbh.site/max/js/米搜.js",
       "style": {
         "type": "list"
-      }
+      },
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ]
     },
     {
       "key": "人人分享站",
@@ -864,7 +1657,19 @@
       "ext": "https://ygbh.site/max/js/人人.js",
       "style": {
         "type": "list"
-      }
+      },
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ]
     },
     {
       "key": "全盘",
@@ -874,7 +1679,19 @@
       "ext": "https://ygbh.site/max/js/全盘.js",
       "style": {
         "type": "list"
-      }
+      },
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ]
     },
     {
       "key": "夸克盘搜",
@@ -884,7 +1701,19 @@
       "ext": "https://ygbh.site/max/js/夸克盘搜.js",
       "style": {
         "type": "list"
-      }
+      },
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ]
     },
     {
       "key": "星芽短剧",
@@ -893,7 +1722,17 @@
       "api": "csp_AppXY",
       "searchable": 1,
       "quickSearch": 0,
-      "filterable": 0
+      "filterable": 0,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "偷乐短剧",
@@ -904,14 +1743,36 @@
       "changeable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "playerType": 2
+      "playerType": 2,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ]
     },
     {
       "key": "短剧网",
       "name": "短剧网┃短剧",
       "type": 3,
       "api": "csp_HBPQ",
-      "ext": "https://ygbh.site/max/XBPQ/短剧网.json"
+      "ext": "https://ygbh.site/max/XBPQ/短剧网.json",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "短剧屋",
@@ -921,7 +1782,17 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "ext": "https://ygbh.site/max/XYQHiker/短剧屋.json"
+      "ext": "https://ygbh.site/max/XYQHiker/短剧屋.json",
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "满分",
@@ -931,7 +1802,17 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "ext": "http://111.173.115.215:9118/icciu_api.php/v1.vod"
+      "ext": "http://111.173.115.215:9118/icciu_api.php/v1.vod",
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "顾我",
@@ -939,7 +1820,20 @@
       "type": 3,
       "playerType": 2,
       "api": "csp_AppYsV2",
-      "ext": "http://121.62.21.14:520/api.php/app/"
+      "ext": "http://121.62.21.14:520/api.php/app/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "起点",
@@ -949,7 +1843,17 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "ext": "http://172.83.156.150:1010/api.php/app/"
+      "ext": "http://172.83.156.150:1010/api.php/app/",
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "好感",
@@ -959,7 +1863,17 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "ext": "https://cs.hgyx.vip/api2/api.php/app/"
+      "ext": "https://cs.hgyx.vip/api2/api.php/app/",
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "金牌影视",
@@ -972,7 +1886,16 @@
       "playerType": 2,
       "ext": {
         "site": "https://www.hkybqufgh.com,https://www.sizhengxt.com,https://0996zp.com,https://9zhoukj.com/,https://www.sizhengxt.com,https://www.tjrongze.com,https://www.jiabaide.cn,https://cqzuoer.com"
-      }
+      },
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ]
     },
     {
       "key": "猎手影视",
@@ -983,7 +1906,16 @@
       "changeable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "playerType": 2
+      "playerType": 2,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ]
     },
     {
       "key": "美帕影视",
@@ -994,7 +1926,16 @@
       "changeable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "playerType": 2
+      "playerType": 2,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ]
     },
     {
       "key": "快看",
@@ -1005,7 +1946,17 @@
       "quickSearch": 1,
       "filterable": 1,
       "changeable": 1,
-      "ext": "http://kkwk123.top/api.php/app/"
+      "ext": "http://kkwk123.top/api.php/app/",
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "厂长影视",
@@ -1016,25 +1967,74 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "ext": "https://www.czzymovie.com/"
+      "ext": "https://www.czzymovie.com/",
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "私人影视",
       "name": "私人┃影视",
       "type": 3,
-      "api": "csp_Siren"
+      "api": "csp_Siren",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "云播影视",
       "name": "云播┃影视",
       "type": 3,
-      "api": "csp_Tvyb"
+      "api": "csp_Tvyb",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "奇优影视",
       "name": "奇优┃影视",
       "type": 3,
-      "api": "csp_Qiyou"
+      "api": "csp_Qiyou",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "苹果影视",
@@ -1043,21 +2043,57 @@
       "api": "csp_LiteApple",
       "searchable": 1,
       "quickSearch": 1,
-      "filterable": 1
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "全网影视",
       "name": "全看┃影视",
       "type": 3,
       "api": "csp_Quanwk",
-      "ext": "https://www.91qkw.com"
+      "ext": "https://www.91qkw.com",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "饺子影视",
       "name": "饺子┃影视",
       "type": 3,
       "api": "csp_Jiaozi",
-      "playerType": 2
+      "playerType": 2,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "尘落影视",
@@ -1066,41 +2102,116 @@
       "api": "csp_Wetv",
       "searchable": 1,
       "quickSearch": 1,
-      "ext": "https://v.wetv.wang"
+      "ext": "https://v.wetv.wang",
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "攻阁影视",
       "name": "攻阁┃影视",
       "type": 3,
       "playerType": "2",
-      "api": "csp_Lggys"
+      "api": "csp_Lggys",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "鸭梨影视",
       "name": "鸭梨┃影视",
       "type": 3,
-      "api": "csp_KmeiJu"
+      "api": "csp_KmeiJu",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "绝对影视",
       "name": "绝对┃影视",
       "type": 3,
       "api": "csp_FourK",
-      "ext": "https://www.4kvm.net"
+      "ext": "https://www.4kvm.net",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "白白影视",
       "name": "白白┃影视",
       "type": 3,
       "api": "csp_SuBaiBai",
-      "ext": "https://www.subaibai.com"
+      "ext": "https://www.subaibai.com",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "免费影视",
       "name": "️免费┃影视",
       "type": 3,
       "quickSearch": 1,
-      "api": "csp_FreeOk"
+      "api": "csp_FreeOk",
+      "searchable": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "低端影视",
@@ -1109,7 +2220,17 @@
       "api": "csp_Ddys",
       "searchable": 1,
       "quickSearch": 1,
-      "filterable": 1
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "来看影视",
@@ -1118,7 +2239,17 @@
       "api": "csp_Lkdy",
       "searchable": 1,
       "quickSearch": 1,
-      "filterable": 1
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "瓜子影视",
@@ -1127,7 +2258,17 @@
       "api": "csp_Gz360",
       "searchable": 1,
       "quickSearch": 1,
-      "filterable": 1
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "快看影视",
@@ -1136,14 +2277,36 @@
       "api": "csp_Kuaikan",
       "searchable": 1,
       "quickSearch": 1,
-      "filterable": 1
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "采集之王",
       "name": "采集┃合集",
       "type": 3,
       "api": "https://ygbh.site/max/js/drpy2.min.js",
-      "ext": "https://ygbh.site/max/js/采集之王.js?type=url&params=.https://ygbh.site/max/json/采集静态.json$1$1"
+      "ext": "https://ygbh.site/max/js/采集之王.js?type=url&params=.https://ygbh.site/max/json/采集静态.json$1$1",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ]
     },
     {
       "key": "爱看机器人",
@@ -1152,77 +2315,217 @@
       "api": "csp_Ikanbot",
       "searchable": 1,
       "quickSearch": 1,
-      "filterable": 1
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "可可影视",
       "name": "可可┃影视",
       "type": 3,
       "api": "csp_HBPQ",
-      "ext": "https://ygbh.site/max/XBPQ/可可影视.json"
+      "ext": "https://ygbh.site/max/XBPQ/可可影视.json",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "海纳影视",
       "name": "海纳┃影视",
       "type": 3,
       "api": "csp_HBPQ",
-      "ext": "https://ygbh.site/max/XBPQ/海纳影视.json"
+      "ext": "https://ygbh.site/max/XBPQ/海纳影视.json",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "面包影视",
       "name": "面包┃影视",
       "type": 3,
       "api": "csp_HBPQ",
-      "ext": "https://ygbh.site/max/XBPQ/面包影视.json"
+      "ext": "https://ygbh.site/max/XBPQ/面包影视.json",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "永乐影视",
       "name": "永乐┃影视",
       "type": 3,
       "api": "csp_HBPQ",
-      "ext": "https://ygbh.site/max/XBPQ/永乐影视.json"
+      "ext": "https://ygbh.site/max/XBPQ/永乐影视.json",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "雪糕影视",
       "name": "雪糕┃影视",
       "type": 3,
       "api": "csp_HBPQ",
-      "ext": "https://ygbh.site/max/XBPQ/雪糕影视.json"
+      "ext": "https://ygbh.site/max/XBPQ/雪糕影视.json",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "骚火影视",
       "name": "骚火┃影视",
       "type": 3,
       "api": "csp_HBPQ",
-      "ext": "https://ygbh.site/max/XBPQ/骚火影视.json"
+      "ext": "https://ygbh.site/max/XBPQ/骚火影视.json",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "农民影视",
       "name": "农民┃影视",
       "type": 3,
       "api": "csp_HBPQ",
-      "ext": "https://ygbh.site/max/XBPQ/农民影视.json"
+      "ext": "https://ygbh.site/max/XBPQ/农民影视.json",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "七点影视",
       "name": "七点┃影视",
       "type": 3,
       "api": "csp_HBPQ",
-      "ext": "https://ygbh.site/max/XBPQ/七点影视.json"
+      "ext": "https://ygbh.site/max/XBPQ/七点影视.json",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "三九影视",
       "name": "三九┃影视",
       "type": 3,
       "api": "csp_HBPQ",
-      "ext": "https://ygbh.site/max/XBPQ/三九影视.json"
+      "ext": "https://ygbh.site/max/XBPQ/三九影视.json",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "三四影视",
       "name": "三四┃影视",
       "type": 3,
       "api": "csp_HBPQ",
-      "ext": "https://ygbh.site/max/XBPQ/三四影视.json"
+      "ext": "https://ygbh.site/max/XBPQ/三四影视.json",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "耐看影视",
@@ -1232,7 +2535,17 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "ext": "w7TClcONw6LDrsKYwoXCosKcwpvCrcKcw6HDrsKnwqDCo2rCqMKiw7HDsMOxYcKewpvClMOvw5fCqMOmw59VXFLCpMOiw6PCnMKzwpzCjuWGtemEmOaPleWRnMKf5Yem5L6Q5ZGxbeW+oeintui1tOa8ieetjMOXwpvDtw=="
+      "ext": "w7TClcONw6LDrsKYwoXCosKcwpvCrcKcw6HDrsKnwqDCo2rCqMKiw7HDsMOxYcKewpvClMOvw5fCqMOmw59VXFLCpMOiw6PCnMKzwpzCjuWGtemEmOaPleWRnMKf5Yem5L6Q5ZGxbeW+oeintui1tOa8ieetjMOXwpvDtw==",
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "真心影视",
@@ -1241,28 +2554,74 @@
       "api": "csp_WebGZ",
       "searchable": 1,
       "quickSearch": 1,
-      "filterable": 1
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "思古影视",
       "name": "思古┃影视",
       "type": 3,
       "api": "https://ygbh.site/max/js/drpy2.min.js",
-      "ext": "https://ygbh.site/max/js/思古影视.js"
+      "ext": "https://ygbh.site/max/js/思古影视.js",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ]
     },
     {
       "key": "魔力高清",
       "name": "魔力┃影视",
       "type": 3,
       "api": "https://ygbh.site/max/js/drpy2.min.js",
-      "ext": "https://ygbh.site/max/js/魔力高清.js"
+      "ext": "https://ygbh.site/max/js/魔力高清.js",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ]
     },
     {
       "key": "碟调影视",
       "name": "碟调┃影视",
       "type": 3,
       "api": "https://ygbh.site/max/js/drpy2.min.js",
-      "ext": "https://ygbh.site/max/js/碟调影视.js"
+      "ext": "https://ygbh.site/max/js/碟调影视.js",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ]
     },
     {
       "key": "盒子影视",
@@ -1272,7 +2631,17 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "ext": "https://ygbh.site/max/XYQHiker/盒子影视.json"
+      "ext": "https://ygbh.site/max/XYQHiker/盒子影视.json",
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "电影牛",
@@ -1282,21 +2651,55 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "ext": "https://ygbh.site/max/XYQHiker/电影牛.json"
+      "ext": "https://ygbh.site/max/XYQHiker/电影牛.json",
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "剧圈圈",
       "name": "剧圈圈┃影视",
       "type": 3,
       "api": "https://ygbh.site/max/js/drpy2.min.js",
-      "ext": "https://ygbh.site/max/js/剧圈圈.js"
+      "ext": "https://ygbh.site/max/js/剧圈圈.js",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ]
     },
     {
       "key": "看了么",
       "name": "看了么┃影视",
       "type": 3,
       "api": "https://ygbh.site/max/js/drpy2.min.js",
-      "ext": "https://ygbh.site/max/js/看了么.js"
+      "ext": "https://ygbh.site/max/js/看了么.js",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ]
     },
     {
       "key": "1905",
@@ -1305,7 +2708,17 @@
       "api": "csp_Web1905",
       "searchable": 1,
       "quickSearch": 0,
-      "filterable": 0
+      "filterable": 0,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "无上资源",
@@ -1322,6 +2735,17 @@
         "纪录片",
         "少儿",
         "短剧"
+      ],
+      "quickSearch": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
       ]
     },
     {
@@ -1332,28 +2756,77 @@
       "style": {
         "type": "list"
       },
-      "ext": "https://ygbh.site/max/XBPQ/哆啦新番社.json"
+      "ext": "https://ygbh.site/max/XBPQ/哆啦新番社.json",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "56动漫",
       "name": "56┃动漫",
       "type": 3,
       "api": "https://ygbh.site/max/js/drpy2.min.js",
-      "ext": "https://ygbh.site/max/js/56动漫.js"
+      "ext": "https://ygbh.site/max/js/56动漫.js",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ]
     },
     {
       "key": "NT动漫",
       "name": "NT┃动漫",
       "type": 3,
       "api": "https://ygbh.site/max/js/drpy2.min.js",
-      "ext": "https://ygbh.site/max/js/NT动漫.js"
+      "ext": "https://ygbh.site/max/js/NT动漫.js",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ]
     },
     {
       "key": "Anime1",
       "name": "A1┃动漫",
       "type": 3,
       "api": "https://ygbh.site/max/js/drpy2.min.js",
-      "ext": "https://ygbh.site/max/js/Anime1.js"
+      "ext": "https://ygbh.site/max/js/Anime1.js",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ]
     },
     {
       "key": "曼波动漫",
@@ -1367,7 +2840,19 @@
         "dataIv": "66dc309cbeeca454",
         "deviceId": "",
         "version": ""
-      }
+      },
+      "searchable": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "稀饭动漫",
@@ -1381,7 +2866,19 @@
         "dataIv": "1yZ2Spn9krnzVKoC",
         "deviceId": "",
         "version": ""
-      }
+      },
+      "searchable": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "咕咕动漫",
@@ -1395,7 +2892,19 @@
         "dataIv": "nKfZ8KX6JTNWRzTD",
         "deviceId": "",
         "version": ""
-      }
+      },
+      "searchable": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "米饭动漫",
@@ -1409,91 +2918,249 @@
         "dataIv": "GETMIFUNGEIMIFUN",
         "deviceId": "",
         "version": ""
-      }
+      },
+      "searchable": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "樱花动漫",
       "name": "樱花┃动漫",
       "type": 3,
       "api": "csp_HBPQ",
-      "ext": "https://ygbh.site/max/XBPQ/樱花动漫.json"
+      "ext": "https://ygbh.site/max/XBPQ/樱花动漫.json",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "巴士动漫",
       "name": "巴士┃动漫",
       "type": 3,
       "api": "csp_XYQHiker",
-      "ext": "https://ygbh.site/max/XYQHiker/巴士动漫.json"
+      "ext": "https://ygbh.site/max/XYQHiker/巴士动漫.json",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "好看动漫",
       "name": "好看┃动漫",
       "type": 3,
       "api": "https://ygbh.site/max/js/drpy2.min.js",
-      "ext": "https://ygbh.site/max/js/好看动漫.js"
+      "ext": "https://ygbh.site/max/js/好看动漫.js",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ]
     },
     {
       "key": "奇米动漫",
       "name": "奇米┃动漫",
       "type": 3,
       "api": "https://ygbh.site/max/js/drpy2.min.js",
-      "ext": "https://ygbh.site/max/js/奇米动漫.js"
+      "ext": "https://ygbh.site/max/js/奇米动漫.js",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ]
     },
     {
       "key": "怡萱动漫",
       "name": "怡萱┃动漫",
       "type": 3,
       "api": "https://ygbh.site/max/js/drpy2.min.js",
-      "ext": "https://ygbh.site/max/js/怡萱动漫.js"
+      "ext": "https://ygbh.site/max/js/怡萱动漫.js",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ]
     },
     {
       "key": "花子动漫",
       "name": "花子┃动漫",
       "type": 3,
       "api": "https://ygbh.site/max/js/drpy2.min.js",
-      "ext": "https://ygbh.site/max/js/花子动漫.js"
+      "ext": "https://ygbh.site/max/js/花子动漫.js",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ]
     },
     {
       "key": "动画片",
       "name": "动画片┃动漫",
       "type": 3,
       "api": "https://ygbh.site/max/js/drpy2.min.js",
-      "ext": "https://ygbh.site/max/js/动画片大全.js"
+      "ext": "https://ygbh.site/max/js/动画片大全.js",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ]
     },
     {
       "key": "路漫漫",
       "name": "路漫漫┃动漫",
       "type": 3,
       "api": "https://ygbh.site/max/js/drpy2.min.js",
-      "ext": "https://ygbh.site/max/js/路漫漫.js"
+      "ext": "https://ygbh.site/max/js/路漫漫.js",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ]
     },
     {
       "key": "动漫岛",
       "name": "动漫岛┃动漫",
       "type": 3,
       "api": "https://ygbh.site/max/js/drpy2.min.js",
-      "ext": "https://ygbh.site/max/js/动漫岛.js"
+      "ext": "https://ygbh.site/max/js/动漫岛.js",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ]
     },
     {
       "key": "去看吧",
       "name": "去看吧┃动漫",
       "type": 3,
       "api": "https://ygbh.site/max/js/drpy2.min.js",
-      "ext": "https://ygbh.site/max/js/去看吧.js"
+      "ext": "https://ygbh.site/max/js/去看吧.js",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ]
     },
     {
       "key": "爱弹幕",
       "name": "爱弹幕┃动漫",
       "type": 3,
       "api": "https://ygbh.site/max/js/drpy2.min.js",
-      "ext": "https://ygbh.site/max/js/爱弹幕.js"
+      "ext": "https://ygbh.site/max/js/爱弹幕.js",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ]
     },
     {
       "key": "异世界",
       "name": "异世界┃动漫",
       "type": 3,
       "api": "https://ygbh.site/max/js/drpy2.min.js",
-      "ext": "https://ygbh.site/max/js/异世界.js"
+      "ext": "https://ygbh.site/max/js/异世界.js",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ]
     },
     {
       "key": "荐片",
@@ -1501,7 +3168,20 @@
       "api": "csp_Jianpian",
       "type": 3,
       "playerType": 1,
-      "ext": "http://api2.rinhome.com"
+      "ext": "http://api2.rinhome.com",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "修罗影视",
@@ -1511,7 +3191,17 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "ext": "https://ygbh.site/max/XBPQ/修罗影视.json"
+      "ext": "https://ygbh.site/max/XBPQ/修罗影视.json",
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "七味",
@@ -1520,7 +3210,17 @@
       "api": "csp_QnMp4",
       "searchable": 1,
       "quickSearch": 1,
-      "filterable": 1
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "80S",
@@ -1530,7 +3230,17 @@
       "playerType": 1,
       "searchable": 1,
       "quickSearch": 1,
-      "filterable": 1
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "New6v",
@@ -1540,7 +3250,17 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "ext": "https://www.xb6v.com"
+      "ext": "https://www.xb6v.com",
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "SeedHub",
@@ -1549,7 +3269,17 @@
       "api": "csp_SeedHub",
       "searchable": 1,
       "quickSearch": 1,
-      "filterable": 1
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "美剧迷",
@@ -1558,7 +3288,17 @@
       "api": "csp_MeijuMi",
       "searchable": 1,
       "quickSearch": 1,
-      "filterable": 1
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "迅雷吧",
@@ -1567,7 +3307,17 @@
       "api": "csp_Xunlei8",
       "searchable": 1,
       "quickSearch": 1,
-      "filterable": 1
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "电影港",
@@ -1577,7 +3327,17 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "ext": "https://ygbh.site/max/XYQHiker/电影港.json"
+      "ext": "https://ygbh.site/max/XYQHiker/电影港.json",
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "狐狸君",
@@ -1588,7 +3348,17 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "ext": "https://ygbh.site/max/XBPQ/狐狸君.json"
+      "ext": "https://ygbh.site/max/XBPQ/狐狸君.json",
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "布谷TV",
@@ -1598,7 +3368,17 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "ext": "https://ygbh.site/max/XBPQ/布谷TV.json"
+      "ext": "https://ygbh.site/max/XBPQ/布谷TV.json",
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "BT天堂",
@@ -1608,7 +3388,17 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "ext": "https://ygbh.site/max/XYQHiker/BT天堂.json"
+      "ext": "https://ygbh.site/max/XYQHiker/BT天堂.json",
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "Mp4电影",
@@ -1617,7 +3407,17 @@
       "api": "csp_Mp4Mov",
       "searchable": 1,
       "quickSearch": 1,
-      "filterable": 1
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "酷吧电影",
@@ -1626,7 +3426,17 @@
       "api": "csp_KubaCL",
       "searchable": 1,
       "quickSearch": 1,
-      "filterable": 1
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "美剧天堂",
@@ -1635,7 +3445,17 @@
       "api": "csp_MeijuTT",
       "searchable": 1,
       "quickSearch": 1,
-      "filterable": 1
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "电影天堂",
@@ -1644,7 +3464,17 @@
       "api": "csp_DyGod",
       "searchable": 1,
       "quickSearch": 1,
-      "filterable": 1
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "阿里云盘",
@@ -1658,7 +3488,18 @@
         "type": "list",
         "ratio": 1.433
       },
-      "ext": "https://ygbh.site/max/json/aliShare.json"
+      "ext": "https://ygbh.site/max/json/aliShare.json",
+      "quickSearch": 0,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "夸克云盘",
@@ -1672,7 +3513,18 @@
         "type": "list",
         "ratio": 1.433
       },
-      "ext": "https://ygbh.site/max/json/quarkShare.json"
+      "ext": "https://ygbh.site/max/json/quarkShare.json",
+      "quickSearch": 0,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "UC",
@@ -1686,7 +3538,18 @@
         "type": "list",
         "ratio": 1.433
       },
-      "ext": "https://ygbh.site/max/json/ucShare.json"
+      "ext": "https://ygbh.site/max/json/ucShare.json",
+      "quickSearch": 0,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "百度云盘",
@@ -1699,7 +3562,18 @@
       "style": {
         "type": "list",
         "ratio": 1.433
-      }
+      },
+      "quickSearch": 0,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "短剧合集",
@@ -1709,7 +3583,19 @@
       "ext": "https://ygbh.site/max/js/短剧合集.js",
       "style": {
         "type": "list"
-      }
+      },
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ]
     },
     {
       "key": "短剧大全",
@@ -1719,7 +3605,19 @@
       "ext": "https://ygbh.site/max/js/短剧大全.js",
       "style": {
         "type": "list"
-      }
+      },
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ]
     },
     {
       "key": "AList",
@@ -1732,13 +3630,36 @@
       "style": {
         "type": "list"
       },
-      "ext": "https://ygbh.site/max/json/alist.json"
+      "ext": "https://ygbh.site/max/json/alist.json",
+      "quickSearch": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "网络直播",
       "name": "网络┃直播",
       "type": 3,
-      "api": "https://ygbh.site/max/py/网络直播.py"
+      "api": "https://ygbh.site/max/py/网络直播.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ]
     },
     {
       "key": "88看球",
@@ -1748,7 +3669,20 @@
       "gridview": 3,
       "style": {
         "type": "list"
-      }
+      },
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "哔哩合集",
@@ -1766,7 +3700,17 @@
       "ext": {
         "json": "https://ygbh.site/max/json/哔哩合集.json",
         "cookie": "http://127.0.0.1:9978/file/TVBox/bili_cookie.txt"
-      }
+      },
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "哔哩哔哩演唱会",
@@ -1783,7 +3727,17 @@
       "style": {
         "type": "rect",
         "ratio": 1.597
-      }
+      },
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "哔哩哔哩听书",
@@ -1800,7 +3754,17 @@
       "style": {
         "type": "rect",
         "ratio": 1.597
-      }
+      },
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "哔哩哔哩相声",
@@ -1817,7 +3781,17 @@
       "style": {
         "type": "rect",
         "ratio": 1.597
-      }
+      },
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "哔哩哔哩小品",
@@ -1834,7 +3808,17 @@
       "style": {
         "type": "rect",
         "ratio": 1.597
-      }
+      },
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "哔哩哔哩戏曲",
@@ -1851,7 +3835,17 @@
       "style": {
         "type": "rect",
         "ratio": 1.597
-      }
+      },
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "急救教学",
@@ -1865,7 +3859,18 @@
         "type": "rect",
         "ratio": 3.8
       },
-      "gridview": "0-0-4.1"
+      "gridview": "0-0-4.1",
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "养生堂",
@@ -1876,7 +3881,20 @@
       "style": {
         "type": "rect",
         "ratio": 1.597
-      }
+      },
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
+      ],
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     },
     {
       "key": "push_agent",
@@ -1885,230 +3903,18 @@
       "api": "csp_Push",
       "searchable": 0,
       "filterable": 0,
-      "changeable": 0
-    }
-  ],
-  "parses": [
-    {
-      "name": "无上",
-      "type": "1",
-      "url": "https://mfjx.iwsyy.xyz/?url=",
-      "ext": {
-        "flag": [
-          "qq",
-          "腾讯",
-          "qiyi",
-          "爱奇艺",
-          "奇艺",
-          "youku",
-          "优酷",
-          "sohu",
-          "搜狐",
-          "letv",
-          "乐视",
-          "mgtv",
-          "芒果",
-          "tnmb",
-          "seven",
-          "bilibili",
-          "1905"
-        ],
-        "header": {
-          "User-Agent": "okhttp/4.9.1"
-        }
-      }
-    },
-    {
-      "name": "QD4K",
-      "type": 1,
-      "url": "https://zy.qiaoji8.com/xiafan.php?url=",
-      "ext": {
-        "flag": [
-          "QD4K",
-          "iyf",
-          "duanju",
-          "gzcj",
-          "GTV",
-          "GZYS",
-          "weggz",
-          "Ace"
-        ],
-        "header": {
-          "User-Agent": "okhttp/4.9.1"
-        }
-      }
-    },
-    {
-      "name": "咸鱼",
-      "type": 0,
-      "url": "https://jx.xymp4.cc/?url=",
-      "ext": {
-        "header": {
-          "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.3124.68"
-        }
-      }
-    },
-    {
-      "name": "虾米",
-      "type": 0,
-      "url": "https://jx.xmflv.com/?url=",
-      "ext": {
-        "header": {
-          "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.57"
-        }
-      }
-    },
-    {
-      "name": "淘片",
-      "type": 0,
-      "url": "https://jx.yparse.com/index.php?url=",
-      "ext": {
-        "header": {
-          "user-agent": "Mozilla/5.0 (Linux; Android 13; V2049A Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/116.0.0.0 Mobile Safari/537.36"
-        }
-      }
-    },
-    {
-      "name": "冰豆",
-      "type": 0,
-      "url": "https://bd.jx.cn/?url=",
-      "ext": {
-        "header": {
-          "user-agent": "Mozilla/5.0 (Linux; Android 13; V2049A Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/116.0.0.0 Mobile Safari/537.36"
-        }
-      }
-    },
-    {
-      "name": "七七",
-      "type": 0,
-      "url": "https://jx.77flv.cc/?url=",
-      "ext": {
-        "header": {
-          "user-agent": "Mozilla/5.0 (Linux; Android 13; V2049A Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/116.0.0.0 Mobile Safari/537.36"
-        }
-      }
-    },
-    {
-      "name": "盘古",
-      "type": 0,
-      "url": "https://www.playm3u8.cn/jiexi.php?url=",
-      "ext": {
-        "header": {
-          "user-agent": "Mozilla/5.0 (Linux; Android 13; V2049A Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/116.0.0.0 Mobile Safari/537.36"
-        }
-      }
-    },
-    {
-      "name": "夜幕",
-      "type": 0,
-      "url": "https://yemu.xyz/?url=",
-      "ext": {
-        "header": {
-          "user-agent": "Mozilla/5.0 (Linux; Android 13; V2049A Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/116.0.0.0 Mobile Safari/537.36"
-        }
-      }
-    }
-  ],
-  "rules": [
-    {
-      "name": "农民",
-      "hosts": [
-        "toutiaovod.com"
+      "changeable": 0,
+      "quickSearch": 0,
+      "flags": [
+        "youku",
+        "qq",
+        "qiyi",
+        "lmgt",
+        "wymv",
+        "bilibili",
+        "duanju"
       ],
-      "regex": [
-        "video/tos/cn"
-      ]
-    },
-    {
-      "name": "火山",
-      "hosts": [
-        "huoshan.com"
-      ],
-      "regex": [
-        "item_id="
-      ]
-    },
-    {
-      "name": "抖音",
-      "hosts": [
-        "douyin.com"
-      ],
-      "regex": [
-        "is_play_url="
-      ]
-    },
-    {
-      "name": "饭团点击",
-      "hosts": [
-        "dadagui",
-        "freeok",
-        "dadagui"
-      ],
-      "script": [
-        "document.querySelector(\"#playleft iframe\").contentWindow.document.querySelector(\"#start\").click();"
-      ]
-    },
-    {
-      "name": "毛驴点击",
-      "hosts": [
-        "www.maolvys.com"
-      ],
-      "script": [
-        "document.getElementsByClassName('swal-button swal-button--confirm')[0].click()"
-      ]
-    },
-    {
-      "name": "ofiii",
-      "hosts": [
-        "www.ofiii.com"
-      ],
-      "script": [
-        "const play=document.getElementsByClassName('play_icon')[0],event=new MouseEvent('click',{bubbles:!0,cancelable:!0,view:window,screenX:100,screenY:100,clientX:50,clientY:50,button:0,shiftKey:!1,ctrlKey:!1,altKey:!1,metaKey:!1,modifierState:0});play.dispatchEvent(event);"
-      ]
-    }
-  ],
-  "doh": [
-    {
-      "name": "Google",
-      "url": "https://dns.google/dns-query",
-      "ips": [
-        "8.8.4.4",
-        "8.8.8.8"
-      ]
-    },
-    {
-      "name": "Cloudflare",
-      "url": "https://cloudflare-dns.com/dns-query",
-      "ips": [
-        "1.1.1.1",
-        "1.0.0.1",
-        "2606:4700:4700::1111",
-        "2606:4700:4700::1001"
-      ]
-    },
-    {
-      "name": "AdGuard",
-      "url": "https://dns.adguard.com/dns-query",
-      "ips": [
-        "94.140.14.140",
-        "94.140.14.141"
-      ]
-    },
-    {
-      "name": "DNSWatch",
-      "url": "https://resolver2.dns.watch/dns-query",
-      "ips": [
-        "84.200.69.80",
-        "84.200.70.40"
-      ]
-    },
-    {
-      "name": "Quad9",
-      "url": "https://dns.quad9.net/dns-quer",
-      "ips": [
-        "9.9.9.9",
-        "149.112.112.112"
-      ]
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/baohe_spider.jar"
     }
   ],
   "lives": [
@@ -2118,14 +3924,16 @@
       "url": "https://github.3x25.com/https://raw.githubusercontent.com/PizazzGY/TV/master/output/user_result.txt",
       "epg": "http://cdn.1678520.xyz/epg/?ch={name}&date={date}",
       "playerType": 1,
-      "timeout": 10
+      "timeout": 10,
+      "logo": "https://epg.112114.xyz/logo/{name}.png"
     },
     {
       "name": "Guovin",
       "type": 0,
       "url": "https://gitee.com/mytv-android/iptv-api/raw/master/output/result.m3u",
       "epg": "http://cdn.1678520.xyz/epg/?ch={name}&date={date}",
-      "timeout": 10
+      "timeout": 10,
+      "logo": "https://epg.112114.xyz/logo/{name}.png"
     },
     {
       "name": "虎牙一起看",
@@ -2133,7 +3941,9 @@
       "api": "csp_Feiyang",
       "url": "https://yun.urldwz.com/f/BE9PSL/huyayqk.m3u",
       "timeout": 10,
-      "ua": "okhttp/3.15"
+      "ua": "okhttp/3.15",
+      "epg": "http://epg.112114.xyz/?ch={name}&date={date}",
+      "logo": "https://epg.112114.xyz/logo/{name}.png"
     },
     {
       "name": "斗鱼一起看",
@@ -2141,7 +3951,9 @@
       "api": "csp_Feiyang",
       "url": "https://yun.urldwz.com/f/NR9qiA/douyuyqk.m3u",
       "timeout": 10,
-      "ua": "okhttp/3.15"
+      "ua": "okhttp/3.15",
+      "epg": "http://epg.112114.xyz/?ch={name}&date={date}",
+      "logo": "https://epg.112114.xyz/logo/{name}.png"
     },
     {
       "name": "YY轮播",
@@ -2149,7 +3961,9 @@
       "api": "csp_Feiyang",
       "url": "https://yun.urldwz.com/f/dlkycZ/yylunbo.m3u",
       "timeout": 10,
-      "ua": "okhttp/3.15"
+      "ua": "okhttp/3.15",
+      "epg": "http://epg.112114.xyz/?ch={name}&date={date}",
+      "logo": "https://epg.112114.xyz/logo/{name}.png"
     },
     {
       "name": "B站直播",
@@ -2157,27 +3971,35 @@
       "api": "csp_Feiyang",
       "url": "https://yun.urldwz.com/f/9XBkHK/bilibili.m3u",
       "timeout": 10,
-      "ua": "okhttp/3.15"
+      "ua": "okhttp/3.15",
+      "epg": "http://epg.112114.xyz/?ch={name}&date={date}",
+      "logo": "https://epg.112114.xyz/logo/{name}.png"
     },
     {
       "name": "电视Live",
       "type": 0,
       "url": "https://tv.iill.top/m3u/Gather",
       "playerType": 2,
-      "timeout": 10
+      "timeout": 10,
+      "epg": "http://epg.112114.xyz/?ch={name}&date={date}",
+      "logo": "https://epg.112114.xyz/logo/{name}.png"
     },
     {
       "name": "网络Live",
       "type": 0,
       "url": "https://tv.iill.top/m3u/Live",
       "playerType": 2,
-      "timeout": 10
+      "timeout": 10,
+      "epg": "http://epg.112114.xyz/?ch={name}&date={date}",
+      "logo": "https://epg.112114.xyz/logo/{name}.png"
     },
     {
       "name": "范明明",
       "type": 0,
       "url": "https://live.fanmingming.cn/tv/m3u/ipv6.m3u",
-      "timeout": 10
+      "timeout": 10,
+      "epg": "http://epg.112114.xyz/?ch={name}&date={date}",
+      "logo": "https://epg.112114.xyz/logo/{name}.png"
     },
     {
       "name": "APTV",
@@ -2189,212 +4011,325 @@
       "timeout": 10
     }
   ],
-  "hosts": [
-    "cache.ott.*.itv.cmvideo.cn=base-v4-free-mghy.e.cdn.chinamobile.com",
-    "cache.ott.ystenlive.itv.cmvideo.cn=base-v4-free-mghy.e.cdn.chinamobile.com",
-    "cache.ott.bestlive.itv.cmvideo.cn=base-v4-free-mghy.e.cdn.chinamobile.com",
-    "cache.ott.wasulive.itv.cmvideo.cn=base-v4-free-mghy.e.cdn.chinamobile.com",
-    "cache.ott.fifalive.itv.cmvideo.cn=base-v4-free-mghy.e.cdn.chinamobile.com",
-    "cache.ott.hnbblive.itv.cmvideo.cn=base-v4-free-mghy.e.cdn.chinamobile.com"
-  ],
-  "flags": [
-    "youku",
-    "优酷",
-    "优 酷",
-    "优酷视频",
-    "qq",
-    "腾讯",
-    "腾 讯",
-    "腾讯视频",
-    "iqiyi",
-    "qiyi",
-    "奇艺",
-    "爱奇艺",
-    "爱 奇 艺",
-    "m1905",
-    "xigua",
-    "letv",
-    "leshi",
-    "乐视",
-    "乐 视",
-    "sohu",
-    "搜狐",
-    "搜 狐",
-    "搜狐视频",
-    "tudou",
-    "pptv",
-    "mgtv",
-    "芒果",
-    "imgo",
-    "芒果TV",
-    "芒 果 T V",
-    "bilibili",
-    "哔 哩",
-    "哔 哩 哔 哩"
-  ],
-  "ijk": [
+  "parses": [
     {
-      "group": "软解码",
-      "options": [
-        {
-          "category": 4,
-          "name": "opensles",
-          "value": "0"
-        },
-        {
-          "category": 4,
-          "name": "overlay-format",
-          "value": "842225234"
-        },
-        {
-          "category": 4,
-          "name": "framedrop",
-          "value": "1"
-        },
-        {
-          "category": 4,
-          "name": "soundtouch",
-          "value": "1"
-        },
-        {
-          "category": 4,
-          "name": "start-on-prepared",
-          "value": "1"
-        },
-        {
-          "category": 1,
-          "name": "http-detect-range-support",
-          "value": "0"
-        },
-        {
-          "category": 1,
-          "name": "fflags",
-          "value": "fastseek"
-        },
-        {
-          "category": 2,
-          "name": "skip_loop_filter",
-          "value": "48"
-        },
-        {
-          "category": 4,
-          "name": "reconnect",
-          "value": "1"
-        },
-        {
-          "category": 4,
-          "name": "enable-accurate-seek",
-          "value": "0"
-        },
-        {
-          "category": 4,
-          "name": "mediacodec",
-          "value": "0"
-        },
-        {
-          "category": 4,
-          "name": "mediacodec-auto-rotate",
-          "value": "0"
-        },
-        {
-          "category": 4,
-          "name": "mediacodec-handle-resolution-change",
-          "value": "0"
-        },
-        {
-          "category": 4,
-          "name": "mediacodec-hevc",
-          "value": "0"
-        },
-        {
-          "category": 1,
-          "name": "dns_cache_timeout",
-          "value": "600000000"
-        }
+      "name": "聚合",
+      "type": 0,
+      "url": ""
+    },
+    {
+      "name": "WebView",
+      "type": 1,
+      "url": ""
+    },
+    {
+      "name": "嗅探",
+      "type": 2,
+      "url": ""
+    }
+  ],
+  "blk": [
+    {
+      "name": "暴风",
+      "hosts": [
+        "bfzy",
+        "bfbfvip",
+        "bfengbf"
+      ],
+      "regex": [
+        "#EXTINF.*?\\s+.*?adjump.*?\\.ts"
       ]
     },
     {
-      "group": "硬解码",
-      "options": [
-        {
-          "category": 4,
-          "name": "opensles",
-          "value": "0"
-        },
-        {
-          "category": 4,
-          "name": "overlay-format",
-          "value": "842225234"
-        },
-        {
-          "category": 4,
-          "name": "framedrop",
-          "value": "1"
-        },
-        {
-          "category": 4,
-          "name": "soundtouch",
-          "value": "1"
-        },
-        {
-          "category": 4,
-          "name": "start-on-prepared",
-          "value": "1"
-        },
-        {
-          "category": 1,
-          "name": "http-detect-range-support",
-          "value": "0"
-        },
-        {
-          "category": 1,
-          "name": "fflags",
-          "value": "fastseek"
-        },
-        {
-          "category": 2,
-          "name": "skip_loop_filter",
-          "value": "48"
-        },
-        {
-          "category": 4,
-          "name": "reconnect",
-          "value": "1"
-        },
-        {
-          "category": 4,
-          "name": "enable-accurate-seek",
-          "value": "0"
-        },
-        {
-          "category": 4,
-          "name": "mediacodec",
-          "value": "1"
-        },
-        {
-          "category": 4,
-          "name": "mediacodec-auto-rotate",
-          "value": "1"
-        },
-        {
-          "category": 4,
-          "name": "mediacodec-handle-resolution-change",
-          "value": "1"
-        },
-        {
-          "category": 4,
-          "name": "mediacodec-hevc",
-          "value": "1"
-        },
-        {
-          "category": 1,
-          "name": "dns_cache_timeout",
-          "value": "600000000"
-        }
+      "name": "量子",
+      "hosts": [
+        "vip.lz",
+        "hd.lz",
+        ".cdnlz"
+      ],
+      "regex": [
+        "#EXT-X-DISCONTINUITY\\r*\\n*#EXTINF:7\\.166667,[\\s\\S]*?#EXT-X-DISCONTINUITY",
+        "#EXTINF.*?\\s+.*?08646.*?\\.ts",
+        "#EXT-X-DISCONTINUITY\\r*\\n*#EXTINF.*?6\\.667,[\\s\\S]*?#EXT-X-DISCONTINUITY",
+        "#EXTINF.*?\\s+.*?48234.*?\\.ts",
+        "#EXT-X-DISCONTINUITY\\r*\\n*#EXTINF.*?7\\.067,[\\s\\S]*?#EXT-X-DISCONTINUITY",
+        "17.19",
+        "19.63"
+      ]
+    },
+    {
+      "name": "非凡",
+      "hosts": [
+        "vip.ffzy",
+        "hd.ffzy",
+        "super.ffzy",
+        "cachem3u8.2s0"
+      ],
+      "regex": [
+        "#EXT-X-DISCONTINUITY\\r*\\n*#EXTINF:6\\.400000,[\\s\\S]*?#EXT-X-DISCONTINUITY",
+        "#EXT-X-DISCONTINUITY\\r*\\n*#EXTINF:6\\.666667,[\\s\\S]*?#EXT-X-DISCONTINUITY",
+        "#EXTINF.*?\\s+.*?1171(057).*?\\.ts",
+        "#EXTINF.*?\\s+.*?6d7b(077).*?\\.ts",
+        "#EXTINF.*?\\s+.*?6718a(403).*?\\.ts",
+        "17.99",
+        "14.45"
+      ]
+    },
+    {
+      "name": "索尼",
+      "hosts": [
+        "suonizy"
+      ],
+      "regex": [
+        "#EXT-X-DISCONTINUITY\\r*\\n*#EXTINF:1\\.000000,[\\s\\S]*?#EXT-X-DISCONTINUITY",
+        "#EXTINF.*?\\s+.*?p1ayer.*?\\.ts",
+        "#EXTINF.*?\\s+.*?\\/video\\/original.*?\\.ts"
+      ]
+    },
+    {
+      "name": "快看",
+      "hosts": [
+        "kuaikan"
+      ],
+      "regex": [
+        "#EXT-X-KEY:METHOD=NONE\\r*\\n*#EXTINF:5,[\\s\\S]*?#EXT-X-DISCONTINUITY",
+        "#EXT-X-KEY:METHOD=NONE\\r*\\n*#EXTINF:2\\.4,[\\s\\S]*?#EXT-X-DISCONTINUITY",
+        "#EXT-X-KEY:METHOD=NONE\\r*\\n*#EXTINF:1\\.467,[\\s\\S]*?#EXT-X-DISCONTINUITY"
+      ]
+    },
+    {
+      "name": "leshiyun",
+      "hosts": [
+        "leshiyuncdn"
+      ],
+      "regex": [
+        "15.92"
+      ]
+    },
+    {
+      "name": "看影网",
+      "hosts": [
+        "fentvoss"
+      ],
+      "regex": [
+        "38.68",
+        "38.12",
+        "38.80",
+        "30.08",
+        "44.00",
+        "36.80",
+        "40.68",
+        "29.08",
+        "29.28",
+        "24.88"
+      ]
+    },
+    {
+      "name": "1080zyk",
+      "hosts": [
+        "high24-playback",
+        "high20-playback",
+        "yzzy.play",
+        "yzzy-dy"
+      ],
+      "regex": [
+        "16.63",
+        "17.66"
+      ]
+    },
+    {
+      "name": "ikun",
+      "hosts": [
+        "bfikuncdn"
+      ],
+      "regex": [
+        "#EXTINF.*?\\s+.*?XR8pDxQk.*?\\.ts",
+        "#EXTINF.*?\\s+.*?p5XQill8.*?\\.ts"
+      ]
+    },
+    {
+      "name": "黑木耳hmr",
+      "hosts": [
+        "hmrvideo"
+      ],
+      "regex": [
+        "#EXT-X-DISCONTINUITY\\r*\\n*#EXTINF:3\\.366667,[\\s\\S]*?#EXT-X-DISCONTINUITY"
+      ]
+    },
+    {
+      "name": "ryplay",
+      "hosts": [
+        "cdn.ryplay"
+      ],
+      "regex": [
+        "#EXT-X-DISCONTINUITY\\r*\\n*#EXTINF:6\\.633333,[\\s\\S]*?#EXT-X-DISCONTINUITY",
+        "#EXT-X-DISCONTINUITY\\r*\\n*#EXTINF:8\\.333333,[\\s\\S].*?\\.ts",
+        "#EXTINF:2\\.933333,[\\s\\S].*?\\.ts"
+      ]
+    },
+    {
+      "name": "555DM",
+      "hosts": [
+        "cqxfjz"
+      ],
+      "regex": [
+        "10.56"
+      ]
+    },
+    {
+      "name": "海外看",
+      "hosts": [
+        "haiwaikan"
+      ],
+      "regex": [
+        "10.0099",
+        "10.3333",
+        "16.0599",
+        "8.1748",
+        "10.85"
+      ]
+    },
+    {
+      "name": "磁力广告",
+      "hosts": [
+        "magnet"
+      ],
+      "regex": [
+        "更多",
+        "社 區",
+        "x u u",
+        "最 新",
+        "更 新",
+        "社 区",
+        "有趣",
+        "有 趣",
+        "英皇体育",
+        "全中文AV在线",
+        "澳门皇冠赌场",
+        "哥哥快来",
+        "美女荷官",
+        "裸聊",
+        "新片首发",
+        "UUE29"
+      ]
+    },
+    {
+      "name": "通用-广告片段过滤",
+      "hosts": [
+        "*"
+      ],
+      "regex": [
+        "#EXTINF:\\s*([0-4]\\.\\d+|5\\.0),.*?(ad|promo|preroll|midroll|postroll)",
+        "#EXT-X-DISCONTINUITY[^#]*#EXTINF[^#]*adjump",
+        ".*popads\\.net.*",
+        ".*doubleclick\\.net.*"
+      ]
+    },
+    {
+      "name": "通用-广告域名拦截",
+      "hosts": [
+        "*"
+      ],
+      "regex": [
+        ".*googlesyndication\\.com.*",
+        ".*propellerads\\.com.*",
+        ".*adnxs\\.com.*",
+        ".*ae01\\.alicdn\\.com.*"
       ]
     }
   ],
-  "ads": [
-    "static-mozai.4gtv.tv"
-  ]
+  "adblock": {
+    "page": {
+      "remove_elements": [
+        "iframe[src*='ads']",
+        "iframe[src*='pop']",
+        "div.ad",
+        "div.ads",
+        "div.adbox",
+        "div.ad-wrap",
+        "div[class*='advert']",
+        "div[class*='banner']",
+        "div[class*='popup']",
+        "div[class*='modal-ad']",
+        "div[class*='cnzz']",
+        "div[id*='cnzz']",
+        "div[class*='floating']",
+        "div[class*='float-ads']",
+        "img[src*='ae01.alicdn']",
+        "img[src*='tips.gamevvip']",
+        "script[src*='cnzz']",
+        "script[src*='googletag']",
+        "script[src*='doubleclick']"
+      ],
+      "block_url_keywords": [
+        "doubleclick.net",
+        "googlesyndication.com",
+        "googletagmanager.com",
+        "cnzz.com",
+        "um.cavuc.com",
+        "ae01.alicdn.com",
+        "tips.gamevvip.com",
+        "popads.net",
+        "propellerads.com",
+        "adnxs.com",
+        "adsafeprotected.com",
+        "cms.qdwght.com",
+        "api.htpan.net",
+        "ppl.xunzhuo123.com",
+        "qiu.xixiqiu.com"
+      ],
+      "block_url_regex": [
+        ".*\\.cnzz\\..*",
+        ".*popads\\.net.*",
+        ".*googlesyndication.*",
+        ".*doubleclick\\.net.*",
+        ".*propellerads\\.com.*"
+      ]
+    },
+    "stream": {
+      "drop_segments_keywords": [
+        "ad",
+        "ads",
+        "promo",
+        "preroll",
+        "midroll",
+        "postroll",
+        "advert",
+        "popup_ad",
+        "adbreak",
+        "adpod"
+      ],
+      "drop_segments_regex": [
+        "#EXTINF:\\s*([0-4]\\.\\d+|5\\.0),.*?(ad|promo|popup|preroll)",
+        "#EXT-X-DISCONTINUITY[^#]*#EXTINF[^#]*adjump",
+        "#EXT-X-DISCONTINUITY[^#]*#EXTINF[^#]*p1ayer",
+        "#EXT-X-DISCONTINUITY[^#]*#EXTINF[^#]*08646.*?\\.ts",
+        "#EXT-X-DISCONTINUITY[^#]*#EXTINF[^#]*1171.*?\\.ts"
+      ],
+      "min_duration": 5
+    },
+    "headers": {
+      "block_request_domains": [
+        "doubleclick.net",
+        "googletagmanager.com",
+        "googlesyndication.com",
+        "cnzz.com",
+        "um.cavuc.com",
+        "ae01.alicdn.com",
+        "tips.gamevvip.com",
+        "popads.net",
+        "propellerads.com",
+        "adnxs.com",
+        "adsafeprotected.com"
+      ],
+      "inject_headers": {
+        "X-Requested-With": "tvbox",
+        "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8"
+      }
+    },
+    "enabled": true
+  },
+  "图片代理": "https://images.weserv.nl/?url=",
+  "warningText": "勿信视频中任何广告！",
+  "spider": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider_all_final.jar"
 }
