@@ -59,12 +59,6 @@
       }
     },
     {
-      "key": "本地",
-      "name": "本地 • 视频",
-      "type": 3,
-      "api": "csp_LocalFile"
-    },
-    {
       "key": "预告",
       "name": "新片 • 预告",
       "type": 3,
@@ -1116,16 +1110,6 @@
       "timeout": 60
     },
     {
-      "key": "酷乐",
-      "name": "酷乐 • 搜索",
-      "type": 3,
-      "api": "csp_KuLe",
-      "searchable": 1,
-      "quickSearch": 0,
-      "filterable": 0,
-      "timeout": 60
-    },
-    {
       "key": "鬼鬼",
       "name": "鬼鬼 • 搜索",
       "type": 3,
@@ -1267,18 +1251,6 @@
       }
     },
     {
-      "key": "戏曲多多",
-      "name": "戏曲 • 多多",
-      "type": 3,
-      "api": "csp_AppLY",
-      "searchable": 0,
-      "quickSearch": 0,
-      "changeable": 0,
-      "style": {
-        "type": "list"
-      }
-    },
-    {
       "key": "童趣",
       "name": "童趣 • 儿童",
       "type": 3,
@@ -1296,19 +1268,6 @@
       "name": "兔小贝 • 儿童",
       "type": 3,
       "api": "csp_TuXiaoBei",
-      "searchable": 1,
-      "quickSearch": 0,
-      "changeable": 0,
-      "style": {
-        "type": "rect",
-        "ratio": 1.618
-      }
-    },
-    {
-      "key": "贝乐虎",
-      "name": "贝乐虎 • 儿童",
-      "type": 3,
-      "api": "csp_BeiLeHu",
       "searchable": 1,
       "quickSearch": 0,
       "changeable": 0,
@@ -2071,14 +2030,16 @@
         "channelUsername": "Tgsearchers6,peccxinpd,yunpan139,yggpan,yunpanuc,shareAliyun,yunpan189,BaiduCloudDisk,Channel_Shares_115,gimy115,ydypzyfx,dianying4K,sbsbsnsqq,Q_dongman,ysmffx,XiangxiuNBB,yoyokuakeduanju,yeqingjie_GJG666,TG654TG,PanjClub,guoman4K,alyp_1,kuake_yppan,Baidu_Netdisk,bdwpzhpd,baidu_yppan,zyfb123,xx123pan,zyzhpd123,yp123pan,cloudtianyi,txtyzy,tianyirigeng,tyypzhpd,zaihuayun,ali_yppan",
         "commonConfig": "https://gh-proxy.org/https://raw.githubusercontent.com/yoursmile66/TVBox/main/json/peizhi.json",
         "filter": "https://gh-proxy.org/https://raw.githubusercontent.com/yoursmile66/TVBox/main/json/douban.json"
-      }
+      },
+      "spider": "https://gitee.com/aeve/tvbox-server/raw/main/jar/yoursmile_spider.jar"
     },
     {
       "key": "弹幕",
       "name": "Ⓜ️嗷呜弹幕设置",
       "type": 3,
       "api": "csp_AAConfigAmns",
-      "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png"
+      "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png",
+      "spider": "https://gitee.com/aeve/tvbox-server/raw/main/jar/full_spider.jar"
     },
     {
       "key": "ConfigCenter",
@@ -2089,17 +2050,8 @@
       "changeable": 0,
       "ext": {
         "commonConfig": "https://gh-proxy.org/https://raw.githubusercontent.com/yoursmile66/TVBox/main/json/peizhi.json"
-      }
-    },
-    {
-      "key": "csp_LocalFile",
-      "name": "🏣本地文件",
-      "type": 3,
-      "api": "csp_LocalFile",
-      "searchable": 0,
-      "quickSearch": 0,
-      "filterable": 1,
-      "type_flag": 0
+      },
+      "spider": "https://gitee.com/aeve/tvbox-server/raw/main/jar/yoursmile_spider.jar"
     },
     {
       "name": "🍉瓜子",
@@ -2110,7 +2062,8 @@
       "quickSearch": 1,
       "changeable": 0,
       "ext": "Guazi",
-      "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png"
+      "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png",
+      "spider": "https://gitee.com/aeve/tvbox-server/raw/main/jar/full_spider.jar"
     },
     {
       "key": "天天",
@@ -2120,7 +2073,8 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "ext": "7lj763gg0939791h1l3888jig44gi291li"
+      "ext": "7lj763gg0939791h1l3888jig44gi291li",
+      "spider": "https://gitee.com/aeve/tvbox-server/raw/main/jar/yoursmile_spider.jar"
     },
     {
       "key": "金牌",
@@ -2247,7 +2201,8 @@
       "name": "XC·🍟王子",
       "type": 3,
       "api": "csp_Xdai",
-      "ext": "7lj763gg402i7942503g9g9jk909jji3g0li9j088291253h4k141gggkk41435h43924kg6ik48i0856j01k882glkh4kllg538704jl5k4j1gl27j321g03lll"
+      "ext": "7lj763gg402i7942503g9g9jk909jji3g0li9j088291253h4k141gggkk41435h43924kg6ik48i0856j01k882glkh4kllg538704jl5k4j1gl27j321g03lll",
+      "spider": "https://gitee.com/aeve/tvbox-server/raw/main/jar/yoursmile_spider.jar"
     },
     {
       "key": "动漫巴士",
@@ -2278,7 +2233,8 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "ext": "https://gh-proxy.org/https://raw.githubusercontent.com/yoursmile66/TVBox/main/json/jianpian.json"
+      "ext": "https://gh-proxy.org/https://raw.githubusercontent.com/yoursmile66/TVBox/main/json/jianpian.json",
+      "spider": "https://gitee.com/aeve/tvbox-server/raw/main/jar/yoursmile_spider.jar"
     },
     {
       "key": "农民",
@@ -2327,7 +2283,8 @@
       "api": "csp_Dygang",
       "searchable": 1,
       "quickSearch": 1,
-      "filterable": 1
+      "filterable": 1,
+      "spider": "https://gitee.com/aeve/tvbox-server/raw/main/jar/yoursmile_spider.jar"
     },
     {
       "key": "csp_New6v",
@@ -2367,7 +2324,8 @@
       "quickSearch": 1,
       "changeable": 1,
       "ext": "AppV7Mtq",
-      "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png"
+      "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png",
+      "spider": "https://gitee.com/aeve/tvbox-server/raw/main/jar/full_spider.jar"
     },
     {
       "name": "🍊柚子",
@@ -2378,7 +2336,8 @@
       "quickSearch": 1,
       "changeable": 1,
       "ext": "AppV7Xyz",
-      "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png"
+      "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png",
+      "spider": "https://gitee.com/aeve/tvbox-server/raw/main/jar/full_spider.jar"
     },
     {
       "name": "📦师兄",
@@ -2389,7 +2348,8 @@
       "quickSearch": 1,
       "changeable": 1,
       "ext": "AppV7Dsx",
-      "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png"
+      "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png",
+      "spider": "https://gitee.com/aeve/tvbox-server/raw/main/jar/full_spider.jar"
     },
     {
       "name": "🏃‍♂️‍➡️追剧",
@@ -2400,7 +2360,8 @@
       "quickSearch": 1,
       "changeable": 1,
       "ext": "AppV7Zjdr",
-      "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png"
+      "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png",
+      "spider": "https://gitee.com/aeve/tvbox-server/raw/main/jar/full_spider.jar"
     },
     {
       "name": "🍌小黄人",
@@ -2411,7 +2372,8 @@
       "quickSearch": 1,
       "changeable": 1,
       "ext": "AppV7Xhr",
-      "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png"
+      "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png",
+      "spider": "https://gitee.com/aeve/tvbox-server/raw/main/jar/full_spider.jar"
     },
     {
       "name": "📦咸鱼",
@@ -2422,7 +2384,8 @@
       "quickSearch": 1,
       "changeable": 1,
       "ext": "AppV7Xy",
-      "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png"
+      "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png",
+      "spider": "https://gitee.com/aeve/tvbox-server/raw/main/jar/full_spider.jar"
     },
     {
       "name": "📦零零七",
@@ -2433,7 +2396,8 @@
       "quickSearch": 1,
       "changeable": 1,
       "ext": "AppV7Llq",
-      "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png"
+      "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png",
+      "spider": "https://gitee.com/aeve/tvbox-server/raw/main/jar/full_spider.jar"
     },
     {
       "name": "🐶特狗",
@@ -2444,7 +2408,8 @@
       "quickSearch": 1,
       "changeable": 1,
       "ext": "AppV6Tg",
-      "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png"
+      "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png",
+      "spider": "https://gitee.com/aeve/tvbox-server/raw/main/jar/full_spider.jar"
     },
     {
       "name": "🏭厂长",
@@ -2455,7 +2420,8 @@
       "filterable": 1,
       "quickSearch": 1,
       "ext": "Czzy",
-      "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png"
+      "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png",
+      "spider": "https://gitee.com/aeve/tvbox-server/raw/main/jar/full_spider.jar"
     },
     {
       "name": "🐱牛来动漫",
@@ -2465,7 +2431,8 @@
       "searchable": 1,
       "quickSearch": 1,
       "changeable": 1,
-      "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png"
+      "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png",
+      "spider": "https://gitee.com/aeve/tvbox-server/raw/main/jar/full_spider.jar"
     },
     {
       "name": "🐱番薯动漫",
@@ -2475,7 +2442,8 @@
       "searchable": 1,
       "quickSearch": 1,
       "changeable": 1,
-      "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png"
+      "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png",
+      "spider": "https://gitee.com/aeve/tvbox-server/raw/main/jar/full_spider.jar"
     },
     {
       "name": "🐱青云动漫",
@@ -2485,7 +2453,8 @@
       "searchable": 1,
       "quickSearch": 1,
       "changeable": 1,
-      "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png"
+      "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png",
+      "spider": "https://gitee.com/aeve/tvbox-server/raw/main/jar/full_spider.jar"
     },
     {
       "name": "🐱魔都动漫",
@@ -2495,7 +2464,8 @@
       "searchable": 1,
       "quickSearch": 1,
       "changeable": 1,
-      "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png"
+      "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png",
+      "spider": "https://gitee.com/aeve/tvbox-server/raw/main/jar/full_spider.jar"
     },
     {
       "name": "⭐韩剧",
@@ -2505,7 +2475,8 @@
       "searchable": 1,
       "quickSearch": 1,
       "changeable": 1,
-      "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png"
+      "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png",
+      "spider": "https://gitee.com/aeve/tvbox-server/raw/main/jar/full_spider.jar"
     },
     {
       "name": "🔥短剧推荐",
@@ -2517,7 +2488,8 @@
       "changeable": 1,
       "genre": "shortdrama",
       "ext": "Hgdh",
-      "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png"
+      "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png",
+      "spider": "https://gitee.com/aeve/tvbox-server/raw/main/jar/full_spider.jar"
     },
     {
       "name": "🎬短剧",
@@ -2529,7 +2501,8 @@
       "changeable": 1,
       "ext": "DjHggg",
       "genre": "shortdrama",
-      "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png"
+      "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png",
+      "spider": "https://gitee.com/aeve/tvbox-server/raw/main/jar/full_spider.jar"
     },
     {
       "name": "🎬豪堪短剧",
@@ -2540,7 +2513,8 @@
       "quickSearch": 1,
       "changeable": 1,
       "genre": "shortdrama",
-      "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png"
+      "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png",
+      "spider": "https://gitee.com/aeve/tvbox-server/raw/main/jar/full_spider.jar"
     },
     {
       "name": "🎬盒马短剧",
@@ -2551,7 +2525,8 @@
       "quickSearch": 1,
       "changeable": 1,
       "genre": "shortdrama",
-      "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png"
+      "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png",
+      "spider": "https://gitee.com/aeve/tvbox-server/raw/main/jar/full_spider.jar"
     },
     {
       "name": "🎬拜拜短剧",
@@ -2562,7 +2537,8 @@
       "quickSearch": 1,
       "changeable": 1,
       "genre": "shortdrama",
-      "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png"
+      "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png",
+      "spider": "https://gitee.com/aeve/tvbox-server/raw/main/jar/full_spider.jar"
     },
     {
       "name": "🎬围观短剧",
@@ -2573,7 +2549,8 @@
       "quickSearch": 1,
       "changeable": 1,
       "genre": "shortdrama",
-      "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png"
+      "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png",
+      "spider": "https://gitee.com/aeve/tvbox-server/raw/main/jar/full_spider.jar"
     },
     {
       "name": "🎬喵喵短剧",
@@ -2584,7 +2561,8 @@
       "quickSearch": 1,
       "changeable": 1,
       "genre": "shortdrama",
-      "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png"
+      "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png",
+      "spider": "https://gitee.com/aeve/tvbox-server/raw/main/jar/full_spider.jar"
     },
     {
       "name": "🎬星星短剧",
@@ -2595,49 +2573,8 @@
       "quickSearch": 1,
       "changeable": 1,
       "genre": "shortdrama",
-      "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png"
-    },
-    {
-      "name": "🏆瓜子体育",
-      "key": "GuaziLive",
-      "type": 3,
-      "api": "csp_GuaziLiveAmns",
-      "searchable": 0,
-      "quickSearch": 0,
-      "changeable": 1,
-      "ext": "GuaziLive",
-      "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png"
-    },
-    {
-      "name": "🏆飞球体育",
-      "key": "FeiqLive",
-      "type": 3,
-      "api": "csp_FeiqLiveAmns",
-      "searchable": 1,
-      "quickSearch": 1,
-      "changeable": 1,
-      "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png"
-    },
-    {
-      "name": "🏆88体育",
-      "key": "BbkqLive",
-      "type": 3,
-      "api": "csp_BbkqLiveAmns",
-      "searchable": 1,
-      "quickSearch": 1,
-      "changeable": 1,
-      "ext": "BbkqLive",
-      "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png"
-    },
-    {
-      "name": "🏆咖啡体育",
-      "key": "KafLive",
-      "type": 3,
-      "api": "csp_KafLiveAmns",
-      "searchable": 0,
-      "quickSearch": 0,
-      "changeable": 1,
-      "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png"
+      "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png",
+      "spider": "https://gitee.com/aeve/tvbox-server/raw/main/jar/full_spider.jar"
     },
     {
       "name": "📖富强听书",
@@ -2647,7 +2584,8 @@
       "searchable": 1,
       "quickSearch": 1,
       "changeable": 1,
-      "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png"
+      "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png",
+      "spider": "https://gitee.com/aeve/tvbox-server/raw/main/jar/full_spider.jar"
     },
     {
       "name": "📖文明听书",
@@ -2657,7 +2595,8 @@
       "searchable": 1,
       "quickSearch": 1,
       "changeable": 1,
-      "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png"
+      "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png",
+      "spider": "https://gitee.com/aeve/tvbox-server/raw/main/jar/full_spider.jar"
     },
     {
       "name": "📖嗷嗚听书",
@@ -2667,7 +2606,8 @@
       "searchable": 1,
       "quickSearch": 1,
       "changeable": 1,
-      "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png"
+      "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png",
+      "spider": "https://gitee.com/aeve/tvbox-server/raw/main/jar/full_spider.jar"
     },
     {
       "name": "🎸酷听音乐",
@@ -2678,7 +2618,8 @@
       "quickSearch": 1,
       "changeable": 1,
       "genre": "music",
-      "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png"
+      "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png",
+      "spider": "https://gitee.com/aeve/tvbox-server/raw/main/jar/full_spider.jar"
     },
     {
       "name": "🎸蜻蜓电台",
@@ -2689,7 +2630,8 @@
       "quickSearch": 1,
       "changeable": 1,
       "genre": "music",
-      "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png"
+      "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png",
+      "spider": "https://gitee.com/aeve/tvbox-server/raw/main/jar/full_spider.jar"
     },
     {
       "key": "SeedHub",
@@ -2714,7 +2656,8 @@
       "ext": {
         "siteUrl": "https://www.qwmkv.com",
         "commonConfig": "https://gh-proxy.org/https://raw.githubusercontent.com/yoursmile66/TVBox/main/json/peizhi.json"
-      }
+      },
+      "spider": "https://gitee.com/aeve/tvbox-server/raw/main/jar/yoursmile_spider.jar"
     },
     {
       "key": "pansou|fish",
@@ -2732,7 +2675,8 @@
           ]
         },
         "commonConfig": "https://gh-proxy.org/https://raw.githubusercontent.com/yoursmile66/TVBox/main/json/peizhi.json"
-      }
+      },
+      "spider": "https://gitee.com/aeve/tvbox-server/raw/main/jar/yoursmile_spider.jar"
     },
     {
       "key": "xc_玩偶",
@@ -2766,7 +2710,8 @@
           "https://www.muou.site"
         ],
         "filter": "https://gh-proxy.org/https://raw.githubusercontent.com/yoursmile66/TVBox/main/json/wogg.json"
-      }
+      },
+      "spider": "https://gitee.com/aeve/tvbox-server/raw/main/jar/yoursmile_spider.jar"
     },
     {
       "key": "xc_虎斑",
@@ -2781,7 +2726,8 @@
           "http://38.76.197.172:16969/"
         ],
         "filter": "https://gh-proxy.org/https://raw.githubusercontent.com/yoursmile66/TVBox/main/json/wogg.json"
-      }
+      },
+      "spider": "https://gitee.com/aeve/tvbox-server/raw/main/jar/yoursmile_spider.jar"
     },
     {
       "key": "傻样",
@@ -2796,7 +2742,8 @@
           "http://38.76.197.172:12521/"
         ],
         "filter": "https://gh-proxy.org/https://raw.githubusercontent.com/yoursmile66/TVBox/main/json/wogg.json"
-      }
+      },
+      "spider": "https://gitee.com/aeve/tvbox-server/raw/main/jar/yoursmile_spider.jar"
     },
     {
       "key": "xc_蜡笔",
@@ -2813,7 +2760,8 @@
           "http://www.tvpanpan.site"
         ],
         "filter": "https://gh-proxy.org/raw.githubusercontent.com/yoursmile66/TVBox/main/json/wogg.json"
-      }
+      },
+      "spider": "https://gitee.com/aeve/tvbox-server/raw/main/jar/yoursmile_spider.jar"
     },
     {
       "key": "歌",
@@ -2830,7 +2778,8 @@
           "https://woog.430520.xyz"
         ],
         "filter": "https://gh-proxy.org/https://raw.githubusercontent.com/yoursmile66/TVBox/main/json/wogg.json"
-      }
+      },
+      "spider": "https://gitee.com/aeve/tvbox-server/raw/main/jar/yoursmile_spider.jar"
     },
     {
       "key": "xc_多多",
@@ -2847,7 +2796,8 @@
           "https://tv.214521.xyz"
         ],
         "filter": "https://gh-proxy.org/https://raw.githubusercontent.com/yoursmile66/TVBox/main/json/wogg.json"
-      }
+      },
+      "spider": "https://gitee.com/aeve/tvbox-server/raw/main/jar/yoursmile_spider.jar"
     },
     {
       "key": "xc_闪电",
@@ -2864,7 +2814,8 @@
           "https://sduc.cloud/"
         ],
         "filter": "https://gh-proxy.org/https://raw.githubusercontent.com/yoursmile66/TVBox/main/json/wogg.json"
-      }
+      },
+      "spider": "https://gitee.com/aeve/tvbox-server/raw/main/jar/yoursmile_spider.jar"
     },
     {
       "key": "剧透社",
@@ -2877,7 +2828,8 @@
       "ext": {
         "siteUrl": "https://1.star2.cn",
         "commonConfig": "https://gh-proxy.org/https://raw.githubusercontent.com/yoursmile66/TVBox/main/json/peizhi.json"
-      }
+      },
+      "spider": "https://gitee.com/aeve/tvbox-server/raw/main/jar/yoursmile_spider.jar"
     },
     {
       "key": "FourKZN",
@@ -2889,7 +2841,8 @@
       "ext": {
         "siteUrl": "https://4kzn.cc",
         "commonConfig": "https://gh-proxy.org/https://raw.githubusercontent.com/yoursmile66/TVBox/main/json/peizhi.json"
-      }
+      },
+      "spider": "https://gitee.com/aeve/tvbox-server/raw/main/jar/yoursmile_spider.jar"
     },
     {
       "key": "光鸭社区",
@@ -2901,7 +2854,8 @@
       "ext": {
         "siteUrl": "https://gy.lubao2.de5.net",
         "commonConfig": "https://gh-proxy.org/https://raw.githubusercontent.com/yoursmile66/TVBox/main/json/peizhi.json"
-      }
+      },
+      "spider": "https://gitee.com/aeve/tvbox-server/raw/main/jar/yoursmile_spider.jar"
     },
     {
       "key": "网盘集合",
@@ -2914,7 +2868,8 @@
       "ext": {
         "commonConfig": "https://gh-proxy.org/https://raw.githubusercontent.com/yoursmile66/TVBox/main/json/peizhi.json",
         "share": "https://gh-proxy.org/https://raw.githubusercontent.com/yoursmile66/TVBox/main/json/网盘集合.json"
-      }
+      },
+      "spider": "https://gitee.com/aeve/tvbox-server/raw/main/jar/yoursmile_spider.jar"
     },
     {
       "key": "Youtube",
@@ -2930,21 +2885,8 @@
       "ext": {
         "commonConfig": "https://gh-proxy.org/https://raw.githubusercontent.com/yoursmile66/TVBox/main/json/peizhi.json",
         "json": "https://gh-proxy.org/https://raw.githubusercontent.com/yoursmile66/TVBox/main/json/youtube.json"
-      }
-    },
-    {
-      "key": "TgYunPan|本地",
-      "name": "🅿TgYunPan|本地",
-      "type": 3,
-      "api": "csp_TgYunPanLocal",
-      "searchable": 1,
-      "filterable": 0,
-      "switchable": 0,
-      "ext": {
-        "count": 4,
-        "channelUsername": "Tgsearchers6,peccxinpd,yunpan139,yggpan,yunpanuc,shareAliyun,yunpan189,BaiduCloudDisk,Channel_Shares_115,gimy115,ydypzyfx,dianying4K,sbsbsnsqq,Q_dongman,ysmffx,XiangxiuNBB,yoyokuakeduanju,yeqingjie_GJG666,TG654TG,PanjClub,guoman4K,alyp_1,kuake_yppan,Baidu_Netdisk,bdwpzhpd,baidu_yppan,zyfb123,xx123pan,zyzhpd123,yp123pan,cloudtianyi,txtyzy,tianyirigeng,tyypzhpd,zaihuayun,ali_yppan",
-        "commonConfig": "https://gh-proxy.org/https://raw.githubusercontent.com/yoursmile66/TVBox/main/json/peizhi.json"
-      }
+      },
+      "spider": "https://gitee.com/aeve/tvbox-server/raw/main/jar/yoursmile_spider.jar"
     },
     {
       "key": "xc_push_agent",
@@ -2971,7 +2913,8 @@
       "style": {
         "type": "rect",
         "ratio": 1.433
-      }
+      },
+      "spider": "https://gitee.com/aeve/tvbox-server/raw/main/jar/yoursmile_spider.jar"
     },
     {
       "key": "斗鱼",
@@ -2984,7 +2927,8 @@
       "style": {
         "type": "rect",
         "ratio": 1.433
-      }
+      },
+      "spider": "https://gitee.com/aeve/tvbox-server/raw/main/jar/yoursmile_spider.jar"
     },
     {
       "key": "csp_Kugou",
