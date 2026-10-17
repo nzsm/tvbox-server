@@ -3156,6 +3156,105 @@
     "commonConfig": "https://gh-proxy.org/https://raw.githubusercontent.com/yoursmile66/TVBox/main/json/peizhi.json",
     "cookie": ""
    }
+  },
+  {
+   "key": "IQIYI",
+   "name": "爱奇艺",
+   "type": 3,
+   "api": "csp_IQIYI",
+   "searchable": 1,
+   "quickSearch": 0,
+   "filterable": 0
+  },
+  {
+   "key": "QQ",
+   "name": "腾讯视频",
+   "type": 3,
+   "api": "csp_QQ",
+   "searchable": 1,
+   "quickSearch": 0,
+   "filterable": 0
+  },
+  {
+   "key": "Mgtv",
+   "name": "芒果TV",
+   "type": 3,
+   "api": "csp_Mgtv",
+   "searchable": 1,
+   "quickSearch": 0,
+   "filterable": 0
+  },
+  {
+   "key": "Ying",
+   "name": "樱花动漫",
+   "type": 3,
+   "api": "csp_Ying",
+   "searchable": 1,
+   "quickSearch": 0,
+   "filterable": 0
+  },
+  {
+   "key": "Anime1",
+   "name": "Anime1",
+   "type": 3,
+   "api": "csp_Anime1",
+   "searchable": 1,
+   "quickSearch": 0,
+   "filterable": 0
+  },
+  {
+   "key": "JavBus",
+   "name": "JavBus",
+   "type": 3,
+   "api": "csp_JavBus",
+   "searchable": 1,
+   "quickSearch": 0,
+   "filterable": 0
+  },
+  {
+   "key": "AList",
+   "name": "AList网盘",
+   "type": 3,
+   "api": "csp_AList",
+   "searchable": 1,
+   "quickSearch": 0,
+   "filterable": 0
+  },
+  {
+   "key": "WoGG",
+   "name": "WoGG网盘",
+   "type": 3,
+   "api": "csp_WoGG",
+   "searchable": 1,
+   "quickSearch": 0,
+   "filterable": 0
+  },
+  {
+   "key": "HuyaLiveAmns",
+   "name": "虎牙纯净",
+   "type": 3,
+   "api": "csp_HuyaLiveAmns",
+   "searchable": 1,
+   "quickSearch": 0,
+   "filterable": 0
+  },
+  {
+   "key": "Dm84",
+   "name": "动漫屋",
+   "type": 3,
+   "api": "csp_Dm84",
+   "searchable": 1,
+   "quickSearch": 0,
+   "filterable": 0
+  },
+  {
+   "key": "Ysj",
+   "name": "樱花JS",
+   "type": 3,
+   "api": "csp_Ysj",
+   "searchable": 1,
+   "quickSearch": 0,
+   "filterable": 0
   }
  ],
  "parses": [
