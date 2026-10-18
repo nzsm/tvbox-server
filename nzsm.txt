@@ -3547,6 +3547,27 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
+      "ext": {
+        "site": [
+          "https://4kzn.cc"
+        ]
+      },
+      "timeout": 60,
+      "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/qist_spider.jar"
+    },
+    {
+      "key": "小丑",
+      "name": "小丑 • 4K",
+      "type": 3,
+      "api": "csp_4KZhinan",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "ext": {
+        "site": [
+          "https://4kxc.com"
+        ]
+      },
       "timeout": 60,
       "jar": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/qist_spider.jar"
     },
