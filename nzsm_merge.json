@@ -21,7 +21,7 @@
    "name": "Ⓜ️嗷呜弹幕设置",
    "type": 3,
    "api": "csp_AAConfigAmns",
-   "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png"
+   "jar": "https://file.icve.com.cn/file_doc/997/227/F9538F89E13ADF0CFBCA7909AE555AB6.png"
   },
   {
    "key": "ConfigCenter",
@@ -53,7 +53,7 @@
    "quickSearch": 1,
    "changeable": 0,
    "ext": "Guazi",
-   "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png"
+   "jar": "https://file.icve.com.cn/file_doc/997/227/F9538F89E13ADF0CFBCA7909AE555AB6.png"
   },
   {
    "key": "天天",
@@ -310,7 +310,7 @@
    "quickSearch": 1,
    "changeable": 1,
    "ext": "AppV7Mtq",
-   "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png"
+   "jar": "https://file.icve.com.cn/file_doc/997/227/F9538F89E13ADF0CFBCA7909AE555AB6.png"
   },
   {
    "name": "🍊柚子",
@@ -321,7 +321,7 @@
    "quickSearch": 1,
    "changeable": 1,
    "ext": "AppV7Xyz",
-   "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png"
+   "jar": "https://file.icve.com.cn/file_doc/997/227/F9538F89E13ADF0CFBCA7909AE555AB6.png"
   },
   {
    "name": "📦师兄",
@@ -332,7 +332,7 @@
    "quickSearch": 1,
    "changeable": 1,
    "ext": "AppV7Dsx",
-   "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png"
+   "jar": "https://file.icve.com.cn/file_doc/997/227/F9538F89E13ADF0CFBCA7909AE555AB6.png"
   },
   {
    "name": "🏃‍♂️‍➡️追剧",
@@ -343,7 +343,7 @@
    "quickSearch": 1,
    "changeable": 1,
    "ext": "AppV7Zjdr",
-   "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png"
+   "jar": "https://file.icve.com.cn/file_doc/997/227/F9538F89E13ADF0CFBCA7909AE555AB6.png"
   },
   {
    "name": "🍌小黄人",
@@ -354,7 +354,7 @@
    "quickSearch": 1,
    "changeable": 1,
    "ext": "AppV7Xhr",
-   "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png"
+   "jar": "https://file.icve.com.cn/file_doc/997/227/F9538F89E13ADF0CFBCA7909AE555AB6.png"
   },
   {
    "name": "📦咸鱼",
@@ -365,7 +365,7 @@
    "quickSearch": 1,
    "changeable": 1,
    "ext": "AppV7Xy",
-   "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png"
+   "jar": "https://file.icve.com.cn/file_doc/997/227/F9538F89E13ADF0CFBCA7909AE555AB6.png"
   },
   {
    "name": "📦零零七",
@@ -376,7 +376,7 @@
    "quickSearch": 1,
    "changeable": 1,
    "ext": "AppV7Llq",
-   "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png"
+   "jar": "https://file.icve.com.cn/file_doc/997/227/F9538F89E13ADF0CFBCA7909AE555AB6.png"
   },
   {
    "name": "🐶特狗",
@@ -387,7 +387,7 @@
    "quickSearch": 1,
    "changeable": 1,
    "ext": "AppV6Tg",
-   "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png"
+   "jar": "https://file.icve.com.cn/file_doc/997/227/F9538F89E13ADF0CFBCA7909AE555AB6.png"
   },
   {
    "name": "🏭厂长",
@@ -398,7 +398,7 @@
    "filterable": 1,
    "quickSearch": 1,
    "ext": "Czzy",
-   "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png"
+   "jar": "https://file.icve.com.cn/file_doc/997/227/F9538F89E13ADF0CFBCA7909AE555AB6.png"
   },
   {
    "name": "🐱牛来动漫",
@@ -408,17 +408,18 @@
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1,
-   "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png"
+   "jar": "https://file.icve.com.cn/file_doc/997/227/F9538F89E13ADF0CFBCA7909AE555AB6.png"
   },
   {
-   "name": "🐱番薯动漫",
-   "key": "DMfans",
+   "name": "🐱冬瓜动漫",
+   "key": "DMxigua",
    "type": 3,
-   "api": "csp_DMfansAmns",
+   "api": "csp_DMxiguaAmns",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1,
-   "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png"
+   "ext": "DMxigua",
+   "jar": "https://file.icve.com.cn/file_doc/997/227/F9538F89E13ADF0CFBCA7909AE555AB6.png"
   },
   {
    "name": "🐱青云动漫",
@@ -428,7 +429,7 @@
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1,
-   "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png"
+   "jar": "https://file.icve.com.cn/file_doc/997/227/F9538F89E13ADF0CFBCA7909AE555AB6.png"
   },
   {
    "name": "🐱魔都动漫",
@@ -438,7 +439,7 @@
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1,
-   "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png"
+   "jar": "https://file.icve.com.cn/file_doc/997/227/F9538F89E13ADF0CFBCA7909AE555AB6.png"
   },
   {
    "name": "⭐韩剧",
@@ -448,7 +449,7 @@
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1,
-   "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png"
+   "jar": "https://file.icve.com.cn/file_doc/997/227/F9538F89E13ADF0CFBCA7909AE555AB6.png"
   },
   {
    "name": "🔥短剧推荐",
@@ -460,7 +461,7 @@
    "changeable": 1,
    "genre": "shortdrama",
    "ext": "Hgdh",
-   "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png"
+   "jar": "https://file.icve.com.cn/file_doc/997/227/F9538F89E13ADF0CFBCA7909AE555AB6.png"
   },
   {
    "name": "🎬短剧",
@@ -472,7 +473,7 @@
    "changeable": 1,
    "ext": "DjHggg",
    "genre": "shortdrama",
-   "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png"
+   "jar": "https://file.icve.com.cn/file_doc/997/227/F9538F89E13ADF0CFBCA7909AE555AB6.png"
   },
   {
    "name": "🎬豪堪短剧",
@@ -483,7 +484,7 @@
    "quickSearch": 1,
    "changeable": 1,
    "genre": "shortdrama",
-   "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png"
+   "jar": "https://file.icve.com.cn/file_doc/997/227/F9538F89E13ADF0CFBCA7909AE555AB6.png"
   },
   {
    "name": "🎬盒马短剧",
@@ -494,7 +495,7 @@
    "quickSearch": 1,
    "changeable": 1,
    "genre": "shortdrama",
-   "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png"
+   "jar": "https://file.icve.com.cn/file_doc/997/227/F9538F89E13ADF0CFBCA7909AE555AB6.png"
   },
   {
    "name": "🎬拜拜短剧",
@@ -505,7 +506,7 @@
    "quickSearch": 1,
    "changeable": 1,
    "genre": "shortdrama",
-   "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png"
+   "jar": "https://file.icve.com.cn/file_doc/997/227/F9538F89E13ADF0CFBCA7909AE555AB6.png"
   },
   {
    "name": "🎬围观短剧",
@@ -516,7 +517,7 @@
    "quickSearch": 1,
    "changeable": 1,
    "genre": "shortdrama",
-   "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png"
+   "jar": "https://file.icve.com.cn/file_doc/997/227/F9538F89E13ADF0CFBCA7909AE555AB6.png"
   },
   {
    "name": "🎬喵喵短剧",
@@ -527,7 +528,7 @@
    "quickSearch": 1,
    "changeable": 1,
    "genre": "shortdrama",
-   "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png"
+   "jar": "https://file.icve.com.cn/file_doc/997/227/F9538F89E13ADF0CFBCA7909AE555AB6.png"
   },
   {
    "name": "🎬星星短剧",
@@ -538,7 +539,7 @@
    "quickSearch": 1,
    "changeable": 1,
    "genre": "shortdrama",
-   "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png"
+   "jar": "https://file.icve.com.cn/file_doc/997/227/F9538F89E13ADF0CFBCA7909AE555AB6.png"
   },
   {
    "name": "🏆瓜子体育",
@@ -549,7 +550,7 @@
    "quickSearch": 0,
    "changeable": 1,
    "ext": "GuaziLive",
-   "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png"
+   "jar": "https://file.icve.com.cn/file_doc/997/227/F9538F89E13ADF0CFBCA7909AE555AB6.png"
   },
   {
    "name": "🏆飞球体育",
@@ -559,7 +560,7 @@
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1,
-   "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png"
+   "jar": "https://file.icve.com.cn/file_doc/997/227/F9538F89E13ADF0CFBCA7909AE555AB6.png"
   },
   {
    "name": "🏆88体育",
@@ -570,7 +571,7 @@
    "quickSearch": 1,
    "changeable": 1,
    "ext": "BbkqLive",
-   "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png"
+   "jar": "https://file.icve.com.cn/file_doc/997/227/F9538F89E13ADF0CFBCA7909AE555AB6.png"
   },
   {
    "name": "🏆咖啡体育",
@@ -580,7 +581,7 @@
    "searchable": 0,
    "quickSearch": 0,
    "changeable": 1,
-   "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png"
+   "jar": "https://file.icve.com.cn/file_doc/997/227/F9538F89E13ADF0CFBCA7909AE555AB6.png"
   },
   {
    "name": "📖富强听书",
@@ -590,7 +591,7 @@
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1,
-   "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png"
+   "jar": "https://file.icve.com.cn/file_doc/997/227/F9538F89E13ADF0CFBCA7909AE555AB6.png"
   },
   {
    "name": "📖文明听书",
@@ -600,7 +601,7 @@
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1,
-   "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png"
+   "jar": "https://file.icve.com.cn/file_doc/997/227/F9538F89E13ADF0CFBCA7909AE555AB6.png"
   },
   {
    "name": "📖嗷嗚听书",
@@ -610,7 +611,7 @@
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1,
-   "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png"
+   "jar": "https://file.icve.com.cn/file_doc/997/227/F9538F89E13ADF0CFBCA7909AE555AB6.png"
   },
   {
    "name": "🎸酷听音乐",
@@ -621,7 +622,7 @@
    "quickSearch": 1,
    "changeable": 1,
    "genre": "music",
-   "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png"
+   "jar": "https://file.icve.com.cn/file_doc/997/227/F9538F89E13ADF0CFBCA7909AE555AB6.png"
   },
   {
    "name": "🎸蜻蜓电台",
@@ -632,7 +633,7 @@
    "quickSearch": 1,
    "changeable": 1,
    "genre": "music",
-   "jar": "https://file.icve.com.cn/file_doc/305/994/4C4F8A2CE645A5539405DEFE99D17FA3.png"
+   "jar": "https://file.icve.com.cn/file_doc/997/227/F9538F89E13ADF0CFBCA7909AE555AB6.png"
   },
   {
    "key": "SeedHub",
@@ -966,29 +967,6 @@
    "type": 3,
    "api": "https://gh-proxy.org/https://raw.githubusercontent.com/yoursmile66/TVBox/main/js/lib/drpy2.min.js",
    "ext": "https://gh-proxy.org/https://raw.githubusercontent.com/yoursmile66/TVBox/main/js/酷我听书.js"
-  },
-  {
-   "key": "DJ阁舞曲网",
-   "name": "🎵DJ阁舞曲网",
-   "type": 3,
-   "api": "csp_XBPQ",
-   "ext": {
-    "请求头": "User-Agent$PC_UA",
-    "编码": "utf-8",
-    "直接播放": "1",
-    "短视频": "1",
-    "主页url": "https://www.djge.com/dance/opt/ranks",
-    "二次截取": "tracks-items\">&&</ul>",
-    "数组": "lazyload&&</span>",
-    "标题": "target=\"_track\">&&</a>",
-    "图片": "data-src=\"&&\"",
-    "链接": "<a class=\"\" href=\"&&\"",
-    "播放链接": "href=\"&&\"",
-    "嗅探词": ".m4a#.m4a?#.mp3#.mp3?#.m3u8#.mp4#.aac?#zjk02-httpdown.guangyacdn.com",
-    "分类": "精品串烧$1#慢歌串烧$2#酒吧串烧$3#车载串烧$4",
-    "分类url": "https://www.djge.com/dance/lists-id-{cateId}-{catePg}.html",
-    "类型": "1--中文串烧$6#英文串烧$5#粤语串烧$7#中英文串烧$8||2--流行串烧$9#老歌串烧$10||3--包房串烧$11#现场喊麦$12||4--空"
-   }
   },
   {
    "key": "哔哩",
