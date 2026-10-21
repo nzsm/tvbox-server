@@ -1,5 +1,5 @@
-﻿{
-  "spider": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/qist_spider.jar",
+{
+  "spider": "https://nzsm.github.io/tvbox-server/jar/qist_spider.jar",
   "lives": [
     {
       "name": "migu",
