@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-tvbox_optimize.py — 云编译 TVBoxOS 优化注入脚本
-用途：在云编译拉取官方 TVBoxOS 源码后、编译前运行，自动完成两项优化：
-  1. DNS 优化：DoH 解析失败自动回退系统 DNS（根治"设置 DNS 后搜不到"）+ 扩充选项（114/OneDNS）
+tvbox_optimize.py — 云编译 TVBoxOS 优化注入脚本（适配 q215613905/TVBoxOS 官方源码）
+用途：云编译拉取官方源码后、编译前运行，自动完成两项优化：
+  1. DNS 优化：DoH 解析失败自动回退系统 DNS（根治"设置 DNS 后搜不到"）+ 选项扩充（114/OneDNS/Google/AdGuard/Quad9）
   2. 广告规则：每次编译自动拉取 AdGuard 最新规则，合并旧规则，注入 APK 内置默认拦截列表
 用法：python3 tvbox_optimize.py <tvboxos源码目录>
 """
@@ -81,84 +81,55 @@ def pull_latest_ads():
             print(f'  [{name}] 拉取失败: {e}')
     return sorted(hosts)
 
-# ---------------- DNS 优化 ----------------
+# ---------------- DNS 优化（适配官方 TVBoxOS 结构） ----------------
 def patch_dns():
     with open(OKGO, encoding='utf-8') as f:
         src = f.read()
     changed = []
 
-    # 1. 扩充 DoH 选项：加 114 / OneDNS
-    new_cases = '''
-            case 7: {
-                return "https://114.114.114.114/dns-query";
-            }
-            case 8: {
-                return "https://doh.onedns.net/dns-query";
-            }'''
-    if 'case 7' not in src:
-        src = src.replace('''            case 6: {
-                return "https://dns.quad9.net/dns-query";
-            }''', '''            case 6: {
-                return "https://dns.quad9.net/dns-query";
-            }''' + new_cases)
-        changed.append('getDohUrl 加 114/OneDNS')
-    if 'dnsHttpsList.add("114")' not in src:
-        src = src.replace('dnsHttpsList.add("Quad9");',
-                          'dnsHttpsList.add("Quad9");\n        dnsHttpsList.add("114");\n        dnsHttpsList.add("OneDNS");')
-        changed.append('DNS 选项列表加 114/OneDNS')
+    # 1. 扩充内置 DNS 配置 JSON：原 3 个 → 8 个（国内优先，国外兜底可选）
+    new_json = (
+        '    private static final String dnsConfigJson = "["\n'
+        '            + "{\\"name\\": \\"腾讯\\", \\"url\\": \\"https://doh.pub/dns-query\\"},"\n'
+        '            + "{\\"name\\": \\"阿里\\", \\"url\\": \\"https://dns.alidns.com/dns-query\\"},"\n'
+        '            + "{\\"name\\": \\"360\\", \\"url\\": \\"https://doh.360.cn/dns-query\\"},"\n'
+        '            + "{\\"name\\": \\"114\\", \\"url\\": \\"https://114.114.114.114/dns-query\\"},"\n'
+        '            + "{\\"name\\": \\"OneDNS\\", \\"url\\": \\"https://doh.onedns.net/dns-query\\"},"\n'
+        '            + "{\\"name\\": \\"Google\\", \\"url\\": \\"https://dns.google/dns-query\\"},"\n'
+        '            + "{\\"name\\": \\"AdGuard\\", \\"url\\": \\"https://dns.adguard.com/dns-query\\"},"\n'
+        '            + "{\\"name\\": \\"Quad9\\", \\"url\\": \\"https://dns.quad9.net/dns-query\\"}"\n'
+        '            + "]";'
+    )
+    dns_pattern = re.compile(r'private static final String dnsConfigJson = "\["(?:\s*\+\s*"(?:[^"\\]|\\.)*")*\s*\+\s*"\]";')
+    if 'doh.onedns.net' not in src:
+        if dns_pattern.search(src):
+            src = dns_pattern.sub(lambda m: new_json, src)
+            changed.append('dnsConfigJson 扩充为 8 项')
+        else:
+            raise SystemExit('[FAIL] 未找到官方 dnsConfigJson 结构，DNS 配置扩充失败')
 
-    # 2. 关闭时 dnsOverHttps = null（避免 null URL 构造）
-    if 'dnsOverHttps = null' not in src:
-        src = src.replace(
-            '        String dohUrl = getDohUrl(Hawk.get(HawkConfig.DOH_URL, 0));\n'
-            '        dnsOverHttps = new DnsOverHttps.Builder().client(dohClient).url(dohUrl.isEmpty() ? null : HttpUrl.get(dohUrl)).build();',
-            '        String dohUrl = getDohUrl(Hawk.get(HawkConfig.DOH_URL, 0));\n'
-            '        if (dohUrl.isEmpty()) {\n'
-            '            dnsOverHttps = null;\n'
-            '        } else {\n'
-            '            dnsOverHttps = new DnsOverHttps.Builder().client(dohClient).url(HttpUrl.get(dohUrl)).build();\n'
-            '        }')
-        changed.append('关闭时 dnsOverHttps=null')
-
-    # 3. 注入 FallbackDns（DoH 失败自动回退系统 DNS）
-    fallback = '''
-    public static Dns getEffectiveDns() {
-        final Dns doh = dnsOverHttps;
-        return new Dns() {
-            @Override
-            public List<InetAddress> lookup(String hostname) throws UnknownHostException {
-                try {
-                    if (doh != null) {
-                        return doh.lookup(hostname);
-                    }
-                } catch (Throwable ignored) {
-                }
-                return Dns.SYSTEM.lookup(hostname);
-            }
-        };
-    }'''
-    if 'getEffectiveDns' not in src:
-        # 插在 initDnsOverHttps 方法结束后（下一个静态块前）
-        src = src.replace('    static OkHttpClient defaultClient = null;',
-                          fallback + '\n\n    static OkHttpClient defaultClient = null;')
-        changed.append('注入 getEffectiveDns(FallbackDns)')
-
-    # 4. 使用点改用回退 DNS
-    src = src.replace('builder.dns(dnsOverHttps);', 'builder.dns(getEffectiveDns());')
-    src = src.replace('.dns(dnsOverHttps);', '.dns(getEffectiveDns());')
-    changed.append('两处 dns() 改为回退 DNS')
-
-    # 确保 import InetAddress / UnknownHostException / Dns
-    if 'import okhttp3.Dns;' not in src:
-        src = src.replace('import okhttp3.Call;', 'import okhttp3.Call;\nimport okhttp3.Dns;') if 'import okhttp3.Call;' in src else src
-        if 'import java.net.UnknownHostException;' not in src:
-            src = src.replace('import java.net.HttpURLConnection;', 'import java.net.HttpURLConnection;\nimport java.net.UnknownHostException;\nimport java.util.List;') if 'import java.net.HttpURLConnection;' in src else src
-        if 'import java.util.List;' not in src:
-            src = src.replace('import java.util.ArrayList;', 'import java.util.ArrayList;\nimport java.util.List;')
-    changed.append('补 import')
+    # 2. CustomDns.lookup 加 try-catch：DoH 失败自动回退系统 DNS
+    lookup_pattern = re.compile(
+        r'Dns dns = dnsOverHttps != null \? dnsOverHttps : Dns\.SYSTEM;\s+return\s+dns\.lookup\(hostname\);')
+    if 'catch (Throwable e)' not in src or 'Dns.SYSTEM.lookup(hostname)' not in src:
+        if lookup_pattern.search(src):
+            new_lookup = ('Dns dns = dnsOverHttps != null ? dnsOverHttps : Dns.SYSTEM;\n'
+                          '                try {\n'
+                          '                    return dns.lookup(hostname);\n'
+                          '                } catch (Throwable e) {\n'
+                          '                    return Dns.SYSTEM.lookup(hostname);\n'
+                          '                }')
+            src = lookup_pattern.sub(lambda m: new_lookup, src)
+            changed.append('CustomDns.lookup 加失败回退')
+        else:
+            raise SystemExit('[FAIL] 未找到官方 CustomDns.lookup 结构，回退注入失败')
 
     with open(OKGO, 'w', encoding='utf-8') as f:
         f.write(src)
+
+    # 验证
+    if '114.114.114.114' not in src or 'doh.onedns.net' not in src or 'catch (Throwable e)' not in src:
+        raise SystemExit('[FAIL] DNS 注入后验证未通过')
     print('DNS 优化完成:', changed)
 
 # ---------------- 广告规则注入 ----------------
@@ -167,15 +138,12 @@ def patch_ads():
         src = f.read()
     ads = pull_latest_ads()
     print(f'  合并后广告域名总数: {len(ads)}')
-    # 生成 Java 字符串字面量里的 ads 数组：\"a\",\"b\"
     inner = ','.join('\\"%s\\"' % h for h in ads)
     new_block = '\\"ads\\":[' + inner + ']'
-    # 匹配 defaultIJKADS 字符串里的 \"ads\":[...] （注意 Java 源码中转义）
-    pattern = r'\\"ads\\":\[[^\]]*\]'
-    m = re.search(pattern, src)
+    pattern = re.compile(r'\\"ads\\":\[[^\]]*\]')
+    m = pattern.search(src)
     if not m:
-        print('  !! 未找到内置 ads 数组（源码可能已改版）——跳过注入')
-        return False
+        raise SystemExit('[FAIL] 未找到内置 ads 数组（ApiConfig 结构变化），广告注入失败')
     src = src.replace(m.group(0), new_block)
     with open(APICFG, 'w', encoding='utf-8') as f:
         f.write(src)
@@ -183,12 +151,15 @@ def patch_ads():
     return True
 
 if __name__ == '__main__':
-    if not os.path.exists(OKGO) or not os.path.exists(APICFG):
-        print(f'源码路径无效: {SRC_DIR}（需为 TVBoxOS 源码根目录）')
+    if not os.path.exists(OKGO):
+        print(f'[FAIL] 未找到 OkGoHelper.java: {OKGO}')
         sys.exit(1)
     print('== 1/2 DNS 优化 ==')
     patch_dns()
     print('== 2/2 广告规则注入 ==')
-    patch_ads()
+    if os.path.exists(APICFG):
+        patch_ads()
+    else:
+        print('[SKIP] ApiConfig.java 不存在，跳过广告注入（DNS 已注入）')
     print('== 完成 ==')
 #（注：内容由AI生成）
