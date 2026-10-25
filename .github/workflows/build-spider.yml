@@ -89,10 +89,18 @@ jobs:
           git add jar/
           if git diff --cached --quiet; then
             echo "无变化，跳过提交"
-          else
-            git commit -m "auto: 云编译引擎jar $(date -u +'%Y-%m-%d %H:%M')"
-            git push
+            exit 0
           fi
+          git commit -m "auto: 云编译引擎jar $(date -u +'%Y-%m-%d %H:%M')"
+          # 远端可能已有新提交（用户手动推/其它工作流），先 fetch+rebase 再 push，避免被拒
+          git fetch origin main || exit 1
+          if ! git rebase origin/main; then
+            echo "⚠️ 与远端冲突（多为并发构建同改 jar/），保留本次新构建的 jar"
+            git checkout --ours jar/ 2>/dev/null || true
+            git add jar/ 2>/dev/null || true
+            GIT_EDITOR=true git rebase --continue 2>/dev/null || git rebase --abort
+          fi
+          git push
 
       - name: 上传 jar 附件（网页可直接下载）
         uses: actions/upload-artifact@v4
