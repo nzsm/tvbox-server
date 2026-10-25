@@ -30,7 +30,7 @@ jobs:
       - name: 运行订阅脚本（抓取+解密+合并+生成）
         env:
           # 订阅源列表，格式: 标签|链接;标签|链接
-          SUB_SOURCES: "XC|https://ghfast.top/https://raw.githubusercontent.com/yoursmile66/TVBox/main/XC.json;宝盒|https://ghfast.top/https://raw.githubusercontent.com/guot55/yg/main/ygbox.json"
+          SUB_SOURCES: "XC|https://ghfast.top/https://raw.githubusercontent.com/yoursmile66/TVBox/main/XC.json;宝盒|https://ghfast.top/https://raw.githubusercontent.com/guot55/yg/main/ygbox.json;qist|https://raw.githubusercontent.com/qist/tvbox/master/jsm.json"
         run: python subscribe.py
 
       - name: 有变更则提交推送
