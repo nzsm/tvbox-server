@@ -35,6 +35,14 @@ on:
         description: '编译内存上限（最小内存，默认 2g，按需可调 1g/2g/3g）'
         type: string
         default: '2g'
+      strip_so_closure:
+        description: '完美版 qist_spider.jar 是否去原生.so（默认true，更小更快可上Gitee raw）'
+        type: boolean
+        default: true
+      strip_so_all:
+        description: '全量版 all_qist_spider.jar 是否去原生.so（默认false，保留完整作兜底）'
+        type: boolean
+        default: false
 
 permissions:
   contents: write          # 用内置 token 自动提交推送，无需配置密钥
@@ -69,6 +77,8 @@ jobs:
           MODE: ${{ github.event.inputs.mode || 'both' }}
           JAVA_MEM: ${{ github.event.inputs.java_mem || '2g' }}
           DEX_METHOD_TARGET: ${{ github.event.inputs.method_target || 22000 }}
+          STRIP_SO_CLOSURE: ${{ github.event.inputs.strip_so_closure == true && '1' || '0' }}
+          STRIP_SO_ALL: ${{ github.event.inputs.strip_so_all == true && '1' || '0' }}
         run: |
           python3 merge_engine.py
 
