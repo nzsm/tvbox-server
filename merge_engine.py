@@ -247,16 +247,19 @@ def build_dex(rel_list, merged_smali, prefix, sml, tag):
             dex_files.append(outdex)
     return dex_files
 
-def pack_jar(out, dex_files, assets):
+def pack_jar(out, dex_files, assets, strip_so=False):
     os.makedirs(os.path.dirname(out), exist_ok=True)
     with zipfile.ZipFile(out, "w", zipfile.ZIP_DEFLATED, compresslevel=9) as z:
-        for df in dex_files:
-            z.write(df, os.path.basename(df))
+        # dex 统一用标准命名 classes.dex / classes2.dex ...（TVBox/Android 只认这套）
+        for i, df in enumerate(dex_files, 1):
+            z.write(df, f"classes{i}.dex" if i > 1 else "classes.dex")
         for n, d in assets.items():
+            if strip_so and (".so" in n.lower() or n.endswith(".so")):
+                continue
             z.writestr(n, d)
     md5 = hashlib.md5(open(out, "rb").read()).hexdigest()
     print(f"  ✅ {os.path.basename(out)}: {os.path.getsize(out)/1048576:.2f}MB | "
-          f"{len(dex_files)} dex | MD5 {md5}")
+          f"{len(dex_files)} dex | MD5 {md5}" + (" | 已去.so" if strip_so else ""))
     open(out + ".md5", "w").write(md5)
 
 # ---------- 5) 主流程 ----------
@@ -360,7 +363,7 @@ def main():
         print("\n[1/2] 生成全量 all_qist_spider.jar（所有类，不论大小）")
         dex_all = build_dex(all_rels, merged_smali, "all_", sml, "全量")
         if dex_all:
-            pack_jar(OUT_ALL, dex_all, assets)
+            pack_jar(OUT_ALL, dex_all, assets, os.environ.get("STRIP_SO_ALL", "0") == "1")
 
     # ============ 产物 B：完美版 qist_spider.jar（依赖闭包）============
     if MODE in ("closure", "both"):
@@ -392,7 +395,7 @@ def main():
         print(f"  闭包保留 {len(keep)} 类")
         dex_c = build_dex(keep, merged_smali, "c_", sml, "完美版")
         if dex_c:
-            pack_jar(OUT_CLOSURE, dex_c, assets)
+            pack_jar(OUT_CLOSURE, dex_c, assets, os.environ.get("STRIP_SO_CLOSURE", "1") == "1")
 
     print("\n完成。产物：")
     made = 0
