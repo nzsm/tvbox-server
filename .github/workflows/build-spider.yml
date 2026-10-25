@@ -1,43 +1,56 @@
 # ============================================================
-# 云编译 spider.jar —— GitHub Actions 全自动管线 v10（增强版）
-#
-# ★ v10 优先级反转：gao 第一 → 站主第二 → 我的 jar 垫底只补缺（重复类用 gao/站主实现，删除我的）
-#   （v8 已含 666tv/69 的 pg/66tv 与影视仓 124.71.19.220 大包）
-#   还来自这几个大 jar。v8 在编译时自动把它们并进 spider.jar。
-#
-# 使用：覆盖 .github/workflows/build-spider.yml 后 Run workflow
-# 地址：https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar
+# 全能引擎 jar 云编译工作流（双产物）
+# 作用：定时 + 手动触发，自动发现并拉取各影视源引用的 jar → 类级合并去重
+#       → 按 dex 64K 上限分 dex → 最小内存重汇编 → 产出两个 jar 并回写仓库：
+#   1) jar/all_qist_spider.jar  全量版：收录所有能拿到的类与原生库（不论大小），
+#                               作为"防人家源删库"的兜底。
+#   2) jar/qist_spider.jar      完美版：依赖闭包裁剪，只保留配置实际引用的
+#                               csp 爬虫类 + 依赖链，体积可控且源不缺类。
+# 触发机制：
+#   * schedule：每天 06:00 / 18:00（北京时间）自动轮询各源仓库，对方更新即重新合并
+#   * workflow_dispatch：可在 Actions 页手动点「Run workflow」随时跑
+# 保存路径：.github/workflows/build-engine.yml
+# 产物地址（本仓库自托管）：
+#   https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/qist_spider.jar
+#   https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/all_qist_spider.jar
 # ============================================================
-name: Build Spider Jar
+name: 全能引擎jar云编译
 
 on:
+  schedule:
+    - cron: '0 22 * * *'   # UTC 22:00 = 北京时间 06:00
+    - cron: '0 10 * * *'   # UTC 10:00 = 北京时间 18:00
   workflow_dispatch:
     inputs:
-      merge_old:
-        description: '合并增强：把仓库现有 jar 独有的爬虫也合进来（推荐）'
-        type: boolean
-        default: true
-      merge_external:
-        description: '合并外部大 jar（666tv/69 的 pg/66tv 等，补全 csp 爬虫）'
-        type: boolean
-        default: true
+      mode:
+        description: '生成哪些：both(两个) / all(仅全量) / closure(仅完美版)'
+        type: choice
+        default: both
+        options: [both, all, closure]
+      method_target:
+        description: '每个 dex 的方法数上限（默认 22000，越小越稳但 dex 越多）'
+        type: number
+        default: 22000
+      java_mem:
+        description: '编译内存上限（最小内存，默认 2g，按需可调 1g/2g/3g）'
+        type: string
+        default: '2g'
 
 permissions:
-  contents: write
+  contents: write          # 用内置 token 自动提交推送，无需配置密钥
+
+concurrency:
+  group: engine-build
+  cancel-in-progress: false
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: 检出自仓库 tvbox-server
+      - name: 检出仓库
         uses: actions/checkout@v4
         with:
           fetch-depth: 1
-
-      - name: 匿名拉取编译源码 CatVodSpider（public 仓库，不需要 token）
-        run: |
-          git clone --depth 1 https://github.com/nzsm/CatVodSpider.git src
-          echo "源码已拉取: $(ls src/app/build.gradle)"
 
       - name: 安装 JDK 17
         uses: actions/setup-java@v4
@@ -45,450 +58,37 @@ jobs:
           distribution: temurin
           java-version: '17'
 
-      - name: 准备 Android SDK
+      - name: 缓存工具链（baksmali/smali，避免每次重下 Maven 依赖）
+        uses: actions/cache@v4
+        with:
+          path: .merge_tools
+          key: merge-tools-${{ runner.os }}
+
+      - name: 运行全能 jar 合并脚本（双产物，最小内存）
+        env:
+          MODE: ${{ github.event.inputs.mode || 'both' }}
+          JAVA_MEM: ${{ github.event.inputs.java_mem || '2g' }}
+          DEX_METHOD_TARGET: ${{ github.event.inputs.method_target || 22000 }}
         run: |
-          yes | sdkmanager --licenses >/dev/null 2>&1 || true
-          sdkmanager "platforms;android-33" "build-tools;33.0.1" >/dev/null 2>&1 || true
+          python3 merge_engine.py
 
-      - name: Gradle 编译（R8 混淆）
+      - name: 提交并推送（有变化才提交）
         run: |
-          cd src
-          chmod +x gradlew
-          sed -i 's/targetSdk 28/targetSdk 33/' app/build.gradle
-          ./gradlew :app:assembleRelease -x lint -x lintVitalRelease --no-daemon --stacktrace
-
-      - name: 打包（合并增强：旧 jar + 外部大 jar 独有爬虫并入）
-        run: |
-          set -e
-          cd src
-          # ---- 工具链自举：baksmali / apktool 缺失则自动下载（不依赖仓库文件）----
-          mkdir -p jar/3rd
-          if [ ! -s jar/3rd/baksmali-2.5.2.jar ]; then
-            echo "下载 baksmali-2.5.2.jar ..."
-            curl -L -m 180 -o jar/3rd/baksmali-2.5.2.jar "https://ghfast.top/https://github.com/google/baksmali/releases/download/v2.5.2/baksmali-2.5.2.jar" || curl -L -m 180 -o jar/3rd/baksmali-2.5.2.jar "https://github.com/google/baksmali/releases/download/v2.5.2/baksmali-2.5.2.jar"
-            ls -la jar/3rd/baksmali-2.5.2.jar
-          fi
-          if [ ! -s jar/3rd/apktool_2.4.1.jar ]; then
-            echo "下载 apktool_2.4.1.jar ..."
-            curl -L -m 180 -o jar/3rd/apktool_2.4.1.jar "https://ghfast.top/https://github.com/iBotPeaches/Apktool/releases/download/v2.4.1/apktool_2.4.1.jar" || curl -L -m 180 -o jar/3rd/apktool_2.4.1.jar "https://github.com/iBotPeaches/Apktool/releases/download/v2.4.1/apktool_2.4.1.jar"
-            ls -la jar/3rd/apktool_2.4.1.jar
-          fi
-          head -c 2 jar/3rd/baksmali-2.5.2.jar | grep -q 'PK' || { echo "❌ baksmali 下载失败"; exit 1; }
-          head -c 2 jar/3rd/apktool_2.4.1.jar | grep -q 'PK' || { echo "❌ apktool 下载失败"; exit 1; }
-          echo "✅ 工具链就绪: baksmali $(stat -c%s jar/3rd/baksmali-2.5.2.jar)B / apktool $(stat -c%s jar/3rd/apktool_2.4.1.jar)B"
-          DEX="app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex"
-          ls -la "$DEX"
-          # ---- 反编译新源码的 dex ----
-          rm -rf smali_new && mkdir -p smali_new
-          java -jar jar/3rd/baksmali-2.5.2.jar d "$DEX" -o smali_new
-          # ---- v10 框架保护：记录新源码自带类清单（这些类绝不被外部覆盖，防 app 崩溃）----
-          export NEW_CORE_CLASSES=$(cd smali_new && find com/github/catvod/spider -name '*.smali' -printf '%f\n' 2>/dev/null | sed 's/\.smali$//' | tr '\n' ' ')
-          echo "新源码框架保护类数: $(echo $NEW_CORE_CLASSES | wc -w)"
-          # 配置引用的目标爬虫类：只合并这些，避免方法总数超 dex 65535 上限
-          export V18_BUDGET=52000
-          # ---- 提前删除 catvob（非配置爬虫，避免占用 dex 方法预算）----
-          python3 -c "import shutil; shutil.rmtree('smali_new/com/github/catvob', ignore_errors=True)"
-          echo "已删除 catvob，V18_USED 将只统计 catvod"
-          # ---- 旧 jar 独有爬虫类：反编译备用（预算截断合并稍后执行）----
-          rm -rf smali_old && mkdir -p smali_old
-          java -jar jar/3rd/baksmali-2.5.2.jar d jar/spider.jar -o smali_old || true
-          export V18_USED=$(python3 << 'PYX' > /tmp/v18_used.txt
-          import os
-          t = 0
-          for dp, dn, fns in os.walk('smali_new'):
-              for fn in fns:
-                  if fn.endswith('.smali'):
-                      with open(os.path.join(dp, fn), encoding='utf-8', errors='ignore') as f:
-                          for ln in f:
-                              if ln.strip().startswith('.method'): t += 1
-          print(t)
-          PYX)
-          V18_USED=$(cat /tmp/v18_used.txt)
-          merge_ext() {
-            local SPID="$1"
-            local R
-            R=$(python3 - "$SPID" << 'PYX'
-          import os, sys, shutil
-          spid = sys.argv[1]
-          BUDGET = int(os.environ.get('V18_BUDGET', '59000'))
-          used = int(os.environ.get('V18_USED', '0'))
-          TARGETS = set(os.environ.get('TARGET_CLASSES', '').split())
-          cands = []
-          for dp, dn, fns in os.walk(spid):
-              for fn in fns:
-                  if not fn.endswith('.smali'): continue
-                  p = os.path.join(dp, fn)
-                  rel = os.path.relpath(p, spid)
-                  dest = 'smali_new/com/github/catvod/spider/' + rel
-                  if os.path.exists(dest): continue
-                  mcnt = sum(1 for ln in open(p, encoding='utf-8', errors='ignore') if ln.strip().startswith('.method'))
-                  is_t = fn[:-6] in TARGETS
-                  cands.append((0 if is_t else 1, mcnt, p, dest, fn[:-6]))
-          cands.sort(key=lambda x: (x[0], x[1]))
-          added = 0; n = 0; tg = 0
-          for _, mcnt, p, dest, cls in cands:
-              is_t = cls in TARGETS
-              if not is_t and used + mcnt > BUDGET: continue
-              os.makedirs(os.path.dirname(dest), exist_ok=True)
-              shutil.copy(p, dest)
-              if not is_t: used += mcnt
-              added += mcnt; n += 1
-              if is_t: tg += 1
-          import sys
-          print(f"{n}类/{added}方法(目标{tg})", file=sys.stderr)
-          print(added)
-          PYX)
-            echo "  → 本次新增 ${R} 方法" >&2
-          export V18_USED=$((V18_USED + ${R:-0}))
-                    }
-
-          merge_all() {
-            local SPID="$1"
-            local R
-            R=$(python3 - "$SPID" << 'PYX'
-          import os, sys, shutil
-          spid = sys.argv[1]
-          BUDGET = int(os.environ.get('V18_BUDGET', '55000'))
-          used = int(os.environ.get('V18_USED', '0'))
-          TARGETS = set(os.environ.get('TARGET_CLASSES', '').split())
-          cands = []
-          for dp, dn, fns in os.walk(spid):
-              for fn in fns:
-                  if not fn.endswith('.smali'): continue
-                  p = os.path.join(dp, fn)
-                  rel = os.path.relpath(p, spid)
-                  dest = 'smali_new/com/github/catvod/spider/' + rel
-                  if os.path.exists(dest): continue
-                  mcnt = sum(1 for ln in open(p, encoding='utf-8', errors='ignore') if ln.strip().startswith('.method'))
-                  is_t = fn[:-6] in TARGETS
-                  cands.append((0 if is_t else 1, mcnt, p, dest, fn[:-6]))
-          cands.sort(key=lambda x: (x[0], x[1]))
-          added = 0; n = 0; tg = 0
-          for _, mcnt, p, dest, cls in cands:
-              is_t = cls in TARGETS
-              if not is_t and used + mcnt > BUDGET: continue
-              os.makedirs(os.path.dirname(dest), exist_ok=True)
-              shutil.copy(p, dest)
-              if not is_t: used += mcnt
-              added += mcnt; n += 1
-              if is_t: tg += 1
-          print(f"{n}类/{added}方法(目标{tg})", file=sys.stderr)
-          print(added)
-          PYX)
-            echo "  → 本次新增 ${R} 方法"
-            export V18_USED=$((V18_USED + ${R:-0}))
-                    }
-
-          # v10 覆盖式合并：dest 已存在且不属于新源码框架类 → 删除我的实现，用本 jar 覆盖（gao 先来先得，站主次之）
-          merge_over() {
-            local SPID="$1"
-            local R
-            R=$(python3 - "$SPID" << 'PYX'
-          import os, sys, shutil
-          spid = sys.argv[1]
-          BUDGET = int(os.environ.get('V18_BUDGET', '52000'))
-          used = int(os.environ.get('V18_USED', '0'))
-          TARGETS = set(os.environ.get('TARGET_CLASSES', '').split())
-          NEW_CORE = set(os.environ.get('NEW_CORE_CLASSES', '').split())
-          cands = []
-          for dp, dn, fns in os.walk(spid):
-              for fn in fns:
-                  if not fn.endswith('.smali'): continue
-                  p = os.path.join(dp, fn)
-                  rel = os.path.relpath(p, spid)
-                  dest = 'smali_new/com/github/catvod/spider/' + rel
-                  cls = fn[:-6]
-                  if cls in NEW_CORE: continue
-                  if os.path.exists(dest): continue
-                  mcnt = sum(1 for ln in open(p, encoding='utf-8', errors='ignore') if ln.strip().startswith('.method'))
-                  is_t = cls in TARGETS
-                  cands.append((0 if is_t else 1, mcnt, p, dest, cls))
-          cands.sort(key=lambda x: (x[0], x[1]))
-          added = 0; n = 0; tg = 0
-          for _, mcnt, p, dest, cls in cands:
-              is_t = cls in TARGETS
-              if not is_t and used + mcnt > BUDGET: continue
-              os.makedirs(os.path.dirname(dest), exist_ok=True)
-              if os.path.exists(dest): os.remove(dest)
-              shutil.copy(p, dest)
-              if not is_t: used += mcnt
-              added += mcnt; n += 1
-              if is_t: tg += 1
-          print(f"{n}类/{added}方法(目标{tg})", file=sys.stderr)
-          print(added)
-          PYX)
-            echo "  → 本次覆盖新增 ${R} 方法"
-            export V18_USED=$((V18_USED + ${R:-0}))
-                    }
-
-          # ---- 旧 jar 独有类合并（预算截断：目标类也占预算，防大包撑爆）----
-          if [ "${{ github.event.inputs.merge_old }}" = "true" ]; then
-            OLD_SPIDER="smali_old/com/github/catvod/spider"
-            if [ -d "$OLD_SPIDER" ]; then
-              echo "--- 旧 jar 独有类（预算截断）---"
-          export TARGET_CLASSES="AList Alist Anime1 App99 AppDrama AppFerr AppLY AppRJ AppV6Amns AppV7Amns AppYs AppYsV2 BLSGod BddjAmns Bili Cg51 Ddrk Dm84 Doll Duboku Eighteen FirstAid FourKHDR Gz360 HHkkAmns Hanime HuyaLiveAmns IQIYI Ikanbot Iktv Jable JavBus JavDb JianPian Keke Kkys KubaCL LiteApple Live2Vod MeijuMi MeijuTT Mgtv Miss Mp4Mov NanGua New6v NewGrV2Amns NiNi PanWebShare PanWebShareKF Push QQ SP33 SP360 SeHuaTang SeedHub ShuangXing Smb4nas Taohuazu TianQuanGuard TingShijie WexMingriys Wexduanjuvmp Wexduanjuvop Wexxpgtv WoGG Wobg Wogg XBPQ XMVideo XPath XYQHiker Xb6v Xinsj Xunlei8 YQKan Ying Yinyuetai Ysj"
-              merge_all "$OLD_SPIDER" || true
-            fi
-          fi
-          SPIDER_DIR="smali_new/com/github/catvod/spider"
-          PARSER_DIR="smali_new/com/github/catvod/parser"
-          JS_DIR="smali_new/com/github/catvod/js"
-          echo "新源码爬虫类数: $(find $SPIDER_DIR -name '*.smali' 2>/dev/null | wc -l)"
-
-          # ---- 防御：清理超大方法类（单方法 > ~64KB，dex 硬限制，重编译必炸）----
-          python3 << 'PYX'
-          import os, re
-          THRESH = 8000
-          import shutil
-          shutil.rmtree('smali_new/com/github/catvob', ignore_errors=True)
-          def scan_remove(root, tag):
-              removed = []
-              for dp, dn, fns in os.walk(root):
-                  for fn in fns:
-                      if not fn.endswith('.smali'): continue
-                      p = os.path.join(dp, fn)
-                      with open(p, encoding='utf-8', errors='ignore') as f:
-                          lines = f.readlines()
-                      in_m = False; start = 0; drop = []
-                      for i, ln in enumerate(lines):
-                          s = ln.strip()
-                          if s.startswith('.method') and not in_m:
-                              in_m = True; start = i
-                          elif s == '.end method' and in_m:
-                              if i - start > THRESH:
-                                  removed.append((os.path.relpath(p, root), i - start + 1))
-                                  drop.append((start, i + 1))
-                              in_m = False
-                      if drop:
-                          keep = [ln for idx, ln in enumerate(lines) if not any(a <= idx < b for a, b in drop)]
-                          with open(p, 'w', encoding='utf-8') as f:
-                              f.writelines(keep)
-              return removed
-          r1 = scan_remove('smali_new/com/github/catvod', 'new')
-          r2 = scan_remove('smali_new', 'all') if os.path.isdir('smali_new/com/github/catvob') else []
-          print("clean big methods: new=%d catvob=%d" % (len(r1), len(r2)))
-          for r in (r1 + r2)[:8]:
-              print("  -", r[0], "lines", r[1])
-          PYX
-
-          # ---- 合并增强②：拉取外部大 jar（666tv/69），全包补入独有类（含依赖）----
-          if [ "${{ github.event.inputs.merge_external }}" = "true" ]; then
-            echo "进入合并增强模式②（外部大 jar）……"
-            EXT_DIR="smali_ext"
-            rm -rf "$EXT_DIR" && mkdir -p "$EXT_DIR"
-            # 外部 jar 清单（666tv/69 大而全包）
-            # 外部 jar 清单（大而全包：pg/66tv/Yoursmile/CFlLnSbJ + 用户 TVbox 仓库 lem/wex/duo）
-            EXT_JARS=(
-              "pg.jar"
-              "66tv.jar"
-              "Yoursmile2.jar"
-              "CFlLnSbJ"
-                                                                                  )
-            # 用户 nzsm/TVbox 仓库的补全包（Live2Vod/Wexxpgtv 等独有爬虫）
-            EXT_JARS_USER=(
-              "jar/lem1225.jar"
-              "jar/wex.jar"
-              "jar/duo.jar"
-            )
-            for jn in "${EXT_JARS[@]}"; do
-              curl -L -m 120 -o "ext_$jn" "https://ghfast.top/https://raw.githubusercontent.com/666tv/69/main/jar/$jn" || true
-              if [ -s "ext_$jn" ]; then
-                rm -rf smali_e && mkdir -p smali_e
-                java -jar jar/3rd/baksmali-2.5.2.jar d "ext_$jn" -o smali_e || true
-                EXT_SPIDER="smali_e/com/github/catvod/spider"
-                if [ -d "$EXT_SPIDER" ]; then
-                  merge_ext "$EXT_SPIDER" || true
-                fi
-              else
-                echo "⚠️ $jn 拉取失败，跳过"
-              fi
-            done
-            # v9 新增：gao 三件套（gaotianliuyun/gao 的 pg/XBPQ/XYQ：含 AliShare/P115Share/Olevod/JZU 等网盘新系独有类）
-            EXT_JARS_GAO=(
-              "pg.jar"
-              "XBPQ.jar"
-              "XYQ.jar"
-            )
-            for jn in "${EXT_JARS_GAO[@]}"; do
-              curl -L -m 120 -o "ext_gao_$jn" "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/$jn" || true
-              if [ -s "ext_gao_$jn" ]; then
-                rm -rf smali_gao && mkdir -p smali_gao
-                java -jar jar/3rd/baksmali-2.5.2.jar d "ext_gao_$jn" -o smali_gao || true
-                EXT_SPIDER="smali_gao/com/github/catvod/spider"
-                if [ -d "$EXT_SPIDER" ]; then
-                  merge_over "$EXT_SPIDER" || true
-                fi
-              else
-                echo "⚠️ gao $jn 拉取失败，跳过"
-              fi
-            done
-            # v10 第二优先：站主完整 jar（124.71.19.220）覆盖式合并（gao 已放的跳过，其余覆盖我的实现）
-            curl -L -m 120 -H "User-Agent: okhttp/3.12.1" -o "ext_zhuzhu.jar" "http://124.71.19.220/jar/1/spider.jar" || true
-            if [ -s "ext_zhuzhu.jar" ]; then
-              rm -rf smali_zz && mkdir -p smali_zz
-              java -jar jar/3rd/baksmali-2.5.2.jar d "ext_zhuzhu.jar" -o smali_zz || true
-              EXT_SPIDER="smali_zz/com/github/catvod/spider"
-              if [ -d "$EXT_SPIDER" ]; then
-                merge_over "$EXT_SPIDER" || true
-              fi
-            else
-              echo "⚠️ 站主 jar 拉取失败，跳过"
-            fi
-            # 影视仓大包（124.71.19.220：含 App99/AppDrama/AppLY/AppRJ/Gz360/PanWebShare/PanWebShareKF/ShuangXing/TingShijie + 全套 APP/网盘类）
-            EXT_JARS_URL=(
-              "https://gitee.com/lwlxh/tvhome/raw/master/o.jar"
-              "https://file.icve.com.cn/file_doc/81/326/14751AFEF3EF30B1AFFFA398F1E9D961.png"
-              "https://file.icve.com.cn/file_doc/874/405/DAB654F794A271C3D7A33D18ACFBFA95.jpg"
-              "http://oss4liview.moji.com/thd_file/2026/09/24/06cf2230c30d9c26fa46ea79147b330d.jpg"
-              "https://szyyds.cn/tv/x.jpg"
-            )
-            for jn in "${EXT_JARS_URL[@]}"; do
-              curl -L -m 120 -H "User-Agent: okhttp/3.12.1" -o "ext_u_$(basename $jn)" "$jn" || true
-              if [ -s "ext_u_$(basename $jn)" ]; then
-                rm -rf smali_eu && mkdir -p smali_eu
-                java -jar jar/3rd/baksmali-2.5.2.jar d "ext_u_$(basename $jn)" -o smali_eu || true
-                EXT_SPIDER="smali_eu/com/github/catvod/spider"
-                if [ -d "$EXT_SPIDER" ]; then
-                  merge_ext "$EXT_SPIDER" || true
-                fi
-              fi
-            done
-            # 用户 nzsm/TVbox 仓库的补全包
-            for jn in "${EXT_JARS_USER[@]}"; do
-              curl -L -m 120 -o "ext_u_$(basename $jn)" "https://ghfast.top/https://raw.githubusercontent.com/nzsm/TVbox/main/$jn" || true
-              if [ -s "ext_u_$(basename $jn)" ]; then
-                rm -rf smali_eu && mkdir -p smali_eu
-                java -jar jar/3rd/baksmali-2.5.2.jar d "ext_u_$(basename $jn)" -o smali_eu || true
-                EXT_SPIDER="smali_eu/com/github/catvod/spider"
-                if [ -d "$EXT_SPIDER" ]; then
-                  merge_ext "$EXT_SPIDER" || true
-                fi
-              fi
-            done
-            echo "合并②后爬虫类总数: $(find $SPIDER_DIR -name '*.smali' | wc -l)"
+          git config user.name "nzsm-bot"
+          git config user.email "nzsm@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "无变化，跳过提交"
+          else
+            git commit -m "auto: 云编译引擎jar $(date -u +'%Y-%m-%d %H:%M')"
+            git push
           fi
 
-          # ---- apktool 重打包（模板 = baksmali 反编译目录 + 动态 apktool.yml）----
-          rm -rf spider_build && mkdir -p spider_build
-          java -jar jar/3rd/baksmali-2.5.2.jar d jar/spider.jar -o spider_build/smali || true
-          cat > spider_build/apktool.yml << 'YML'
-          !!brut.androlib.meta.MetaInfo
-          apkFileName: spider.jar
-          compressionType: false
-          doNotCompress: null
-          isFrameworkApk: false
-          packageInfo: null
-          sdkInfo: null
-          sharedLibrary: false
-          sparseResources: false
-          unknownFiles: {}
-          usesFramework: null
-          version: 2.4.1_0303
-          versionInfo: null
-          YML
-          # 模板 catvod 全部替换为新合并产物（框架类源码 dex 已含）
-          rm -rf spider_build/smali/com/github/catvod
-          mkdir -p spider_build/smali/com/github
-          mv smali_new/com/github/catvod spider_build/smali/com/github/catvod
-          # 最终保险：打包前再清一次超大方法类
-          python3 << 'PYX'
-          import os
-          THRESH = 8000
-          import shutil
-          shutil.rmtree('spider_build/smali/com/github/catvob', ignore_errors=True)
-          removed = []
-          for dp, dn, fns in os.walk('spider_build/smali'):
-              for fn in fns:
-                  if not fn.endswith('.smali'): continue
-                  p = os.path.join(dp, fn)
-                  with open(p, encoding='utf-8', errors='ignore') as f:
-                      lines = f.readlines()
-                  in_m = False; start = 0
-                  for i, ln in enumerate(lines):
-                      s = ln.strip()
-                      if s.startswith('.method') and not in_m:
-                          in_m = True; start = i
-                      elif s == '.end method' and in_m:
-                          if i - start > THRESH:
-                              removed.append(os.path.relpath(p, 'spider_build/smali'))
-                              in_m = False
-                              break
-                          in_m = False
-                  if removed and removed[-1] == os.path.relpath(p, 'spider_build/smali'):
-                      os.remove(p)
-          print("final clean big methods: %d" % len(removed))
-          for r in removed[:8]:
-              print("  -", r)
-          PYX
-          # ---- 迭代式打包：失败自动解析毒类删除重试（最多6轮）----
-          for attempt in 1 2 3 4 5 6; do
-            if java -jar jar/3rd/apktool_2.4.1.jar b spider_build -c 2>apktool_err.log; then
-              echo "✅ apktool b 成功 (第 $attempt 轮)"
-              break
-            fi
-            cls=$(grep -oP 'Lcom/[a-zA-Z0-9/$_]+' apktool_err.log | head -1)
-            if [ -z "$cls" ]; then
-              echo "❌ 无法解析报错类，日志前30行："
-              head -30 apktool_err.log
-              exit 1
-            fi
-            rel=$(echo "$cls" | sed 's/^L//;s/;$//')
-            # 核心基类保护：Spider 基类绝不能删（删了全部爬虫失效）
-            case "$rel" in
-              com/github/catvod/crawler/Spider|com/github/catvod/crawler/SpiderReq|com/github/catvod/crawler/SpiderReq*)
-                echo "❌ 报错的是核心基类 $rel —— 说明 R8 产物异常，终止"
-                head -30 apktool_err.log
-                exit 1
-                ;;
-            esac
-            f="spider_build/smali/$rel.smali"
-            if [ -f "$f" ]; then
-              # 配置引用的目标类保护：宁可失败也不删（删了对应影视源失效）
-              clsname=$(basename "$rel" .smali)
-              if echo "$TARGET_CLASSES" | grep -qw "$clsname"; then
-                echo "❌ 报错的是配置引用目标类 $rel —— 预算仍不足，终止（请降低 V18_BUDGET 重跑）"
-                head -30 apktool_err.log
-                exit 1
-              fi
-              echo "⚠️ 第 $attempt 轮: 删除毒类 $rel"
-              rm -f "$f"
-            else
-              echo "❌ 报错类 $rel 不在 smali 中，终止"
-              head -30 apktool_err.log
-              exit 1
-            fi
-          done
-          cp spider_build/dist/spider.jar spider.jar
-          md5sum spider.jar | awk '{print $1}' > spider.jar.md5
-          echo "✅ 产出: spider.jar ($(du -h spider.jar | cut -f1))"
-
-      - name: 回写本仓库 jar/spider.jar（GitHub API 直传，tvbox-server）
-        run: |
-          set -e
-          SHA=""
-          EXIST=$(curl -s -o /tmp/exist.json -w "%{http_code}" -H "Authorization: Bearer ${{ github.token }}" \
-            "https://api.github.com/repos/nzsm/tvbox-server/contents/jar/spider.jar")
-          if [ "$EXIST" = "200" ]; then
-            SHA=$(python3 -c 'import json; print(json.load(open("/tmp/exist.json")).get("sha",""))')
-            echo "检测到已存在 jar/spider.jar，将覆盖更新 (sha=$SHA)"
-          fi
-          {
-            printf '{"message":"auto: 云编译 spider.jar %s","content":"' "$(date +%Y%m%d-%H%M)"
-            base64 -w0 src/spider.jar
-            if [ -n "$SHA" ]; then
-              printf '","sha":"%s"}' "$SHA"
-            else
-              printf '"}'
-            fi
-          } > /tmp/payload.json
-          echo "payload 大小: $(stat -c %s /tmp/payload.json) 字节"
-          curl -s -X PUT -H "Authorization: Bearer ${{ github.token }}" \
-            --data-binary @/tmp/payload.json \
-            "https://api.github.com/repos/nzsm/tvbox-server/contents/jar/spider.jar" > /tmp/result.json || true
-          python3 -c 'import json,sys; d=json.load(open("/tmp/result.json")); ok=d.get("content",{}).get("sha"); print(("OK 写回成功 sha="+ok[:10]+" size="+str(d["content"].get("size",""))) if ok else ("FAIL "+str(d.get("message","未知响应"))[:300])); sys.exit(0 if ok else 1)'
-
-      - name: 上传附件（网页可直接下载）
+      - name: 上传 jar 附件（网页可直接下载）
         uses: actions/upload-artifact@v4
         with:
-          name: spider_jar
-          path: src/spider.jar
+          name: engine_jars
+          path: |
+            jar/qist_spider.jar
+            jar/all_qist_spider.jar
+          if-no-files-found: warn
