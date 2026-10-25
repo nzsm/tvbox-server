@@ -32,8 +32,8 @@ DEFAULT_SOURCES = [
 OUT_JSON = "nzsm_merge.json"
 OUT_TXT = "nzsm.txt"
 
-# 顶层 spider（自己的云 jar——注意指向最新的四合一 jar）
-SPIDER = "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider_all_final.jar"
+# 顶层 spider（自己的云 jar——指向全能引擎合并版 qist_spider.jar）
+SPIDER = "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/qist_spider.jar"
 
 # 基础池：保留本地手动维护的配置（如 202 源优化版），订阅只做增量
 # 首次运行自动把现有 nzsm_merge.json 快照为 nzsm_merge_base.json
