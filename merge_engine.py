@@ -96,16 +96,34 @@ def fat_jar(out, main_url, main_class):
     return True
 
 def ensure_tools():
-    """优先用仓库内已提交的离线 fat 工具；缺失才走 Maven Central 下载自举。"""
+    """优先用仓库内已提交的离线 fat 工具（直接 jar 或 .jar.zip）；其次缓存目录；最后 Maven。"""
     committed = lambda n: os.path.join(WORK, "tools", n)
+    def unzip_if_needed(name):
+        zp = committed(name + ".zip")
+        if os.path.exists(zp) and os.path.getsize(zp) > 1000:
+            import zipfile as _z
+            with _z.ZipFile(zp) as z:
+                member = z.namelist()[0]
+                with z.open(member) as src, open(committed(name), "wb") as dst:
+                    dst.write(src.read())
+            print(f"  ✓ 解包离线工具 {name} from {name}.zip")
+            return True
+        return False
     def pick(name, maven_url, main_cls):
-        for cand in (committed(name), os.path.join(TOOL, name)):
-            if os.path.exists(cand) and os.path.getsize(cand) > 1000:
-                return cand
-        built = os.path.join(TOOL, name)
-        if not fat_jar(built, maven_url, main_cls):
+        # 1) 仓库已提交 tools/xxx.jar
+        if os.path.exists(committed(name)) and os.path.getsize(committed(name)) > 1000:
+            return committed(name)
+        # 2) 仓库 tools/xxx.jar.zip -> 解包
+        if unzip_if_needed(name):
+            return committed(name)
+        # 3) 缓存/上次构建的 .merge_tools
+        cached = os.path.join(TOOL, name)
+        if os.path.exists(cached) and os.path.getsize(cached) > 1000:
+            return cached
+        # 4) Maven 自举兜底
+        if not fat_jar(cached, maven_url, main_cls):
             raise RuntimeError(f"{name} fat jar 构建失败")
-        return built
+        return cached
     bsm = pick("baksmali.jar", BAKSMALI_MAIN, "org.jf.baksmali.Main")
     sml = pick("smali.jar", SMALI_MAIN, "org.jf.smali.Main")
     return bsm, sml
@@ -248,7 +266,12 @@ def main():
     os.makedirs(TMP, exist_ok=True)
 
     extra = discover_extra_jars()
-    print(f"配置自动发现外部 jar: {len(extra)} 个")
+    cap = int(os.environ.get("DISCOVER_CAP", "50"))
+    if 0 < cap < len(extra):
+        print(f"配置自动发现外部 jar {len(extra)} 个，按 DISCOVER_CAP={cap} 截取（防止爆盘/拖慢）")
+        extra = extra[:cap]
+    else:
+        print(f"配置自动发现外部 jar: {len(extra)} 个")
     sources = CORE_SOURCES + extra
     inputs = []          # [(priority, name, local_path)]
     n_core = len(CORE_SOURCES)
@@ -274,12 +297,16 @@ def main():
 
     per_source = []
     assets = {}
+    total_classes_all = 0
     for p, name, jar in inputs:
         outd = os.path.join(TMP, f"smali_{p}")
         if not os.path.isdir(outd):
-            subprocess.run([os.environ.get("JAVA", "java"), JAVA_XMX, "-jar", bsm, "d",
-                            "-o", outd, jar],
-                           check=False, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+            r = subprocess.run([os.environ.get("JAVA", "java"), JAVA_XMX, "-jar", bsm, "d",
+                                "-o", outd, jar],
+                               check=False, stdout=subprocess.DEVNULL, stderr=subprocess.PIPE)
+            if r.returncode != 0:
+                print(f"  ⚠ 反汇编失败 [{p}] {name[:40]} (rc={r.returncode}): "
+                      f"{r.stderr.decode('utf-8','ignore')[-300:]}")
         classes = {}
         if os.path.isdir(outd):
             classes = {os.path.relpath(os.path.join(r, f), outd): 0
@@ -289,6 +316,7 @@ def main():
                 classes[rel] = sum(1 for ln in open(pth, encoding="utf-8", errors="ignore")
                                    if ln.lstrip().startswith(".method"))
         per_source.append((p, name, classes))
+        total_classes_all += len(classes)
         print(f"  → {name[:40]}: {len(classes)} 类")
         try:
             with zipfile.ZipFile(jar) as z:
@@ -297,6 +325,14 @@ def main():
                         assets[n] = z.read(n)
         except Exception:
             pass
+        # 释放磁盘：已反汇编完的临时下载 jar 立即删除（本地仓库内的源保留）
+        if jar.startswith(TMP):
+            try:
+                os.remove(jar)
+            except Exception:
+                pass
+    if total_classes_all == 0:
+        raise RuntimeError("没有任何 jar 反汇编出类（baksmali 全部失败），无法合并")
 
     chosen = {}; seen = set()
     for p, name, classes in per_source:
@@ -359,9 +395,13 @@ def main():
             pack_jar(OUT_CLOSURE, dex_c, assets)
 
     print("\n完成。产物：")
+    made = 0
     for o in (OUT_ALL, OUT_CLOSURE):
         if os.path.exists(o):
+            made += 1
             print(f"  {o} ({os.path.getsize(o)/1048576:.2f}MB)")
+    if made == 0:
+        raise RuntimeError("本次未产出任何 jar，构建视为失败（请查看上方反汇编/汇编日志）")
     return True
 
 def _config_spider_roots(all_rels):
@@ -396,4 +436,3 @@ if __name__ == "__main__":
     except Exception as e:
         print(f"\n❌ 合并失败: {e}")
         sys.exit(1)
-#（注：内容由AI生成）
