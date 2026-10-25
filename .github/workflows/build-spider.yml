@@ -72,11 +72,11 @@ jobs:
         run: |
           python3 merge_engine.py
 
-      - name: 提交并推送（有变化才提交）
+      - name: 提交并推送 jar 产物（只提交 jar/，避免临时目录入库）
         run: |
           git config user.name "nzsm-bot"
           git config user.email "nzsm@users.noreply.github.com"
-          git add -A
+          git add jar/
           if git diff --cached --quiet; then
             echo "无变化，跳过提交"
           else
