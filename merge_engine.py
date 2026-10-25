@@ -53,7 +53,7 @@ def http_get(url, timeout=120):
     with urllib.request.urlopen(req, timeout=timeout) as r:
         return r.read()
 
-def download(url, dest, min_size=100000):
+def download(url, dest, min_size=1000):
     try:
         data = http_get(url)
         if len(data) >= min_size:
@@ -74,7 +74,7 @@ def fat_jar(out, main_url, main_class):
     local = {}
     for name, u in files.items():
         p = os.path.join(jar_dir, name)
-        if not (os.path.exists(p) and os.path.getsize(p) > 50000):
+        if not (os.path.exists(p) and os.path.getsize(p) > 1000):
             if not download(u, p):
                 print(f"  ✗ 关键依赖 {name} 下载失败")
                 return False
@@ -96,13 +96,18 @@ def fat_jar(out, main_url, main_class):
     return True
 
 def ensure_tools():
-    bsm, sml = os.path.join(TOOL, "baksmali.jar"), os.path.join(TOOL, "smali.jar")
-    if not (os.path.exists(bsm) and os.path.getsize(bsm) > 100000):
-        if not fat_jar(bsm, BAKSMALI_MAIN, "org.jf.baksmali.Main"):
-            raise RuntimeError("baksmali fat jar 构建失败")
-    if not (os.path.exists(sml) and os.path.getsize(sml) > 100000):
-        if not fat_jar(sml, SMALI_MAIN, "org.jf.smali.Main"):
-            raise RuntimeError("smali fat jar 构建失败")
+    """优先用仓库内已提交的离线 fat 工具；缺失才走 Maven Central 下载自举。"""
+    committed = lambda n: os.path.join(WORK, "tools", n)
+    def pick(name, maven_url, main_cls):
+        for cand in (committed(name), os.path.join(TOOL, name)):
+            if os.path.exists(cand) and os.path.getsize(cand) > 1000:
+                return cand
+        built = os.path.join(TOOL, name)
+        if not fat_jar(built, maven_url, main_cls):
+            raise RuntimeError(f"{name} fat jar 构建失败")
+        return built
+    bsm = pick("baksmali.jar", BAKSMALI_MAIN, "org.jf.baksmali.Main")
+    sml = pick("smali.jar", SMALI_MAIN, "org.jf.smali.Main")
     return bsm, sml
 
 # ---------- 2) 源 jar 清单：核心（高优先级）+ 配置自动发现（低优先级） ----------
