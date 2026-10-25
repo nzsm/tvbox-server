@@ -365,12 +365,14 @@ def main():
         if dex_all:
             pack_jar(OUT_ALL, dex_all, assets, os.environ.get("STRIP_SO_ALL", "0") == "1")
 
-    # ============ 产物 B：完美版 qist_spider.jar（依赖闭包）============
+    # ============ 产物 B：完美版 qist_spider.jar（保守全量：所有爬虫类+依赖链）============
     if MODE in ("closure", "both"):
-        print("\n[2/2] 生成完美版 qist_spider.jar（依赖闭包裁剪）")
-        roots = _config_spider_roots(all_rels)
-        print(f"  闭包根（配置引用 csp 爬虫类）: {len(roots)}")
-        TYPE_RE = re.compile(r"L[a-zA-Z0-9_/$]+;")
+        print("\n[2/2] 生成完美版 qist_spider.jar（保守全量：所有 spider 爬虫类 + 依赖链）")
+        # 用所有 com/github/catvod/spider/ 类作根（不按配置裁剪），保证任何 csp_ 源都不缺类
+        roots = [rel for rel in all_rels
+                 if rel.startswith("com/github/catvod/spider/") and rel.endswith(".smali")]
+        print(f"  根（全部 spider 爬虫类）: {len(roots)}")
+        TYPE_RE = re.compile(r"L[^;]+;")
         graph = {}
         for root, _, fs in os.walk(merged_smali):
             for f in fs:
@@ -392,7 +394,7 @@ def main():
             keep.add(rel)
             for d in graph.get(rel, ()):
                 stack.append(d)
-        print(f"  闭包保留 {len(keep)} 类")
+        print(f"  保留 {len(keep)} 类（全部爬虫 + 依赖）")
         dex_c = build_dex(keep, merged_smali, "c_", sml, "完美版")
         if dex_c:
             pack_jar(OUT_CLOSURE, dex_c, assets, os.environ.get("STRIP_SO_CLOSURE", "1") == "1")
@@ -408,7 +410,8 @@ def main():
     return True
 
 def _config_spider_roots(all_rels):
-    pat = re.compile(r'"api"\s*:\s*"csp_([A-Za-z0-9_]+)"')
+    # 匹配任意 csp_ 类名（含中文、数字、下划线），防漏
+    pat = re.compile(r'"api"\s*:\s*"csp_([^"\\\s,}]+)"')
     names = set()
     for root, dirs, files in os.walk(WORK):
         dirs[:] = [d for d in dirs if d not in (".git", ".merge_tmp", ".merge_tools")]
