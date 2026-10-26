@@ -1,29 +1,24 @@
 # ============================================================
-# 全能引擎 jar 云编译工作流（双产物）
-# 作用：定时 + 手动触发，自动发现并拉取各影视源引用的 jar → 类级合并去重
+# 全能引擎 jar 云编译工作流（默认双产物：全量版 + 精简版，无自动触发）
+# 作用：手动触发，自动发现并拉取各影视源引用的 jar → 类级合并去重
 #       → 按 dex 64K 上限分 dex → 最小内存重汇编 → 产出两个 jar 并回写仓库：
-#   1) jar/all_qist_spider.jar  全量版：收录所有能拿到的类与原生库（不论大小），
-#                               作为"防人家源删库"的兜底。
-#   2) jar/qist_spider.jar      完美版：依赖闭包裁剪，只保留配置实际引用的
-#                               csp 爬虫类 + 依赖链，体积可控且源不缺类。
-# 触发机制：
-#   * schedule：每天 06:00 / 18:00（北京时间）自动轮询各源仓库，对方更新即重新合并
-#   * workflow_dispatch：可在 Actions 页手动点「Run workflow」随时跑
-# 保存路径：.github/workflows/build-engine.yml
+#   1) jar/qist_spider.jar        全量版：收录所有能拿到的类与原生库（不论大小），
+#                                  配置（subscribe.py）直接加载它，不缺类
+#   2) jar/qist_spider_lite.jar   精简版：所有爬虫类+依赖链、默认去.so，体积更小
+#                                  想用精简版时手动改配置 spider 指向它即可
+# 触发机制：仅 workflow_dispatch 手动 Run（已关闭每天自动编译，避免覆盖式自动变更）
+# 保存路径：.github/workflows/build-spider.yml
 # 产物地址（本仓库自托管）：
 #   https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/qist_spider.jar
-#   https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/all_qist_spider.jar
+#   https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/qist_spider_lite.jar
 # ============================================================
 name: 全能引擎jar云编译
 
 on:
-  schedule:
-    - cron: '0 22 * * *'   # UTC 22:00 = 北京时间 06:00
-    - cron: '0 10 * * *'   # UTC 10:00 = 北京时间 18:00
   workflow_dispatch:
     inputs:
       mode:
-        description: '生成哪些：both(两个) / all(仅全量) / closure(仅完美版)'
+        description: '生成哪些：both(全量+精简，推荐) / all(仅全量) / closure(仅精简)'
         type: choice
         default: both
         options: [both, all, closure]
@@ -36,11 +31,11 @@ on:
         type: string
         default: '2g'
       strip_so_closure:
-        description: '完美版 qist_spider.jar 是否去原生.so（默认true，更小更快可上Gitee raw）'
+        description: '精简版 qist_spider_lite.jar 是否去原生.so（默认true，更小更快）'
         type: boolean
         default: true
       strip_so_all:
-        description: '全量版 all_qist_spider.jar 是否去原生.so（默认false，保留完整作兜底）'
+        description: '全量版 qist_spider.jar 是否去原生.so（默认false，保留完整作兜底）'
         type: boolean
         default: false
 
@@ -108,5 +103,5 @@ jobs:
           name: engine_jars
           path: |
             jar/qist_spider.jar
-            jar/all_qist_spider.jar
+            jar/qist_spider_lite.jar
           if-no-files-found: warn
