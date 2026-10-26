@@ -3,15 +3,17 @@
 # ============================================================
 # merge_engine.py —— 全能引擎 jar 云编译合并脚本（双产物版）
 # 一次运行产出两个 jar：
-#   1) jar/all_qist_spider.jar  全量版：把能拿到的所有源 jar 合并、类级去重，
-#      保留全部类与原生库（不论文件多大），作为"防删库"兜底。
-#   2) jar/qist_spider.jar      完美版：依赖闭包裁剪——只保留"配置实际引用的
-#      csp 爬虫类 + 它们的全部依赖链"，既完整又体积可控。
+#   1) jar/qist_spider.jar         全量版：把能拿到的所有源 jar 合并、类级去重，
+#      保留全部类与原生库（配置订阅直接加载它）。
+#   2) jar/qist_spider_lite.jar    精简版：所有 spider 爬虫类 + 依赖闭包，
+#      默认去 .so，体积更小（想用时手动切配置）。
 #
 # 特性：
 #   * 自动发现：扫描仓库配置里每个源引用的 jar（"jar"/"spider" 字段），
 #     自动加入合并源（含 flaky 域名的容错跳过），提高覆盖率。
-#   * 类级去重：多 jar 里重复的类只保留最高优先级那份。
+#   * 类级去重：多 jar 里重复的类只保留最高优先级那份；
+#     再按 .class 类名二次去重，消除跨 dex 同名类（.1/.2 后缀）导致的
+#     "has already been interned" 汇编冲突（Actions 上缺类也源于此）。
 #   * dex 64K 上限：按方法数分组（每组 < 22000），用 smali 重汇编。
 #   * 最小内存：所有 java 步骤用 -Xmx<JAVA_MEM>（默认 2g），不堆内存。
 #
@@ -31,8 +33,8 @@ DEX_METHOD_TARGET = int(os.environ.get("DEX_METHOD_TARGET", "22000"))
 PROTECT_PREFIXES = ("com/github/catvod/spider/", "com/github/catvod/crawler/Spider")
 JAVA_XMX = f"-Xmx{JAVA_MEM}"
 
-OUT_ALL     = os.path.join(WORK, "jar", "all_qist_spider.jar")
-OUT_CLOSURE = os.path.join(WORK, "jar", "qist_spider.jar")
+OUT_FULL    = os.path.join(WORK, "jar", "qist_spider.jar")       # 全量版（配置引用名，订阅直接加载它）
+OUT_LITE    = os.path.join(WORK, "jar", "qist_spider_lite.jar")  # 精简版：独立文件名，想用时手动切配置
 
 # ---------- 1) 工具链自举（Maven Central，可运行期下载；构建 fat jar） ----------
 BAKSMALI_MAIN = "https://repo1.maven.org/maven2/org/smali/baksmali/2.5.2/baksmali-2.5.2.jar"
@@ -45,6 +47,7 @@ DEPS = [
     "https://repo1.maven.org/maven2/com/beust/jcommander/1.64/jcommander-1.64.jar",
     "https://repo1.maven.org/maven2/org/antlr/antlr-runtime/3.5.2/antlr-runtime-3.5.2.jar",
     "https://repo1.maven.org/maven2/org/antlr/antlr/3.5.2/antlr-3.5.2.jar",
+    "https://repo1.maven.org/maven2/org/smali/util/2.5.2/util-2.5.2.jar",
 ]
 
 def http_get(url, timeout=120):
@@ -187,7 +190,7 @@ def _methods_in(d):
     for root, _, fs in os.walk(d):
         for f in fs:
             if f.endswith(".smali"):
-                rel = os.path.relpath(os.path.join(root, f), d)
+                rel = os.path.relpath(os.path.join(root, f), d).replace("\\", "/")
                 m = sum(1 for ln in open(os.path.join(root, f), encoding="utf-8", errors="ignore")
                         if ln.lstrip().startswith(".method"))
                 out.append((rel, m))
@@ -209,13 +212,17 @@ def assemble_group(gdir, outdex, sml):
         if r.returncode == 0 and os.path.exists(outdex):
             return True
         err = r.stderr.decode("utf-8", "ignore")
-        m = re.search(r"Lcom/[\w/$]+;", err)
-        if m:
-            poison = os.path.join(gdir, m.group(0).replace("L", "", 1).replace(";", ".smali"))
+        # 一次清掉本轮错误里出现的所有毒类（同名重复类），避免每轮只删一个导致重试轮耗尽
+        poisons = set(re.findall(r"Lcom/[\w/$]+;", err))
+        removed = 0
+        for pcls in poisons:
+            poison = os.path.join(gdir, pcls.replace("L", "", 1).replace(";", ".smali"))
             if os.path.isfile(poison):
-                print(f"  ⚠ 删除毒类 {m.group(0)}")
+                print(f"  ⚠ 删除毒类 {pcls}")
                 os.remove(poison)
-                continue
+                removed += 1
+        if removed:
+            continue
         print(f"  ✗ 汇编失败(第{attempt}轮): {err[-500:]}")
         break
     return False
@@ -344,6 +351,30 @@ def main():
                 seen.add(rel); chosen[rel] = (p, classes[rel])
     print(f"去重后唯一类: {len(chosen)}，总方法: {sum(m for _, m in chosen.values())}")
 
+    # 按类名二次去重（解析 .class 指令）：同一 jar 内跨 dex 的同名类反汇编后会生成
+    # z.smali + z.1.smali 等重复文件，汇编时必然报 "has already been interned"，
+    # 这里按类名只保留第一个，从根源消除毒类（Actions 上缺类也源于此）
+    clsmap = {}; dup_drop = 0
+    for rel in sorted(chosen):
+        p, _ = chosen[rel]
+        pth = os.path.join(TMP, f"smali_{p}", rel.replace("/", os.sep))
+        try:
+            txt = open(pth, encoding="utf-8", errors="ignore").read()
+        except Exception:
+            continue
+        m = re.search(r"\.class\b[^\n]*?L([\w/$]+);", txt)
+        if m:
+            cn = m.group(1)
+            if cn in clsmap:
+                dup_drop += 1
+                del chosen[rel]
+            else:
+                clsmap[cn] = rel
+    if dup_drop:
+        print(f"类名二次去重: 删除 {dup_drop} 个同名重复类")
+    else:
+        print("类名二次去重: 无重复")
+
     merged_smali = os.path.join(TMP, "merged")
     os.makedirs(merged_smali, exist_ok=True)
     for p, name, classes in per_source:
@@ -354,20 +385,20 @@ def main():
                 os.makedirs(os.path.dirname(dst), exist_ok=True)
                 shutil.copy(src, dst)
                 del chosen[rel]
-    all_rels = set(os.path.relpath(os.path.join(r, f), merged_smali)
+    all_rels = set(os.path.relpath(os.path.join(r, f), merged_smali).replace("\\", "/")
                    for r, _, fs in os.walk(merged_smali) for f in fs if f.endswith(".smali"))
     print(f"merged_smali 实写类: {len(all_rels)}")
 
-    # ============ 产物 A：全量 all_qist_spider.jar ============
+    # ============ 产物 A：全量 qist_spider.jar（所有类，不论大小）============
     if MODE in ("all", "both"):
-        print("\n[1/2] 生成全量 all_qist_spider.jar（所有类，不论大小）")
+        print("\n[1/2] 生成全量 qist_spider.jar（所有类，不论大小，配置直接加载它）")
         dex_all = build_dex(all_rels, merged_smali, "all_", sml, "全量")
         if dex_all:
-            pack_jar(OUT_ALL, dex_all, assets, os.environ.get("STRIP_SO_ALL", "0") == "1")
+            pack_jar(OUT_FULL, dex_all, assets, os.environ.get("STRIP_SO_ALL", "0") == "1")
 
-    # ============ 产物 B：完美版 qist_spider.jar（保守全量：所有爬虫类+依赖链）============
+    # ============ 产物 B：精简版 qist_spider_lite.jar（所有爬虫类+依赖链，去原生库更小）============
     if MODE in ("closure", "both"):
-        print("\n[2/2] 生成完美版 qist_spider.jar（保守全量：所有 spider 爬虫类 + 依赖链）")
+        print("\n[2/3] 生成精简版 qist_spider_lite.jar（所有 spider 爬虫类 + 依赖链，默认去.so）")
         # 用所有 com/github/catvod/spider/ 类作根（不按配置裁剪），保证任何 csp_ 源都不缺类
         roots = [rel for rel in all_rels
                  if rel.startswith("com/github/catvod/spider/") and rel.endswith(".smali")]
@@ -378,7 +409,7 @@ def main():
             for f in fs:
                 if not f.endswith(".smali"):
                     continue
-                rel = os.path.relpath(os.path.join(root, f), merged_smali)
+                rel = os.path.relpath(os.path.join(root, f), merged_smali).replace("\\", "/")
                 txt = open(os.path.join(root, f), encoding="utf-8", errors="ignore").read()
                 deps = set()
                 for t in TYPE_RE.findall(txt):
@@ -395,13 +426,13 @@ def main():
             for d in graph.get(rel, ()):
                 stack.append(d)
         print(f"  保留 {len(keep)} 类（全部爬虫 + 依赖）")
-        dex_c = build_dex(keep, merged_smali, "c_", sml, "完美版")
+        dex_c = build_dex(keep, merged_smali, "c_", sml, "精简版")
         if dex_c:
-            pack_jar(OUT_CLOSURE, dex_c, assets, os.environ.get("STRIP_SO_CLOSURE", "1") == "1")
+            pack_jar(OUT_LITE, dex_c, assets, os.environ.get("STRIP_SO_CLOSURE", "1") == "1")
 
     print("\n完成。产物：")
     made = 0
-    for o in (OUT_ALL, OUT_CLOSURE):
+    for o in (OUT_FULL, OUT_LITE):
         if os.path.exists(o):
             made += 1
             print(f"  {o} ({os.path.getsize(o)/1048576:.2f}MB)")
