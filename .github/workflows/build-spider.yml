@@ -2,6 +2,11 @@ name: 干净双jar云编译
 
 on:
   workflow_dispatch:
+    inputs:
+      upstream:
+        description: '并入上游最新源？on=自动吸收别人更新，off=只编基座+V8稳定版'
+        required: false
+        default: 'on'
   push:
     paths:
       - 'build_clean.py'
@@ -16,7 +21,7 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-    timeout-minutes: 90
+    timeout-minutes: 120
     steps:
       - uses: actions/checkout@v4
 
@@ -26,6 +31,8 @@ jobs:
           java-version: '11'
 
       - name: 编译
+        env:
+          UPSTREAM: ${{ github.event.inputs.upstream || 'on' }}
         run: python3 build_clean.py all
 
       - name: 提交产物
