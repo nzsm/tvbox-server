@@ -133,6 +133,7 @@ def ensure_tools():
 
 # ---------- 2) 源 jar 清单：核心（高优先级）+ 配置自动发现（低优先级） ----------
 CORE_SOURCES = [
+    "jar/qist_spider_v8.jar",        # V8 独有源：Czzy/Mgtv/MyUc/Qkso/Xdys/XBPQ/Td/Oka/Xpg/Yqk 等 19 个爬虫类
     "https://gitee.com/baohe2025/bh/raw/master/spider.jar",
     "https://raw.githubusercontent.com/qist/tvbox/master/jar/spider.jar",
     "https://jihulab.com/yoursmile77/TVBox/-/raw/master/Yoursmile.jar",
@@ -205,10 +206,15 @@ def is_asset(n):
 
 # ---------- 4) 汇编一组类到 dex（含毒类重试，最小内存） ----------
 def assemble_group(gdir, outdex, sml):
+    cp = os.environ.get("SMALI_CP")
     for attempt in range(1, 7):
-        r = subprocess.run([os.environ.get("JAVA", "java"), JAVA_XMX, "-jar", sml,
-                            "assemble", "-o", outdex, gdir],
-                           stdout=subprocess.DEVNULL, stderr=subprocess.PIPE)
+        if cp:
+            cmd = [os.environ.get("JAVA", "java"), JAVA_XMX, "-cp", cp,
+                   "org.jf.smali.Main", "assemble", "-o", outdex, gdir]
+        else:
+            cmd = [os.environ.get("JAVA", "java"), JAVA_XMX, "-jar", sml,
+                   "assemble", "-o", outdex, gdir]
+        r = subprocess.run(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.PIPE)
         if r.returncode == 0 and os.path.exists(outdex):
             return True
         err = r.stderr.decode("utf-8", "ignore")
@@ -244,6 +250,9 @@ def build_dex(rel_list, merged_smali, prefix, sml, tag):
     dex_files = []
     for gi, g in enumerate(groups, 1):
         gdir = os.path.join(TMP, f"{prefix}g{gi}")
+        # 关键：必须先清空旧组目录，否则上一轮构建残留的类会被一并汇编进 dex（曾导致产物混入加壳类）
+        if os.path.isdir(gdir):
+            shutil.rmtree(gdir, ignore_errors=True)
         os.makedirs(gdir, exist_ok=True)
         for rel, _ in g:
             dst = os.path.join(gdir, rel)
