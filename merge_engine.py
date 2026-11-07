@@ -43,7 +43,7 @@ DEPS = [
     "https://repo1.maven.org/maven2/org/smali/dexlib2/2.5.2/dexlib2-2.5.2.jar",
     "https://repo1.maven.org/maven2/com/google/guava/guava/27.1-android/guava-27.1-android.jar",
     "https://repo1.maven.org/maven2/com/google/code/gson/gson/2.8.5/gson-2.8.5.jar",
-    "https://repo1.maven.org/maven2/commons-cli/commons-cli/1.4/commons-cli-1.4.jar",
+"https://repo1.maven.org/maven2/commons-cli/commons-cli/1.4/commons-cli-1.4.jar",
     "https://repo1.maven.org/maven2/com/beust/jcommander/1.64/jcommander-1.64.jar",
     "https://repo1.maven.org/maven2/org/antlr/antlr-runtime/3.5.2/antlr-runtime-3.5.2.jar",
     "https://repo1.maven.org/maven2/org/antlr/antlr/3.5.2/antlr-3.5.2.jar",
@@ -66,7 +66,6 @@ def download(url, dest, min_size=1000):
     except Exception as e:
         print(f"  ⚠ 下载失败: {os.path.basename(url)} ({type(e).__name__})")
     return False
-
 def fat_jar(out, main_url, main_class):
     """从 Maven Central 下载主 jar + 依赖，合并成可直接 java -jar 的 fat jar。"""
     os.makedirs(TOOL, exist_ok=True)
@@ -93,7 +92,7 @@ def fat_jar(out, main_url, main_class):
     with zipfile.ZipFile(out, "w", zipfile.ZIP_DEFLATED) as z:
         z.writestr("META-INF/MANIFEST.MF",
                    b"Manifest-Version: 1.0\r\nMain-Class: " + main_class.encode() + b"\r\n\r\n")
-        for n, d in merged.items():
+for n, d in merged.items():
             z.writestr(n, d)
     print(f"  ✓ 工具就绪 {os.path.basename(out)} ({len(merged)} 类)")
     return True
@@ -118,7 +117,7 @@ def ensure_tools():
             return committed(name)
         # 2) 仓库 tools/xxx.jar.zip -> 解包
         if unzip_if_needed(name):
-            return committed(name)
+return committed(name)
         # 3) 缓存/上次构建的 .merge_tools
         cached = os.path.join(TOOL, name)
         if os.path.exists(cached) and os.path.getsize(cached) > 1000:
@@ -139,7 +138,7 @@ CORE_SOURCES = [
     "https://jihulab.com/yoursmile77/TVBox/-/raw/master/Yoursmile.jar",
     "https://ghfast.top/https://raw.githubusercontent.com/666tv/69/main/jar/pg.jar",
     "https://ghfast.top/https://raw.githubusercontent.com/666tv/69/main/jar/66tv.jar",
-    "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar",
+"https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar",
     "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar",
     "https://ghfast.top/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XYQ.jar",
     "jar/spider_all_final.jar",
@@ -165,7 +164,7 @@ def discover_extra_jars():
     found = set()
     jar_re = re.compile(r'"(jar|spider)"\s*:\s*"([^"]+)"')
     for root, dirs, files in os.walk(WORK):
-        dirs[:] = [d for d in dirs if d not in (".git", ".merge_tmp", ".merge_tools")]
+dirs[:] = [d for d in dirs if d not in (".git", ".merge_tmp", ".merge_tools")]
         for f in files:
             if not f.endswith((".txt", ".json", ".m3u")):
                 continue
@@ -192,7 +191,7 @@ def _methods_in(d):
         for f in fs:
             if f.endswith(".smali"):
                 rel = os.path.relpath(os.path.join(root, f), d).replace("\\", "/")
-                m = sum(1 for ln in open(os.path.join(root, f), encoding="utf-8", errors="ignore")
+m = sum(1 for ln in open(os.path.join(root, f), encoding="utf-8", errors="ignore")
                         if ln.lstrip().startswith(".method"))
                 out.append((rel, m))
     return out
@@ -218,7 +217,7 @@ def assemble_group(gdir, outdex, sml):
         if r.returncode == 0 and os.path.exists(outdex):
             return True
         err = r.stderr.decode("utf-8", "ignore")
-        # 一次清掉本轮错误里出现的所有毒类（同名重复类），避免每轮只删一个导致重试轮耗尽
+# 一次清掉本轮错误里出现的所有毒类（同名重复类），避免每轮只删一个导致重试轮耗尽
         poisons = set(re.findall(r"Lcom/[\w/$]+;", err))
         removed = 0
         for pcls in poisons:
@@ -246,7 +245,7 @@ def build_dex(rel_list, merged_smali, prefix, sml, tag):
     if cur:
         groups.append(cur)
     print(f"  {tag}: {len(files)} 类 / {sum(m for _, m in files)} 方法，分 {len(groups)} 组"
-          f" {[sum(m for _, m in g) for g in groups]}")
+f" {[sum(m for _, m in g) for g in groups]}")
     dex_files = []
     for gi, g in enumerate(groups, 1):
         gdir = os.path.join(TMP, f"{prefix}g{gi}")
@@ -267,7 +266,7 @@ def pack_jar(out, dex_files, assets, strip_so=False):
     os.makedirs(os.path.dirname(out), exist_ok=True)
     with zipfile.ZipFile(out, "w", zipfile.ZIP_DEFLATED, compresslevel=9) as z:
         # dex 统一用标准命名 classes.dex / classes2.dex ...（TVBox/Android 只认这套）
-        for i, df in enumerate(dex_files, 1):
+for i, df in enumerate(dex_files, 1):
             z.write(df, f"classes{i}.dex" if i > 1 else "classes.dex")
         for n, d in assets.items():
             if strip_so and (".so" in n.lower() or n.endswith(".so")):
@@ -292,7 +291,7 @@ def main():
     else:
         print(f"配置自动发现外部 jar: {len(extra)} 个")
     sources = CORE_SOURCES + extra
-    inputs = []          # [(priority, name, local_path)]
+inputs = []          # [(priority, name, local_path)]
     n_core = len(CORE_SOURCES)
     for p, src in enumerate(sources):
         local = src if os.path.isfile(os.path.join(WORK, src)) else None
@@ -313,8 +312,7 @@ def main():
         except Exception as e:
             print(f"  ⚠ 跳过 [{p}] {src[:60]} ({type(e).__name__})")
     print(f"实际参与合并 {len(inputs)} 个 jar")
-
-    per_source = []
+per_source = []
     assets = {}
     total_classes_all = 0
     for p, name, jar in inputs:
@@ -334,7 +332,7 @@ def main():
                 pth = os.path.join(outd, rel.replace("/", os.sep))
                 classes[rel] = sum(1 for ln in open(pth, encoding="utf-8", errors="ignore")
                                    if ln.lstrip().startswith(".method"))
-        per_source.append((p, name, classes))
+per_source.append((p, name, classes))
         total_classes_all += len(classes)
         print(f"  → {name[:40]}: {len(classes)} 类")
         try:
@@ -362,7 +360,7 @@ def main():
 
     # 按类名二次去重（解析 .class 指令）：同一 jar 内跨 dex 的同名类反汇编后会生成
     # z.smali + z.1.smali 等重复文件，汇编时必然报 "has already been interned"，
-    # 这里按类名只保留第一个，从根源消除毒类（Actions 上缺类也源于此）
+# 这里按类名只保留第一个，从根源消除毒类（Actions 上缺类也源于此）
     clsmap = {}; dup_drop = 0
     for rel in sorted(chosen):
         p, _ = chosen[rel]
@@ -391,7 +389,7 @@ def main():
             if rel in classes:
                 src = os.path.join(TMP, f"smali_{p}", rel.replace("/", os.sep))
                 dst = os.path.join(merged_smali, rel)
-                os.makedirs(os.path.dirname(dst), exist_ok=True)
+os.makedirs(os.path.dirname(dst), exist_ok=True)
                 shutil.copy(src, dst)
                 del chosen[rel]
     all_rels = set(os.path.relpath(os.path.join(r, f), merged_smali).replace("\\", "/")
@@ -410,7 +408,7 @@ def main():
         print("\n[2/3] 生成精简版 qist_spider_lite.jar（所有 spider 爬虫类 + 依赖链，默认去.so）")
         # 用所有 com/github/catvod/spider/ 类作根（不按配置裁剪），保证任何 csp_ 源都不缺类
         roots = [rel for rel in all_rels
-                 if rel.startswith("com/github/catvod/spider/") and rel.endswith(".smali")]
+if rel.startswith("com/github/catvod/spider/") and rel.endswith(".smali")]
         print(f"  根（全部 spider 爬虫类）: {len(roots)}")
         TYPE_RE = re.compile(r"L[^;]+;")
         graph = {}
@@ -434,7 +432,7 @@ def main():
             keep.add(rel)
             for d in graph.get(rel, ()):
                 stack.append(d)
-        print(f"  保留 {len(keep)} 类（全部爬虫 + 依赖）")
+print(f"  保留 {len(keep)} 类（全部爬虫 + 依赖）")
         dex_c = build_dex(keep, merged_smali, "c_", sml, "精简版")
         if dex_c:
             pack_jar(OUT_LITE, dex_c, assets, os.environ.get("STRIP_SO_CLOSURE", "1") == "1")
