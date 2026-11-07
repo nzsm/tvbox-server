@@ -152,6 +152,21 @@ DIR_NOP = os.path.join(TMP, "smali_nop")
 DIR_V8 = os.path.join(TMP, "smali_v8")
 DIR_CLEAN = os.path.join(TMP, "smali_clean")
 DIR_COMB = os.path.join(TMP, "smali_combined")
+DIR_SRC = os.path.join(TMP, "smali_src")
+
+# 上游活源：每次构建都重新下载最新版，谁更新了就自动吸收进来。
+# 只吸收 Lcom/github/catvod/ 开头的类（爬虫/解析器/工具），不碰框架支撑类，避免版本冲突。
+UPSTREAM = [
+    ("qist",      "https://raw.githubusercontent.com/qist/tvbox/master/jar/spider.jar"),
+    ("baohe",     "https://gitee.com/baohe2025/bh/raw/master/spider.jar"),
+    ("yoursmile", "https://jihulab.com/yoursmile77/TVBox/-/raw/master/Yoursmile.jar"),
+    ("666pg",     "https://raw.githubusercontent.com/666tv/69/main/jar/pg.jar"),
+    ("666tv",     "https://raw.githubusercontent.com/666tv/69/main/jar/66tv.jar"),
+    ("gaopg",     "https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar"),
+    ("XBPQ",      "https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XBPQ.jar"),
+    ("XYQ",       "https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/XYQ.jar"),
+]
+UPSTREAM_PREFIX = "Lcom/github/catvod/"
 
 CLS_RE = re.compile(r'^\.class\s+(?:[^\n]*?\s)?(L[^;]+;)\s*$', re.M)
 KILL_PREFIX = ("np/", "com/github/catvod/parser/merge/",
@@ -187,7 +202,7 @@ def preflight():
 
 
 # ---------------- 1) 逐 dex 反汇编 ----------------------------
-def disasm_one(jar, outdir):
+def disasm_one(jar, outdir, strict=True):
     if os.path.exists(outdir):
         shutil.rmtree(outdir)
     os.makedirs(outdir, exist_ok=True)
@@ -214,15 +229,64 @@ def disasm_one(jar, outdir):
             ok += 1
     if ok != len(dexes):
         print("x 反汇编不全：%d/%d 成功" % (ok, len(dexes)))
-        sys.exit(3)
+        if strict:
+            sys.exit(3)
+        return False
     total = sum(len(fs) for _, _, fs in os.walk(outdir))
     print("  %s 合计 %d smali" % (os.path.basename(outdir), total))
+    return True
 
 
 def stage_disasm():
     os.makedirs(TMP, exist_ok=True)
     disasm_one(NOP_JAR, DIR_NOP)
     disasm_one(V8_JAR, DIR_V8)
+
+
+def _count_methods(p):
+    try:
+        with open(p, encoding="utf-8", errors="ignore") as fh:
+            return sum(1 for ln in fh if ln.lstrip().startswith(".method"))
+    except Exception:
+        return 0
+
+
+def stage_upstream():
+    """从上游活源拉最新 jar 并反汇编。失败的源跳过，不阻塞整体。"""
+    if os.environ.get("UPSTREAM", "on").strip().lower() in ("off", "0", "no", "false"):
+        print("UPSTREAM=off：跳过上游并入，只编基座 + V8（稳定模式）")
+        shutil.rmtree(DIR_SRC, ignore_errors=True)
+        return
+    shutil.rmtree(DIR_SRC, ignore_errors=True)
+    os.makedirs(DIR_SRC, exist_ok=True)
+    got = []
+    for name, url in UPSTREAM:
+        p = os.path.join(TMP, "src_%s.jar" % name)
+        if os.path.exists(p):
+            try:
+                os.remove(p)
+            except Exception:
+                pass
+        if not _download(url, p):
+            print("SKIP %-10s 下载失败" % name)
+            continue
+        try:
+            with zipfile.ZipFile(p) as z:
+                dexes = [n for n in z.namelist() if n.endswith(".dex")]
+            if not dexes:
+                print("SKIP %-10s 不含 dex" % name)
+                continue
+        except Exception as e:
+            print("SKIP %-10s 不是合法 jar (%s)" % (name, e))
+            continue
+        print("OK   %-10s %.2f MB / %d dex" % (name, os.path.getsize(p) / 1048576, len(dexes)))
+        if not disasm_one(p, os.path.join(DIR_SRC, name), strict=False):
+            print("SKIP %-10s 反汇编不全，整源丢弃" % name)
+            shutil.rmtree(os.path.join(DIR_SRC, name), ignore_errors=True)
+            continue
+        got.append(name)
+    print("上游可用源 %d/%d: %s" % (len(got), len(UPSTREAM),
+                                ", ".join(got) if got else "无"))
 
 
 # ---------------- 2) 剔加壳 + 合并去重 ---------------------------
@@ -287,6 +351,45 @@ def stage_combine():
         nop_cls.add(c)
         added += 1
     print("   补入 V8 独有类: %d" % added)
+
+    print("[3.5] 并入上游活源（同名类留方法数更多的实现）")
+    if not os.path.isdir(DIR_SRC) or not os.listdir(DIR_SRC):
+        print("   上游无可用源，跳过（本次只编基座+V8）")
+    else:
+        idx = {}
+        for p in smali_files(DIR_COMB):
+            c = class_of(p)
+            if c:
+                idx[c] = (p, _count_methods(p))
+        up_added = up_repl = up_skip = 0
+        for name, _ in UPSTREAM:
+            d = os.path.join(DIR_SRC, name)
+            if not os.path.isdir(d):
+                continue
+            a = r = s = 0
+            for p in smali_files(d):
+                c = class_of(p)
+                if not c or not c.startswith(UPSTREAM_PREFIX):
+                    continue
+                m = _count_methods(p)
+                if c in idx:
+                    op, om = idx[c]
+                    if m > om:
+                        shutil.copy2(p, op)
+                        idx[c] = (op, m)
+                        r += 1
+                    else:
+                        s += 1
+                else:
+                    rel = os.path.relpath(p, d)
+                    dst = os.path.join(DIR_COMB, rel)
+                    os.makedirs(os.path.dirname(dst), exist_ok=True)
+                    shutil.copy2(p, dst)
+                    idx[c] = (dst, m)
+                    a += 1
+            print("   %-10s 新增 %d / 覆盖 %d / 保留原 %d" % (name, a, r, s))
+            up_added += a; up_repl += r; up_skip += s
+        print("   上游合计：新增 %d / 覆盖 %d / 保留原 %d" % (up_added, up_repl, up_skip))
 
     print("[4] 按类名全局去重（同名只留一份）")
     seen = {}
@@ -482,7 +585,7 @@ def stage_verify():
     print("OK 两个 jar 重复类均为 0")
 
 
-STAGES = {"disasm": stage_disasm, "combine": stage_combine,
+STAGES = {"disasm": stage_disasm, "upstream": stage_upstream, "combine": stage_combine,
           "build": stage_build, "verify": stage_verify}
 
 
@@ -490,7 +593,7 @@ def main():
     stage = sys.argv[1] if len(sys.argv) > 1 else "all"
     preflight()
     if stage == "all":
-        for s in ("disasm", "combine", "build", "verify"):
+        for s in ("disasm", "upstream", "combine", "build", "verify"):
             print("\n########## %s ##########" % s)
             STAGES[s]()
     else:
