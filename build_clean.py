@@ -28,7 +28,6 @@
     TOOL_ALL / JC_JAR   覆盖工具路径
 """
 import os, sys, re, shutil, subprocess, hashlib, zipfile
-
 BASE = os.path.dirname(os.path.abspath(__file__))
 TMP = os.path.join(BASE, ".merge_tmp")
 OUTDIR = os.path.join(BASE, "jar")
@@ -89,7 +88,7 @@ def class_of(p):
     try:
         with open(p, encoding="utf-8", errors="ignore") as fh:
             head = fh.read(3000)
-    except Exception:
+except Exception:
         return None
     m = CLS_RE.search(head)
     return m.group(1) if m else None
@@ -119,7 +118,7 @@ def disasm_one(jar, outdir):
     os.makedirs(outdir, exist_ok=True)
     dexdir = os.path.join(TMP, "_dex_" + os.path.basename(outdir))
     shutil.rmtree(dexdir, ignore_errors=True)
-    os.makedirs(dexdir, exist_ok=True)
+os.makedirs(dexdir, exist_ok=True)
     with zipfile.ZipFile(jar) as z:
         dexes = sorted([n for n in z.namelist() if n.endswith(".dex")])
         for n in dexes:
@@ -141,7 +140,7 @@ def disasm_one(jar, outdir):
     if ok != len(dexes):
         print("✗ 反汇编不全：%d/%d 成功" % (ok, len(dexes)))
         sys.exit(3)
-    total = sum(len(fs) for _, _, fs in os.walk(outdir))
+total = sum(len(fs) for _, _, fs in os.walk(outdir))
     print("  %s 合计 %d smali" % (os.path.basename(outdir), total))
 
 
@@ -172,8 +171,7 @@ def stage_combine():
                 killed += 1
                 break
     print("   删除加壳目录数: %d" % killed)
-
-    print("② 传递删除引用了加壳类的文件")
+print("② 传递删除引用了加壳类的文件")
     it = 0
     while True:
         it += 1
@@ -207,7 +205,7 @@ def stage_combine():
         if not c or c in nop_cls:
             continue
         rel = os.path.relpath(p, DIR_CLEAN)
-        dst = os.path.join(DIR_COMB, rel)
+dst = os.path.join(DIR_COMB, rel)
         os.makedirs(os.path.dirname(dst), exist_ok=True)
         shutil.copy2(p, dst)
         nop_cls.add(c)
@@ -244,7 +242,7 @@ def stage_build():
     # 精简版：干净基座按类名去重后的类集
     seen = {}
     for p in smali_files(DIR_NOP):
-        c = class_of(p)
+c = class_of(p)
         if c and c not in seen:
             seen[c] = os.path.relpath(p, DIR_NOP).replace(os.sep, "/")
     nop_rels = list(seen.values())
@@ -270,7 +268,7 @@ def stage_build():
         p = os.path.join(OUTDIR, f)
         if os.path.exists(p):
             print("  %s  %.2f MB  MD5 %s" % (
-                f, os.path.getsize(p) / 1048576,
+f, os.path.getsize(p) / 1048576,
                 hashlib.md5(open(p, "rb").read()).hexdigest()))
     print("✓ build 完成")
 
@@ -295,7 +293,7 @@ def verify_jar(jar):
             r = subprocess.run([JAVA, JAVA_XMX, "-cp", SMALI_CP,
                                 "org.jf.baksmali.Main", "d", "-o", o, p],
                                stdout=subprocess.DEVNULL, stderr=subprocess.PIPE)
-            if r.returncode != 0:
+if r.returncode != 0:
                 print("  ✗ %s 反汇编失败: %s" % (d, r.stderr.decode("utf-8", "ignore")[-200:]))
                 continue
             cnt = 0
