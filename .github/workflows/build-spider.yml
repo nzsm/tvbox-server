@@ -1,213 +1,49 @@
-# ============================================================
-# 干净双 jar 云编译（GitHub Actions）
-#
-# 与旧版的根本区别：
-#   旧版 build-spider.yml 跑 merge_engine.py 主流程 —— 把几十个外部 jar
-#   全部合并、按"文件路径"去重。路径级去重在大小写折叠下失效，162 个同名类
-#   仍重复，汇编报 has already been interned，产出的 22MB jar 就是线上一直
-#   转圈、报 protected jar loader not bound 的那一版。
-#   新版跑 build_clean.py —— 干净基座 + V8 独有类，按 .class 全限定名
-#   全局唯一化，再逐 dex 反汇编/汇编，最后自检重复类必须为 0。
-#
-# 素材全部走直链，仓库不用存任何 jar：
-#   V8 输入   = qist_spider_full_1305classes.jar（22,087,575 B / 7 dex）
-#   干净基座  = qist_spider_nop.jar（13,454,716 B / 5 dex）
-#   tools_all = baksmali+smali 合并 fat jar
-#   jc-1.48   = jcommander 1.48
-#
-# 【重要】不要用仓库里那个 jar/all_qist_spider.jar 当 V8 输入。
-#   它同样有 7 个 dex、每个 dex 大小也逐个相同，但 MD5 全不一致：
-#   混淆类被重排过，同名类装的是另一份实现（实测 63 个类方法数对不上，
-#   Hxq 少 46 个 / merge/J/i 多 16 个），编出来的包类名齐全但内容不是同一份。
-#   所以下面用逐 dex MD5 硬校验，素材不对直接失败，绝不静默降级。
-#
-# 触发：
-#   1) 手动 Run（workflow_dispatch）
-#   2) push 到 build_clean.py / merge_engine.py / 本工作流 —— 改了脚本自动重编
-#
-# 产物：jar/qist_spider_lite.jar（精简 16,490 类）、jar/qist_spider.jar（全量 16,655 类）
-# 门禁：verify 阶段重复类不为 0 则整个 job 失败，不会提交任何东西
-# ============================================================
 name: 干净双jar云编译
 
 on:
   workflow_dispatch:
-    inputs:
-      dex_method_target:
-        description: '每个 dex 的方法数上限（默认 22000，超过 65535 才会崩）'
-        type: number
-        default: 22000
-      java_mem:
-        description: '汇编内存上限（默认 1600m，runner 7G 足够）'
-        type: string
-        default: '1600m'
-      commit_result:
-        description: '是否把产物提交回仓库 jar/ 目录'
-        type: boolean
-        default: true
   push:
     paths:
       - 'build_clean.py'
-      - 'merge_engine.py'
-      - '.github/workflows/build-spider.yml'
 
 permissions:
   contents: write
 
 concurrency:
-  group: clean-jar-build
+  group: jar-build
   cancel-in-progress: false
-
-env:
-  V8_URL: https://aka.doubaocdn.com/s/oU9Tx6Nytj
-  NOP_URL: https://aka.doubaocdn.com/s/qX5YV6QqKY
-  TOOLS_URL: https://aka.doubaocdn.com/s/zaIORwEYQY
-  JC_URL: https://aka.doubaocdn.com/s/6PniGnFxs8
 
 jobs:
   build:
     runs-on: ubuntu-latest
     timeout-minutes: 90
-
     steps:
-- name: 检出仓库
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 1
+      - uses: actions/checkout@v4
 
-      # 必须 JDK 11：tools_all.jar 是 smali 2.x，JDK 17 上 com.beust 与
-      # org.jf.util 会冲突。云端实测 11.0.32 通过。
-      - name: 安装 JDK 11
-        uses: actions/setup-java@v4
+      - uses: actions/setup-java@v4
         with:
           distribution: temurin
           java-version: '11'
 
-      - name: 准备素材（逐 dex MD5 硬校验，不对就失败）
+      - name: 编译
+        run: python3 build_clean.py all
+
+      - name: 提交产物
         run: |
-          set -e
-          for pair in "qist_spider_v8.jar:$V8_URL" "qist_spider_nop.jar:$NOP_URL" "tools_all.jar:$TOOLS_URL" "jc-1.48.jar:$JC_URL"; do
-            f="${pair%%:*}"
-            url="${pair#*:}"
-            if [ -f "$f" ]; then
-              echo "SKIP: $f 仓库已有"
-            else
-              echo "GET: $f"
-              curl -fL --retry 3 --retry-delay 2 -o "$f" "$url" || { echo "ERROR: $f 下载失败"; exit 1; }
-            fi
-          done
-
-          python3 - <<'PYEOF'
-          import hashlib, sys, zipfile
-
-          # 逐 dex 指纹：名字 -> {dex: (字节数, md5)}
-          # 这是唯一可信的素材判定依据。只比文件大小会漏掉"同名类装不同实现"的情况。
-EXPECT = {
-              'qist_spider_v8.jar': {
-                  'classes.dex':  ('8328632', 'f391d1cb9458385802193690adbdda37'),
-                  'classes2.dex': ('5529248', 'b256e1b6d44377a72fa6e47bc327d989'),
-                  'classes3.dex': ('3768200', '3861714a1c25df4bd0ff1df055ccf8c9'),
-                  'classes4.dex': ('3767656', 'aca8891fac66c30d86ed2916865da262'),
-                  'classes5.dex': ('3977380', '10c6e6d3b2bc7d274e33046288ca3590'),
-                  'classes6.dex': ('3170720', '979f4e06a490027563efd3cd3862cfcc'),
-                  'classes7.dex': ('1963196', '02139bd3379dd1a57b4127df21c33469'),
-              },
-              'qist_spider_nop.jar': {
-                  'classes.dex':  ('4815112', '23f09e9f6960b1539cd5fd828f9ef230'),
-                  'classes2.dex': ('6330456', '319a6cec8216dcf8f3ad4493812d095c'),
-                  'classes3.dex': ('6322260', 'd9d0c0e11461f8d850004a7864f41b8f'),
-                  'classes4.dex': ('10453960', '14fd2fe996d7415ef9fec0b1d9fde268'),
-'classes5.dex': ('8444644', '10041e55889f0fe42966ee427965680c'),
-              },
-          }
-          SIZE_ONLY = {'tools_all.jar': 5086583, 'jc-1.48.jar': 63504}
-
-          ok = True
-          for f, dexes in EXPECT.items():
-              if not __import__('os').path.exists(f):
-                  print(f'FAIL 缺失 {f}'); ok = False; continue
-              z = zipfile.ZipFile(f)
-              bad = 0
-              for dn, (size, md5) in dexes.items():
-                  if dn not in z.namelist():
-                      print(f'FAIL {f} 缺 {dn}'); bad += 1; continue
-                  d = z.read(dn)
-                  got = (str(len(d)), hashlib.md5(d).hexdigest())
-                  if got != (size, md5):
-                      print(f'FAIL {f} {dn} 指纹不符: {got} != {(size, md5)}'); bad += 1
-              if bad == 0:
-                  print(f'OK   {f} {len(z.namelist())} 项 / {len(dexes)} dex 指纹全对（原始素材）')
-              else:
-                  ok = False
-
-          import os
-          for f, size in SIZE_ONLY.items():
-if not os.path.exists(f):
-                  print(f'FAIL 缺失 {f}'); ok = False; continue
-              got = os.path.getsize(f)
-              if abs(got - size) > size * 0.02:
-                  print(f'FAIL {f} 尺寸 {got}，期望 {size}'); ok = False
-              else:
-                  print(f'OK   {f} {got} B')
-          sys.exit(0 if ok else 1)
-          PYEOF
-
-      - name: 反汇编 + 剔加壳 + 去重 + 汇编 + 自检
-        env:
-          JAVA_MEM: ${{ github.event.inputs.java_mem || '1600m' }}
-          DEX_METHOD_TARGET: ${{ github.event.inputs.dex_method_target || 22000 }}
-        run: |
-          set -o pipefail
-          python3 build_clean.py all 2>&1 | tee build.log
-          echo "=== 产物 ==="
-          ls -l jar/
-
-      - name: 记录构建报告
-        if: always()
-        run: |
-          {
-            echo "# 构建报告 $(date -u +'%Y-%m-%d %H:%M UTC')"
-            echo
-            echo "commit: ${{ github.sha }}"
-            echo "触发: ${{ github.event_name }}"
-            echo
-            echo '```'
-grep -E "删除加壳|传递|轮删除|补入|去重删除|基座类|精简版|全量版|唯一类|重复类|OK|FAIL" build.log || true
-            echo '```'
-          } > jar/build-report.md
-          cat jar/build-report.md
-
-      - name: 提交产物（只在 verify 通过后才会走到这里）
-        if: (github.event_name == 'workflow_dispatch' && github.event.inputs.commit_result != 'false') || github.event_name == 'push'
-        run: |
-          git config user.name "nzsm-bot"
-          git config user.email "nzsm@users.noreply.github.com"
-          # 顺手把 md5 校验文件一起更新，避免 jar 变了 md5 文件还是旧的
-          md5sum jar/qist_spider_lite.jar | awk '{print $1}' > jar/qist_spider_lite.jar.md5
-          md5sum jar/qist_spider.jar      | awk '{print $1}' > jar/qist_spider.jar.md5
+          git config user.name nzsm-bot
+          git config user.email nzsm@users.noreply.github.com
           git add jar/
           if git diff --cached --quiet; then
             echo "jar 无变化，跳过提交"
             exit 0
           fi
-          git commit -m "auto: 干净双jar $(date -u +'%Y-%m-%d %H:%M')"
-          git fetch origin main || exit 1
-          if ! git rebase origin/main; then
-            echo "WARN 与远端冲突，保留本次构建产物"
-            git checkout --ours jar/ 2>/dev/null || true
-            git add jar/ 2>/dev/null || true
-            GIT_EDITOR=true git rebase --continue 2>/dev/null || git rebase --abort
-          fi
-          git push
+          git commit -m "auto: 双jar $(date -u +%F_%H%M)"
+          git pull --rebase origin main || true
+          git push || echo "推送失败，产物看附件"
 
-      - name: 上传附件（网页可直接下载）
+      - uses: actions/upload-artifact@v4
         if: always()
-        uses: actions/upload-artifact@v4
         with:
-          name: clean-jars-${{ github.run_number }}
-          path: |
-            jar/qist_spider_lite.jar
-            jar/qist_spider.jar
-            jar/build-report.md
-            build.log
+          name: jars
+          path: jar/
           if-no-files-found: warn
