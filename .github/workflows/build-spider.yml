@@ -9,11 +9,17 @@
 #   新版跑 build_clean.py —— 干净基座 + V8 独有类，按 .class 全限定名
 #   全局唯一化，再逐 dex 反汇编/汇编，最后自检重复类必须为 0。
 #
-# 素材来源（仓库不用存大文件，手机只需粘 3 个文本）：
-#   V8 输入      = 仓库自带的 jar/all_qist_spider.jar（7 个 dex 与原始 V8 完全一致）
-#   干净基座     = qist_spider_nop.jar，仓库没放就自动下载
-#   tools_all    = baksmali+smali 合并 fat jar，仓库没放就自动下载
-#   jc-1.48      = jcommander 1.48，仓库没放就自动下载
+# 素材全部走直链，仓库不用存任何 jar：
+#   V8 输入   = qist_spider_full_1305classes.jar（22,087,575 B / 7 dex）
+#   干净基座  = qist_spider_nop.jar（13,454,716 B / 5 dex）
+#   tools_all = baksmali+smali 合并 fat jar
+#   jc-1.48   = jcommander 1.48
+#
+# 【重要】不要用仓库里那个 jar/all_qist_spider.jar 当 V8 输入。
+#   它同样有 7 个 dex、每个 dex 大小也逐个相同，但 MD5 全不一致：
+#   混淆类被重排过，同名类装的是另一份实现（实测 63 个类方法数对不上，
+#   Hxq 少 46 个 / merge/J/i 多 16 个），编出来的包类名齐全但内容不是同一份。
+#   所以下面用逐 dex MD5 硬校验，素材不对直接失败，绝不静默降级。
 #
 # 触发：
 #   1) 手动 Run（workflow_dispatch）
@@ -53,7 +59,7 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  # 素材直链（仓库没放对应文件时用它兜底，链接失效就手工换一个）
+  V8_URL: https://aka.doubaocdn.com/s/oU9Tx6Nytj
   NOP_URL: https://aka.doubaocdn.com/s/qX5YV6QqKY
   TOOLS_URL: https://aka.doubaocdn.com/s/zaIORwEYQY
   JC_URL: https://aka.doubaocdn.com/s/6PniGnFxs8
@@ -64,7 +70,7 @@ jobs:
     timeout-minutes: 90
 
     steps:
-      - name: 检出仓库
+- name: 检出仓库
         uses: actions/checkout@v4
         with:
           fetch-depth: 1
@@ -77,20 +83,10 @@ jobs:
           distribution: temurin
           java-version: '11'
 
-      - name: 准备素材（缺谁补谁，全部校验尺寸与 dex 数量）
+      - name: 准备素材（逐 dex MD5 硬校验，不对就失败）
         run: |
           set -e
-          # V8：直接取仓库自带的 all_qist_spider.jar
-          if [ -f jar/all_qist_spider.jar ]; then
-            cp jar/all_qist_spider.jar ./qist_spider_v8.jar
-            echo "V8 <- jar/all_qist_spider.jar"
-          elif [ -f qist_spider_v8.jar ]; then
-            echo "V8 <- 仓库根 qist_spider_v8.jar"
-          else
-            echo "ERROR: 找不到 V8 输入"; exit 1
-          fi
-
-          for pair in "qist_spider_nop.jar:$NOP_URL" "tools_all.jar:$TOOLS_URL" "jc-1.48.jar:$JC_URL"; do
+          for pair in "qist_spider_v8.jar:$V8_URL" "qist_spider_nop.jar:$NOP_URL" "tools_all.jar:$TOOLS_URL" "jc-1.48.jar:$JC_URL"; do
             f="${pair%%:*}"
             url="${pair#*:}"
             if [ -f "$f" ]; then
@@ -102,27 +98,57 @@ jobs:
           done
 
           python3 - <<'PYEOF'
-          import os, sys, zipfile
-          need = {
-              'qist_spider_nop.jar': (13454716, 5, '干净基座'),
-              'qist_spider_v8.jar':  (22087558, 7, 'V8 全量'),
-              'tools_all.jar':       (5086583,  None, 'smali 工具'),
-              'jc-1.48.jar':         (63504,    None, 'jcommander'),
+          import hashlib, sys, zipfile
+
+          # 逐 dex 指纹：名字 -> {dex: (字节数, md5)}
+          # 这是唯一可信的素材判定依据。只比文件大小会漏掉"同名类装不同实现"的情况。
+EXPECT = {
+              'qist_spider_v8.jar': {
+                  'classes.dex':  ('8328632', 'f391d1cb9458385802193690adbdda37'),
+                  'classes2.dex': ('5529248', 'b256e1b6d44377a72fa6e47bc327d989'),
+                  'classes3.dex': ('3768200', '3861714a1c25df4bd0ff1df055ccf8c9'),
+                  'classes4.dex': ('3767656', 'aca8891fac66c30d86ed2916865da262'),
+                  'classes5.dex': ('3977380', '10c6e6d3b2bc7d274e33046288ca3590'),
+                  'classes6.dex': ('3170720', '979f4e06a490027563efd3cd3862cfcc'),
+                  'classes7.dex': ('1963196', '02139bd3379dd1a57b4127df21c33469'),
+              },
+              'qist_spider_nop.jar': {
+                  'classes.dex':  ('4815112', '23f09e9f6960b1539cd5fd828f9ef230'),
+                  'classes2.dex': ('6330456', '319a6cec8216dcf8f3ad4493812d095c'),
+                  'classes3.dex': ('6322260', 'd9d0c0e11461f8d850004a7864f41b8f'),
+                  'classes4.dex': ('10453960', '14fd2fe996d7415ef9fec0b1d9fde268'),
+'classes5.dex': ('8444644', '10041e55889f0fe42966ee427965680c'),
+              },
           }
+          SIZE_ONLY = {'tools_all.jar': 5086583, 'jc-1.48.jar': 63504}
+
           ok = True
-          for f, (size, dex, desc) in need.items():
-              if not os.path.exists(f):
+          for f, dexes in EXPECT.items():
+              if not __import__('os').path.exists(f):
+                  print(f'FAIL 缺失 {f}'); ok = False; continue
+              z = zipfile.ZipFile(f)
+              bad = 0
+              for dn, (size, md5) in dexes.items():
+                  if dn not in z.namelist():
+                      print(f'FAIL {f} 缺 {dn}'); bad += 1; continue
+                  d = z.read(dn)
+                  got = (str(len(d)), hashlib.md5(d).hexdigest())
+                  if got != (size, md5):
+                      print(f'FAIL {f} {dn} 指纹不符: {got} != {(size, md5)}'); bad += 1
+              if bad == 0:
+                  print(f'OK   {f} {len(z.namelist())} 项 / {len(dexes)} dex 指纹全对（原始素材）')
+              else:
+                  ok = False
+
+          import os
+          for f, size in SIZE_ONLY.items():
+if not os.path.exists(f):
                   print(f'FAIL 缺失 {f}'); ok = False; continue
               got = os.path.getsize(f)
               if abs(got - size) > size * 0.02:
-                  print(f'FAIL {f} 尺寸异常 {got}，期望 {size}（{desc}）'); ok = False; continue
-              if dex is not None:
-                  n = len([x for x in zipfile.ZipFile(f).namelist() if x.endswith('.dex')])
-                  if n != dex:
-                      print(f'FAIL {f} dex 数量 {n}，期望 {dex}（{desc}）'); ok = False; continue
-                  print(f'OK   {f} {got} B / {n} dex（{desc}）')
+                  print(f'FAIL {f} 尺寸 {got}，期望 {size}'); ok = False
               else:
-                  print(f'OK   {f} {got} B（{desc}）')
+                  print(f'OK   {f} {got} B')
           sys.exit(0 if ok else 1)
           PYEOF
 
@@ -146,7 +172,7 @@ jobs:
             echo "触发: ${{ github.event_name }}"
             echo
             echo '```'
-            grep -E "删除加壳|传递|轮删除|补入|去重删除|基座类|精简版|全量版|唯一类|重复类|OK|FAIL" build.log || true
+grep -E "删除加壳|传递|轮删除|补入|去重删除|基座类|精简版|全量版|唯一类|重复类|OK|FAIL" build.log || true
             echo '```'
           } > jar/build-report.md
           cat jar/build-report.md
@@ -156,6 +182,9 @@ jobs:
         run: |
           git config user.name "nzsm-bot"
           git config user.email "nzsm@users.noreply.github.com"
+          # 顺手把 md5 校验文件一起更新，避免 jar 变了 md5 文件还是旧的
+          md5sum jar/qist_spider_lite.jar | awk '{print $1}' > jar/qist_spider_lite.jar.md5
+          md5sum jar/qist_spider.jar      | awk '{print $1}' > jar/qist_spider.jar.md5
           git add jar/
           if git diff --cached --quiet; then
             echo "jar 无变化，跳过提交"
