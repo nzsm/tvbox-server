@@ -1,107 +1,184 @@
 # ============================================================
-# 全能引擎 jar 云编译工作流（默认双产物：全量版 + 精简版，无自动触发）
-# 作用：手动触发，自动发现并拉取各影视源引用的 jar → 类级合并去重
-#       → 按 dex 64K 上限分 dex → 最小内存重汇编 → 产出两个 jar 并回写仓库：
-#   1) jar/qist_spider.jar        全量版：收录所有能拿到的类与原生库（不论大小），
-#                                  配置（subscribe.py）直接加载它，不缺类
-#   2) jar/qist_spider_lite.jar   精简版：所有爬虫类+依赖链、默认去.so，体积更小
-#                                  想用精简版时手动改配置 spider 指向它即可
-# 触发机制：仅 workflow_dispatch 手动 Run（已关闭每天自动编译，避免覆盖式自动变更）
-# 保存路径：.github/workflows/build-spider.yml
-# 产物地址（本仓库自托管）：
-#   https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/qist_spider.jar
-#   https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/qist_spider_lite.jar
+# 干净双 jar 云编译（GitHub Actions）
+#
+# 与旧版的根本区别：
+#   旧版 build-spider.yml 跑 merge_engine.py 主流程 —— 把几十个外部 jar
+#   全部合并、按"文件路径"去重。路径级去重在大小写折叠下失效，162 个同名类
+#   仍重复，汇编报 has already been interned，产出的 22MB jar 就是线上一直
+#   转圈、报 protected jar loader not bound 的那一版。
+#   新版跑 build_clean.py —— 干净基座 + V8 独有类，按 .class 全限定名
+#   全局唯一化，再逐 dex 反汇编/汇编，最后自检重复类必须为 0。
+#
+# 素材来源（仓库不用存大文件，手机只需粘 3 个文本）：
+#   V8 输入      = 仓库自带的 jar/all_qist_spider.jar（7 个 dex 与原始 V8 完全一致）
+#   干净基座     = qist_spider_nop.jar，仓库没放就自动下载
+#   tools_all    = baksmali+smali 合并 fat jar，仓库没放就自动下载
+#   jc-1.48      = jcommander 1.48，仓库没放就自动下载
+#
+# 触发：
+#   1) 手动 Run（workflow_dispatch）
+#   2) push 到 build_clean.py / merge_engine.py / 本工作流 —— 改了脚本自动重编
+#
+# 产物：jar/qist_spider_lite.jar（精简 16,490 类）、jar/qist_spider.jar（全量 16,655 类）
+# 门禁：verify 阶段重复类不为 0 则整个 job 失败，不会提交任何东西
 # ============================================================
-name: 全能引擎jar云编译
+name: 干净双jar云编译
 
 on:
   workflow_dispatch:
     inputs:
-      mode:
-        description: '生成哪些：both(全量+精简，推荐) / all(仅全量) / closure(仅精简)'
-        type: choice
-        default: both
-        options: [both, all, closure]
-      method_target:
-        description: '每个 dex 的方法数上限（默认 22000，越小越稳但 dex 越多）'
+      dex_method_target:
+        description: '每个 dex 的方法数上限（默认 22000，超过 65535 才会崩）'
         type: number
         default: 22000
       java_mem:
-        description: '编译内存上限（最小内存，默认 2g，按需可调 1g/2g/3g）'
+        description: '汇编内存上限（默认 1600m，runner 7G 足够）'
         type: string
-        default: '2g'
-      strip_so_closure:
-        description: '精简版 qist_spider_lite.jar 是否去原生.so（默认true，更小更快）'
+        default: '1600m'
+      commit_result:
+        description: '是否把产物提交回仓库 jar/ 目录'
         type: boolean
         default: true
-      strip_so_all:
-        description: '全量版 qist_spider.jar 是否去原生.so（默认false，保留完整作兜底）'
-        type: boolean
-        default: false
+  push:
+    paths:
+      - 'build_clean.py'
+      - 'merge_engine.py'
+      - '.github/workflows/build-spider.yml'
 
 permissions:
-  contents: write          # 用内置 token 自动提交推送，无需配置密钥
+  contents: write
 
 concurrency:
-  group: engine-build
+  group: clean-jar-build
   cancel-in-progress: false
+
+env:
+  # 素材直链（仓库没放对应文件时用它兜底，链接失效就手工换一个）
+  NOP_URL: https://aka.doubaocdn.com/s/qX5YV6QqKY
+  TOOLS_URL: https://aka.doubaocdn.com/s/zaIORwEYQY
+  JC_URL: https://aka.doubaocdn.com/s/6PniGnFxs8
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 90
+
     steps:
       - name: 检出仓库
         uses: actions/checkout@v4
         with:
           fetch-depth: 1
 
-      - name: 安装 JDK 17
+      # 必须 JDK 11：tools_all.jar 是 smali 2.x，JDK 17 上 com.beust 与
+      # org.jf.util 会冲突。云端实测 11.0.32 通过。
+      - name: 安装 JDK 11
         uses: actions/setup-java@v4
         with:
           distribution: temurin
-          java-version: '17'
+          java-version: '11'
 
-      - name: 缓存工具链（baksmali/smali，避免每次重下 Maven 依赖）
-        uses: actions/cache@v4
-        with:
-          path: .merge_tools
-          key: merge-tools-${{ runner.os }}
-
-      - name: 运行全能 jar 合并脚本（双产物，最小内存）
-        env:
-          MODE: ${{ github.event.inputs.mode || 'both' }}
-          JAVA_MEM: ${{ github.event.inputs.java_mem || '2g' }}
-          DEX_METHOD_TARGET: ${{ github.event.inputs.method_target || 22000 }}
-          STRIP_SO_CLOSURE: ${{ github.event.inputs.strip_so_closure == true && '1' || '0' }}
-          STRIP_SO_ALL: ${{ github.event.inputs.strip_so_all == true && '1' || '0' }}
+      - name: 准备素材（缺谁补谁，全部校验尺寸与 dex 数量）
         run: |
-          python3 merge_engine.py
+          set -e
+          # V8：直接取仓库自带的 all_qist_spider.jar
+          if [ -f jar/all_qist_spider.jar ]; then
+            cp jar/all_qist_spider.jar ./qist_spider_v8.jar
+            echo "V8 <- jar/all_qist_spider.jar"
+          elif [ -f qist_spider_v8.jar ]; then
+            echo "V8 <- 仓库根 qist_spider_v8.jar"
+          else
+            echo "ERROR: 找不到 V8 输入"; exit 1
+          fi
 
-      - name: 提交并推送 jar 产物（只提交 jar/，避免临时目录入库）
+          for pair in "qist_spider_nop.jar:$NOP_URL" "tools_all.jar:$TOOLS_URL" "jc-1.48.jar:$JC_URL"; do
+            f="${pair%%:*}"
+            url="${pair#*:}"
+            if [ -f "$f" ]; then
+              echo "SKIP: $f 仓库已有"
+            else
+              echo "GET: $f"
+              curl -fL --retry 3 --retry-delay 2 -o "$f" "$url" || { echo "ERROR: $f 下载失败"; exit 1; }
+            fi
+          done
+
+          python3 - <<'PYEOF'
+          import os, sys, zipfile
+          need = {
+              'qist_spider_nop.jar': (13454716, 5, '干净基座'),
+              'qist_spider_v8.jar':  (22087558, 7, 'V8 全量'),
+              'tools_all.jar':       (5086583,  None, 'smali 工具'),
+              'jc-1.48.jar':         (63504,    None, 'jcommander'),
+          }
+          ok = True
+          for f, (size, dex, desc) in need.items():
+              if not os.path.exists(f):
+                  print(f'FAIL 缺失 {f}'); ok = False; continue
+              got = os.path.getsize(f)
+              if abs(got - size) > size * 0.02:
+                  print(f'FAIL {f} 尺寸异常 {got}，期望 {size}（{desc}）'); ok = False; continue
+              if dex is not None:
+                  n = len([x for x in zipfile.ZipFile(f).namelist() if x.endswith('.dex')])
+                  if n != dex:
+                      print(f'FAIL {f} dex 数量 {n}，期望 {dex}（{desc}）'); ok = False; continue
+                  print(f'OK   {f} {got} B / {n} dex（{desc}）')
+              else:
+                  print(f'OK   {f} {got} B（{desc}）')
+          sys.exit(0 if ok else 1)
+          PYEOF
+
+      - name: 反汇编 + 剔加壳 + 去重 + 汇编 + 自检
+        env:
+          JAVA_MEM: ${{ github.event.inputs.java_mem || '1600m' }}
+          DEX_METHOD_TARGET: ${{ github.event.inputs.dex_method_target || 22000 }}
+        run: |
+          set -o pipefail
+          python3 build_clean.py all 2>&1 | tee build.log
+          echo "=== 产物 ==="
+          ls -l jar/
+
+      - name: 记录构建报告
+        if: always()
+        run: |
+          {
+            echo "# 构建报告 $(date -u +'%Y-%m-%d %H:%M UTC')"
+            echo
+            echo "commit: ${{ github.sha }}"
+            echo "触发: ${{ github.event_name }}"
+            echo
+            echo '```'
+            grep -E "删除加壳|传递|轮删除|补入|去重删除|基座类|精简版|全量版|唯一类|重复类|OK|FAIL" build.log || true
+            echo '```'
+          } > jar/build-report.md
+          cat jar/build-report.md
+
+      - name: 提交产物（只在 verify 通过后才会走到这里）
+        if: (github.event_name == 'workflow_dispatch' && github.event.inputs.commit_result != 'false') || github.event_name == 'push'
         run: |
           git config user.name "nzsm-bot"
           git config user.email "nzsm@users.noreply.github.com"
           git add jar/
           if git diff --cached --quiet; then
-            echo "无变化，跳过提交"
+            echo "jar 无变化，跳过提交"
             exit 0
           fi
-          git commit -m "auto: 云编译引擎jar $(date -u +'%Y-%m-%d %H:%M')"
-          # 远端可能已有新提交（用户手动推/其它工作流），先 fetch+rebase 再 push，避免被拒
+          git commit -m "auto: 干净双jar $(date -u +'%Y-%m-%d %H:%M')"
           git fetch origin main || exit 1
           if ! git rebase origin/main; then
-            echo "⚠️ 与远端冲突（多为并发构建同改 jar/），保留本次新构建的 jar"
+            echo "WARN 与远端冲突，保留本次构建产物"
             git checkout --ours jar/ 2>/dev/null || true
             git add jar/ 2>/dev/null || true
             GIT_EDITOR=true git rebase --continue 2>/dev/null || git rebase --abort
           fi
           git push
 
-      - name: 上传 jar 附件（网页可直接下载）
+      - name: 上传附件（网页可直接下载）
+        if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: engine_jars
+          name: clean-jars-${{ github.run_number }}
           path: |
-            jar/qist_spider.jar
             jar/qist_spider_lite.jar
+            jar/qist_spider.jar
+            jar/build-report.md
+            build.log
           if-no-files-found: warn
